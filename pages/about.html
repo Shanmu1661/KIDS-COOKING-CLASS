@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Little Chefs Academy & Culinary Camps</title>
+  <meta name="description" content="Discover our story, certified kitchen safety standards, and passionate chef instructors dedicated to building culinary confidence in kids.">
+  <meta name="keywords" content="kids cooking instructors, culinary safety, child cooking school, kitchen safety standards, chef team">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | Little Chefs Academy">
+  <meta property="og:description" content="Nurturing creativity, motor skills, and joyful food exploration in a 100% safety-certified teaching kitchen.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍🍳</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN (Pre-configured to prevent Bootstrap clash) -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: ['selector', '[data-theme="dark"]'],
+        corePlugins: {
+          preflight: false,
+          visibility: false,
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Skip to content for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="brand-title">
+            <span class="brand-name">Little Chefs</span>
+            <span class="brand-tagline">Academy & Camps</span>
+          </div>
+        </a>
+
+        <!-- Mobile Toggles Container -->
+        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+          <button class="btn btn-sm btn-outline-custom theme-toggle-btn p-2" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout">
+            <span class="rtl-text">RTL</span>
+            <i class="fa-solid fa-right-left ms-1"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-4 text-primary"></i>
+          </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
+            <button class="btn btn-outline-custom theme-toggle-btn d-none d-lg-inline-flex p-2" aria-label="Toggle dark/light theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+              <span class="rtl-text">RTL</span>
+              <i class="fa-solid fa-right-left ms-2"></i>
+            </button>
+            <a href="login.html" class="btn btn-primary-custom btn-sm-custom">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb & Page Banner -->
+    <section class="page-header-banner banner-about">
+      <div class="container text-center py-3">
+        <span class="section-tag"><i class="fa-solid fa-heart"></i> Our Story & Values</span>
+        <h1 class="section-title mb-2">Nurturing Lifelong Kitchen Joy</h1>
+        <p class="text-muted max-w-xl mx-auto mb-0">
+          Learn how our kid-centered culinary academy grew from a mother’s kitchen table dream into a premier culinary training ground for children.
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section">
+          <span class="banner-label-pill pill-primary">
+            <i class="fa-solid fa-cake-candles"></i> Founded in 2018
+          </span>
+          <span class="banner-label-pill pill-success">
+            <i class="fa-solid fa-shield-heart"></i> 100% Nut-Safe Sanctuary
+          </span>
+          <span class="banner-label-pill pill-info">
+            <i class="fa-solid fa-user-group"></i> 1:5 Chef-to-Student Ratio
+          </span>
+          <span class="banner-label-pill pill-warning">
+            <i class="fa-solid fa-star"></i> 4.9/5 Parent Rating
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-location-dot text-danger"></i> Austin, TX Studio
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Origin Story Section -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt="Bright modern kid-height teaching kitchen at Little Chefs Academy" class="rounded-3xl shadow-xl w-100 object-cover" style="height: 440px;" width="600" height="440">
+              <div class="position-absolute bottom-4 start-4 bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-lg border max-w-xs">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center fs-4 font-bold">
+                    <i class="fa-solid fa-seedling"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold font-heading">Founded in 2018</h6>
+                    <small class="text-muted">Over 12,000 hours of culinary smiles</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="section-tag"><i class="fa-solid fa-book-open"></i> How It Started</span>
+            <h2 class="section-title">Cooking is More Than Food — It's Independence & Chemistry</h2>
+            <p class="text-muted">
+              Little Chefs Academy was founded by professional pastry chef and mother of two, <strong>Maya Vance</strong>. Frustrated by commercial cooking programs that relegated children to spectators or used pre-packaged mixes, Maya created a state-of-the-art culinary sanctuary where kids cook completely from scratch.
+            </p>
+            <p class="text-muted">
+              Here, measuring cups teach fractions, sauté pans demonstrate heat transfer, and vegetable chopping transforms picky eaters into adventurous culinary explorers. We believe every child deserves the pride of serving their family a meal they cooked themselves.
+            </p>
+            <div class="row g-3 pt-2">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-check-circle text-success fs-5"></i>
+                  <span class="fw-bold">1:5 Chef-to-Student Ratio</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-check-circle text-success fs-5"></i>
+                  <span class="fw-bold">100% Hands-On Every Minute</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-check-circle text-success fs-5"></i>
+                  <span class="fw-bold">100% Nut-Safe Certified</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-check-circle text-success fs-5"></i>
+                  <span class="fw-bold">Pediatric CPR Certified Chefs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Philosophy Section (Our 4 Core Learning Pillars) -->
+    <section class="py-5 bg-subtle">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Holistic Culinary Education</span>
+          <h2 class="section-title">Our 4 Core Learning Pillars</h2>
+          <p class="section-subtitle">We teach more than following recipes. Our curriculum builds life skills, scientific wonder, and creative confidence.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pillar 1: STEM -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
+                <i class="fa-solid fa-flask-vial"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Kitchen Chemistry & STEM</h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                From yeast fermentation and Maillard browning to acid-base balancing and ratio arithmetic, children discover how science makes food delicious.
+              </p>
+              <ul class="class-meta-list text-xs mb-0">
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Fractions via volumetric cups</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> State changes & heat transfer</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Emulsification experiments</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Sensory -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
+                <i class="fa-solid fa-carrot"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Conquering Picky Eating</h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                When children chop, season, and plate vegetables themselves, psychological food resistance vanishes. We turn hesitation into curious ownership.
+              </p>
+              <ul class="class-meta-list text-xs mb-0">
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Multi-sensory food discovery</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Blind herb & spice sniffing</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Zero pressure "Flavor Passport"</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Cultural Literacy -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
+                <i class="fa-solid fa-earth-americas"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Global Gastronomy</h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Food is the friendliest doorway to world cultures. Students explore heirloom recipes, historical cooking methods, and spices from over 24 countries.
+              </p>
+              <ul class="class-meta-list text-xs mb-0">
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Fresh handmade pasta & gnocchi</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Asian dumpling & noodle arts</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Latin masa & scratch salsas</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Sustainability -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Farm-to-Kitchen Eco Care</h5>
+              <p class="text-muted small mb-3 flex-grow-1">
+                Young chefs learn respect for agricultural ingredients, seasonality, indoor hydroponic herb clipping, and responsible zero-waste kitchen habits.
+              </p>
+              <ul class="class-meta-list text-xs mb-0">
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Living classroom herb walls</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Scratch vegetable stock boiling</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Organic compost stewardship</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio Facility & Ergonomics Showcase -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <span class="section-tag"><i class="fa-solid fa-kitchen-set"></i> Purpose-Built Studio</span>
+            <h2 class="section-title">Designed From the Floor Up Exclusively for Young Chefs</h2>
+            <p class="text-muted mb-4">
+              Adult kitchens can be intimidating and dangerous for children. Our 4,500 sq. ft. Austin academy was custom-engineered with child safety, ergonomics, and visibility at every single workstation.
+            </p>
+
+            <div class="row g-4">
+              <!-- Feature 1 -->
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center flex-shrink-0 fs-4">
+                    <i class="fa-solid fa-arrows-up-down"></i>
+                  </div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-1">Adjustable Counters</h6>
+                    <p class="text-muted small mb-0">Pneumatic workstations adjust from 28" to 36" so kids cook with ergonomic posture without stepping on stools.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 fs-4">
+                    <i class="fa-solid fa-tv"></i>
+                  </div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-1">Overhead 4K Displays</h6>
+                    <p class="text-muted small mb-0">Angled demonstration mirrors and overhead 4K screens allow every child a crystal-clear view of chef hand techniques.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 fs-4">
+                    <i class="fa-solid fa-sink"></i>
+                  </div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-1">Triple Hygiene Sinks</h6>
+                    <p class="text-muted small mb-0">Automatic touchless sensor faucets and kid-height warm wash stations reinforce surgical-grade hygiene habits.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature 4 -->
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0 fs-4">
+                    <i class="fa-solid fa-mug-saucer"></i>
+                  </div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-1">Parent Viewing Lounge</h6>
+                    <p class="text-muted small mb-0">Acoustic glass viewing lounge with complimentary artisan coffee, high-speed Wi-Fi, and live photo tablet stations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80" alt="Little Chefs Academy spacious state-of-the-art kid cooking workstations" class="rounded-3xl shadow-xl w-100 object-cover" style="height: 460px;">
+              <div class="position-absolute top-4 end-4 bg-white dark:bg-slate-800 py-2 px-3 rounded-full shadow-lg border d-flex align-items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs fw-bold">16 Dedicated Workstations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety First Standards Section -->
+    <section class="py-5 bg-subtle" id="safety">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag bg-emerald-100 text-emerald-800"><i class="fa-solid fa-shield-halved"></i> Uncompromising Care</span>
+          <h2 class="section-title">Our Gold-Standard Kitchen Safety Pillars</h2>
+          <p class="section-subtitle">Safety isn't just a rule in our kitchen — it's the foundation of every recipe we teach.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pillar 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4">
+              <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Ergonomic Kid Cutlery</h5>
+              <p class="text-muted small mb-0">
+                Children use custom nylon safety serrated knives and finger guards designed to slice carrots and cucumbers easily without breaking skin.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4">
+              <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+                <i class="fa-solid fa-fire-extinguisher"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Induction Cool-Touch Tops</h5>
+              <p class="text-muted small mb-0">
+                All cooking stations utilize induction burners that heat the cookware magnetic base directly without an open flame or scorching hot glass.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4">
+              <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+                <i class="fa-solid fa-shield-virus"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Rigorous Allergen Isolation</h5>
+              <p class="text-muted small mb-0">
+                Our entire teaching facility is completely tree nut and peanut-free. Separate color-coded cookware is dedicated for gluten-free and dairy-free students.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4">
+              <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+                <i class="fa-solid fa-user-doctor"></i>
+              </div>
+              <h5 class="font-heading fw-bold mb-2">Certified First Aid Staff</h5>
+              <p class="text-muted small mb-0">
+                Every chef instructor holds active Red Cross Pediatric First Aid, CPR, and ServSafe Food Protection Manager certifications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestone Timeline Section -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-timeline"></i> Growing Together</span>
+          <h2 class="section-title">Our Culinary Journey & Milestones</h2>
+          <p class="section-subtitle">How a mother's passion project blossomed into Central Texas' leading hands-on kids culinary academy.</p>
+        </div>
+
+        <div class="story-timeline max-w-4xl mx-auto">
+          <!-- 2018 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">2018</div>
+            <div class="timeline-content">
+              <span class="badge bg-orange-100 text-orange-700 mb-2">Humble Beginnings</span>
+              <h5 class="font-heading fw-bold mb-2">The Kitchen Table Pilot</h5>
+              <p class="text-muted small mb-0">
+                Chef Maya Vance welcomed 8 neighborhood kids into her home kitchen for Saturday morning scone and brioche baking. Word spread rapidly among parents craving screen-free tactile hobbies.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">2020</div>
+            <div class="timeline-content">
+              <span class="badge bg-emerald-100 text-emerald-700 mb-2">Nut-Safe Milestone</span>
+              <h5 class="font-heading fw-bold mb-2">100% Tree Nut & Peanut-Free Certification</h5>
+              <p class="text-muted small mb-0">
+                In response to rising childhood food allergies, we transitioned our entire operation into a strictly certified nut-free sanctuary with separate gluten-free color-coded workstations.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">2022</div>
+            <div class="timeline-content">
+              <span class="badge bg-blue-100 text-blue-700 mb-2">Expansion</span>
+              <h5 class="font-heading fw-bold mb-2">Opening the 4,500 Sq. Ft. Flagship Studio</h5>
+              <p class="text-muted small mb-0">
+                We designed and opened our dream academy in Austin featuring 16 kid-ergonomic workstations, an acoustic parent viewing lounge, and a professional culinary demonstration stage.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">2024</div>
+            <div class="timeline-content">
+              <span class="badge bg-purple-100 text-purple-700 mb-2">Curriculum Excellence</span>
+              <h5 class="font-heading fw-bold mb-2">STEM Kitchen Accreditation & School Field Trips</h5>
+              <p class="text-muted small mb-0">
+                Partnered with 14 Austin elementary schools to deliver accredited science-in-the-kitchen field trips, turning kitchen chemistry into hands-on curriculum credits for 3rd to 8th graders.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2026 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">2026</div>
+            <div class="timeline-content">
+              <span class="badge bg-amber-100 text-amber-800 mb-2">Today & Beyond</span>
+              <h5 class="font-heading fw-bold mb-2">1,850+ Graduates & Community Table Initiative</h5>
+              <p class="text-muted small mb-0">
+                Celebrating over 1,850 young chefs graduated! Launched our "Cooking For Good" lunchbox charity giving program where students prepare fresh meals donated to Central Texas food pantries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chef Instructors Team Section -->
+    <section class="py-5 bg-subtle">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-hat-chef"></i> Master Mentors</span>
+          <h2 class="section-title">Meet Our Culinary Instructors</h2>
+          <p class="section-subtitle">Passionate culinary educators who make learning technique empowering and delightful.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Chef 1 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="chef-card">
+              <div class="chef-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=500&q=80" alt="Executive Chef Maya Vance portrait" class="chef-avatar" width="140" height="140">
+                <span class="badge badge-pill badge-featured chef-specialty-pill">Founder & Pastry</span>
+              </div>
+              <h4 class="font-heading fw-bold mb-1">Chef Maya Vance</h4>
+              <p class="text-muted small mb-2">Culinary Institute Alum</p>
+              <p class="small text-muted mb-3">15+ years in French pastry arts. Loves teaching kids the fluffy wonders of yeast and choux pastry.</p>
+              <div class="d-flex justify-content-center gap-3 text-muted">
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chef 2 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="chef-card">
+              <div class="chef-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&q=80" alt="Chef Marco Rossi portrait" class="chef-avatar" width="140" height="140">
+                <span class="badge badge-pill badge-diet chef-specialty-pill">Pasta & Savory</span>
+              </div>
+              <h4 class="font-heading fw-bold mb-1">Chef Marco Rossi</h4>
+              <p class="text-muted small mb-2">Italian Regional Cuisine</p>
+              <p class="small text-muted mb-3">Specializes in handmade pasta, slow sauces, and kitchen knife ergonomics for kids ages 6 to 13.</p>
+              <div class="d-flex justify-content-center gap-3 text-muted">
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chef 3 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="chef-card">
+              <div class="chef-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=500&q=80" alt="Chef Priya Patel portrait" class="chef-avatar" width="140" height="140">
+                <span class="badge badge-pill badge-age chef-specialty-pill">Nutrition & Spices</span>
+              </div>
+              <h4 class="font-heading fw-bold mb-1">Chef Priya Patel</h4>
+              <p class="text-muted small mb-2">Pediatric Dietitian & Chef</p>
+              <p class="small text-muted mb-3">Passionate about flavor balance, allergen substitutions, and turning vibrant vegetables into kids' favorites.</p>
+              <div class="d-flex justify-content-center gap-3 text-muted">
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chef 4 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="chef-card">
+              <div class="chef-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=500&q=80" alt="Chef Liam Chen portrait" class="chef-avatar" width="140" height="140">
+                <span class="badge badge-pill badge-spot chef-specialty-pill">Bread & Chemistry</span>
+              </div>
+              <h4 class="font-heading fw-bold mb-1">Chef Liam Chen</h4>
+              <p class="text-muted small mb-2">Artisan Baker & Chemist</p>
+              <p class="small text-muted mb-3">Transforms baking into exciting science experiments. Leads the Junior Gourmet & Teen Masterclass tracks.</p>
+              <div class="d-flex justify-content-center gap-3 text-muted">
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accreditations & Safety Certifications -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-award"></i> Verified Standards</span>
+          <h2 class="section-title">Accreditations & Community Trust</h2>
+          <p class="section-subtitle">We hold ourselves to the strictest industry hygiene, allergen care, and educational standards.</p>
+        </div>
+
+        <div class="row g-4 text-center">
+          <!-- Cert 1 -->
+          <div class="col-6 col-md-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="w-16 h-16 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center fs-2 mb-3">
+                <i class="fa-solid fa-clipboard-check"></i>
+              </div>
+              <h6 class="font-heading fw-bold mb-1">ServSafe Certified</h6>
+              <p class="text-muted text-xs mb-0">100% instructor food handling & safe temp manager compliance</p>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="col-6 col-md-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center fs-2 mb-3">
+                <i class="fa-solid fa-shield-virus"></i>
+              </div>
+              <h6 class="font-heading fw-bold mb-1">FARE Allergy Partner</h6>
+              <p class="text-muted text-xs mb-0">Recognized by Food Allergy Research & Education standards</p>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="col-6 col-md-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center fs-2 mb-3">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <h6 class="font-heading fw-bold mb-1">Red Cross Pediatric CPR</h6>
+              <p class="text-muted text-xs mb-0">Active pediatric first aid & emergency care on every shift</p>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="col-6 col-md-3">
+            <div class="custom-card p-4 h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="w-16 h-16 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center fs-2 mb-3">
+                <i class="fa-solid fa-recycle"></i>
+              </div>
+              <h6 class="font-heading fw-bold mb-1">Zero-Waste Austin</h6>
+              <p class="text-muted text-xs mb-0">92% organic food scraps composted; 100% plastic-free packaging</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions Section -->
+    <section class="py-5 bg-subtle" id="faq">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Parent Guidance</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions parents ask about class structure, food allergies, and studio visits.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion accordion-flush custom-card p-3 p-md-4" id="aboutAccordion">
+              
+              <!-- FAQ 1 -->
+              <div class="accordion-item mb-3 border rounded-xl overflow-hidden">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    My child is an extremely picky eater. Will they actually eat what they cook?
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    Yes! Over 88% of parents report their children try foods at our academy they refuse to touch at home. When children are the executive chefs who wash, chop, season, and smell ingredients during preparation, they take immense pride and curiosity in tasting their own culinary creation. We never force children to eat, which removes dinner-table anxiety.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="accordion-item mb-3 border rounded-xl overflow-hidden">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How strictly do you manage peanut, tree nut, and severe food allergies?
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    Our entire facility is strictly 100% peanut and tree-nut free. We do not permit outside food or snacks. For children with celiac disease, dairy allergies, egg allergies, or kosher/halal requirements, we have dedicated purple allergy workstations, sterile cutting boards, and certified allergen substitute ingredients.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="accordion-item mb-3 border rounded-xl overflow-hidden">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Can parents stay and watch during the cooking class?
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    Absolutely! You are welcome to relax in our soundproof viewing lounge equipped with one-way acoustic glass, complimentary artisan coffee, and high-speed Wi-Fi. Alternatively, you can drop off your child and follow along via our private live parent photo portal on your phone.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="accordion-item mb-3 border rounded-xl overflow-hidden">
+                <h3 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What does my child need to wear or bring to class?
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    All your child needs are closed-toe shoes and long hair tied back. We provide everything else: personalized chef coats/aprons, chef hats, kid-safe cutlery, ingredients, and durable take-home bakery boxes with full recipe cards.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div class="accordion-item border rounded-xl overflow-hidden">
+                <h3 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    What happens if my child is sick or misses a class?
+                  </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body text-muted small">
+                    We offer flexible makeup sessions! If you notify us at least 12 hours prior to class, your credit never expires and can be redeemed for any equivalent weekend workshop, evening masterclass, or credited toward our summer camps.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule a Studio Tour CTA -->
+    <section class="py-5 cta-banner-section text-white text-center">
+      <div class="container py-3">
+        <h2 class="font-heading fw-bold mb-3">Want to Tour Our Teaching Kitchen?</h2>
+        <p class="text-orange-100 max-w-xl mx-auto mb-4">
+          We welcome parents and children to visit our Austin studio, meet our chefs, inspect our allergen-safe workstations, and try a complimentary treat!
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section mb-4">
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-map-location-dot"></i> Central Austin Studio
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-circle-check"></i> Free 20-Min Guided Tour
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-shield-heart"></i> Allergen Station Walkthrough
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-cookie-bite"></i> Fresh Sample Treat Included
+          </span>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-light text-orange-600 font-bold px-4 py-3 rounded-full shadow-lg hover:bg-orange-50">
+            <i class="fa-solid fa-calendar-check me-2"></i> Book a Free Kitchen Tour
+          </a>
+          <a href="classes.html" class="btn btn-outline-light font-bold px-4 py-3 rounded-full">
+            <i class="fa-solid fa-utensils me-2"></i> View Upcoming Classes
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="brand-title">
+              <span class="brand-name">Little Chefs</span>
+              <span class="brand-tagline">Academy & Camps</span>
+            </div>
+          </a>
+          <p class="text-muted mb-4">
+            Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="https://facebook.com" class="text-muted hover:text-primary" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com" class="text-muted hover:text-primary" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" class="text-muted hover:text-primary" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-widget-title font-heading">Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i> Classes</a></li>
+            <li><a href="camps.html"><i class="fa-solid fa-angle-right"></i> Summer Camps</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-angle-right"></i> Young Chefs</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Culinary Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Age Programs</h5>
+          <ul class="footer-links">
+            <li><a href="classes.html#tiny-tasters"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</a></li>
+            <li><a href="classes.html#little-chefs"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</a></li>
+            <li><a href="classes.html#junior-gourmet"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</a></li>
+            <li><a href="classes.html#teen-master"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</a></li>
+            <li><a href="dashboard.html"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Visit Our Kitchen</h5>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary me-2"></i> 452 Gourmet Way, Suite 100, Austin, TX 78701</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> (512) 555-CHEF (2433)</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-envelope text-primary me-2"></i> hello@littlechefsacademy.com</p>
+          <p class="text-muted small"><i class="fa-regular fa-clock text-primary me-2"></i> Tue – Sun: 9:00 AM – 6:30 PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+        <p class="mb-0">&copy; 2026 Little Chefs Academy. All rights reserved.</p>
+        <div class="d-flex gap-4">
+          <a href="about.html#safety" class="text-muted hover:text-primary">Safety Protocols</a>
+          <a href="contact.html#faq" class="text-muted hover:text-primary">Parent FAQs</a>
+          <a href="404.html" class="text-muted hover:text-primary">404 Error Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

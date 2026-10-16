@@ -1,0 +1,143 @@
+/* ==========================================================================
+   LITTLE CHEFS ACADEMY - RTL (RIGHT-TO-LEFT) STYLES
+   Kids Cooking Class & Culinary Camp HTML Template
+   Complete Arabic / Hebrew Support
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+/* Header & Navigation Flipping */
+[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+
+[dir="rtl"] .navbar-brand {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* Floating Badges */
+[dir="rtl"] .floating-badge-1 {
+  left: auto;
+  right: -25px;
+}
+
+[dir="rtl"] .floating-badge-2 {
+  right: auto;
+  left: -20px;
+}
+
+/* Card Badges and Overlays */
+[dir="rtl"] .class-card-badges {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .class-card-price {
+  right: auto;
+  left: 14px;
+}
+
+/* Footer Accent Underline */
+[dir="rtl"] .footer-widget-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+/* Toast Notifications */
+
+[dir="rtl"] .toast-container-custom {
+  right: auto;
+  left: 24px;
+}
+
+[dir="rtl"] .toast-custom {
+  border-left: 1px solid var(--border-color);
+  border-right: 5px solid var(--color-primary);
+  transform: translateX(-120%);
+}
+
+[dir="rtl"] .toast-custom.show {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .toast-custom.success {
+  border-right-color: var(--color-secondary);
+}
+
+[dir="rtl"] .toast-custom.warning {
+  border-right-color: var(--color-accent-gold);
+}
+
+/* Dashboard Sidebar */
+[dir="rtl"] .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+/* Form Controls Validation Icon Flipping */
+[dir="rtl"] .form-control-custom.is-valid-custom,
+[dir="rtl"] .form-select-custom.is-valid-custom,
+[dir="rtl"] .form-control-custom.is-invalid-custom,
+[dir="rtl"] .form-select-custom.is-invalid-custom {
+  background-position: left calc(0.375em + 0.1875rem) center;
+}
+
+/* Mirrored Directional Icons */
+[dir="rtl"] .fa-arrow-right,
+[dir="rtl"] .fa-chevron-right,
+[dir="rtl"] .fa-angle-right {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+[dir="rtl"] .fa-arrow-left,
+[dir="rtl"] .fa-chevron-left,
+[dir="rtl"] .fa-angle-left {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Margin and Padding Utilities in RTL */
+[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+
+/* Story Timeline RTL Flipping */
+@media (max-width: 767.98px) {
+  [dir="rtl"] .story-timeline::before {
+    left: auto;
+    right: 24px;
+  }
+  [dir="rtl"] .timeline-badge {
+    left: auto;
+    right: 24px;
+  }
+  [dir="rtl"] .timeline-content {
+    margin-left: 0 !important;
+    margin-right: 60px !important;
+  }
+}
+

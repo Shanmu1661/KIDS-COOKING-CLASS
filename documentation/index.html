@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation | Little Chefs Academy Template</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #FF5E36;
+      --secondary: #10B981;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #1E293B;
+      --border: #E2E8F0;
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Fredoka', cursive, sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; }
+    .doc-sidebar { position: sticky; top: 20px; height: calc(100vh - 40px); overflow-y: auto; }
+    .doc-link { color: #64748B; text-decoration: none; padding: 6px 12px; display: block; border-radius: 8px; font-weight: 500; }
+    .doc-link:hover, .doc-link.active { color: var(--primary); background: #FFF0EB; }
+    .code-block { background: #0F172A; color: #E2E8F0; padding: 18px; border-radius: 12px; overflow-x: auto; }
+  </style>
+</head>
+<body class="py-4">
+
+  <div class="container-fluid px-lg-5">
+    <div class="row g-4">
+      
+      <!-- Documentation Sidebar -->
+      <div class="col-lg-3 col-xl-2 d-none d-lg-block">
+        <div class="doc-sidebar bg-white p-3 rounded-3 border">
+          <div class="d-flex align-items-center gap-2 mb-4 pb-3 border-bottom">
+            <div class="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold fs-5">👨‍🍳</div>
+            <div>
+              <h6 class="mb-0 font-heading fw-bold">Little Chefs</h6>
+              <small class="text-muted">Docs v1.0.0</small>
+            </div>
+          </div>
+          <nav class="d-flex flex-column gap-1">
+            <a href="#overview" class="doc-link active">1. Overview</a>
+            <a href="#installation" class="doc-link">2. Installation Guide</a>
+            <a href="#customization" class="doc-link">3. Customization Guide</a>
+            <a href="#features" class="doc-link">4. Key Features</a>
+            <a href="#pages" class="doc-link">5. Page Directory</a>
+            <a href="#dashboard" class="doc-link">6. Parent Dashboard</a>
+            <a href="#credits" class="doc-link">7. Credits & Resources</a>
+            <a href="#changelog" class="doc-link">8. Changelog</a>
+            <a href="../pages/index.html" class="doc-link text-primary mt-3 pt-2 border-top"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Launch Template</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Documentation Content -->
+      <div class="col-lg-9 col-xl-10">
+        <div class="bg-white p-4 p-md-5 rounded-3 border">
+          
+          <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+            <div>
+              <span class="badge bg-orange-100 text-orange-600 font-bold px-3 py-1 rounded-full mb-2">HTML5 Template</span>
+              <h1 class="display-6 font-heading fw-bold mb-1">Little Chefs Academy Documentation</h1>
+              <p class="text-muted mb-0">Complete setup guide for Kids Cooking Class & Culinary Camp HTML Template.</p>
+            </div>
+            <a href="../pages/index.html" class="btn btn-outline-danger rounded-pill fw-bold">
+              <i class="fa-solid fa-play me-1"></i> View Live Demo
+            </a>
+          </div>
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="mb-5">
+            <h2 class="font-heading fw-bold text-primary mb-3">1. Template Overview</h2>
+            <p>
+              <strong>Little Chefs Academy</strong> is a fun, hands-on, highly responsive website template tailored for kids cooking schools, culinary camps, family baking workshops, and youth nutrition programs. It features light & dark mode toggles, full RTL (Right-to-Left) Arabic/Hebrew support, WCAG 2.1 AA accessibility standards, skeleton loaders, and an interactive parent dashboard.
+            </p>
+          </section>
+
+          <!-- Section 2: Installation Guide -->
+          <section id="installation" class="mb-5">
+            <h2 class="font-heading fw-bold text-primary mb-3">2. Installation & Quick Start Guide</h2>
+            <p>No build step or Node.js required! The template uses vanilla HTML5, CSS3, ES6 JavaScript, Bootstrap 5.3, and Tailwind CSS utilities.</p>
+            
+            <h5 class="fw-bold">Step 1: Open with Any Web Server or Live Server</h5>
+            <p class="text-muted small">You can serve the directory using VS Code Live Server, Python simple HTTP server, or any Apache/Nginx web server:</p>
+            <div class="code-block mb-3">
+# Using Python 3 built-in HTTP server:
+python -m http.server 8000
+
+# Open in browser:
+http://localhost:8000/
+            </div>
+          </section>
+
+          <!-- Section 3: Customization Guide -->
+          <section id="customization" class="mb-5">
+            <h2 class="font-heading fw-bold text-primary mb-3">3. Customization Guide</h2>
+            <h5 class="fw-bold">3.1 Color Palette (CSS Variables)</h5>
+            <p class="text-muted small">To customize brand colors, open <code>assets/css/style.css</code> and update the root tokens:</p>
+            <div class="code-block mb-4">
+:root {
+  --color-primary: #FF5E36;       /* Main Brand Tangerine */
+  --color-primary-hover: #E04822;
+  --color-secondary: #10B981;     /* Fresh Herb Mint */
+  --color-accent-gold: #FFB703;   /* Honey Dijon */
+  --color-accent-purple: #8B5CF6; /* Berry Purple */
+}
+            </div>
+
+            <h5 class="fw-bold">3.2 Typography</h5>
+            <p class="text-muted small">Headings use Google Font <code>'Fredoka'</code> and body copy uses <code>'Plus Jakarta Sans'</code>.</p>
+          </section>
+
+          <!-- Section 4: Key Features -->
+          <section id="features" class="mb-5">
+            <h2 class="font-heading fw-bold text-primary mb-3">4. Key Built-in Features</h2>
+            <ul>
+              <li><strong>Dark / Light Mode Switching:</strong> Instant theme toggle with local storage persistence and system auto-detection.</li>
+              <li><strong>Full RTL Support:</strong> Complete <code>dir="rtl"</code> layout mirroring for Arabic and Hebrew text.</li>
+              <li><strong>Interactive Cook-Along Timer:</strong> Real-time start, pause, and reset timer widget for recipes.</li>
+              <li><strong>Client-Side Live Validation:</strong> Built-in validation with animated feedback and toast alerts.</li>
+              <li><strong>Skeleton Loaders:</strong> Interactive toggle to preview skeleton placeholder states.</li>
+            </ul>
+          </section>
+
+          <!-- Section 5: Page Directory -->
+          <section id="pages" class="mb-5">
+            <h2 class="font-heading fw-bold text-primary mb-3">5. Page Directory</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>File</th>
+                    <th>Page Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>pages/index.html</code></td>
+                    <td>Home Page</td>
+                    <td>Hero with floating badges, young chef highlights, age-organized classes preview, camp banner, parent portal teaser, and testimonials.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/about.html</code></td>
+                    <td>About Us</td>
+                    <td>Founder story, kitchen safety standards, instructor chef biographies, and studio tour CTA.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/services.html</code></td>
+                    <td>Services & Offerings</td>
+                    <td>Comprehensive offerings: semester classes, culinary camps, birthday parties, STEM school field trips, parent & me sessions, and starter kits.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/classes.html</code></td>
+                    <td>Classes & Age Groups</td>
+                    <td>Age-organized curriculum (Tiny Tasters 3-5, Little Chefs 6-9, Junior Gourmet 10-13, Teen Masterclass 14-17), filter tabs, and skeleton preview.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/camps.html</code></td>
+                    <td>Summer Camps</td>
+                    <td>4 signature camp tracks, weekly schedule table, daily routine timeline, and registration buttons.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/gallery.html</code></td>
+                    <td>Young Chef Showcase</td>
+                    <td>Filtered photo gallery of student creations with high-resolution lightbox modal and download feature.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/blog.html</code></td>
+                    <td>Culinary Blog</td>
+                    <td>Recipe guides, food chemistry experiments, picky eater strategies, and newsletter subscription.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/blog-detail.html</code></td>
+                    <td>Single Recipe</td>
+                    <td>Step-by-step instructions, interactive ingredient checklist, cooking timer widget, and chef safety tips.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/contact.html</code></td>
+                    <td>Contact & Location</td>
+                    <td>Validated inquiry form, interactive map mockup, parking notes, kitchen hours, and parent FAQ accordion.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/login.html</code></td>
+                    <td>Parent Portal Login</td>
+                    <td>Sign-in / sign-up tabbed interface with 1-click quick demo login button and password strength meter.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/dashboard.html</code></td>
+                    <td>Parent Dashboard</td>
+                    <td>Full portal for child enrollment, schedule tracking with calendar sync, private session photo albums, and recipe vault.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/404.html</code></td>
+                    <td>404 Error Page</td>
+                    <td>Playful "The Soufflé Collapsed!" error page with search bar and navigation shortcuts.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pages/coming-soon.html</code></td>
+                    <td>Coming Soon</td>
+                    <td>Pre-launch countdown timer and VIP early-access notification form.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Section 6: Parent Dashboard -->
+          <section id="dashboard" class="mb-5">
+            <h2 class="font-heading fw-bold text-primary mb-3">6. Parent Dashboard Architecture</h2>
+            <p>
+              The parent portal in <code>pages/dashboard.html</code> and <code>assets/js/dashboard.js</code> provides:
+            </p>
+            <ul>
+              <li><strong>Child Profile Management:</strong> Add and view enrolled kids, record severe allergies and dietary flags (Peanut-free, Gluten-free, etc.), and view earned badges.</li>
+              <li><strong>Live Session Enrollment:</strong> Select child, choose upcoming class or camp session, and complete simulated checkout with Stripe/Apple Pay.</li>
+              <li><strong>Schedule & Attendance Tracking:</strong> Interactive schedule table with calendar export (iCal/Google Calendar format simulation) and session rescheduling.</li>
+              <li><strong>Session Photo Albums:</strong> High-res photo albums with lightbox zoom and download button.</li>
+              <li><strong>Digital Recipe Vault:</strong> Print-ready family recipe cards for at-home cooking.</li>
+            </ul>
+          </section>
+
+          <!-- Section 7: Credits -->
+          <section id="credits" class="mb-5">
+            <h2 class="font-heading fw-bold text-primary mb-3">7. Credits & Third-Party Resources</h2>
+            <ul>
+              <li><strong>Bootstrap 5.3:</strong> Responsive grid, modals, dropdowns, and collapse utilities.</li>
+              <li><strong>Tailwind CSS (CDN):</strong> Rapid utility classes for modern layouts and gradients.</li>
+              <li><strong>Google Fonts:</strong> 'Fredoka' & 'Plus Jakarta Sans'.</li>
+              <li><strong>Font Awesome 6.5:</strong> Crisp culinary and UI vector icons.</li>
+              <li><strong>Unsplash:</strong> High-resolution, non-repetitive culinary and children cooking photography.</li>
+            </ul>
+          </section>
+
+          <!-- Section 8: Changelog -->
+          <section id="changelog" class="mb-4">
+            <h2 class="font-heading fw-bold text-primary mb-3">8. Version History & Support</h2>
+            <div class="p-3 bg-subtle rounded-2xl mb-3">
+              <span class="badge bg-success font-bold px-3 py-1 mb-2">v1.0.0 - Initial Release</span>
+              <ul class="mb-0 small text-muted">
+                <li>Complete 12-page responsive template package.</li>
+                <li>Dark/Light mode + Full RTL layout support.</li>
+                <li>Parent portal with enrollment engine, schedule tracker, and session photo lightbox.</li>
+                <li>WCAG 2.1 AA accessible with live form validation and skeleton loaders.</li>
+              </ul>
+            </div>
+            <p class="text-muted small">Need customization help? Contact our template author support team at <code>support@littlechefsacademy.com</code>.</p>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Cooking Classes & Culinary Camps | Little Chefs Academy</title>
+  <meta name="description" content="Fun, hands-on kids cooking classes and summer culinary camps for ages 3 to 17. Safe certified kitchen, young chef highlights, and parent dashboard.">
+  <meta name="keywords" content="kids cooking class, culinary camp, children cooking academy, junior chef, baking camp for kids, toddler cooking">
+  <meta name="author" content="Little Chefs Academy">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Little Chefs Academy | Hands-on Cooking Classes & Camps">
+  <meta property="og:description" content="Inspiring young foodies through hands-on culinary classes, summer camps, and safety-certified kitchen adventures.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍🍳</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN (Pre-configured to prevent Bootstrap clash) -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: ['selector', '[data-theme="dark"]'],
+        corePlugins: {
+          preflight: false,
+          visibility: false,
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  <!-- JSON-LD Structured Data for LocalBusiness & EducationalOrganization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Little Chefs Academy",
+    "description": "Fun, hands-on cooking classes and summer culinary camps for kids and teens aged 3-17.",
+    "url": "https://example.com/little-chefs-academy",
+    "telephone": "+1-800-555-CHEF",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "452 Gourmet Way",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "postalCode": "78701",
+      "addressCountry": "US"
+    },
+    "priceRange": "$$",
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-18:00"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to content for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="brand-title">
+            <span class="brand-name">Little Chefs</span>
+            <span class="brand-tagline">Academy & Camps</span>
+          </div>
+        </a>
+
+        <!-- Mobile Toggles Container -->
+        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+          <button class="btn btn-sm btn-outline-custom theme-toggle-btn p-2" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout">
+            <span class="rtl-text">RTL</span>
+            <i class="fa-solid fa-right-left ms-1"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-4 text-primary"></i>
+          </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
+            <!-- Theme Toggle -->
+            <button class="btn btn-outline-custom theme-toggle-btn d-none d-lg-inline-flex p-2" aria-label="Toggle dark/light theme" title="Toggle theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- RTL Pill Button (Matching user screenshot) -->
+            <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+              <span class="rtl-text">RTL</span>
+              <i class="fa-solid fa-right-left ms-2"></i>
+            </button>
+
+            <!-- Parent Portal Login Button -->
+            <a href="login.html" class="btn btn-primary-custom btn-sm-custom">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="badge-pill badge-featured mb-3">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Welcoming Ages 3 to 17
+            </div>
+            <h1 class="hero-title">
+              Where Little Hands Create <span class="hero-highlight">Culinary Magic!</span>
+            </h1>
+            <p class="hero-lead">
+              Inspiring children to chop, whisk, bake, and savor through safety-first cooking classes and immersive summer camps. Building life skills, healthy eating habits, and joyful memories!
+            </p>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a href="classes.html" class="btn btn-primary-custom">
+                <i class="fa-solid fa-utensils"></i> Explore Class Sessions
+              </a>
+              <a href="camps.html" class="btn btn-outline-custom">
+                <i class="fa-solid fa-campground"></i> 2026 Summer Camps
+              </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="d-flex align-items-center gap-4 pt-3 border-top">
+              <div class="d-flex align-items-center gap-2">
+                <div class="text-warning fs-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div>
+                  <span class="fw-bold d-block text-sm">4.9 / 5 Rating</span>
+                  <small class="text-muted"><span class="stat-counter" data-target="850" data-suffix="+">0+</span> Happy Families</small>
+                </div>
+              </div>
+              <div class="vr"></div>
+              <div class="d-flex align-items-center gap-2">
+                <div class="text-success fs-4">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                  <span class="fw-bold d-block text-sm"><span class="stat-counter" data-target="100" data-suffix="%">0%</span> Nut-Safe</span>
+                  <small class="text-muted">Allergy-Aware Facility</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Media -->
+          <div class="col-lg-6">
+            <div class="hero-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80" alt="Smiling young girl wearing chef apron and rolling fresh dough in kitchen" class="hero-main-img" width="600" height="480">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Young Chef Highlights Section -->
+    <section class="py-5 bg-subtle">
+      <div class="container py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-award"></i> Hall of Fame</span>
+            <h2 class="section-title mb-1">Young Chef Highlights</h2>
+            <p class="text-muted mb-0">Celebrate the delicious milestones created by our students this week.</p>
+          </div>
+          <a href="gallery.html" class="btn btn-outline-custom btn-sm-custom mt-3 mt-md-0">
+            View All Creations <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Young Chef 1 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="custom-card p-3">
+              <div class="rounded-3 overflow-hidden mb-3 position-relative" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80" alt="Freshly baked golden braided brioche loaf dusted with flour" class="w-100 h-100 object-cover" width="300" height="200">
+                <span class="badge bg-warning text-dark position-absolute top-2 start-2 fw-bold">Star Baker</span>
+              </div>
+              <h5 class="font-heading fw-bold mb-1">Golden Brioche Braid</h5>
+              <p class="small text-muted mb-2">Baked by <strong>Leo (Age 8)</strong></p>
+              <div class="d-flex align-items-center gap-1 text-warning small">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1">(Flawless Rise)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Young Chef 2 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="custom-card p-3">
+              <div class="rounded-3 overflow-hidden mb-3 position-relative" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80" alt="Colorful berry dessert tart with mint garnish" class="w-100 h-100 object-cover" width="300" height="200">
+                <span class="badge bg-purple-100 text-purple-700 position-absolute top-2 start-2 fw-bold">Pastry Pro</span>
+              </div>
+              <h5 class="font-heading fw-bold mb-1">Triple Berry Rustic Tart</h5>
+              <p class="small text-muted mb-2">Crafted by <strong>Mia (Age 11)</strong></p>
+              <div class="d-flex align-items-center gap-1 text-warning small">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1">(Perfect Glaze)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Young Chef 3 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="custom-card p-3">
+              <div class="rounded-3 overflow-hidden mb-3 position-relative" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Handmade mozzarella basil pizza slice" class="w-100 h-100 object-cover" width="300" height="200">
+                <span class="badge bg-emerald-100 text-emerald-700 position-absolute top-2 start-2 fw-bold">Savory Master</span>
+              </div>
+              <h5 class="font-heading fw-bold mb-1">Wood-Fired Style Pizza</h5>
+              <p class="small text-muted mb-2">Tossed by <strong>Oliver (Age 9)</strong></p>
+              <div class="d-flex align-items-center gap-1 text-warning small">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1">(Crispy Crust)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Young Chef 4 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="custom-card p-3">
+              <div class="rounded-3 overflow-hidden mb-3 position-relative" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" alt="Artisanal buttercream piped cupcakes with sprinkles" class="w-100 h-100 object-cover" width="300" height="200">
+                <span class="badge bg-pink-100 text-pink-700 position-absolute top-2 start-2 fw-bold">Creative Piping</span>
+              </div>
+              <h5 class="font-heading fw-bold mb-1">Vanilla Rose Cupcakes</h5>
+              <p class="small text-muted mb-2">Decorated by <strong>Zoe (Age 6)</strong></p>
+              <div class="d-flex align-items-center gap-1 text-warning small">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="text-muted ms-1">(Piping Star)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes by Age Group Section -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-users"></i> Tailored Curriculum</span>
+          <h2 class="section-title">Cooking Classes Organized by Age</h2>
+          <p class="section-subtitle">
+            Every age group has unique developmental milestones. Our age-specific kitchens ensure kids cook safely at their comfort level.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Age Group 1: 3-5 Years -->
+          <div class="col-md-6 col-lg-3">
+            <div class="class-card">
+              <div class="class-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Toddler in chef hat enjoying dough kneading" class="class-card-img" width="300" height="220">
+                <div class="class-card-badges">
+                  <span class="badge-pill badge-age">Ages 3 – 5</span>
+                </div>
+                <div class="class-card-price">$45</div>
+              </div>
+              <div class="class-card-body">
+                <h4 class="font-heading fw-bold mb-2">Tiny Tasters</h4>
+                <p class="text-muted small mb-3">
+                  Sensory discovery through food! Kneading safe dough, berry layering, counting ingredients, and tasting rainbows.
+                </p>
+                <ul class="class-meta-list">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 60 Min Sessions</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-heart"></i> Parent & Me Welcome</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-shield-halved"></i> 100% No-Heat Safe</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                  <a href="classes.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Curriculum</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Age Group 2: 6-9 Years -->
+          <div class="col-md-6 col-lg-3">
+            <div class="class-card">
+              <div class="class-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=600&q=80" alt="Young child carefully slicing colorful vegetables" class="class-card-img" width="300" height="220">
+                <div class="class-card-badges">
+                  <span class="badge-pill badge-age">Ages 6 – 9</span>
+                  <span class="badge-pill badge-featured">Popular</span>
+                </div>
+                <div class="class-card-price">$55</div>
+              </div>
+              <div class="class-card-body">
+                <h4 class="font-heading fw-bold mb-2">Little Chefs</h4>
+                <p class="text-muted small mb-3">
+                  Knife safety using child-safe nylon blades, handmade pasta rolling, measuring geometry, and tasty skillet quesadillas.
+                </p>
+                <ul class="class-meta-list">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 90 Min Sessions</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-utensils"></i> Individual Cooking Station</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-certificate"></i> Junior Knife Badge</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                  <a href="classes.html" class="btn btn-primary-custom w-100 btn-sm-custom">View Curriculum</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Age Group 3: 10-13 Years -->
+          <div class="col-md-6 col-lg-3">
+            <div class="class-card">
+              <div class="class-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1514986888952-8cd320577b68?auto=format&fit=crop&w=600&q=80" alt="Pre-teen making handmade filled ravioli pasta" class="class-card-img" width="300" height="220">
+                <div class="class-card-badges">
+                  <span class="badge-pill badge-age">Ages 10 – 13</span>
+                </div>
+                <div class="class-card-price">$65</div>
+              </div>
+              <div class="class-card-body">
+                <h4 class="font-heading fw-bold mb-2">Junior Gourmet</h4>
+                <p class="text-muted small mb-3">
+                  Induction burner sautéing, emulsified vinaigrettes, yeast breads, culinary chemistry, and plating aesthetics.
+                </p>
+                <ul class="class-meta-list">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 2 Hour Sessions</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-fire-burner"></i> Heat & Flame Safety</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-award"></i> Sauté Master Badge</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                  <a href="classes.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Curriculum</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Age Group 4: 14-17 Years -->
+          <div class="col-md-6 col-lg-3">
+            <div class="class-card">
+              <div class="class-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=600&q=80" alt="Teenager plating an elegant culinary dish" class="class-card-img" width="300" height="220">
+                <div class="class-card-badges">
+                  <span class="badge-pill badge-age">Ages 14 – 17</span>
+                </div>
+                <div class="class-card-price">$75</div>
+              </div>
+              <div class="class-card-body">
+                <h4 class="font-heading fw-bold mb-2">Teen Masterclass</h4>
+                <p class="text-muted small mb-3">
+                  Advanced French pastry, mother sauces, sushi craftsmanship, knife speed, and mystery ingredient cook-offs.
+                </p>
+                <ul class="class-meta-list">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 2.5 Hour Sessions</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-mortar-pestle"></i> Professional Prep Skills</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-graduation-cap"></i> Culinary Pre-College Prep</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                  <a href="classes.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Curriculum</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summer Camps Banner / Showcase Section -->
+    <section class="py-5 summer-camp-banner-section">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-tag bg-amber-100 text-amber-800"><i class="fa-solid fa-sun"></i> Summer 2026 Adventure</span>
+            <h2 class="section-title">Full & Half Day Culinary Summer Camps</h2>
+            <p class="text-muted mb-4">
+              Our week-long culinary camps turn curious food lovers into confident kitchen creators! Each week explores exciting themes from global cuisines to artisan pastry arts.
+            </p>
+
+            <!-- Banner Label Section -->
+            <div class="banner-labels-section justify-content-start mb-4">
+              <span class="banner-label-pill pill-primary">
+                <i class="fa-solid fa-calendar-days"></i> Mon&ndash;Fri Camps
+              </span>
+              <span class="banner-label-pill pill-success">
+                <i class="fa-solid fa-clock"></i> 9 AM &ndash; 3 PM
+              </span>
+              <span class="banner-label-pill pill-warning">
+                <i class="fa-solid fa-utensils"></i> Hot Lunch Included
+              </span>
+              <span class="banner-label-pill pill-info">
+                <i class="fa-solid fa-shield-heart"></i> 100% Nut-Safe
+              </span>
+            </div>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-3 border">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">1</div>
+                  <div>
+                    <h6 class="mb-0 fw-bold font-heading">Global Gastronomy</h6>
+                    <small class="text-muted">Passport to 5 Cuisines</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-3 border">
+                  <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">2</div>
+                  <div>
+                    <h6 class="mb-0 fw-bold font-heading">Master Pastry Camp</h6>
+                    <small class="text-muted">Croissants, Macarons & Tarts</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-3 border">
+                  <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">3</div>
+                  <div>
+                    <h6 class="mb-0 fw-bold font-heading">Farm-to-Table Green</h6>
+                    <small class="text-muted">Harvesting & Botanical Drinks</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-3 border">
+                  <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">4</div>
+                  <div>
+                    <h6 class="mb-0 fw-bold font-heading">Iron Chef Mystery</h6>
+                    <small class="text-muted">Creative Team Challenges</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="camps.html" class="btn btn-primary-custom">
+              <i class="fa-solid fa-calendar-check"></i> See Weekly Camp Schedule
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-700">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Artisanal mini pizzas prepared during summer camp session" class="w-100 h-96 object-cover" width="600" height="400">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent Dashboard Teaser & Features -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 order-2 order-lg-1">
+            <div class="custom-card p-4 shadow-xl border-orange-200">
+              <div class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=120&q=80" alt="Leo Miller child avatar" class="w-12 h-12 rounded-full border-2 border-orange-500 object-cover">
+                  <div>
+                    <h6 class="mb-0 fw-bold font-heading">Leo Miller (Age 8)</h6>
+                    <small class="text-emerald-600 font-semibold"><i class="fa-solid fa-circle-check"></i> Peanut-Free Station Assigned</small>
+                  </div>
+                </div>
+                <span class="badge bg-orange-100 text-orange-700">Active Pass</span>
+              </div>
+              <div class="p-3 bg-subtle rounded-3 mb-3">
+                <div class="d-flex justify-content-between text-sm mb-1">
+                  <span class="text-muted">Upcoming Session:</span>
+                  <span class="fw-bold text-primary">Sat, Oct 24 • 10:00 AM</span>
+                </div>
+                <div class="fw-bold">Handmade Gnocchi & Fresh Herb Pesto</div>
+                <small class="text-muted">Instructor: Chef Marco Rossi • Station #3</small>
+              </div>
+              <div class="d-flex justify-content-between align-items-center text-sm">
+                <span><i class="fa-solid fa-camera text-primary me-1"></i> 18 Photos in Album</span>
+                <a href="dashboard.html" class="fw-bold text-primary hover:underline">Access Portal &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 order-1 order-lg-2">
+            <span class="section-tag"><i class="fa-solid fa-shield-halved"></i> Peace of Mind</span>
+            <h2 class="section-title">A Seamless Parent Dashboard for Stress-Free Scheduling</h2>
+            <p class="text-muted mb-4">
+              We know busy parents value transparency and convenience. Our parent portal gives you instant control over every detail of your child's culinary education.
+            </p>
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="fs-3 text-primary"><i class="fa-solid fa-calendar-days"></i></div>
+                  <div>
+                    <h5 class="font-heading fw-bold mb-1">Live Class Enrollment</h5>
+                    <p class="text-muted small">Reserve open spots in weekend workshops, multi-week semesters, or camp slots with one click.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="fs-3 text-success"><i class="fa-solid fa-camera-retro"></i></div>
+                  <div>
+                    <h5 class="font-heading fw-bold mb-1">Private Session Photos</h5>
+                    <p class="text-muted small">High-resolution candid photos uploaded by chef instructors after every session to download and share.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="fs-3 text-warning"><i class="fa-solid fa-notes-medical"></i></div>
+                  <div>
+                    <h5 class="font-heading fw-bold mb-1">Allergy & Dietary Profiles</h5>
+                    <p class="text-muted small">Detailed allergy tags sent directly to the chef's tablet so workstations are sanitized and allergen-safe.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex gap-3">
+                  <div class="fs-3 text-purple-500"><i class="fa-solid fa-book-bookmark"></i></div>
+                  <div>
+                    <h5 class="font-heading fw-bold mb-1">Digital Recipe Vault</h5>
+                    <p class="text-muted small">Every recipe cooked in class is saved to your account with step-by-step cook-at-home instructions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2">
+              <a href="dashboard.html" class="btn btn-secondary-custom">
+                <i class="fa-solid fa-right-to-bracket"></i> Launch Parent Dashboard Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Recipe Feature with Cook Timer -->
+    <section class="py-5 bg-subtle">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-tag"><i class="fa-solid fa-cookie-bite"></i> Recipe of the Week</span>
+            <h2 class="section-title">Crispy Rainbow Veggie Quesadillas</h2>
+            <p class="text-muted mb-4">
+              Taught in our Little Chefs (6-9) group, this kid-tested favorite packs grated zucchini, sweet corn, cheddar, and mashed avocado into golden triangles.
+            </p>
+            <div class="recipe-timer-card">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-primary text-white px-3 py-1 rounded-full"><i class="fa-regular fa-clock me-1"></i> Interactive Baking Timer</span>
+                <span class="text-muted small">Step 3 of 4: Golden Crust</span>
+              </div>
+              <div class="timer-display" id="recipeTimerDisplay" data-minutes="8">08:00</div>
+              <p class="text-muted small mb-3">Cook until cheese melts and tortillas turn bubbly and golden brown!</p>
+              <div class="d-flex justify-content-center gap-2">
+                <button type="button" class="btn btn-primary-custom btn-sm-custom" id="timerStartBtn">
+                  <i class="fa-solid fa-play"></i> Start Baking Timer
+                </button>
+                <button type="button" class="btn btn-warning btn-sm-custom d-none" id="timerPauseBtn">
+                  <i class="fa-solid fa-pause"></i> Pause
+                </button>
+                <button type="button" class="btn btn-outline-custom btn-sm-custom" id="timerResetBtn">
+                  <i class="fa-solid fa-rotate-right"></i> Reset
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="rounded-3xl overflow-hidden shadow-lg">
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80" alt="Crispy golden quesadillas served on rustic wooden board" class="w-100 h-96 object-cover" width="600" height="380">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reduced & Modern Statistics Section -->
+    <section class="py-4 my-2">
+      <div class="container">
+        <div class="stat-banner-reduced">
+          <div class="row text-center g-3 align-items-center">
+            <div class="col-6 col-md-3 stat-item">
+              <div class="stat-number text-orange-500 stat-counter" data-target="1850" data-suffix="+">0+</div>
+              <p class="mb-0 text-muted font-medium text-sm">Young Chefs Graduated</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+              <div class="stat-number text-orange-500 stat-counter" data-target="480" data-suffix="+">0+</div>
+              <p class="mb-0 text-muted font-medium text-sm">Kid-Friendly Recipes</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+              <div class="stat-number text-emerald-500 stat-counter" data-target="100" data-suffix="%">0%</div>
+              <p class="mb-0 text-muted font-medium text-sm">Kitchen Safety Record</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+              <div class="stat-number text-purple-500 stat-counter" data-target="98" data-suffix="%">0%</div>
+              <p class="mb-0 text-muted font-medium text-sm">Parent Approval Score</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent Testimonials Section -->
+    <section class="py-5 testimonials-bg-section">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-comments"></i> Parent Stories</span>
+          <h2 class="section-title">What Families Are Saying</h2>
+          <p class="section-subtitle">Real experiences from parents whose children found their culinary voice with us.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Testimonial 1 -->
+          <div class="col-lg-4 d-flex">
+            <div class="testimonial-card w-100">
+              <div class="testimonial-quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+              <div class="testimonial-body">
+                <!-- Top Header: Stars & Program Badge -->
+                <div class="d-flex justify-content-between align-items-center mb-2 pe-4">
+                  <div class="text-warning small d-flex gap-1" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge badge-pill bg-orange-100 text-orange-700">Little Chefs (6&ndash;9)</span>
+                </div>
+
+                <!-- Review Title -->
+                <h5 class="font-heading fw-bold mt-2 mb-2">"From Picky Eater to Junior Pasta Chef!"</h5>
+
+                <!-- Quote Body -->
+                <p class="text-muted mb-3 flex-grow-1">
+                  "My 7-year-old was the pickiest eater on the planet. After 3 weeks in the Little Chefs class, he now asks to chop bell peppers and made our whole family homemade pasta from scratch!"
+                </p>
+
+                <!-- Skill & Feature Highlights -->
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-subtle text-muted text-xs border"><i class="fa-solid fa-utensils text-orange-500 me-1"></i> Fresh Pasta Workshop</span>
+                  <span class="badge bg-subtle text-muted text-xs border"><i class="fa-solid fa-shield-heart text-success me-1"></i> Kid-Safe Knives</span>
+                </div>
+              </div>
+
+              <!-- Author Footer (Pinned to Exact Same Baseline) -->
+              <div class="testimonial-footer d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Sarah Jenkins parent portrait" class="w-11 h-11 rounded-full object-cover border-2 border-orange-500">
+                  <div>
+                    <h6 class="mb-0 font-heading fw-bold d-flex align-items-center gap-1">
+                      Sarah Jenkins <i class="fa-solid fa-circle-check text-emerald-500 text-xs" title="Verified Enrolled Parent"></i>
+                    </h6>
+                    <small class="text-muted">Mom of Leo (Age 8)</small>
+                  </div>
+                </div>
+                <span class="badge bg-subtle text-muted text-xs border d-none d-sm-inline-block">
+                  <i class="fa-regular fa-calendar me-1"></i> Spring '26
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-lg-4 d-flex">
+            <div class="testimonial-card w-100">
+              <div class="testimonial-quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+              <div class="testimonial-body">
+                <!-- Top Header: Stars & Program Badge -->
+                <div class="d-flex justify-content-between align-items-center mb-2 pe-4">
+                  <div class="text-warning small d-flex gap-1" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge badge-pill bg-amber-100 text-amber-800">Summer Camp</span>
+                </div>
+
+                <!-- Review Title -->
+                <h5 class="font-heading fw-bold mt-2 mb-2">"Hands Down the Best Camp Experience"</h5>
+
+                <!-- Quote Body -->
+                <p class="text-muted mb-3 flex-grow-1">
+                  "The summer camp was hands down the best camp experience our daughter has ever had. She came home every afternoon beaming with pride, carrying fresh sourdough focaccia and cupcakes."
+                </p>
+
+                <!-- Skill & Feature Highlights -->
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-subtle text-muted text-xs border"><i class="fa-solid fa-sun text-warning me-1"></i> Full-Day Camp Track</span>
+                  <span class="badge bg-subtle text-muted text-xs border"><i class="fa-solid fa-cookie-bite text-amber-600 me-1"></i> Pastry Artistry</span>
+                </div>
+              </div>
+
+              <!-- Author Footer (Pinned to Exact Same Baseline) -->
+              <div class="testimonial-footer d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="David Martinez parent portrait" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500">
+                  <div>
+                    <h6 class="mb-0 font-heading fw-bold d-flex align-items-center gap-1">
+                      David Martinez <i class="fa-solid fa-circle-check text-emerald-500 text-xs" title="Verified Enrolled Parent"></i>
+                    </h6>
+                    <small class="text-muted">Dad of Mia (Age 11)</small>
+                  </div>
+                </div>
+                <span class="badge bg-subtle text-muted text-xs border d-none d-sm-inline-block">
+                  <i class="fa-solid fa-campground me-1"></i> July '26
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-lg-4 d-flex">
+            <div class="testimonial-card w-100">
+              <div class="testimonial-quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+              <div class="testimonial-body">
+                <!-- Top Header: Stars & Program Badge -->
+                <div class="d-flex justify-content-between align-items-center mb-2 pe-4">
+                  <div class="text-warning small d-flex gap-1" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge badge-pill bg-emerald-100 text-emerald-700">100% Nut-Safe</span>
+                </div>
+
+                <!-- Review Title -->
+                <h5 class="font-heading fw-bold mt-2 mb-2">"True Peace of Mind for Food Allergies"</h5>
+
+                <!-- Quote Body -->
+                <p class="text-muted mb-3 flex-grow-1">
+                  "As a parent of a child with severe peanut allergies, finding safe cooking classes felt impossible. Little Chefs Academy took extreme care, and the parent photo portal made my day!"
+                </p>
+
+                <!-- Skill & Feature Highlights -->
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-subtle text-muted text-xs border"><i class="fa-solid fa-camera text-info me-1"></i> Photo Portal Access</span>
+                  <span class="badge bg-subtle text-muted text-xs border"><i class="fa-solid fa-shield-halved text-emerald-600 me-1"></i> Allergen Protocol</span>
+                </div>
+              </div>
+
+              <!-- Author Footer (Pinned to Exact Same Baseline) -->
+              <div class="testimonial-footer d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Emily Watson parent portrait" class="w-11 h-11 rounded-full object-cover border-2 border-emerald-500">
+                  <div>
+                    <h6 class="mb-0 font-heading fw-bold d-flex align-items-center gap-1">
+                      Emily Watson <i class="fa-solid fa-circle-check text-emerald-500 text-xs" title="Verified Enrolled Parent"></i>
+                    </h6>
+                    <small class="text-muted">Mom of Sam (Age 6)</small>
+                  </div>
+                </div>
+                <span class="badge bg-subtle text-muted text-xs border d-none d-sm-inline-block">
+                  <i class="fa-regular fa-clock me-1"></i> Weekend Batch
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter & Free Recipe Starter Pack CTA -->
+    <section class="py-5 recipe-newsletter-banner-section">
+      <div class="container py-4">
+        <div class="custom-card bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 p-5 text-center">
+          <div class="max-w-2xl mx-auto">
+            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 fs-3 shadow-md">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <h2 class="font-heading fw-bold mb-2">Get Our Free "10 Kid-Approved Recipes" Guide</h2>
+            <p class="text-muted mb-4">Join 4,000+ parents who receive our weekend family cooking tips, kitchen safety worksheets, and early-access camp discounts.</p>
+            
+            <!-- Banner Label Section -->
+            <div class="banner-labels-section mb-4">
+              <span class="banner-label-pill pill-primary">
+                <i class="fa-solid fa-file-pdf"></i> Instant PDF Guide
+              </span>
+              <span class="banner-label-pill pill-success">
+                <i class="fa-solid fa-utensils"></i> 10 Kid-Approved Recipes
+              </span>
+              <span class="banner-label-pill pill-warning">
+                <i class="fa-solid fa-heart"></i> 4,000+ Happy Families
+              </span>
+              <span class="banner-label-pill pill-info">
+                <i class="fa-solid fa-bell"></i> Weekly Cooking Tips
+              </span>
+            </div>
+
+            <form class="newsletter-form d-flex flex-column flex-sm-row gap-2 justify-content-center max-w-lg mx-auto">
+              <input type="email" class="form-control-custom" placeholder="Enter your email address" required aria-label="Parent email address">
+              <button type="submit" class="btn btn-primary-custom text-nowrap">
+                <i class="fa-solid fa-paper-plane"></i> Send Free Guide
+              </button>
+            </form>
+            <p class="text-xs text-muted mt-3"><i class="fa-solid fa-lock me-1"></i> We respect your privacy. No spam ever. Unsubscribe anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: Brand & Bio -->
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div class="brand-title">
+              <span class="brand-name">Little Chefs</span>
+              <span class="brand-tagline">Academy & Camps</span>
+            </div>
+          </a>
+          <p class="text-muted mb-4">
+            Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="https://facebook.com" class="text-muted hover:text-primary" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com" class="text-muted hover:text-primary" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" class="text-muted hover:text-primary" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://pinterest.com" class="text-muted hover:text-primary" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-widget-title font-heading">Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i> Classes</a></li>
+            <li><a href="camps.html"><i class="fa-solid fa-angle-right"></i> Summer Camps</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-angle-right"></i> Young Chefs</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Culinary Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Age Groups -->
+        <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Age Programs</h5>
+          <ul class="footer-links">
+            <li><a href="classes.html#tiny-tasters"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</a></li>
+            <li><a href="classes.html#little-chefs"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</a></li>
+            <li><a href="classes.html#junior-gourmet"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</a></li>
+            <li><a href="classes.html#teen-master"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</a></li>
+            <li><a href="dashboard.html"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</a></li>
+            <li><a href="coming-soon.html"><i class="fa-solid fa-clock"></i> Fall 2026 Preview</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Location -->
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Visit Our Kitchen</h5>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary me-2"></i> 452 Gourmet Way, Suite 100, Austin, TX 78701</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> (512) 555-CHEF (2433)</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-envelope text-primary me-2"></i> hello@littlechefsacademy.com</p>
+          <p class="text-muted small"><i class="fa-regular fa-clock text-primary me-2"></i> Tue – Sun: 9:00 AM – 6:30 PM</p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+        <p class="mb-0">&copy; 2026 Little Chefs Academy. All rights reserved. Crafted for joyful young foodies.</p>
+        <div class="d-flex gap-4">
+          <a href="about.html#safety" class="text-muted hover:text-primary">Safety Protocols</a>
+          <a href="contact.html#faq" class="text-muted hover:text-primary">Parent FAQs</a>
+          <a href="404.html" class="text-muted hover:text-primary">404 Error Page</a>
+          <a href="../documentation/index.html" class="text-muted hover:text-primary">Template Documentation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

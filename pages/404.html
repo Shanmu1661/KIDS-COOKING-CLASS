@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Recipe Not Found | Little Chefs Academy</title>
+  <meta name="description" content="Oops! The page you were looking for seems to have simmered away. Return to Little Chefs Academy kitchen home.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧁</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN (Pre-configured to prevent Bootstrap clash) -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: ['selector', '[data-theme="dark"]'],
+        corePlugins: {
+          preflight: false,
+          visibility: false,
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-subtle min-h-screen flex flex-col justify-between">
+
+  <!-- Skip to content for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="brand-title">
+            <span class="brand-name">Little Chefs</span>
+            <span class="brand-tagline">Academy & Camps</span>
+          </div>
+        </a>
+
+        <!-- Mobile Toggles Container -->
+        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+          <button class="btn btn-sm btn-outline-custom theme-toggle-btn p-2" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout">
+            <span class="rtl-text">RTL</span>
+            <i class="fa-solid fa-right-left ms-1"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-4 text-primary"></i>
+          </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
+            <button class="btn btn-outline-custom theme-toggle-btn d-none d-lg-inline-flex p-2" aria-label="Toggle dark/light theme" title="Toggle theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- RTL Pill Button (Matching user screenshot) -->
+            <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+              <span class="rtl-text">RTL</span>
+              <i class="fa-solid fa-right-left ms-2"></i>
+            </button>
+
+            <a href="login.html" class="btn btn-primary-custom btn-sm-custom">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 404 Main Body -->
+  <main id="main-content" class="my-auto py-5 text-center">
+    <div class="container">
+      <div class="max-w-xl mx-auto">
+        <div class="mb-4">
+          <span class="text-9xl font-bold font-heading text-orange-500 tracking-wider">404</span>
+          <div class="text-6xl -mt-6">🧑‍🍳💨</div>
+        </div>
+
+        <h1 class="font-heading fw-bold mb-2">Oops! The Soufflé Collapsed!</h1>
+        <p class="text-muted mb-4">
+          The recipe page you are searching for might have burned in the oven, had its name changed, or simmered completely away. Don't worry, every master chef burns a batch once in a while!
+        </p>
+
+        <!-- Navigation Buttons -->
+        <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+          <a href="index.html" class="btn btn-primary-custom">
+            <i class="fa-solid fa-house me-1"></i> Back to Kitchen Home
+          </a>
+          <a href="classes.html" class="btn btn-outline-custom">
+            <i class="fa-solid fa-utensils me-1"></i> Explore Classes by Age
+          </a>
+          <a href="dashboard.html" class="btn btn-outline-custom">
+            <i class="fa-solid fa-user-lock me-1"></i> Parent Portal
+          </a>
+        </div>
+
+        <!-- Quick Search Bar -->
+        <div class="custom-card p-3 max-w-md mx-auto">
+          <form action="classes.html" method="get" class="d-flex gap-2">
+            <input type="text" class="form-control-custom" placeholder="Search pasta, camps, pastry..." aria-label="Search site">
+            <button type="submit" class="btn btn-primary-custom btn-sm-custom text-nowrap">
+              <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3 text-center text-muted small border-top bg-white dark:bg-slate-900">
+    <div class="container">
+      &copy; 2026 Little Chefs Academy. All rights reserved. Keep on cooking!
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

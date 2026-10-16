@@ -1,0 +1,6 @@
+# Little Chefs Academy - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://littlechefsacademy.com/sitemap.xml
