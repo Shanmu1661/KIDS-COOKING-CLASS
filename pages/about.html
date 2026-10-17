@@ -14,7 +14,9 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍🍳</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,15 +71,15 @@
 
         <!-- Mobile Toggles Container -->
         <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
-          <button class="btn btn-sm btn-outline-custom theme-toggle-btn p-2" aria-label="Toggle theme">
+          <button class="btn btn-icon-round theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
             <i class="fa-solid fa-moon"></i>
           </button>
-          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout">
+          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout" title="Switch text direction">
             <span class="rtl-text">RTL</span>
             <i class="fa-solid fa-right-left ms-1"></i>
           </button>
           <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fs-4 text-primary"></i>
+            <i class="fa-solid fa-bars fs-4 text-white"></i>
           </button>
         </div>
 
@@ -91,10 +93,10 @@
               <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
+              <a class="nav-link" href="classes.html">Classes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+              <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog.html">Blog</a>
@@ -109,14 +111,19 @@
 
           <!-- Action Buttons -->
           <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
-            <button class="btn btn-outline-custom theme-toggle-btn d-none d-lg-inline-flex p-2" aria-label="Toggle dark/light theme">
+            <!-- Settings / Theme Toggle (Matching user screenshot) -->
+            <button class="btn btn-icon-round theme-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
               <i class="fa-solid fa-moon"></i>
             </button>
+
+            <!-- RTL Pill Button (Matching user screenshot) -->
             <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
               <span class="rtl-text">RTL</span>
               <i class="fa-solid fa-right-left ms-2"></i>
             </button>
-            <a href="login.html" class="btn btn-primary-custom btn-sm-custom">
+
+            <!-- Parent Portal Login Button (Matching user screenshot) -->
+            <a href="login.html" class="btn btn-parent-login">
               <i class="fa-solid fa-lock me-1"></i> Parent Login
             </a>
           </div>
@@ -129,6 +136,13 @@
     <!-- Breadcrumb & Page Banner -->
     <section class="page-header-banner banner-about">
       <div class="container text-center py-3">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <div class="page-breadcrumb-pill">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="breadcrumb-current">About Us</span>
+          </div>
+        </nav>
         <span class="section-tag"><i class="fa-solid fa-heart"></i> Our Story & Values</span>
         <h1 class="section-title mb-2">Nurturing Lifelong Kitchen Joy</h1>
         <p class="text-muted max-w-xl mx-auto mb-0">
@@ -217,7 +231,7 @@
     </section>
 
     <!-- Educational Philosophy Section (Our 4 Core Learning Pillars) -->
-    <section class="py-5 bg-subtle">
+    <section class="py-5 learning-pillars-bg-section">
       <div class="container py-4">
         <div class="text-center mb-5">
           <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Holistic Culinary Education</span>
@@ -445,73 +459,166 @@
       </div>
     </section>
 
-    <!-- Milestone Timeline Section -->
-    <section class="py-5">
+    <!-- Milestone Timeline Section (Growing Together) -->
+    <section class="py-5 py-lg-6 journey-section">
       <div class="container py-4">
-        <div class="text-center mb-5">
-          <span class="section-tag"><i class="fa-solid fa-timeline"></i> Growing Together</span>
+        <!-- Section Header -->
+        <div class="text-center mb-5 max-w-3xl mx-auto">
+          <span class="section-tag"><i class="fa-solid fa-seedling"></i> Growing Together</span>
           <h2 class="section-title">Our Culinary Journey & Milestones</h2>
           <p class="section-subtitle">How a mother's passion project blossomed into Central Texas' leading hands-on kids culinary academy.</p>
         </div>
 
-        <div class="story-timeline max-w-4xl mx-auto">
-          <!-- 2018 -->
-          <div class="timeline-item">
-            <div class="timeline-badge">2018</div>
-            <div class="timeline-content">
-              <span class="badge bg-orange-100 text-orange-700 mb-2">Humble Beginnings</span>
-              <h5 class="font-heading fw-bold mb-2">The Kitchen Table Pilot</h5>
-              <p class="text-muted small mb-0">
-                Chef Maya Vance welcomed 8 neighborhood kids into her home kitchen for Saturday morning scone and brioche baking. Word spread rapidly among parents craving screen-free tactile hobbies.
+        <div class="row g-5 align-items-start">
+          <!-- Left Column: Story Overview & Key Highlights -->
+          <div class="col-lg-5 col-xl-4 sticky-lg-top" style="top: 100px;">
+            <div class="journey-hero-card p-4 p-md-5 rounded-4 shadow-xl border">
+              <div class="badge-pill badge-featured mb-3">
+                <i class="fa-solid fa-heart-pulse"></i> 8 Years of Joyful Cooking
+              </div>
+              <h3 class="font-heading fw-bold mb-3">From Maya's Table to Austin's Flagship Studio</h3>
+              <p class="text-muted mb-4">
+                What began with 8 neighborhood children baking fresh scones around a flour-dusted table has grown into an accredited, allergen-safe culinary sanctuary empowering thousands of confident young chefs.
               </p>
+
+              <!-- Quick Milestone Metric Badges -->
+              <div class="row g-3 mb-4">
+                <div class="col-6">
+                  <div class="p-3 bg-subtle rounded-3 text-center border">
+                    <div class="fs-3 fw-bold text-primary font-heading">2018</div>
+                    <small class="text-muted fw-semibold">Year Founded</small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 bg-subtle rounded-3 text-center border">
+                    <div class="fs-3 fw-bold text-success font-heading">100%</div>
+                    <small class="text-muted fw-semibold">Nut-Safe Sanctuary</small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 bg-subtle rounded-3 text-center border">
+                    <div class="fs-3 fw-bold text-blue-600 font-heading">4.5k</div>
+                    <small class="text-muted fw-semibold">Sq. Ft. Studio</small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 bg-subtle rounded-3 text-center border">
+                    <div class="fs-3 fw-bold text-amber-500 font-heading">1,850+</div>
+                    <small class="text-muted fw-semibold">Graduates</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quote Card -->
+              <div class="p-3 rounded-3 bg-orange-50 dark:bg-slate-800 border-start border-4 border-orange-500">
+                <p class="small text-muted mb-1 fst-italic">"Every great chef was once a child who made a glorious, creative mess in the kitchen."</p>
+                <small class="fw-bold text-primary">&mdash; Chef Maya Vance, Founder</small>
+              </div>
             </div>
           </div>
 
-          <!-- 2020 -->
-          <div class="timeline-item">
-            <div class="timeline-badge">2020</div>
-            <div class="timeline-content">
-              <span class="badge bg-emerald-100 text-emerald-700 mb-2">Nut-Safe Milestone</span>
-              <h5 class="font-heading fw-bold mb-2">100% Tree Nut & Peanut-Free Certification</h5>
-              <p class="text-muted small mb-0">
-                In response to rising childhood food allergies, we transitioned our entire operation into a strictly certified nut-free sanctuary with separate gluten-free color-coded workstations.
-              </p>
-            </div>
-          </div>
+          <!-- Right Column: Linear Progressive Milestone Track -->
+          <div class="col-lg-7 col-xl-8">
+            <div class="journey-track ps-md-4">
+              <!-- Milestone 1: 2018 -->
+              <div class="journey-card-wrapper mb-4">
+                <div class="journey-node bg-orange-500 text-white shadow-md">
+                  <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                <div class="journey-card p-4 rounded-4 shadow-sm border">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="journey-year-pill bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300">2018</span>
+                      <span class="badge bg-subtle text-muted border">Humble Beginnings</span>
+                    </div>
+                    <span class="text-xs text-muted fw-bold"><i class="fa-solid fa-user-group me-1"></i> 8 Pilot Students</span>
+                  </div>
+                  <h4 class="font-heading fw-bold mb-2">The Kitchen Table Pilot</h4>
+                  <p class="text-muted mb-0">
+                    Chef Maya Vance welcomed 8 neighborhood kids into her home kitchen for Saturday morning scone and brioche baking. Word spread rapidly among parents craving tactile, screen-free hobbies that taught real life skills.
+                  </p>
+                </div>
+              </div>
 
-          <!-- 2022 -->
-          <div class="timeline-item">
-            <div class="timeline-badge">2022</div>
-            <div class="timeline-content">
-              <span class="badge bg-blue-100 text-blue-700 mb-2">Expansion</span>
-              <h5 class="font-heading fw-bold mb-2">Opening the 4,500 Sq. Ft. Flagship Studio</h5>
-              <p class="text-muted small mb-0">
-                We designed and opened our dream academy in Austin featuring 16 kid-ergonomic workstations, an acoustic parent viewing lounge, and a professional culinary demonstration stage.
-              </p>
-            </div>
-          </div>
+              <!-- Milestone 2: 2020 -->
+              <div class="journey-card-wrapper mb-4">
+                <div class="journey-node bg-emerald-500 text-white shadow-md">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div class="journey-card p-4 rounded-4 shadow-sm border">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="journey-year-pill bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">2020</span>
+                      <span class="badge bg-subtle text-muted border">Nut-Safe Milestone</span>
+                    </div>
+                    <span class="text-xs text-emerald-600 fw-bold"><i class="fa-solid fa-circle-check me-1"></i> 100% Certified Safe</span>
+                  </div>
+                  <h4 class="font-heading fw-bold mb-2">Tree Nut & Peanut-Free Certification</h4>
+                  <p class="text-muted mb-0">
+                    In response to rising childhood food allergies, we transitioned our entire culinary operation into a strictly certified nut-free sanctuary with dedicated color-coded cookware for gluten-free and dairy-free learners.
+                  </p>
+                </div>
+              </div>
 
-          <!-- 2024 -->
-          <div class="timeline-item">
-            <div class="timeline-badge">2024</div>
-            <div class="timeline-content">
-              <span class="badge bg-purple-100 text-purple-700 mb-2">Curriculum Excellence</span>
-              <h5 class="font-heading fw-bold mb-2">STEM Kitchen Accreditation & School Field Trips</h5>
-              <p class="text-muted small mb-0">
-                Partnered with 14 Austin elementary schools to deliver accredited science-in-the-kitchen field trips, turning kitchen chemistry into hands-on curriculum credits for 3rd to 8th graders.
-              </p>
-            </div>
-          </div>
+              <!-- Milestone 3: 2022 -->
+              <div class="journey-card-wrapper mb-4">
+                <div class="journey-node bg-blue-500 text-white shadow-md">
+                  <i class="fa-solid fa-kitchen-set"></i>
+                </div>
+                <div class="journey-card p-4 rounded-4 shadow-sm border">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="journey-year-pill bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">2022</span>
+                      <span class="badge bg-subtle text-muted border">Flagship Expansion</span>
+                    </div>
+                    <span class="text-xs text-blue-600 fw-bold"><i class="fa-solid fa-expand me-1"></i> 4,500 Sq. Ft. Studio</span>
+                  </div>
+                  <h4 class="font-heading fw-bold mb-2">Opening the Custom Austin Facility</h4>
+                  <p class="text-muted mb-0">
+                    We designed and opened our dream academy in Austin featuring 16 kid-ergonomic induction stations, an acoustic parent viewing lounge, child-safe French cookware, and a live culinary demonstration stage.
+                  </p>
+                </div>
+              </div>
 
-          <!-- 2026 -->
-          <div class="timeline-item">
-            <div class="timeline-badge">2026</div>
-            <div class="timeline-content">
-              <span class="badge bg-amber-100 text-amber-800 mb-2">Today & Beyond</span>
-              <h5 class="font-heading fw-bold mb-2">1,850+ Graduates & Community Table Initiative</h5>
-              <p class="text-muted small mb-0">
-                Celebrating over 1,850 young chefs graduated! Launched our "Cooking For Good" lunchbox charity giving program where students prepare fresh meals donated to Central Texas food pantries.
-              </p>
+              <!-- Milestone 4: 2024 -->
+              <div class="journey-card-wrapper mb-4">
+                <div class="journey-node bg-purple-500 text-white shadow-md">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <div class="journey-card p-4 rounded-4 shadow-sm border">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="journey-year-pill bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300">2024</span>
+                      <span class="badge bg-subtle text-muted border">Curriculum Excellence</span>
+                    </div>
+                    <span class="text-xs text-purple-600 fw-bold"><i class="fa-solid fa-school me-1"></i> 14 Partner Schools</span>
+                  </div>
+                  <h4 class="font-heading fw-bold mb-2">STEM Kitchen Accreditation & Field Trips</h4>
+                  <p class="text-muted mb-0">
+                    Partnered with 14 Austin elementary and middle schools to deliver accredited science-in-the-kitchen field trips, turning yeast biology, dough gluten elasticity, and emulsion chemistry into interactive curriculum credits.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Milestone 5: 2026 -->
+              <div class="journey-card-wrapper">
+                <div class="journey-node bg-amber-500 text-white shadow-md">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div class="journey-card p-4 rounded-4 shadow-sm border border-amber-300 dark:border-amber-700">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="journey-year-pill bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">2026</span>
+                      <span class="badge bg-amber-50 text-amber-700 border border-amber-200">Today & Beyond</span>
+                    </div>
+                    <span class="text-xs text-amber-600 fw-bold"><i class="fa-solid fa-heart me-1"></i> 1,850+ Graduates</span>
+                  </div>
+                  <h4 class="font-heading fw-bold mb-2">1,850+ Graduates & Community Table Initiative</h4>
+                  <p class="text-muted mb-0">
+                    Celebrating over 1,850 junior chefs graduated! Launched our "Cooking For Good" lunchbox charity giving program where students prepare nutritious, balanced meals donated directly to Central Texas food pantries.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -539,8 +646,8 @@
               <p class="text-muted small mb-2">Culinary Institute Alum</p>
               <p class="small text-muted mb-3">15+ years in French pastry arts. Loves teaching kids the fluffy wonders of yeast and choux pastry.</p>
               <div class="d-flex justify-content-center gap-3 text-muted">
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Maya Vance LinkedIn Login" title="Redirect to LinkedIn Login Page" data-social="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Maya Vance Instagram Login" title="Redirect to Instagram Login Page" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -556,8 +663,8 @@
               <p class="text-muted small mb-2">Italian Regional Cuisine</p>
               <p class="small text-muted mb-3">Specializes in handmade pasta, slow sauces, and kitchen knife ergonomics for kids ages 6 to 13.</p>
               <div class="d-flex justify-content-center gap-3 text-muted">
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Marco Rossi LinkedIn Login" title="Redirect to LinkedIn Login Page" data-social="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Marco Rossi Instagram Login" title="Redirect to Instagram Login Page" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -573,8 +680,8 @@
               <p class="text-muted small mb-2">Pediatric Dietitian & Chef</p>
               <p class="small text-muted mb-3">Passionate about flavor balance, allergen substitutions, and turning vibrant vegetables into kids' favorites.</p>
               <div class="d-flex justify-content-center gap-3 text-muted">
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Priya Patel LinkedIn Login" title="Redirect to LinkedIn Login Page" data-social="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Priya Patel Instagram Login" title="Redirect to Instagram Login Page" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -590,8 +697,8 @@
               <p class="text-muted small mb-2">Artisan Baker & Chemist</p>
               <p class="small text-muted mb-3">Transforms baking into exciting science experiments. Leads the Junior Gourmet & Teen Masterclass tracks.</p>
               <div class="d-flex justify-content-center gap-3 text-muted">
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Liam Chen LinkedIn Login" title="Redirect to LinkedIn Login Page" data-social="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="hover:text-primary" aria-label="Chef Liam Chen Instagram Login" title="Redirect to Instagram Login Page" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -796,10 +903,11 @@
           <p class="text-muted mb-4">
             Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
           </p>
-          <div class="d-flex gap-3 fs-5">
-            <a href="https://facebook.com" class="text-muted hover:text-primary" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://instagram.com" class="text-muted hover:text-primary" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://youtube.com" class="text-muted hover:text-primary" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <div class="d-flex gap-3 fs-5 footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Facebook Login" title="Redirect to Facebook Login Page" data-social="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Instagram Login" title="Redirect to Instagram Login Page" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="YouTube Login" title="Redirect to YouTube Login Page" data-social="youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Pinterest Login" title="Redirect to Pinterest Login Page" data-social="pinterest"><i class="fa-brands fa-pinterest"></i></a>
           </div>
         </div>
 
@@ -819,11 +927,11 @@
         <div class="col-6 col-md-3 col-lg-3">
           <h5 class="footer-widget-title font-heading">Age Programs</h5>
           <ul class="footer-links">
-            <li><a href="classes.html#tiny-tasters"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</a></li>
-            <li><a href="classes.html#little-chefs"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</a></li>
-            <li><a href="classes.html#junior-gourmet"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</a></li>
-            <li><a href="classes.html#teen-master"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</a></li>
+            <li><span class="footer-item"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</span></li>
           </ul>
         </div>
 

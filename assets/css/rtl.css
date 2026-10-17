@@ -141,3 +141,26 @@
   }
 }
 
+/* Journey Roadmap RTL Support */
+[dir="rtl"] .journey-track::before {
+  left: auto;
+  right: 20px;
+}
+
+[dir="rtl"] .journey-track.ps-md-4 {
+  padding-left: 0 !important;
+  padding-right: 1.5rem !important;
+}
+
+@media (max-width: 575.98px) {
+  [dir="rtl"] .journey-track::before {
+    left: auto;
+    right: 16px;
+  }
+}
+
+/* Page Breadcrumb Pill RTL Flipping */
+[dir="rtl"] .page-breadcrumb-pill .breadcrumb-separator i {
+  transform: rotate(180deg);
+}
+

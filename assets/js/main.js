@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (icon) {
         if (theme === 'dark') {
           icon.className = 'fa-solid fa-sun';
+          icon.style.color = '#FBBF24';
           btn.setAttribute('aria-label', 'Switch to light mode');
           btn.title = 'Switch to light mode';
         } else {
           icon.className = 'fa-solid fa-moon';
+          icon.style.color = '';
           btn.setAttribute('aria-label', 'Switch to dark mode');
           btn.title = 'Switch to dark mode';
         }
@@ -57,6 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.style.transform = 'scale(0.7) rotate(90deg)';
+        setTimeout(() => {
+          icon.style.transform = '';
+        }, 200);
+      }
+      
       applyTheme(newTheme);
       showToast(
         newTheme === 'dark' ? '🌙 Dark Mode Activated' : '☀️ Light Mode Activated',

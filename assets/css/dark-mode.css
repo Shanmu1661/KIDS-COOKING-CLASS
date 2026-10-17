@@ -160,6 +160,17 @@
   color: #F8FAFC;
 }
 
+[data-theme="dark"] .dashboard-preview-card {
+  background-color: #111A2E !important;
+  border-color: rgba(71, 85, 105, 0.45) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65) !important;
+}
+
+[data-theme="dark"] .dashboard-preview-card .session-ticket-box {
+  background-color: #0B1120 !important;
+  border-color: rgba(51, 65, 85, 0.7) !important;
+}
+
 /* --------------------------------------------------------------------------
    SECTION & PROMOTION BANNERS (E.G. SUMMER CAMPS SHOWCASE)
    -------------------------------------------------------------------------- */
@@ -327,32 +338,67 @@
   color: var(--color-primary) !important;
 }
 
-[data-theme="dark"] .nav-link {
-  color: #F8FAFC !important;
+[data-theme="dark"] .main-header {
+  background-color: #0B1120 !important;
+  border-bottom: 1px solid #1E293B !important;
 }
 
-[data-theme="dark"] .nav-link:hover,
-[data-theme="dark"] .nav-link.active {
-  color: var(--color-primary) !important;
+[data-theme="dark"] .main-header .navbar-brand .brand-name,
+[data-theme="dark"] .main-footer .navbar-brand .brand-name,
+[data-theme="dark"] .brand-name {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .main-header .navbar-brand .brand-tagline,
+[data-theme="dark"] .main-footer .navbar-brand .brand-tagline,
+[data-theme="dark"] .brand-tagline {
+  color: #FF5E36 !important;
+}
+
+[data-theme="dark"] .main-header .nav-link {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .main-header .nav-link:hover {
+  color: #FF5E36 !important;
+  background-color: rgba(255, 94, 54, 0.12) !important;
+}
+
+[data-theme="dark"] .main-header .nav-link.active {
+  color: #FF5E36 !important;
   background-color: rgba(255, 94, 54, 0.18) !important;
 }
 
-[data-theme="dark"] .rtl-btn-pill {
-  background: var(--bg-surface);
-  border-color: var(--border-color);
-  color: #F8FAFC !important;
+[data-theme="dark"] .main-header .btn-icon-round {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
 }
 
+[data-theme="dark"] .main-header .btn-icon-round:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #FF5E36 !important;
+}
+
+[data-theme="dark"] .main-header .rtl-btn-pill,
+[data-theme="dark"] .rtl-btn-pill {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .main-header .rtl-btn-pill:hover,
 [data-theme="dark"] .rtl-btn-pill:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary) !important;
-  background: var(--bg-subtle);
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #FF5E36 !important;
+  background: rgba(255, 255, 255, 0.12) !important;
 }
 
 [data-theme="dark"] .dropdown-menu {
-  background-color: #1E293B !important;
-  border-color: #334155 !important;
-  box-shadow: var(--shadow-lg);
+  background-color: #0B1120 !important;
+  border-color: #1E293B !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5) !important;
 }
 
 [data-theme="dark"] .dropdown-item {
@@ -439,7 +485,8 @@
   border-top: 1px solid #1E293B;
 }
 
-[data-theme="dark"] .footer-links a {
+[data-theme="dark"] .footer-links a,
+[data-theme="dark"] .footer-links .footer-item {
   color: #94A3B8 !important;
 }
 
@@ -452,6 +499,14 @@
   color: #64748B !important;
 }
 
+[data-theme="dark"] .footer-social-btn {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .footer-social-btn:hover {
+  color: var(--color-primary) !important;
+}
+
 [data-theme="dark"] .class-card-price {
   background: rgba(15, 23, 42, 0.88) !important;
   border-color: var(--border-color) !important;
@@ -461,26 +516,41 @@
    TESTIMONIALS SECTION WITH BACKGROUND IMAGE (DARK THEME)
    -------------------------------------------------------------------------- */
 [data-theme="dark"] .testimonials-bg-section {
-  background-image: linear-gradient(rgba(11, 17, 32, 0.92), rgba(11, 17, 32, 0.96)), 
-                    url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1920&q=80') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+  background-color: #0B1120 !important;
+  background-image: none !important;
   border-top: 1px solid #1E293B !important;
   border-bottom: 1px solid #1E293B !important;
 }
 
 [data-theme="dark"] .testimonials-bg-section .testimonial-card {
-  background: rgba(30, 41, 59, 0.9) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: #111A2E !important;
+  border: 1px solid #1E293B !important;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45) !important;
 }
 
 [data-theme="dark"] .testimonial-quote-watermark {
   color: var(--color-primary) !important;
   opacity: 0.18 !important;
+}
+
+/* Journey Roadmap in Dark Mode */
+[data-theme="dark"] .journey-hero-card {
+  background: #111A2E !important;
+  border-color: #1E293B !important;
+}
+
+[data-theme="dark"] .journey-card {
+  background: #111A2E !important;
+  border-color: #1E293B !important;
+}
+
+[data-theme="dark"] .journey-card:hover {
+  border-color: rgba(255, 94, 54, 0.4) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .journey-node {
+  border-color: #0B1120 !important;
 }
 
 /* Story Timeline in Dark Mode */
@@ -498,42 +568,92 @@
   color: #F8FAFC !important;
 }
 
+/* Page Showing Label / Breadcrumb Pill in Dark Mode */
+[data-theme="dark"] .page-breadcrumb-pill {
+  background: rgba(11, 17, 32, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .page-breadcrumb-pill a {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .page-breadcrumb-pill a:hover {
+  color: #FF5E36 !important;
+}
+
+[data-theme="dark"] .page-breadcrumb-pill .breadcrumb-current {
+  color: #FFB703 !important;
+}
+
 /* --------------------------------------------------------------------------
    DARK MODE OVERLAYS FOR CUSTOM GENERATED BANNERS
    -------------------------------------------------------------------------- */
-[data-theme="dark"] .page-header-banner,
-[data-theme="dark"] .page-header-banner.banner-about,
-[data-theme="dark"] .page-header-banner.banner-classes,
-[data-theme="dark"] .page-header-banner.banner-services,
-[data-theme="dark"] .page-header-banner.banner-gallery,
-[data-theme="dark"] .page-header-banner.banner-contact {
-  background-image: linear-gradient(rgba(11, 17, 32, 0.90), rgba(11, 17, 32, 0.95)), 
-                    url('../images/kids_cooking_academy_banner.jpg') !important;
-  border-color: #334155 !important;
+[data-theme="dark"] .page-header-banner {
+  border-bottom-color: rgba(255, 94, 54, 0.45) !important;
 }
 
-[data-theme="dark"] .page-header-banner.banner-camps {
-  background-image: linear-gradient(rgba(11, 17, 32, 0.90), rgba(11, 17, 32, 0.95)), 
-                    url('../images/summer_culinary_camp_banner.jpg') !important;
-  border-color: #334155 !important;
-}
-
-[data-theme="dark"] .page-header-banner.banner-blog {
-  background-image: linear-gradient(rgba(11, 17, 32, 0.90), rgba(11, 17, 32, 0.95)), 
-                    url('../images/kid_recipe_guide_banner.jpg') !important;
-  border-color: #334155 !important;
+[data-theme="dark"] .page-header-banner::before {
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.30) 0%, rgba(15, 23, 42, 0.45) 100%) !important;
 }
 
 [data-theme="dark"] .summer-camp-banner-section {
-  background-image: linear-gradient(rgba(11, 17, 32, 0.92), rgba(11, 17, 32, 0.96)), 
-                    url('../images/summer_culinary_camp_banner.jpg') !important;
-  border-color: #334155 !important;
+  background-color: #0B1120 !important;
+  background-image: none !important;
+  border-color: rgba(51, 65, 85, 0.6) !important;
+}
+
+[data-theme="dark"] .summer-camp-banner-section::before {
+  opacity: 0.28 !important;
+  filter: none !important;
+}
+
+[data-theme="dark"] .recipe-newsletter-banner-section::before {
+  opacity: 0.18 !important;
+}
+
+[data-theme="dark"] .summer-camp-banner-section::after {
+  background: radial-gradient(circle at 18% 30%, rgba(255, 94, 54, 0.14) 0%, transparent 55%),
+              radial-gradient(circle at 85% 70%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+              linear-gradient(135deg, rgba(11, 17, 32, 0.95) 0%, rgba(15, 23, 42, 0.92) 100%) !important;
+}
+
+[data-theme="dark"] .summer-camp-banner-section .border-white {
+  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 [data-theme="dark"] .recipe-newsletter-banner-section {
-  background-image: linear-gradient(rgba(11, 17, 32, 0.92), rgba(11, 17, 32, 0.96)), 
-                    url('../images/kid_recipe_guide_banner.jpg') !important;
+  background-color: #0B1120 !important;
+  background-image: none !important;
   border-color: #334155 !important;
+}
+
+/* Educational Learning Pillars Section in Dark Mode */
+[data-theme="dark"] .learning-pillars-bg-section {
+  background-color: #0B1120 !important;
+  border-color: rgba(51, 65, 85, 0.6) !important;
+}
+
+[data-theme="dark"] .learning-pillars-bg-section::before {
+  opacity: 0.25 !important;
+}
+
+[data-theme="dark"] .learning-pillars-bg-section::after {
+  background: radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 60%),
+              linear-gradient(180deg, rgba(11, 17, 32, 0.90) 0%, rgba(15, 23, 42, 0.88) 100%) !important;
+}
+
+[data-theme="dark"] .learning-pillars-bg-section .custom-card {
+  background: rgba(15, 23, 42, 0.88) !important;
+  border-color: rgba(51, 65, 85, 0.8) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .learning-pillars-bg-section .custom-card:hover {
+  border-color: #FF5E36 !important;
+  box-shadow: 0 16px 36px rgba(255, 94, 54, 0.3) !important;
 }
 
 [data-theme="dark"] .cta-banner-section {
@@ -643,6 +763,45 @@
   background-color: var(--bg-surface) !important;
   color: var(--text-muted) !important;
 }
+
+/* Dietary Showcase Section in Dark Mode */
+[data-theme="dark"] .dietary-showcase-card {
+  background: linear-gradient(135deg, #111A2E 0%, #0F172A 100%) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .dietary-showcase-card::after {
+  color: rgba(16, 185, 129, 0.05) !important;
+}
+
+[data-theme="dark"] .dietary-feature-pill {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .dietary-feature-pill strong {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .dietary-feature-pill small {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .dietary-action-box {
+  background: #111A2E !important;
+  border-color: rgba(51, 65, 85, 0.8) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .dietary-action-box h5 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .dietary-action-box ul li {
+  color: #CBD5E1 !important;
+}
+
 
 
 

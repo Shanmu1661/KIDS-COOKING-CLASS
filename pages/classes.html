@@ -14,7 +14,9 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=1200&q=80">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,15 +67,15 @@
 
         <!-- Mobile Toggles Container -->
         <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
-          <button class="btn btn-sm btn-outline-custom theme-toggle-btn p-2" aria-label="Toggle theme">
+          <button class="btn btn-icon-round theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
             <i class="fa-solid fa-moon"></i>
           </button>
-          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout">
+          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout" title="Switch text direction">
             <span class="rtl-text">RTL</span>
             <i class="fa-solid fa-right-left ms-1"></i>
           </button>
           <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fs-4 text-primary"></i>
+            <i class="fa-solid fa-bars fs-4 text-white"></i>
           </button>
         </div>
 
@@ -81,20 +83,29 @@
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="classes.html">Classes</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
           </ul>
 
           <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
-            <button class="btn btn-outline-custom theme-toggle-btn d-none d-lg-inline-flex p-2" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+            <!-- Settings / Theme Toggle (Matching user screenshot) -->
+            <button class="btn btn-icon-round theme-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- RTL Pill Button (Matching user screenshot) -->
             <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
               <span class="rtl-text">RTL</span>
               <i class="fa-solid fa-right-left ms-2"></i>
             </button>
-            <a href="login.html" class="btn btn-primary-custom btn-sm-custom"><i class="fa-solid fa-lock me-1"></i> Parent Login</a>
+
+            <!-- Parent Portal Login Button (Matching user screenshot) -->
+            <a href="login.html" class="btn btn-parent-login">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
           </div>
         </div>
       </div>
@@ -105,6 +116,13 @@
     <!-- Breadcrumb & Page Banner -->
     <section class="page-header-banner banner-classes">
       <div class="container text-center py-3">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <div class="page-breadcrumb-pill">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="breadcrumb-current">Classes</span>
+          </div>
+        </nav>
         <span class="section-tag"><i class="fa-solid fa-kitchen-set"></i> Year-Round Curriculum</span>
         <h1 class="section-title mb-2">Cooking Classes by Age Group</h1>
         <p class="text-muted max-w-2xl mx-auto mb-3">
@@ -140,7 +158,7 @@
     </section>
 
     <!-- Filter Buttons Bar -->
-    <section class="py-4 border-bottom bg-white dark:bg-slate-900 sticky top-20 z-10">
+    <section class="py-4 border-bottom bg-white dark:bg-slate-900">
       <div class="container">
         <div class="d-flex justify-content-center flex-wrap gap-2">
           <button type="button" class="btn btn-sm btn-outline-custom filter-tab-btn active btn-primary-custom" data-filter="all">
@@ -380,26 +398,369 @@
               </div>
             </div>
           </div>
+
+          <!-- Class 7: Rainbow Baking & Cookie Geometry (Tiny Tasters 3-5) -->
+          <div class="col-md-6 col-lg-4 filter-item" data-category="toddler">
+            <div class="class-card">
+              <div class="class-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=600&q=80" alt="Toddler hands rolling cookie dough with wooden pin" class="class-card-img" width="400" height="220">
+                <div class="class-card-badges">
+                  <span class="badge-pill badge-age">Ages 3 – 5</span>
+                  <span class="badge-pill badge-spot">Sensory Play</span>
+                </div>
+                <div class="class-card-price">$45</div>
+              </div>
+              <div class="class-card-body">
+                <h4 class="font-heading fw-bold mb-2">Rainbow Baking & Cookie Geometry</h4>
+                <p class="text-muted small mb-3">
+                  Early STEM shapes and motor play! Toddlers explore natural plant dyes (spinach, beetroot, turmeric), cut geometric cookies, and bake fluffy cinnamon shortbreads.
+                </p>
+                <ul class="class-meta-list">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 60 Minutes • Sundays 10:00 AM</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-shapes"></i> Colors & Shapes Discovery</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-cookie"></i> Take-Home Tin of 8 Cookies</li>
+                </ul>
+                <div class="mt-auto pt-3 d-flex gap-2">
+                  <a href="dashboard.html" class="btn btn-primary-custom w-100 btn-sm-custom">
+                    <i class="fa-solid fa-plus me-1"></i> Enroll in Portal
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class 8: Handmade Japanese Ramen & Gyoza (Junior Gourmet 10-13) -->
+          <div class="col-md-6 col-lg-4 filter-item" data-category="junior">
+            <div class="class-card">
+              <div class="class-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="Fresh artisan Japanese ramen bowl with broth" class="class-card-img" width="400" height="220">
+                <div class="class-card-badges">
+                  <span class="badge-pill badge-age">Ages 10 – 13</span>
+                  <span class="badge-pill badge-featured">Global Master</span>
+                </div>
+                <div class="class-card-price">$65</div>
+              </div>
+              <div class="class-card-body">
+                <h4 class="font-heading fw-bold mb-2">Japanese Ramen & Hand-Folded Gyoza</h4>
+                <p class="text-muted small mb-3">
+                  Craft silky ramen wheat noodles with hand pasta crank rollers, simmer rich umami broths, master six-minute seasoned eggs, and pleat crispy pan-seared gyoza.
+                </p>
+                <ul class="class-meta-list">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 2 Hours • Fridays 4:30 PM</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-bowl-rice"></i> Asian Gastronomy Badge</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-fire-burner"></i> Induction Broth Simmering</li>
+                </ul>
+                <div class="mt-auto pt-3 d-flex gap-2">
+                  <a href="dashboard.html" class="btn btn-primary-custom w-100 btn-sm-custom">
+                    <i class="fa-solid fa-plus me-1"></i> Enroll in Portal
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class 9: Artisan Sourdough & Knife Ergonomics (Teen Masterclass 14-17) -->
+          <div class="col-md-6 col-lg-4 filter-item" data-category="teen">
+            <div class="class-card">
+              <div class="class-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&q=80" alt="Crusty artisan sourdough bread scored with razor" class="class-card-img" width="400" height="220">
+                <div class="class-card-badges">
+                  <span class="badge-pill badge-age">Ages 14 – 17</span>
+                  <span class="badge-pill badge-spot">Culinary Science</span>
+                </div>
+                <div class="class-card-price">$75</div>
+              </div>
+              <div class="class-card-body">
+                <h4 class="font-heading fw-bold mb-2">Artisan Sourdough & Knife Ergonomics</h4>
+                <p class="text-muted small mb-3">
+                  Master sourdough fermentation kinetics, coil folds, hydration ratios, artistic lame razor scoring, and professional French culinary knife prep cuts (brunoise, julienne).
+                </p>
+                <ul class="class-meta-list">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 2.5 Hours • Saturdays 3:00 PM</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-certificate"></i> Pro Kitchen Knife Safety Cert</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-wheat-awn"></i> Take-Home Sourdough Starter Jar</li>
+                </ul>
+                <div class="mt-auto pt-3 d-flex gap-2">
+                  <a href="dashboard.html" class="btn btn-primary-custom w-100 btn-sm-custom">
+                    <i class="fa-solid fa-plus me-1"></i> Enroll in Portal
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Dietary Accommodations Banner -->
-    <section class="py-5 bg-subtle">
+    <!-- Extra Card Section 1: What's Included in Every Class -->
+    <section class="py-5 bg-subtle" id="class-included-amenities">
       <div class="container py-3">
-        <div class="custom-card p-4 p-md-5">
-          <div class="row align-items-center g-4">
-            <div class="col-md-8">
-              <span class="badge badge-pill badge-diet mb-2"><i class="fa-solid fa-leaf"></i> Inclusive Dining</span>
-              <h3 class="font-heading fw-bold mb-2">We Cater to Every Dietary Need</h3>
-              <p class="text-muted mb-0">
-                Whether your young chef is vegetarian, gluten-sensitive, dairy-free, or observes religious dietary guidelines (Kosher-style / Halal), our chefs adapt recipes seamlessly. Our online parent portal lets you select dietary flags that automatically sync to class stations.
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-sparkles"></i> The Academy Promise</span>
+          <h2 class="section-title">What's Included in Every Single Class</h2>
+          <p class="section-subtitle">No hidden fees, no supply lists. We provide everything young chefs need for an inspiring, safe, and joyful culinary journey.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Amenity Card 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4 h-100">
+              <div class="rounded-circle bg-primary-subtle text-primary mx-auto mb-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 68px; height: 68px; font-size: 1.75rem;">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+              <span class="badge badge-pill badge-featured mx-auto mb-2">Zero Burn Risk</span>
+              <h4 class="font-heading fw-bold fs-5 mb-2">Kid-Safe Workstation</h4>
+              <p class="text-muted small mb-0">
+                Individual cool-touch induction cooktops, child-ergonomic nylon safety knives, non-slip step stools, and sanitizing wipes. Every child works at their own dedicated counter.
               </p>
             </div>
-            <div class="col-md-4 text-md-end">
-              <a href="contact.html#allergy-faq" class="btn btn-secondary-custom">
-                <i class="fa-solid fa-circle-question"></i> Dietary Questions?
-              </a>
+          </div>
+
+          <!-- Amenity Card 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4 h-100">
+              <div class="rounded-circle bg-success-subtle text-success mx-auto mb-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 68px; height: 68px; font-size: 1.75rem;">
+                <i class="fa-solid fa-carrot"></i>
+              </div>
+              <span class="badge badge-pill badge-diet mx-auto mb-2">100% Nut-Free</span>
+              <h4 class="font-heading fw-bold fs-5 mb-2">Fresh Farm Ingredients</h4>
+              <p class="text-muted small mb-0">
+                Pre-measured organic produce, non-GMO dairy, unbleached flours, and safe allergen substitutions. Prepared fresh every morning with strict kitchen cross-contact prevention.
+              </p>
+            </div>
+          </div>
+
+          <!-- Amenity Card 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4 h-100">
+              <div class="rounded-circle bg-warning-subtle text-warning-emphasis mx-auto mb-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 68px; height: 68px; font-size: 1.75rem;">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <span class="badge badge-pill badge-spot mx-auto mb-2">Take-Home Box</span>
+              <h4 class="font-heading fw-bold fs-5 mb-2">Chef Hat, Apron & Treats</h4>
+              <p class="text-muted small mb-0">
+                Complimentary embroidered apron and fabric chef toque to wear, laminated step-by-step recipe cards, and a family-sized bakery box of delicious food made in class.
+              </p>
+            </div>
+          </div>
+
+          <!-- Amenity Card 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card text-center p-4 h-100">
+              <div class="rounded-circle bg-info-subtle text-info mx-auto mb-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 68px; height: 68px; font-size: 1.75rem;">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <span class="badge badge-pill badge-age mx-auto mb-2">Portal Sync</span>
+              <h4 class="font-heading fw-bold fs-5 mb-2">Skill Badges & Passport</h4>
+              <p class="text-muted small mb-0">
+                Collect physical embroidered achievement badges for each mastered cooking technique, automatically synced with live photos and recipes to your digital Parent Portal!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra Card Section 2: Weekend Specialty & Pop-Up Workshops -->
+    <section class="py-5" id="specialty-workshops">
+      <div class="container py-3">
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Limited Series</span>
+          <h2 class="section-title">Specialty Workshops & Family Masterclasses</h2>
+          <p class="section-subtitle">Deepen their culinary curiosity with weekend family pop-ups, STEM cooking science, and holiday bake-offs.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Specialty Card 1 -->
+          <div class="col-lg-4">
+            <div class="custom-card p-0 overflow-hidden h-100 border shadow-sm">
+              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Parent and child baking together in kitchen" class="w-100 object-cover" style="height: 200px;">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge badge-pill badge-age">Ages 4 – 12</span>
+                  <span class="fw-bold text-primary font-heading fs-5">$85 / Duo</span>
+                </div>
+                <h4 class="font-heading fw-bold mb-2">Parent & Child Sunday Brunch Club</h4>
+                <p class="text-muted small mb-3">
+                  Team up with your child to roll buttery layered croissants, whisk fluffy Dutch baby pancakes with macerated berries, and squeeze fresh fruit mocktails.
+                </p>
+                <ul class="class-meta-list mb-4">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 2 Hours • Alternate Sundays 10:30 AM</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-users"></i> 1 Adult + 1 Child Station Included</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-heart text-danger"></i> Treasured Family Weekend Memory</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="dashboard.html" class="btn btn-outline-custom w-100 btn-sm-custom">
+                    <i class="fa-solid fa-calendar-check me-1"></i> Reserve Duo Station
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialty Card 2 -->
+          <div class="col-lg-4">
+            <div class="custom-card p-0 overflow-hidden h-100 border shadow-sm">
+              <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=600&q=80" alt="STEM edible kitchen science experiment" class="w-100 object-cover" style="height: 200px;">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge badge-pill badge-spot">STEM Food Lab</span>
+                  <span class="fw-bold text-primary font-heading fs-5">$70</span>
+                </div>
+                <h4 class="font-heading fw-bold mb-2">Molecular Gastronomy & Flavor Physics</h4>
+                <p class="text-muted small mb-3">
+                  Explore edible chemistry! Spherification fruit juice caviar pearls, acid-base foaming honeycomb sponge candy, and liquid nitrogen ice cream crystal science.
+                </p>
+                <ul class="class-meta-list mb-4">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 2 Hours • 1st Saturday Monthly</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-flask"></i> Certified STEM Culinary Curriculum</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-atom text-info"></i> Junior Food Chemist Lab Coat</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="dashboard.html" class="btn btn-outline-custom w-100 btn-sm-custom">
+                    <i class="fa-solid fa-flask-vial me-1"></i> Register STEM Lab
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialty Card 3 -->
+          <div class="col-lg-4">
+            <div class="custom-card p-0 overflow-hidden h-100 border shadow-sm">
+              <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80" alt="Fresh steamed dim sum bao buns in bamboo basket" class="w-100 object-cover" style="height: 200px;">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge badge-pill badge-featured">Global Flavors</span>
+                  <span class="fw-bold text-primary font-heading fs-5">$65</span>
+                </div>
+                <h4 class="font-heading fw-bold mb-2">Junior Dim Sum & Steamed Bao Masterclass</h4>
+                <p class="text-muted small mb-3">
+                  Hands-on dumpling folding art! Learn to make soft yeasted bao dough, pleat 12-fold crystal veggie dumplings, and stir aromatic soy dipping reductions.
+                </p>
+                <ul class="class-meta-list mb-4">
+                  <li class="class-meta-item"><i class="fa-regular fa-clock"></i> 2 Hours • 3rd Saturday Monthly</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-utensils"></i> Bamboo Steamer Gift Included</li>
+                  <li class="class-meta-item"><i class="fa-solid fa-earth-asia text-warning"></i> Cultural Recipe Passport</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="dashboard.html" class="btn btn-outline-custom w-100 btn-sm-custom">
+                    <i class="fa-solid fa-utensils me-1"></i> Book Masterclass
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Dietary Accommodations & Allergy Safety Section -->
+    <section class="py-5 bg-subtle" id="dietary-accommodations">
+      <div class="container py-3">
+        <div class="dietary-showcase-card">
+          <div class="row align-items-center g-4 g-xl-5">
+            <!-- Left Info & Feature Badges -->
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge badge-pill badge-diet">
+                  <i class="fa-solid fa-shield-heart me-1"></i> Allergen-Safe Academy
+                </span>
+                <span class="badge badge-pill badge-featured">
+                  <i class="fa-solid fa-ban me-1"></i> 100% Peanut & Tree-Nut Free Facility
+                </span>
+              </div>
+              <h2 class="font-heading fw-bold mb-3" style="font-size: clamp(1.6rem, 2.8vw, 2.2rem);">
+                We Cater to Every Dietary Need & Allergy
+              </h2>
+              <p class="text-muted mb-4 lead" style="font-size: 1.05rem; line-height: 1.7;">
+                Whether your young chef is vegetarian, gluten-sensitive, dairy-free, or observes religious dietary guidelines (Kosher-style / Halal), our chefs adapt recipes seamlessly. In your online parent portal, simple dietary flags sync automatically to your child's personalized workstation.
+              </p>
+
+              <!-- Dietary Tags Grid -->
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="dietary-feature-pill">
+                    <i class="fa-solid fa-seedling text-success"></i>
+                    <div>
+                      <strong>Vegetarian & Vegan</strong>
+                      <small class="text-muted">Plant-forward delicious swaps</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="dietary-feature-pill">
+                    <i class="fa-solid fa-wheat-awn-circle-exclamation text-warning"></i>
+                    <div>
+                      <strong>Gluten-Sensitive</strong>
+                      <small class="text-muted">Certified GF flours & pastas</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="dietary-feature-pill">
+                    <i class="fa-solid fa-cow text-info"></i>
+                    <div>
+                      <strong>Dairy & Egg-Free</strong>
+                      <small class="text-muted">Oat milk, flax & aquafaba</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="dietary-feature-pill">
+                    <i class="fa-solid fa-moon text-primary"></i>
+                    <div>
+                      <strong>Kosher-Style & Halal</strong>
+                      <small class="text-muted">Pre-screened clean ingredients</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Callout Card -->
+            <div class="col-lg-5">
+              <div class="dietary-action-box">
+                <div class="d-flex align-items-center gap-3 mb-3 pb-3 border-bottom">
+                  <div class="dietary-action-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold mb-0 font-heading">Allergy Safety Protocol</h5>
+                    <span class="badge bg-success-subtle text-success border border-success-subtle py-1 px-2 mt-1">
+                      <i class="fa-solid fa-circle-check me-1"></i> Nutritionist Verified
+                    </span>
+                  </div>
+                </div>
+
+                <ul class="list-unstyled mb-4 small">
+                  <li class="mb-2 d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-success"></i>
+                    <span>Dedicated clean, sanitised prep counters</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-success"></i>
+                    <span>Separate color-coded cutting boards & knives</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-success"></i>
+                    <span>EpiPen & First-Aid certified chef educators</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-success"></i>
+                    <span>Custom substitute ingredients ready at arrival</span>
+                  </li>
+                </ul>
+
+                <div class="d-grid gap-2">
+                  <a href="contact.html#allergy-faq" class="btn btn-secondary-custom">
+                    <i class="fa-solid fa-circle-question"></i> Dietary Questions? Ask Us
+                  </a>
+                  <a href="dashboard.html" class="btn btn-outline-custom btn-sm">
+                    <i class="fa-solid fa-sliders me-1"></i> Manage Dietary Flags in Portal
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -422,6 +783,12 @@
           <p class="text-muted mb-4">
             Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
           </p>
+          <div class="d-flex gap-3 fs-5 footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Facebook Login" title="Redirect to Facebook Login Page" data-social="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Instagram Login" title="Redirect to Instagram Login Page" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="YouTube Login" title="Redirect to YouTube Login Page" data-social="youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Pinterest Login" title="Redirect to Pinterest Login Page" data-social="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
         </div>
 
         <div class="col-6 col-md-3 col-lg-2">
@@ -440,11 +807,11 @@
         <div class="col-6 col-md-3 col-lg-3">
           <h5 class="footer-widget-title font-heading">Age Programs</h5>
           <ul class="footer-links">
-            <li><a href="classes.html#tiny-tasters"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</a></li>
-            <li><a href="classes.html#little-chefs"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</a></li>
-            <li><a href="classes.html#junior-gourmet"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</a></li>
-            <li><a href="classes.html#teen-master"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</a></li>
+            <li><span class="footer-item"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</span></li>
           </ul>
         </div>
 

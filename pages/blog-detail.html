@@ -14,7 +14,9 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧀</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,13 +67,15 @@
 
         <!-- Mobile Toggles Container -->
         <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
-          <button class="btn btn-sm btn-outline-custom theme-toggle-btn p-2" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
-          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout">
+          <button class="btn btn-icon-round theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout" title="Switch text direction">
             <span class="rtl-text">RTL</span>
             <i class="fa-solid fa-right-left ms-1"></i>
           </button>
           <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fs-4 text-primary"></i>
+            <i class="fa-solid fa-bars fs-4 text-white"></i>
           </button>
         </div>
 
@@ -79,20 +83,29 @@
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
           </ul>
 
           <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
-            <button class="btn btn-outline-custom theme-toggle-btn d-none d-lg-inline-flex p-2" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+            <!-- Settings / Theme Toggle (Matching user screenshot) -->
+            <button class="btn btn-icon-round theme-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- RTL Pill Button (Matching user screenshot) -->
             <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
               <span class="rtl-text">RTL</span>
               <i class="fa-solid fa-right-left ms-2"></i>
             </button>
-            <a href="login.html" class="btn btn-primary-custom btn-sm-custom"><i class="fa-solid fa-lock me-1"></i> Parent Login</a>
+
+            <!-- Parent Portal Login Button (Matching user screenshot) -->
+            <a href="login.html" class="btn btn-parent-login">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
           </div>
         </div>
       </div>
@@ -103,6 +116,15 @@
     <!-- Recipe Article Header -->
     <section class="page-header-banner banner-blog">
       <div class="container text-center py-3">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <div class="page-breadcrumb-pill">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <a href="blog.html">Blog</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="breadcrumb-current">Recipe Guide</span>
+          </div>
+        </nav>
         <div class="d-flex justify-content-center gap-2 mb-3">
           <span class="badge badge-pill badge-featured">Kid-Tested Recipe</span>
           <span class="badge badge-pill badge-age">Ages 6+</span>
@@ -347,7 +369,98 @@
 
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Related Articles & Guides Section -->
+    <section class="py-5 bg-subtle border-top">
+      <div class="container py-2">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <span class="section-tag mb-2"><i class="fa-solid fa-sparkles"></i> Continue Exploring</span>
+            <h3 class="font-heading fw-bold mb-0">More Guides from Our Teaching Kitchen</h3>
+          </div>
+          <a href="blog.html" class="btn btn-outline-custom btn-sm-custom d-none d-sm-inline-flex">
+            All Articles &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="position-relative" style="height: 190px;">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Personal pan pizza" class="w-100 h-100 object-cover">
+                <span class="badge bg-rose-500 text-white position-absolute top-3 start-3 fw-bold">Baking</span>
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column">
+                <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 5 min read • Ages 5+</span>
+                <h5 class="font-heading fw-bold mb-2">
+                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">Fluffy Personal Pan Pizzas: Teaching Kneading & Fractions</a>
+                </h5>
+                <p class="text-muted small mb-3">
+                  Measuring fractions and kneading active dough turns family dinner into a fun math lesson.
+                </p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Chef Marco Bellini</small>
+                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="position-relative" style="height: 190px;">
+                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Knife skills" class="w-100 h-100 object-cover">
+                <span class="badge bg-blue-600 text-white position-absolute top-3 start-3 fw-bold">Safety 101</span>
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column">
+                <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 6 min read • Ages 6+</span>
+                <h5 class="font-heading fw-bold mb-2">
+                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">10 Essential Kitchen Knife Skills Every Child Should Learn</a>
+                </h5>
+                <p class="text-muted small mb-3">
+                  The "Bear Claw" grip, nylon safety blades, and building spatial confidence in the kitchen.
+                </p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Chef Maya Vance</small>
+                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="position-relative" style="height: 190px;">
+                <img src="https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=600&q=80" alt="Yeast chemistry" class="w-100 h-100 object-cover">
+                <span class="badge bg-amber-500 text-white position-absolute top-3 start-3 fw-bold">Kitchen Science</span>
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column">
+                <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 5 min read • Ages 6+</span>
+                <h5 class="font-heading fw-bold mb-2">
+                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">The Chemistry of Bread: Why Yeast Bubbles & Dough Rises</a>
+                </h5>
+                <p class="text-muted small mb-3">
+                  Microbiology and gluten strands in an easy, kid-safe science experiment.
+                </p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Chef Liam Chen</small>
+                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 d-sm-none">
+          <a href="blog.html" class="btn btn-outline-custom btn-sm-custom w-100">
+            View All Culinary Articles &rarr;
+          </a>
         </div>
       </div>
     </section>
@@ -368,6 +481,12 @@
           <p class="text-muted mb-4">
             Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
           </p>
+          <div class="d-flex gap-3 fs-5 footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Facebook Login" title="Redirect to Facebook Login Page" data-social="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Instagram Login" title="Redirect to Instagram Login Page" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="YouTube Login" title="Redirect to YouTube Login Page" data-social="youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Pinterest Login" title="Redirect to Pinterest Login Page" data-social="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
         </div>
 
         <div class="col-6 col-md-3 col-lg-2">
@@ -386,11 +505,11 @@
         <div class="col-6 col-md-3 col-lg-3">
           <h5 class="footer-widget-title font-heading">Age Programs</h5>
           <ul class="footer-links">
-            <li><a href="classes.html#tiny-tasters"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</a></li>
-            <li><a href="classes.html#little-chefs"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</a></li>
-            <li><a href="classes.html#junior-gourmet"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</a></li>
-            <li><a href="classes.html#teen-master"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</a></li>
+            <li><span class="footer-item"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</span></li>
           </ul>
         </div>
 

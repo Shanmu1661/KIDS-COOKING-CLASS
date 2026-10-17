@@ -331,24 +331,37 @@ a:hover {
 /* --------------------------------------------------------------------------
    4. NAVIGATION BAR & HEADER
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   4. NAVIGATION BAR & HEADER (Sleek Dark Navigation matching screenshot)
+   -------------------------------------------------------------------------- */
+:root {
+  --header-bg: #0B1120;             /* Sleek Dark Navy Background */
+  --header-border: #1E293B;         /* Subtle Dark Slate Border */
+  --header-text: #FFFFFF;           /* Crisp White Nav Text */
+  --header-height: 74px;
+}
+
 .main-header {
   position: sticky;
   top: 0;
   z-index: 1030;
-  background: var(--bg-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--header-bg) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--header-border) !important;
   transition: all var(--transition-normal);
   min-height: var(--header-height);
   display: flex;
   align-items: center;
   width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .main-header .navbar {
   width: 100% !important;
   flex: 1 1 100% !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .main-header .container,
@@ -360,36 +373,38 @@ a:hover {
 }
 
 .main-header.scrolled {
-  box-shadow: var(--shadow-sm);
-  min-height: 72px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
+  min-height: 68px;
 }
 
+/* Brand Logo (Matching Screenshot) */
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-main) !important;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 .brand-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent-gold));
-  border-radius: var(--radius-md);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: linear-gradient(135deg, #FF6838 0%, #FF451A 100%);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-size: 1.4rem;
-  box-shadow: 0 4px 10px rgba(255, 94, 54, 0.3);
-  transition: transform var(--transition-bounce);
+  color: #FFFFFF !important;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 14px rgba(255, 94, 54, 0.4);
+  transition: transform var(--transition-bounce), box-shadow var(--transition-fast);
 }
 
 .navbar-brand:hover .brand-icon {
-  transform: rotate(-10deg) scale(1.08);
+  transform: rotate(-8deg) scale(1.06);
+  box-shadow: 0 6px 18px rgba(255, 94, 54, 0.55);
 }
 
 .brand-title {
@@ -397,58 +412,283 @@ a:hover {
   flex-direction: column;
 }
 
-.brand-name {
-  line-height: 1.1;
-  font-size: 1.35rem;
-}
-
-.brand-tagline {
-  font-size: 0.72rem;
-  color: var(--color-primary);
+.main-header .navbar-brand .brand-name {
   font-family: var(--font-body);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 1.15;
+  color: #FFFFFF !important;
+  letter-spacing: -0.02em;
 }
 
-.nav-link {
-  font-weight: 600;
+.brand-name {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 1.15;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.main-footer .navbar-brand .brand-name,
+.main-footer .brand-name {
   color: var(--text-main) !important;
-  padding: 8px 16px !important;
+  font-weight: 800;
+}
+
+.main-header .navbar-brand .brand-tagline,
+.main-footer .navbar-brand .brand-tagline,
+.brand-tagline {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.65rem;
+  color: #FF5E36 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+/* Nav items / links (Matching Screenshot) */
+.main-header .navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-header .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.main-header .nav-link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: #FFFFFF !important;
+  padding: 7px 18px !important;
   border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  position: relative;
-  font-size: 0.95rem;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--color-primary) !important;
-  background: var(--color-primary-light);
+.main-header .nav-link:hover {
+  color: #FF5E36 !important;
+  background: rgba(255, 94, 54, 0.12) !important;
 }
 
-.nav-link.active::after {
+/* Active Link State matching the screenshot */
+.main-header .nav-link.active {
+  color: #FF5E36 !important;
+  background: rgba(255, 94, 54, 0.18) !important;
+  font-weight: 700;
+}
+
+.main-header .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: 2px;
-  left: 20%;
-  width: 60%;
-  height: 3px;
-  background: var(--color-primary);
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 2.5px;
+  background: #FF5E36;
   border-radius: var(--radius-full);
+}
+
+/* Action Controls (Right side of Navbar) */
+/* Settings / Theme Icon Button (Circular Gear button matching screenshot) */
+.btn-icon-round,
+.main-header .theme-toggle-btn.btn-icon-round {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+
+.btn-icon-round i {
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+}
+
+.btn-icon-round:hover,
+.main-header .theme-toggle-btn.btn-icon-round:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #FF5E36 !important;
+  transform: translateY(-1px);
+}
+
+.btn-icon-round:hover i {
+  color: #FF5E36;
+  transform: rotate(-15deg) scale(1.1);
+}
+
+[data-theme="dark"] .main-header .theme-toggle-btn.btn-icon-round i.fa-sun {
+  color: #FBBF24 !important;
+}
+
+[data-theme="dark"] .main-header .theme-toggle-btn.btn-icon-round:hover i.fa-sun {
+  color: #F59E0B !important;
+  transform: rotate(45deg) scale(1.15);
+}
+
+/* RTL Button matching user screenshot */
+.main-header .rtl-btn-pill,
+.rtl-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: var(--radius-full) !important;
+  padding: 8px 18px !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: none !important;
+}
+
+.main-header .rtl-btn-pill:hover,
+.rtl-btn-pill:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #FF5E36 !important;
+  transform: translateY(-1px);
+}
+
+.main-header .rtl-btn-pill i,
+.rtl-btn-pill i {
+  font-size: 0.88rem;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.main-header .rtl-btn-pill:hover i,
+.rtl-btn-pill:hover i {
+  transform: scale(1.15);
+}
+
+/* Parent Login Button matching user screenshot */
+.btn-parent-login,
+.main-header .btn-parent-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FF6239 0%, #FF451A 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: var(--radius-full) !important;
+  padding: 8px 22px !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 18px rgba(255, 94, 54, 0.45) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  min-height: 40px;
+}
+
+.btn-parent-login:hover,
+.main-header .btn-parent-login:hover {
+  background: linear-gradient(135deg, #FF7249 0%, #FF552A 100%) !important;
+  box-shadow: 0 6px 24px rgba(255, 94, 54, 0.65) !important;
+  transform: translateY(-2px);
+  color: #FFFFFF !important;
+}
+
+.btn-parent-login i {
+  font-size: 0.9rem;
+  color: #FFFFFF;
 }
 
 /* Dropdown Menu in Navbar */
+.main-header .dropdown-menu,
 .dropdown-menu {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: #0B1120 !important;
+  border: 1px solid #1E293B !important;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5) !important;
   padding: 8px;
   min-width: 220px;
   animation: slideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-header .dropdown-item,
+.dropdown-item {
+  color: #FFFFFF !important;
+}
+
+.main-header .dropdown-item:hover,
+.dropdown-item:hover {
+  background-color: rgba(255, 94, 54, 0.15) !important;
+  color: #FF5E36 !important;
+}
+
+/* Mobile Navbar Dropdown & Toggler */
+@media (max-width: 991.98px) {
+  .main-header .navbar-collapse {
+    background: #0B1120;
+    border: 1px solid #1E293B;
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  }
+
+  .main-header .navbar-nav {
+    gap: 0.25rem !important;
+    width: 100%;
+    margin-bottom: 1rem !important;
+  }
+
+  .main-header .nav-link {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 16px !important;
+  }
+
+  .main-header .nav-link.active::after {
+    left: 20px;
+    transform: none;
+    bottom: 6px;
+  }
+
+  .main-header .navbar-toggler {
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 6px 10px;
+  }
+
+  .main-header .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 94, 54, 0.35);
+  }
 }
 
 @keyframes slideDown {
@@ -666,20 +906,6 @@ a:hover {
 
 .hero-highlight {
   color: var(--color-primary);
-  position: relative;
-  display: inline-block;
-}
-
-.hero-highlight::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  width: 100%;
-  height: 12px;
-  background: rgba(255, 183, 3, 0.35);
-  border-radius: var(--radius-sm);
-  z-index: -1;
 }
 
 .hero-lead {
@@ -797,6 +1023,17 @@ a:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   border-color: rgba(var(--color-primary-rgb), 0.3);
+}
+
+/* Dashboard Preview Teaser Card */
+.dashboard-preview-card {
+  border-radius: var(--radius-xl) !important;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.dashboard-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
 }
 
 /* Class Card */
@@ -936,6 +1173,22 @@ a:hover {
   white-space: nowrap;
 }
 
+.chef-card a.hover\:text-primary {
+  transition: all var(--transition-fast);
+  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.chef-card a.hover\:text-primary:hover {
+  color: var(--color-primary) !important;
+  transform: translateY(-2px) scale(1.18);
+}
+
 /* Testimonial Card */
 .testimonial-card {
   background: var(--bg-card);
@@ -980,14 +1233,10 @@ a:hover {
   border-top: 1px solid var(--border-color);
 }
 
-/* Testimonials Background Section */
+/* Testimonials Section (Parent Stories) */
 .testimonials-bg-section {
   position: relative;
-  background-image: linear-gradient(rgba(255, 253, 249, 0.93), rgba(255, 253, 249, 0.96)), 
-                    url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1920&q=80');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -996,75 +1245,338 @@ a:hover {
    CUSTOM GENERATED BANNER SECTIONS & HERO BACKGROUNDS
    -------------------------------------------------------------------------- */
 
-/* Universal Page Header Banner (Used across About, Services, Classes, Gallery, Blog, Contact) */
+/* Page Showing Label / Breadcrumb Pill (Matching Screenshot) */
+.page-breadcrumb-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(11, 17, 32, 0.90);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius-full);
+  padding: 7px 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  line-height: 1.2;
+}
+
+.page-breadcrumb-pill a {
+  color: #F1F5F9 !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.page-breadcrumb-pill a:hover {
+  color: var(--color-primary) !important;
+}
+
+.page-breadcrumb-pill .breadcrumb-separator {
+  color: #94A3B8;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.page-breadcrumb-pill .breadcrumb-current {
+  color: #FFB703 !important;
+  font-weight: 700;
+}
+
+/* Universal Page Header Banner (Used across About, Services, Classes, Camps, Gallery, Blog, Blog Detail, Contact) */
 .page-header-banner {
   position: relative;
-  background-image: linear-gradient(rgba(255, 253, 249, 0.90), rgba(255, 253, 249, 0.95)), 
-                    url('../images/kids_cooking_academy_banner.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center center;
   background-repeat: no-repeat;
-  border-bottom: 1px solid var(--border-color);
-  padding: 56px 0;
+  padding: 72px 0 66px;
+  border-bottom: 3px solid rgba(255, 94, 54, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  color: #FFFFFF !important;
 }
 
-.page-header-banner.banner-about {
-  background-image: linear-gradient(rgba(255, 253, 249, 0.88), rgba(255, 253, 249, 0.94)), 
-                    url('../images/kids_cooking_academy_banner.jpg');
+.page-header-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.20) 0%, rgba(15, 23, 42, 0.32) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.page-header-banner.banner-services {
-  background-image: linear-gradient(rgba(255, 253, 249, 0.89), rgba(255, 253, 249, 0.95)), 
-                    url('../images/kids_cooking_academy_banner.jpg');
+.page-header-banner > .container {
+  position: relative;
+  z-index: 2;
 }
 
-.page-header-banner.banner-classes {
-  background-image: linear-gradient(rgba(255, 253, 249, 0.89), rgba(255, 253, 249, 0.95)), 
-                    url('../images/kids_cooking_academy_banner.jpg');
+/* Individual Banner Background Images */
+.page-header-banner,
+.page-header-banner.banner-about,
+.page-header-banner.banner-classes,
+.page-header-banner.banner-services,
+.page-header-banner.banner-gallery,
+.page-header-banner.banner-contact {
+  background-image: url('../images/kids_cooking_academy_banner.jpg');
 }
 
 .page-header-banner.banner-camps {
-  background-image: linear-gradient(rgba(255, 253, 249, 0.88), rgba(255, 253, 249, 0.94)), 
-                    url('../images/summer_culinary_camp_banner.jpg');
-}
-
-.page-header-banner.banner-gallery {
-  background-image: linear-gradient(rgba(255, 253, 249, 0.88), rgba(255, 253, 249, 0.94)), 
-                    url('../images/kids_cooking_academy_banner.jpg');
+  background-image: url('../images/summer_culinary_camp_banner.jpg');
+  background-position: center 25%;
 }
 
 .page-header-banner.banner-blog {
-  background-image: linear-gradient(rgba(255, 253, 249, 0.88), rgba(255, 253, 249, 0.95)), 
-                    url('../images/kid_recipe_guide_banner.jpg');
+  background-image: url('../images/kid_recipe_guide_banner.jpg');
+  background-position: center 35%;
 }
 
-.page-header-banner.banner-contact {
-  background-image: linear-gradient(rgba(255, 253, 249, 0.90), rgba(255, 253, 249, 0.95)), 
-                    url('../images/kids_cooking_academy_banner.jpg');
+/* Typography & Content inside Banner for Maximum Visibility */
+.page-header-banner .section-title,
+.page-header-banner .hero-title,
+.page-header-banner h1,
+.page-header-banner h2 {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: clamp(2.2rem, 4.2vw, 3.25rem) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.02em !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 4px 22px rgba(0, 0, 0, 0.85), 0 1px 2px #000000 !important;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.page-header-banner p,
+.page-header-banner .text-muted,
+.page-header-banner .section-subtitle {
+  color: #FFFFFF !important;
+  font-size: 1.08rem !important;
+  line-height: 1.65 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 1px 3px #000000 !important;
+}
+
+.page-header-banner .text-muted strong {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+.page-header-banner .text-muted i {
+  color: #FFA58E !important;
+}
+
+/* Section Tag inside Page Banner */
+.page-header-banner .section-tag {
+  background: rgba(255, 94, 54, 0.92) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+.page-header-banner .section-tag i {
+  color: #FFFFFF !important;
+}
+
+/* Banner Label Pills inside Page Banner */
+.page-header-banner .banner-label-pill {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+}
+
+.page-header-banner .banner-label-pill:hover {
+  background: rgba(255, 94, 54, 0.95) !important;
+  border-color: #FF5E36 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 94, 54, 0.45);
+}
+
+.page-header-banner .banner-label-pill.pill-primary {
+  border-color: rgba(255, 94, 54, 0.7) !important;
+  color: #FFA58E !important;
+  background: rgba(25, 20, 25, 0.88) !important;
+}
+
+.page-header-banner .banner-label-pill.pill-primary i {
+  color: #FF5E36 !important;
+}
+
+.page-header-banner .banner-label-pill.pill-success {
+  border-color: rgba(16, 185, 129, 0.7) !important;
+  color: #6EE7B7 !important;
+  background: rgba(15, 25, 22, 0.88) !important;
+}
+
+.page-header-banner .banner-label-pill.pill-success i {
+  color: #10B981 !important;
+}
+
+.page-header-banner .banner-label-pill.pill-warning {
+  border-color: rgba(245, 158, 11, 0.7) !important;
+  color: #FCD34D !important;
+  background: rgba(25, 23, 15, 0.88) !important;
+}
+
+.page-header-banner .banner-label-pill.pill-warning i {
+  color: #F59E0B !important;
+}
+
+.page-header-banner .banner-label-pill.pill-info {
+  border-color: rgba(59, 130, 246, 0.7) !important;
+  color: #93C5FD !important;
+  background: rgba(15, 22, 30, 0.88) !important;
+}
+
+.page-header-banner .banner-label-pill.pill-info i {
+  color: #3B82F6 !important;
+}
+
+/* Buttons inside Page Banner (e.g. Skeleton toggle) */
+.page-header-banner .btn-outline-custom {
+  background: rgba(15, 23, 42, 0.85) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.page-header-banner .btn-outline-custom:hover {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #FFFFFF !important;
 }
 
 /* Summer Camps Spotlight Section (Homepage & Camps) */
 .summer-camp-banner-section {
   position: relative;
-  background-image: linear-gradient(rgba(255, 253, 249, 0.91), rgba(255, 253, 249, 0.95)), 
-                    url('../images/summer_culinary_camp_banner.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+.summer-camp-banner-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/summer_culinary_camp_banner.jpg');
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  opacity: 0.28;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.summer-camp-banner-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 30%, rgba(255, 94, 54, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 85% 70%, rgba(255, 183, 3, 0.10) 0%, transparent 55%),
+              linear-gradient(135deg, rgba(255, 253, 249, 0.82) 0%, rgba(255, 248, 238, 0.78) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.summer-camp-banner-section > .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* Free Recipe Guide / Newsletter Section */
 .recipe-newsletter-banner-section {
   position: relative;
-  background-image: linear-gradient(rgba(255, 253, 249, 0.92), rgba(255, 253, 249, 0.96)), 
-                    url('../images/kid_recipe_guide_banner.jpg');
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.recipe-newsletter-banner-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/kid_recipe_guide_banner.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.recipe-newsletter-banner-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Educational Learning Pillars Section (About Us Page) */
+.learning-pillars-bg-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+.learning-pillars-bg-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/learning_pillars_bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.22;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.learning-pillars-bg-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.05) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 60%),
+              linear-gradient(180deg, rgba(255, 253, 249, 0.86) 0%, rgba(255, 249, 238, 0.82) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.learning-pillars-bg-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.learning-pillars-bg-section .custom-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-normal);
+}
+
+.learning-pillars-bg-section .custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  border-color: rgba(var(--color-primary-rgb), 0.45);
 }
 
 /* Studio Tour / Registration CTA Banner */
@@ -1429,10 +1941,43 @@ a:hover {
   transform: translateX(4px);
 }
 
+.footer-links .footer-item {
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+  pointer-events: none;
+  user-select: text;
+}
+
 .footer-bottom {
   border-top: 1px solid var(--border-color);
   padding-top: 28px;
   margin-top: 60px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-social-btn {
+  color: var(--text-muted);
+  font-size: 1.35rem;
+  line-height: 1;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-social-btn:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px) scale(1.1);
 }
 
 /* --------------------------------------------------------------------------
@@ -1536,7 +2081,97 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   STORY TIMELINE (ABOUT PAGE)
+   ENHANCED JOURNEY & MILESTONE ROADMAP (ABOUT PAGE)
+   -------------------------------------------------------------------------- */
+.journey-section {
+  position: relative;
+}
+
+.journey-hero-card {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.journey-track {
+  position: relative;
+}
+
+.journey-track::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 20px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 30%, var(--color-accent-blue) 60%, var(--color-accent-purple) 80%, var(--color-accent-gold) 100%);
+  border-radius: 999px;
+  opacity: 0.35;
+}
+
+.journey-card-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.journey-node {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  z-index: 2;
+  border: 4px solid var(--bg-page);
+  transition: transform var(--transition-fast);
+}
+
+.journey-card-wrapper:hover .journey-node {
+  transform: scale(1.15);
+}
+
+.journey-card {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+  flex-grow: 1;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.journey-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md) !important;
+  border-color: rgba(var(--color-primary-rgb), 0.35) !important;
+}
+
+.journey-year-pill {
+  font-size: 0.85rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 575.98px) {
+  .journey-track::before {
+    left: 16px;
+  }
+  .journey-node {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 0.85rem;
+  }
+  .journey-card-wrapper {
+    gap: 14px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   STORY TIMELINE (ABOUT PAGE - LEGACY FALLBACK)
    -------------------------------------------------------------------------- */
 .story-timeline {
   position: relative;
@@ -1892,4 +2527,175 @@ a:hover {
   padding: 24px;
   transition: all var(--transition-normal);
 }
+
+/* --------------------------------------------------------------------------
+   BLOG DETAILS CARDS & PAGINATION ENHANCEMENTS
+   -------------------------------------------------------------------------- */
+.pagination-custom .page-link {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full) !important;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+  margin: 0 3px;
+  padding: 0;
+}
+
+.pagination-custom .page-link:hover {
+  background: rgba(var(--color-primary-rgb), 0.1);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.pagination-custom .page-item.active .page-link {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(255, 94, 54, 0.35);
+}
+
+.pagination-custom .page-item.disabled .page-link {
+  opacity: 0.45;
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+[data-theme="dark"] .pagination-custom .page-link {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .pagination-custom .page-item.active .page-link {
+  background: var(--color-primary) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .pagination-custom .page-item.disabled .page-link {
+  background: #0F172A;
+  border-color: #334155;
+  color: #64748B;
+}
+
+.blog-tag-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[data-theme="dark"] .blog-tag-pill {
+  background: #0F172A;
+  border-color: #334155;
+  color: #94A3B8;
+}
+
+/* --------------------------------------------------------------------------
+   DIETARY ACCOMMODATIONS SHOWCASE (CLASSES PAGE)
+   -------------------------------------------------------------------------- */
+.dietary-showcase-card {
+  position: relative;
+  background: linear-gradient(135deg, #FFFFFF 0%, rgba(240, 253, 244, 0.75) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  border-left: 6px solid var(--color-secondary);
+  border-radius: var(--radius-2xl);
+  padding: 42px 36px;
+  box-shadow: 0 16px 40px -10px rgba(16, 185, 129, 0.12), 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.dietary-showcase-card:hover {
+  box-shadow: 0 20px 48px -10px rgba(16, 185, 129, 0.18), 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+.dietary-showcase-card::after {
+  content: '\f4d8';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  font-size: 14rem;
+  color: rgba(16, 185, 129, 0.035);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.dietary-feature-pill {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all var(--transition-fast);
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.dietary-feature-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-secondary);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.12);
+}
+
+.dietary-feature-pill i {
+  font-size: 1.35rem;
+  min-width: 26px;
+  text-align: center;
+}
+
+.dietary-feature-pill strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.dietary-feature-pill small {
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+.dietary-action-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.dietary-action-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
 

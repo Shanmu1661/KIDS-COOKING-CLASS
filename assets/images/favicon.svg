@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="brandFavGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B3D"/>
+      <stop offset="100%" stop-color="#FF3E12"/>
+    </linearGradient>
+  </defs>
+  <!-- Brand Squircle Base -->
+  <rect x="0" y="0" width="64" height="64" rx="17" fill="url(#brandFavGrad)"/>
+  
+  <!-- Utensils (Fork & Knife) in White -->
+  <g fill="#FFFFFF">
+    <!-- Fork (Left) -->
+    <rect x="22.5" y="30" width="3.5" height="20" rx="1.75"/>
+    <path d="M 19 22 C 19 27.5 29.5 27.5 29.5 22 Z"/>
+    <rect x="19" y="14" width="2.4" height="11" rx="1.2"/>
+    <rect x="23.05" y="14" width="2.4" height="11" rx="1.2"/>
+    <rect x="27.1" y="14" width="2.4" height="11" rx="1.2"/>
+
+    <!-- Knife (Right) -->
+    <rect x="38" y="30" width="3.5" height="20" rx="1.75"/>
+    <path d="M 38 14 C 38 14 46.5 17 46.5 25.5 C 46.5 29.5 42 32 38 32 Z"/>
+  </g>
+</svg>
