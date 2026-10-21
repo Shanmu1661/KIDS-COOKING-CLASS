@@ -29,6 +29,11 @@
   right: 0 !important;
 }
 
+[dir="rtl"] .main-header .dropdown-toggle::after {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
 /* Floating Badges */
 [dir="rtl"] .floating-badge-1 {
   left: auto;
@@ -41,12 +46,14 @@
 }
 
 /* Card Badges and Overlays */
-[dir="rtl"] .class-card-badges {
+[dir="rtl"] .class-card-badges,
+[dir="rtl"] .service-card-badges {
   left: auto;
   right: 14px;
 }
 
-[dir="rtl"] .class-card-price {
+[dir="rtl"] .class-card-price,
+[dir="rtl"] .service-card-price {
   right: auto;
   left: 14px;
 }
@@ -164,3 +171,14 @@
   transform: rotate(180deg);
 }
 
+
+/* Live Map RTL Support */
+[dir="rtl"] .live-map-pill {
+  left: 12px !important;
+  right: auto !important;
+}
+
+[dir="rtl"] .btn-white-map-action {
+  right: 12px !important;
+  left: auto !important;
+}

@@ -91,19 +91,10 @@
           </div>
         </a>
 
-        <!-- Mobile Toggles Container -->
-        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
-          <button class="btn btn-icon-round theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout" title="Switch text direction">
-            <span class="rtl-text">RTL</span>
-            <i class="fa-solid fa-right-left ms-1"></i>
-          </button>
-          <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fs-4 text-white"></i>
-          </button>
-        </div>
+        <!-- Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4 text-white"></i>
+        </button>
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarMain">
@@ -131,21 +122,21 @@
             </li>
           </ul>
 
-          <!-- Action Buttons -->
-          <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
-            <!-- Settings / Theme Toggle (Matching user screenshot) -->
-            <button class="btn btn-icon-round theme-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
-              <i class="fa-solid fa-moon"></i>
-            </button>
+          <!-- Inside Hamburger Menu (Mobile) & Navbar Actions (Desktop) -->
+          <div class="navbar-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 py-3 py-lg-0 border-top border-lg-0 mt-3 mt-lg-0">
+            <!-- Theme & RTL Toggles (Inside Hamburger Menu on mobile, inline on desktop) -->
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2 mb-2 mb-lg-0">
+              <button class="btn btn-icon-round theme-toggle-btn d-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="rtl-btn-pill rtl-toggle-btn d-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+                <span class="rtl-text">RTL</span>
+                <i class="fa-solid fa-right-left ms-2"></i>
+              </button>
+            </div>
 
-            <!-- RTL Pill Button (Matching user screenshot) -->
-            <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
-              <span class="rtl-text">RTL</span>
-              <i class="fa-solid fa-right-left ms-2"></i>
-            </button>
-
-            <!-- Parent Portal Login Button (Matching user screenshot) -->
-            <a href="login.html" class="btn btn-parent-login">
+            <!-- Parent Portal Login Button -->
+            <a href="login.html" class="btn btn-parent-login text-center">
               <i class="fa-solid fa-lock me-1"></i> Parent Login
             </a>
           </div>

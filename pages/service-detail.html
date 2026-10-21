@@ -1,0 +1,945 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Service Details | Little Chefs Academy</title>
+  <meta name="description" id="page-meta-desc" content="Explore full details, pricing, schedule, and curriculum for our culinary programs at Little Chefs Academy.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" id="og-title" content="Culinary Program Details | Little Chefs Academy">
+  <meta property="og:description" id="og-desc" content="Discover hands-on culinary programs, what's included, safety standards, and pricing at Little Chefs Academy.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN (Pre-configured to prevent Bootstrap clash) -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: ['selector', '[data-theme="dark"]'],
+        corePlugins: {
+          preflight: false,
+          visibility: false,
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Skip to content for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="brand-title">
+            <span class="brand-name">Little Chefs</span>
+            <span class="brand-tagline">Academy & Camps</span>
+          </div>
+        </a>
+
+        <!-- Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4 text-white"></i>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+                                                <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down home-chevron"></i>
+              </a>
+              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 - Classic Academy</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 - Modern Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+
+          <!-- Inside Hamburger Menu (Mobile) & Navbar Actions (Desktop) -->
+          <div class="navbar-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 py-3 py-lg-0 border-top border-lg-0 mt-3 mt-lg-0">
+            <!-- Theme & RTL Toggles (Inside Hamburger Menu on mobile, inline on desktop) -->
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2 mb-2 mb-lg-0">
+              <button class="btn btn-icon-round theme-toggle-btn d-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="rtl-btn-pill rtl-toggle-btn d-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+                <span class="rtl-text">RTL</span>
+                <i class="fa-solid fa-right-left ms-2"></i>
+              </button>
+            </div>
+
+            <!-- Parent Portal Login Button -->
+            <a href="login.html" class="btn btn-parent-login text-center">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb & Page Banner (Standardized 450px) -->
+    <section class="page-header-banner banner-services">
+      <div class="container text-center py-3">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <div class="page-breadcrumb-pill">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <a href="services.html">Services</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="breadcrumb-current" id="banner-breadcrumb-title">Weekly Classes</span>
+          </div>
+        </nav>
+        <span class="section-tag" id="banner-tag"><i class="fa-solid fa-kitchen-set"></i> Core Program</span>
+        <h1 class="section-title mb-2" id="banner-title">Age-Grouped Weekly Classes</h1>
+        <p class="text-muted max-w-2xl mx-auto mb-0" id="banner-desc">
+          Structured semester & drop-in sessions across 4 developmental age tiers with individual induction cooktops.
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section" id="banner-pills-container">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Main Service Content Section (Resized & Proportionate) -->
+    <section class="py-4 py-lg-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+
+          <!-- Left Column: Detailed Service Body -->
+          <div class="col-lg-8">
+            <!-- Hero Service Feature Image (Compact & Proportioned) -->
+            <div class="rounded-2xl overflow-hidden shadow-md mb-4 position-relative" style="height: 280px;">
+              <img id="service-hero-img" src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=1200&q=80" alt="Service feature photo" class="w-100 h-100 object-cover">
+              <div class="position-absolute bottom-3 start-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border shadow-sm">
+                <span class="text-xs fw-bold text-primary font-heading" id="hero-image-badge"><i class="fa-solid fa-camera me-1"></i> Live Academy Classroom</span>
+              </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="mb-4">
+              <span class="section-tag mb-2"><i class="fa-solid fa-circle-info"></i> Program Overview</span>
+              <h3 class="font-heading fw-bold mb-2 fs-4" id="overview-heading">Hands-On Culinary Foundations Built for Children</h3>
+              <p class="text-muted mb-3" id="overview-lead">
+                Every child cooks from scratch at their own individual workstation, mastering knife safety, recipe arithmetic, and sensory chemistry.
+              </p>
+              <p class="text-muted small mb-0" id="overview-body">
+                Our curriculum transforms children from passive eaters into curious, self-reliant culinary artists. Under the compassionate mentorship of professional chef instructors, students measure, chop, whisk, and sautÃ© fresh organic ingredients into complete meals they proudly share with family.
+              </p>
+            </div>
+
+            <!-- What's Included Grid -->
+            <div class="mb-4">
+              <h4 class="font-heading fw-bold mb-3 fs-5">What's Included in This Program</h4>
+              <div class="row g-3" id="included-grid">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Step-by-Step Experience Flow -->
+            <div class="mb-4">
+              <span class="section-tag mb-2"><i class="fa-solid fa-timeline"></i> The Experience</span>
+              <h4 class="font-heading fw-bold mb-3 fs-5">How Each Session Unfolds</h4>
+              <div class="d-flex flex-column gap-2" id="timeline-container">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Safety Sanctuary Banner (Compact) -->
+            <div class="p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 mb-4">
+              <div class="d-flex gap-3 align-items-center">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center fs-5 flex-shrink-0">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                  <h6 class="font-heading fw-bold text-emerald-950 dark:text-emerald-100 mb-0.5">Safety & Allergy Sanctuary Guarantee</h6>
+                  <p class="text-muted text-xs mb-0">
+                    100% peanut and tree nut-free facility. Cool-touch magnetic induction cooktops, ergonomic nylon safety cutlery, and pediatric CPR/First Aid certified chefs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing & Registration Options -->
+            <div class="mb-4">
+              <div class="text-center mb-3">
+                <span class="section-tag mb-1"><i class="fa-solid fa-tags"></i> Transparent Rates</span>
+                <h4 class="font-heading fw-bold mb-1 fs-5">Enrollment & Package Options</h4>
+                <p class="text-muted text-xs mb-0">Choose the plan that best fits your family's schedule and culinary goals.</p>
+              </div>
+
+              <div class="row g-3" id="pricing-grid">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Frequently Asked Questions -->
+            <div class="mb-3">
+              <span class="section-tag mb-2"><i class="fa-solid fa-circle-question"></i> Common Questions</span>
+              <h4 class="font-heading fw-bold mb-3 fs-5">Frequently Asked Questions</h4>
+              <div class="accordion custom-accordion" id="serviceFaqAccordion">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Sidebar Widget (Compact & Proportionate) -->
+          <div class="col-lg-4">
+            
+            <!-- Compact Booking Widget -->
+            <aside class="service-booking-card mb-3" style="position: -webkit-sticky; position: sticky; top: 90px; z-index: 25;">
+              <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                <span class="badge-pill badge-featured text-xs" id="sidebar-pill">Instant Booking</span>
+                <div class="text-end">
+                  <span class="text-xs text-muted d-block">Starting from</span>
+                  <span class="fs-4 fw-bold font-heading text-primary" id="sidebar-price">$45 / class</span>
+                </div>
+              </div>
+
+              <h5 class="font-heading fw-bold mb-1 fs-6" id="sidebar-service-title">Reserve a Workstation</h5>
+              <p class="text-muted text-xs mb-3" id="sidebar-short-desc">
+                Capped at 10&ndash;12 workstations per session for 1:5 chef attention.
+              </p>
+
+              <!-- Compact Booking Form -->
+              <form id="serviceBookingForm" class="d-flex flex-column gap-2.5 mb-3">
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1">AGE TIER / SESSION</label>
+                  <select class="form-select form-select-sm rounded-lg shadow-none text-xs" id="bookingTierSelect">
+                    <option value="tier1">Tiny Tasters (Ages 3 &ndash; 5)</option>
+                    <option value="tier2" selected>Little Chefs (Ages 6 &ndash; 9)</option>
+                    <option value="tier3">Junior Gourmet (Ages 10 &ndash; 13)</option>
+                    <option value="tier4">Teen Masterclass (Ages 14 &ndash; 17)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1">DATE</label>
+                  <input type="date" class="form-control form-control-sm rounded-lg shadow-none text-xs" id="bookingDateInput">
+                </div>
+
+                <div>
+                  <div class="d-flex align-items-center justify-content-between p-2 border rounded-lg bg-subtle">
+                    <span class="text-xs fw-medium">Young Chef Workstations</span>
+                    <div class="d-flex align-items-center gap-1.5">
+                      <button type="button" class="btn btn-sm btn-icon-round border bg-white dark:bg-slate-800" style="width: 26px; height: 26px; font-size: 0.75rem;" id="decSeatsBtn">-</button>
+                      <span class="fw-bold px-2 font-heading text-sm" id="seatsCount">1</span>
+                      <button type="button" class="btn btn-sm btn-icon-round border bg-white dark:bg-slate-800" style="width: 26px; height: 26px; font-size: 0.75rem;" id="incSeatsBtn">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="py-1 px-2.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-900/60 text-xs text-orange-900 dark:text-orange-200">
+                  <i class="fa-solid fa-tag me-1 text-orange-600"></i> Sibling discount: <strong>10% off</strong> applied in portal!
+                </div>
+
+                <a href="dashboard.html" class="btn btn-primary-custom w-100 py-2.5 rounded-full font-bold text-sm shadow-sm hover:shadow" id="sidebar-action-btn">
+                  <i class="fa-solid fa-plus me-1.5"></i> Enroll in Parent Portal
+                </a>
+                <a href="contact.html" class="text-center text-xs text-muted hover:text-primary text-decoration-none py-1">
+                  <i class="fa-solid fa-comments me-1"></i> Inquire about private groups &rarr;
+                </a>
+              </form>
+
+              <!-- Quick Specs 2x2 Grid -->
+              <h6 class="font-heading fw-bold text-xs uppercase tracking-wider text-muted mb-2 border-top pt-2.5">Key Specifications</h6>
+              <div class="service-spec-grid">
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-user-group text-primary"></i>
+                  <div class="spec-content">
+                    <span>Ratio</span>
+                    <strong>1:5 Dedicated</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-clock text-primary"></i>
+                  <div class="spec-content">
+                    <span>Duration</span>
+                    <strong id="spec-duration">90&ndash;120 Mins</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-shield-virus text-success"></i>
+                  <div class="spec-content">
+                    <span>Allergies</span>
+                    <strong class="text-success">100% Nut-Safe</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-location-dot text-danger"></i>
+                  <div class="spec-content">
+                    <span>Studio</span>
+                    <strong>Austin, TX</strong>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Compact All Services Navigation -->
+            <div class="custom-card p-3 border shadow-sm mb-3">
+              <h6 class="font-heading fw-bold text-xs uppercase tracking-wider text-muted mb-2"><i class="fa-solid fa-list-check me-1.5 text-primary"></i> All Programs</h6>
+              <div class="d-flex flex-column gap-1.5" id="sidebar-services-nav">
+                <a href="service-weekly-classes.html" class="p-2 rounded-lg border text-decoration-none d-flex align-items-center justify-content-between hover:bg-orange-50 dark:hover:bg-slate-800 transition text-xs" data-nav="weekly-classes">
+                  <span class="font-medium"><i class="fa-solid fa-kitchen-set text-orange-500 me-1.5"></i> Weekly Classes</span>
+                  <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.65rem;"></i>
+                </a>
+                <a href="service-summer-camps.html" class="p-2 rounded-lg border text-decoration-none d-flex align-items-center justify-content-between hover:bg-orange-50 dark:hover:bg-slate-800 transition text-xs" data-nav="summer-camps">
+                  <span class="font-medium"><i class="fa-solid fa-campground text-amber-500 me-1.5"></i> Summer Camps</span>
+                  <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.65rem;"></i>
+                </a>
+                <a href="service-birthday-parties.html" class="p-2 rounded-lg border text-decoration-none d-flex align-items-center justify-content-between hover:bg-orange-50 dark:hover:bg-slate-800 transition text-xs" data-nav="birthday-parties">
+                  <span class="font-medium"><i class="fa-solid fa-cake-candles text-purple-500 me-1.5"></i> Birthday Parties</span>
+                  <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.65rem;"></i>
+                </a>
+                <a href="service-stem-field-trips.html" class="p-2 rounded-lg border text-decoration-none d-flex align-items-center justify-content-between hover:bg-orange-50 dark:hover:bg-slate-800 transition text-xs" data-nav="stem-field-trips">
+                  <span class="font-medium"><i class="fa-solid fa-school text-emerald-500 me-1.5"></i> STEM Field Trips</span>
+                  <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.65rem;"></i>
+                </a>
+                <a href="service-parent-and-me.html" class="p-2 rounded-lg border text-decoration-none d-flex align-items-center justify-content-between hover:bg-orange-50 dark:hover:bg-slate-800 transition text-xs" data-nav="parent-and-me">
+                  <span class="font-medium"><i class="fa-solid fa-people-roof text-blue-500 me-1.5"></i> Parent &amp; Me</span>
+                  <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.65rem;"></i>
+                </a>
+                <a href="service-starter-kits.html" class="p-2 rounded-lg border text-decoration-none d-flex align-items-center justify-content-between hover:bg-orange-50 dark:hover:bg-slate-800 transition text-xs" data-nav="starter-kits">
+                  <span class="font-medium"><i class="fa-solid fa-bag-shopping text-pink-500 me-1.5"></i> Starter Kits</span>
+                  <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.65rem;"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Compact Help Callout -->
+            <div class="p-3 rounded-xl bg-subtle border text-center">
+              <div class="text-xs text-muted mb-1"><i class="fa-solid fa-phone text-primary me-1"></i> Questions? Call (512) 555-CHEF</div>
+              <a href="contact.html" class="btn btn-xs btn-outline-custom rounded-full px-3 py-1 text-xs">Schedule Free Tour</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services (Resized & Compact) -->
+    <section class="py-4 bg-subtle border-top">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <span class="section-tag mb-1"><i class="fa-solid fa-sparkles"></i> More Experiences</span>
+            <h4 class="font-heading fw-bold mb-0 fs-5">Other Culinary Offerings You Might Love</h4>
+          </div>
+          <a href="services.html" class="btn btn-outline-custom btn-sm-custom text-xs d-none d-sm-inline-flex">
+            All Services &rarr;
+          </a>
+        </div>
+
+        <div class="row g-3" id="related-services-row">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner (Standardized 380px) -->
+    <section class="py-5 cta-banner-section text-white text-center">
+      <div class="container py-3">
+        <h2 class="font-heading fw-bold mb-3">Ready to Spark Kitchen Creativity?</h2>
+        <p class="text-orange-100 max-w-xl mx-auto mb-4">
+          Enroll directly in our parent portal or get in touch with our kitchen team for personalized program advice.
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section mb-4">
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-graduation-cap"></i> Ages 3 to 17 Welcome
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-calendar-check"></i> Instant Online Booking
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-users"></i> Small 1:5 Class Ratios
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-credit-card"></i> Flexible Cancellation
+          </span>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="dashboard.html" class="btn btn-light text-orange-600 font-bold px-4 py-3 rounded-full shadow-lg hover:bg-orange-50">
+            <i class="fa-solid fa-lock me-2"></i> Enroll via Parent Dashboard
+          </a>
+          <a href="contact.html" class="btn btn-outline-light font-bold px-4 py-3 rounded-full">
+            <i class="fa-solid fa-envelope me-2"></i> Contact Kitchen Team
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="brand-title">
+              <span class="brand-name">Little Chefs</span>
+              <span class="brand-tagline">Academy & Camps</span>
+            </div>
+          </a>
+          <p class="text-muted mb-4">
+            Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
+          </p>
+          <div class="d-flex gap-3 fs-5 footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Facebook Login" title="Redirect to Facebook Login Page"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Instagram Login" title="Redirect to Instagram Login Page"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="YouTube Login" title="Redirect to YouTube Login Page"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Pinterest Login" title="Redirect to Pinterest Login Page"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-widget-title font-heading">Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="index-2.html"><i class="fa-solid fa-angle-right"></i> Home 2 (Modern)</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i> Classes</a></li>
+            <li><a href="camps.html"><i class="fa-solid fa-angle-right"></i> Summer Camps</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Age Programs</h5>
+          <ul class="footer-links">
+            <li><span class="footer-item"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</span></li>
+            <li><span class="footer-item"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</span></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Visit Our Kitchen</h5>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary me-2"></i> 452 Gourmet Way, Suite 100, Austin, TX 78701</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> (512) 555-CHEF (2433)</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-envelope text-primary me-2"></i> hello@littlechefsacademy.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+        <p class="mb-0">&copy; 2026 Little Chefs Academy. All rights reserved.</p>
+        <div class="d-flex gap-4">
+          <a href="about.html#safety" class="text-muted hover:text-primary">Safety Protocols</a>
+          <a href="contact.html#faq" class="text-muted hover:text-primary">Parent FAQs</a>
+          <a href="404.html" class="text-muted hover:text-primary">404 Error Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Service Detail Dynamic Content Handler -->
+  <script>
+    const SERVICES_DATA = {
+      'weekly-classes': {
+        title: 'Age-Grouped Weekly Cooking Classes',
+        tag: '<i class="fa-solid fa-kitchen-set"></i> Core Semester Curriculum',
+        badge: 'Core Program &bull; Ages 3 &ndash; 17',
+        price: '$45 / class',
+        heroImg: 'https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=1200&q=80',
+        shortDesc: 'Structured semester & drop-in sessions across 4 developmental age tiers with individual induction cooktops and take-home family portions.',
+        overviewHeading: 'Lifelong Kitchen Independence Across 4 Age Tiers',
+        overviewLead: 'Every child works at their own dedicated, kid-safe workstation. All ingredients, custom chef aprons, hats, and take-home dinners are included.',
+        overviewBody: 'From dough elasticity and knife safety to emulsification and sauce balancing, our weekly classes build confidence step by step. We maintain an uncompromising 1:5 chef-to-student ratio so every young chef receives focused guidance and praise.',
+        specs: { duration: '90&ndash;120 Mins', age: 'Ages 3&ndash;17', ratio: '1:5 Dedicated', groupSize: 'Max 12' },
+        bannerPills: [
+          { icon: 'fa-solid fa-graduation-cap', text: '4 Age Tiers (3&ndash;17)', pillClass: 'pill-primary' },
+          { icon: 'fa-solid fa-fire-burner', text: '100% Induction Tops', pillClass: 'pill-success' },
+          { icon: 'fa-solid fa-shield-heart', text: 'Nut-Free Sanctuary', pillClass: 'pill-warning' },
+          { icon: 'fa-solid fa-user-group', text: '1:5 Chef Ratio', pillClass: 'pill-info' },
+          { icon: 'fa-solid fa-box-open text-danger', text: 'Take-Home Feasts', pillClass: '' }
+        ],
+        included: [
+          { icon: 'fa-solid fa-kitchen-set', title: 'Dedicated Induction Station', desc: 'Child-ergonomic cool-touch burner, silicone utensils, step stool, and sanitizing wipes.' },
+          { icon: 'fa-solid fa-carrot', title: 'Farm-Fresh Ingredients', desc: '100% organic pre-measured produce, non-GMO dairy, unbleached grains, and allergy subs.' },
+          { icon: 'fa-solid fa-hat-chef', title: 'Chef Apron & Hat', desc: 'Embroidered canvas apron and cloth chef toque to wear in every class session.' },
+          { icon: 'fa-solid fa-award', title: 'Skill Passport Badges', desc: 'Embroidered physical technique milestone badges and digital parent portal recipe sync.' }
+        ],
+        timeline: [
+          { num: '01', title: 'Arrival, Uniforming & Hygiene Check', desc: 'Chefs sanitize hands at our sensor wash stations, don custom aprons, and review the day's recipe.' },
+          { num: '02', title: 'Sensory Exploration & Knife Demo', desc: 'Chef educator demonstrates technique (e.g. bear-claw grip, slicing julienne) with sensory food discovery.' },
+          { num: '03', title: 'Hands-On SautÃ© & Cooking', desc: 'Children activate their cool-touch induction tops to prepare sauces, cook grains, and fold dough.' },
+          { num: '04', title: 'Studio Tasting & Take-Home Packing', desc: 'Chefs taste their creations together at our farm table and pack generous dinners for family at home.' }
+        ],
+        pricing: [
+          { name: 'Single Drop-In Pass', price: '$45', period: 'per class', desc: 'Perfect for trying out our studio or flexible schedules.', features: ['1 Single class session', 'All ingredients included', 'Take-home dinner portion', 'Apron & hat rental included'], btnText: 'Book Drop-In', featured: false },
+          { name: '4-Week Mini Semester', price: '$165', period: '4 sessions ($41/ea)', desc: 'Our most popular introductory semester track.', features: ['4 Consecutive weekly classes', 'Keepsake apron to keep', '1 Skill mastery badge', '1 Free class reschedule pass'], btnText: 'Enroll Semester', featured: true },
+          { name: '12-Week Master Series', price: '$460', period: '12 sessions ($38/ea)', desc: 'Comprehensive culinary technique certification.', features: ['Full semester curriculum', 'Free 3-pc safety knife kit ($30 value)', '3 Skill mastery badges & graduation', 'Priority camp registration access'], btnText: 'Join Master Series', featured: false }
+        ],
+        faqs: [
+          { q: 'Can parents stay and watch the class?', a: 'Yes! We have an acoustic glass viewing lounge overlooking the kitchen with complimentary artisan coffee, high-speed Wi-Fi, and live photo tablet stations.' },
+          { q: 'What happens if we miss a scheduled class?', a: 'Semester enrollments include flexible makeup passes that can be redeemed in any equivalent age-group class within 60 days.' },
+          { q: 'How do you handle dietary restrictions and allergies?', a: 'Our entire facility is strictly tree-nut and peanut-free. We gladly accommodate gluten-free, dairy-free, and vegetarian requirements with advance notice.' }
+        ]
+      },
+
+      'summer-camps': {
+        title: 'Culinary Summer Camps & Immersions',
+        tag: '<i class="fa-solid fa-campground"></i> Summer 2026 Registration Open',
+        badge: '5-Day Immersion &bull; Ages 6 &ndash; 16',
+        price: '$395 / week',
+        heroImg: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80',
+        shortDesc: 'Immersive week-long expeditions covering Global Gastronomy, French Patisserie, Farm Botany, and Junior Iron Chef mystery basket bake-offs.',
+        overviewHeading: 'Unforgettable 5-Day Kitchen Adventures',
+        overviewLead: 'Campers cook complete hot 2-course lunches every single day, explore edible science, and host a Friday graduation banquet for family!',
+        overviewBody: 'Our summer camp program runs Monday through Friday in convenient full-day and half-day formats. Every week features a unique culinary theme&mdash;from Hand-Rolled Pasta & Baking to World Street Food Journeys and STEM Food Lab Experiments.',
+        specs: { duration: '9 AM &ndash; 3 PM (Full Day)', age: 'Ages 6&ndash;16', ratio: '1:5 Dedicated', groupSize: 'Max 16' },
+        bannerPills: [
+          { icon: 'fa-solid fa-calendar-days', text: '5-Day Weekly Sessions', pillClass: 'pill-primary' },
+          { icon: 'fa-solid fa-clock', text: 'Full & Half Day Options', pillClass: 'pill-success' },
+          { icon: 'fa-solid fa-utensils', text: 'Hot Lunch Included Daily', pillClass: 'pill-warning' },
+          { icon: 'fa-solid fa-trophy', text: 'Friday Parent Banquet', pillClass: 'pill-info' },
+          { icon: 'fa-solid fa-shield-heart text-danger', text: '100% Nut-Safe', pillClass: '' }
+        ],
+        included: [
+          { icon: 'fa-solid fa-utensils', title: 'Daily 2-Course Hot Lunch', desc: 'Campers prepare, cook, and feast on a freshly cooked hot lunch and dessert each day.' },
+          { icon: 'fa-solid fa-shirt', title: 'Personalized Embroidered Apron', desc: 'High-quality canvas apron with their name embroidered, yours to keep forever.' },
+          { icon: 'fa-solid fa-seedling', title: 'Courtyard Botany & Gardening', desc: 'Daily organic herb harvesting and sensory tastings in our private sunny courtyard.' },
+          { icon: 'fa-solid fa-graduation-cap', title: 'Friday Family Banquet Pass', desc: 'Two family guest tickets to the Friday Parent Graduation Banquet and awards.' }
+        ],
+        timeline: [
+          { num: '01', title: '9:00 AM - Kitchen Kickoff & Yeast Lab', desc: 'Morning baking session: kneading doughs, fermenting focaccias, and pastry crust techniques.' },
+          { num: '02', title: '11:00 AM - Savory Lunch Preparation', desc: 'Chefs fire up induction cooktops to cook our international savory meal of the day.' },
+          { num: '03', title: '12:30 PM - Communal Feast & Outdoor Break', desc: 'Dining together family-style followed by fun outdoor sensory garden activities.' },
+          { num: '04', title: '1:45 PM - Mystery Basket Bake-Off', desc: 'Creative challenges, plating artistry, edible science labs, and packaging afternoon treats.' }
+        ],
+        pricing: [
+          { name: 'Half-Day Camp (Morning)', price: '$285', period: 'per week (9am&ndash;12pm)', desc: 'Ideal for younger campers easing into kitchen training.', features: ['Daily morning pastry lab', 'Take-home baked goods daily', 'Keepsake embroidered apron', 'Friday award ceremony'], btnText: 'Reserve Half-Day', featured: false },
+          { name: 'Full-Day Camp Immersion', price: '$395', period: 'per week (9am&ndash;3pm)', desc: 'Our flagship culinary camp experience.', features: ['Full 6 hours hands-on daily', 'Fresh hot lunch included daily', 'Friday Banquet 2 guest passes', 'Camp photo album download'], btnText: 'Reserve Full-Day', featured: true },
+          { name: '2-Week Multi-Camp Pass', price: '$720', period: '2 full weeks (Save $70)', desc: 'For budding young masterchefs wanting two full camp themes.', features: ['Two full 5-day camp tracks', 'Free starter cutlery set', 'Priority track selection', 'Sibling transferrable'], btnText: 'Get 2-Week Pass', featured: false }
+        ],
+        faqs: [
+          { q: 'Is before and after care available?', a: 'Yes! Extended care is available starting at 8:00 AM and running until 5:00 PM for a flat $50/week add-on.' },
+          { q: 'Do campers need to bring a packed lunch?', a: 'No! The campers prepare and cook their own delicious, hot, balanced 2-course lunch every single day.' },
+          { q: 'What is the Friday Banquet?', a: 'On Friday at 2:00 PM, family members are invited into the studio for a graduation ceremony and tasting reception cooked by the campers.' }
+        ]
+      },
+
+      'birthday-parties': {
+        title: 'Private Birthday Cooking Parties',
+        tag: '<i class="fa-solid fa-cake-candles"></i> Exclusive Studio Celebration',
+        badge: 'Exclusive Studio &bull; All Ages',
+        price: '$450 (12 Kids)',
+        heroImg: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=80',
+        shortDesc: 'Exclusive commercial kitchen studio rental for your child's birthday celebration! Kids stretch artisan pizzas, bake cupcakes, and enjoy zero cleanup for parents.',
+        overviewHeading: 'The Ultimate Hands-On Birthday Celebration',
+        overviewLead: 'Give your child a one-of-a-kind culinary bash where friends cook, laugh, celebrate, and parents don't lift a finger!',
+        overviewBody: 'Our private cooking birthday parties grant your party exclusive access to our modern 4,500 sq. ft. kitchen academy. Led by two energetic chef educators, kids stretch scratch pizza dough, pipe colorful buttercreams, and sing with joy.',
+        specs: { duration: '2 Hours Private', age: 'Ages 3&ndash;16', ratio: '2 Dedicated Chefs', groupSize: '12&ndash;18 Kids' },
+        bannerPills: [
+          { icon: 'fa-solid fa-clock', text: '2-Hour Private Studio', pillClass: 'pill-primary' },
+          { icon: 'fa-solid fa-pizza-slice', text: 'Handmade Artisan Pizzas', pillClass: 'pill-success' },
+          { icon: 'fa-solid fa-cake-candles', text: 'Cupcake Decorating Lab', pillClass: 'pill-warning' },
+          { icon: 'fa-solid fa-broom', text: 'Zero Cleanup for Parents', pillClass: 'pill-info' },
+          { icon: 'fa-solid fa-gift text-danger', text: 'Keepsake Apron for Host', pillClass: '' }
+        ],
+        included: [
+          { icon: 'fa-solid fa-house-chimney-user', title: '100% Private Studio Buyout', desc: 'No other classes or patrons in the facility during your scheduled private celebration.' },
+          { icon: 'fa-solid fa-pizza-slice', title: 'Scratch Personal Pizzas', desc: 'Each guest stretches their own yeast dough, spoons sauce, and selects favorite toppings.' },
+          { icon: 'fa-solid fa-wand-magic-sparkles', title: 'Cupcake Decorating Station', desc: 'Pastry piping bags, natural color frostings, sprinkles, and edible glitter.' },
+          { icon: 'fa-solid fa-sparkles', title: 'All Setup & Complete Cleanup', desc: 'We handle 100% of the ingredient prep, party setup, and commercial dish sanitization.' }
+        ],
+        timeline: [
+          { num: '01', title: 'Welcome & Chef Uniforming (15 mins)', desc: 'Guests arrive, put on chef hats, wash hands, and receive customized party name tags.' },
+          { num: '02', title: 'Pizza Dough Stretching & Baking (45 mins)', desc: 'Hands in the flour! Rolling dough, ladling scratch sauce, and watching pizzas bake.' },
+          { num: '03', title: 'The Cupcake Bakery Studio (30 mins)', desc: 'Learning pastry piping techniques with colorful buttercreams and custom cake toppers.' },
+          { num: '04', title: 'Candles, Singing & Birthday Feast (30 mins)', desc: 'Eating hot fresh pizzas, singing Happy Birthday, and packing bakery party favors.' }
+        ],
+        pricing: [
+          { name: 'Petite Celebration', price: '$350', period: 'up to 8 children', desc: 'Perfect for intimate gatherings and close friends.', features: ['90 Minutes private studio', 'Personal pan pizzas for all', 'Cupcake decorating session', 'Paper chef hats included'], btnText: 'Book Petite Party', featured: false },
+          { name: 'Classic Masterchef Bash', price: '$450', period: 'up to 12 children', desc: 'Our most popular all-inclusive birthday package.', features: ['Full 2 hours private studio', 'Embroidered apron for birthday child', 'Personal pizzas & cupcakes', 'Punch bowl & coffee lounge for parents'], btnText: 'Book Classic Bash', featured: true },
+          { name: 'Deluxe Grand Feast', price: '$595', period: 'up to 16 children', desc: 'The ultimate VIP culinary experience.', features: ['2.5 Hours private studio', 'Embroidered aprons for ALL 16 guests', 'Custom celebration cake included', 'Goodie bags with kid-safe cutter'], btnText: 'Book Deluxe Feast', featured: false }
+        ],
+        faqs: [
+          { q: 'Can we bring our own outside birthday cake?', a: 'Yes! While each child bakes and decorates their own cupcake in class, you are always welcome to bring an outside nut-free cake for candle lighting.' },
+          { q: 'What do parents do during the party?', a: 'Parents can watch through our acoustic glass lounge, enjoy complimentary espresso, or join the fun in the kitchen taking photos!' },
+          { q: 'What days and times are parties held?', a: 'Private celebrations are hosted on Saturdays (11am, 2:30pm, 6pm) and Sundays (1pm, 4:30pm), as well as weekday afternoons.' }
+        ]
+      },
+
+      'stem-field-trips': {
+        title: 'School Field Trips & STEM Kitchen Labs',
+        tag: '<i class="fa-solid fa-school"></i> TEKS & NGSS Standards Aligned',
+        badge: 'Grades K &ndash; 12 &bull; Field Trips',
+        price: '$18 / student',
+        heroImg: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80',
+        shortDesc: 'Interactive standards-aligned food chemistry workshops and garden tours for public/private schools, homeschool co-ops, and scout troops.',
+        overviewHeading: 'Where Science, Math & Nutrition Come Alive',
+        overviewLead: 'Turn measuring cups into fractions, sautÃ© pans into thermal physics, and yeast dough into biological fermentation!',
+        overviewBody: 'Little Chefs Academy hosts school field trips engineered by certified educators and professional chefs. Each trip bridges core STEM curriculum concepts with tangible, edible laboratory experiments children never forget.',
+        specs: { duration: '2 to 2.5 Hours', age: 'Grades K&ndash;12', ratio: '1:6 Dedicated', groupSize: '15&ndash;60 Students' },
+        bannerPills: [
+          { icon: 'fa-solid fa-flask-vial', text: 'Hands-on Chemistry Labs', pillClass: 'pill-primary' },
+          { icon: 'fa-solid fa-seedling', text: 'Herb Courtyard Botany', pillClass: 'pill-success' },
+          { icon: 'fa-solid fa-calculator', text: 'Applied Culinary Math', pillClass: 'pill-warning' },
+          { icon: 'fa-solid fa-chalkboard-user', text: 'Teacher Packets Included', pillClass: 'pill-info' },
+          { icon: 'fa-solid fa-bus text-danger', text: 'Dedicated Bus Drop-Off', pillClass: '' }
+        ],
+        included: [
+          { icon: 'fa-solid fa-microscope', title: 'Edible Science Experiments', desc: 'Yeast respiration gas collection, acid-base indicators, and emulsification demonstrations.' },
+          { icon: 'fa-solid fa-pizza-slice', title: 'Scratch Herb Focaccia Bread', desc: 'Every student kneads and bakes their own personal herb-infused focaccia flatbread.' },
+          { icon: 'fa-solid fa-book-bookmark', title: 'Teacher Curriculum Packet', desc: 'Pre-trip classroom preparation worksheets and post-trip assessment quizzes.' },
+          { icon: 'fa-solid fa-bus-simple', title: 'Free Chaperone Admission', desc: 'Teachers and adult chaperones participate for free with complimentary coffee lounge access.' }
+        ],
+        timeline: [
+          { num: '01', title: 'Welcome & Food Science Briefing (20 mins)', desc: 'Overview of kitchen lab safety, microscopic yeast organisms, and sensory hypothesis testing.' },
+          { num: '02', title: 'Hands-On Biological Fermentation (40 mins)', desc: 'Measuring active dry yeast, evaluating water temperatures, and calculating gluten elasticity.' },
+          { num: '03', title: 'Courtyard Botany & Herb Infusion (30 mins)', desc: 'Harvesting rosemary and thyme from our sensory garden and learning plant taxonomy.' },
+          { num: '04', title: 'Oven Bake, Scientific Tasting & Debrief (30 mins)', desc: 'Evaluating the Maillard reaction, tasting fresh breads, and completing lab worksheets.' }
+        ],
+        pricing: [
+          { name: 'Homeschool / Scout Troop', price: '$22', period: 'per student (10&ndash;18 kids)', desc: 'Intimate hands-on STEM lab session.', features: ['Full 2-hour laboratory workshop', 'Individual focaccia baking', 'Scout badge requirement coverage', 'Lab worksheet packet'], btnText: 'Book Troop Trip', featured: false },
+          { name: 'Standard Grade-Level Trip', price: '$18', period: 'per student (19&ndash;35 kids)', desc: 'Our most booked school field trip package.', features: ['2.5-hour interactive lab', 'Yeast balloon gas experiment', 'Teacher lesson prep guide', 'Free admission for chaperones'], btnText: 'Book School Trip', featured: true },
+          { name: 'Multi-Class Grade Buyout', price: '$16', period: 'per student (36&ndash;60 kids)', desc: 'Exclusive entire academy campus reservation.', features: ['Split-cohort rotating stations', 'Botany tour + indoor cooktop lab', 'Custom TEKS standard alignment', 'Dedicated bus staging area'], btnText: 'Reserve Grade Buyout', featured: false }
+        ],
+        faqs: [
+          { q: 'Is there parking for large yellow school buses?', a: 'Yes! Our facility has a designated wide bus turn-around lane and free reserved parking directly in front of our main entrance.' },
+          { q: 'Can we pay using a School District Purchase Order (PO)?', a: 'Yes! We are an approved educational vendor for Austin ISD, Round Rock ISD, and surrounding Central Texas districts and gladly accept official POs.' },
+          { q: 'How many chaperones are permitted?', a: 'We recommend 1 adult chaperone per 8 to 10 students. All teachers and required chaperones attend free of charge.' }
+        ]
+      },
+
+      'parent-and-me': {
+        title: 'Parent & Me Weekend Culinary Workshops',
+        tag: '<i class="fa-solid fa-people-roof"></i> Weekend Family Bonding',
+        badge: 'Sunday Duo &bull; Ages 3 &ndash; 12 + Adult',
+        price: '$85 / Duo',
+        heroImg: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80',
+        shortDesc: 'Weekend culinary bonding sessions where parent and child duos team up to roll potato gnocchi, bake soft pretzels, and enjoy zero prep or cleanup.',
+        overviewHeading: 'Unplug, Bond & Create Delicious Memories Together',
+        overviewLead: 'Step side by side up to a shared workstation. Cook authentic handmade cuisine together with zero prep, zero stress, and zero dishes!',
+        overviewBody: 'Life is busy, but the kitchen brings us together. In our Parent & Me workshops, you and your child work collaboratively as a team. Under the calm, supportive direction of our master chefs, you'll learn secrets of handmade pasta, laminated pastry doughs, and global street food.',
+        specs: { duration: '2 Hours Duo', age: 'Ages 3&ndash;12 + Adult', ratio: '1:5 Duo Ratio', groupSize: 'Max 10 Duos' },
+        bannerPills: [
+          { icon: 'fa-solid fa-people-arrows', text: '1 Adult + 1 Child Station', pillClass: 'pill-primary' },
+          { icon: 'fa-solid fa-mug-saucer', text: 'Espresso Bar for Parents', pillClass: 'pill-success' },
+          { icon: 'fa-solid fa-heart', text: 'Guided Step-by-Step Flow', pillClass: 'pill-warning' },
+          { icon: 'fa-solid fa-box-open', text: 'Family Dinner Take-Home', pillClass: 'pill-info' },
+          { icon: 'fa-solid fa-shield-heart text-danger', text: '100% Nut-Safe', pillClass: '' }
+        ],
+        included: [
+          { icon: 'fa-solid fa-utensils', title: 'Shared Spacious Duo Counter', desc: 'Induction cooktop, dual cutting boards, silicone utensils, and ergonomic stool.' },
+          { icon: 'fa-solid fa-mug-hot', title: 'Artisan Espresso Bar for Adults', desc: 'Enjoy unlimited organic cappuccinos, lattes, or teas while cooking with your child.' },
+          { icon: 'fa-solid fa-plate-wheat', title: 'Full 3-Course Family Dinner', desc: 'Eat your appetizers in class and take home enough portions to feed the whole family.' },
+          { icon: 'fa-solid fa-camera-retro', title: 'High-Res Photo Moments', desc: 'Our chef assistants capture candid photo memories of you and your child in action.' }
+        ],
+        timeline: [
+          { num: '01', title: 'Welcome Mocktail & Espresso Settle-In (15 mins)', desc: 'Pick your station, pour an espresso or cold-pressed juice, and tie each other's aprons.' },
+          { num: '02', title: 'Shared Dough Kneading & Rolling (45 mins)', desc: 'Teamwork rolling silky pasta sheets, folding potstickers, or shaping Bavarian pretzels.' },
+          { num: '03', title: 'Sizzle, Simmer & SautÃ© (35 mins)', desc: 'Cooperative cooktop time: child whisks while parent stirs, learning safe heat control.' },
+          { num: '04', title: 'Communal Farm Table Feast (25 mins)', desc: 'Sitting down together to toast your culinary achievements and pack family takeaway boxes.' }
+        ],
+        pricing: [
+          { name: 'Standard Duo Workshop', price: '$85', period: '1 Adult + 1 Child', desc: 'One shared culinary island workstation.', features: ['Complete 2-hour cooking experience', 'Generous 4-person family dinner portion', 'Complimentary espresso bar for adult', 'Full laminated recipe card'], btnText: 'Reserve Duo Station', featured: true },
+          { name: 'Trio Family Pass', price: '$120', period: '1 Adult + 2 Children', desc: 'Expanded workstation for two siblings + one parent.', features: ['Expanded double-prep station', 'Enough food for 6 family members', 'Individual aprons for both children', 'Free extra recipe card set'], btnText: 'Reserve Trio Station', featured: false },
+          { name: '3-Workshop Seasonal Pass', price: '$225', period: '3 Duos ($75/ea)', desc: 'A treasured monthly Sunday ritual together.', features: ['3 Weekend workshops of your choice', 'Save $30 off single rates', 'Flexible rescheduling pass', 'Priority booking on holiday themes'], btnText: 'Get 3-Workshop Pass', featured: false }
+        ],
+        faqs: [
+          { q: 'Can grandparents or aunts/uncles attend as the adult?', a: 'Absolutely! Any loving adult (parent, grandparent, guardian, aunt, or uncle) is welcome to team up with the child.' },
+          { q: 'What if I have two children?', a: 'You can select the Trio Family Pass ($120) which allocates extra counter space and ingredients so both children cook with you comfortably.' },
+          { q: 'What is the minimum age for Parent & Me?', a: 'Children as young as 3 years old are warmly welcomed! Our gentle step-by-step pace is designed to be joyful and easy for preschoolers.' }
+        ]
+      },
+
+      'starter-kits': {
+        title: 'Young Chef Starter Kits & Cutlery',
+        tag: '<i class="fa-solid fa-bag-shopping"></i> Home Kitchen Equipment',
+        badge: 'Home Kitchen &bull; Ages 3 & Up',
+        price: '$49.99 Kit',
+        heroImg: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80',
+        shortDesc: 'Take the kitchen excitement home! Certified child-safe nylon knives, silicone cutting mats, adjustable canvas aprons, and our 50-Recipe Kid Cookbook.',
+        overviewHeading: 'Professional Culinary Tools Engineered for Little Hands',
+        overviewLead: 'Empower your child to safely slice, prep, and bake in your home kitchen with the exact equipment we use in our academy studios.',
+        overviewBody: 'Every tool in our Young Chef Starter Kit has undergone rigorous child safety and durability testing. Our patented serrated nylon knives slice easily through crisp carrots, apples, and cucumbers while remaining 100% skin-safe.',
+        specs: { duration: 'Ships in 24h / Pickup', age: 'Ages 3 & Up', ratio: 'Parent Supervised', groupSize: 'Direct Delivery' },
+        bannerPills: [
+          { icon: 'fa-solid fa-shield-halved', text: '100% Cut-Proof Safety Knives', pillClass: 'pill-primary' },
+          { icon: 'fa-solid fa-book', text: '50-Recipe Illustrated Book', pillClass: 'pill-success' },
+          { icon: 'fa-solid fa-shirt', text: 'Heavyweight Canvas Apron', pillClass: 'pill-warning' },
+          { icon: 'fa-solid fa-truck-fast', text: 'Free 2-Day Studio Pickup', pillClass: 'pill-info' },
+          { icon: 'fa-solid fa-star text-danger', text: 'BPA-Free & Dishwasher Safe', pillClass: '' }
+        ],
+        included: [
+          { icon: 'fa-solid fa-utensils', title: '3-Piece Nylon Safety Cutlery', desc: 'Small, medium, and large serrated food-grade nylon knives with ergonomic non-slip silicone handles.' },
+          { icon: 'fa-solid fa-ruler-combined', title: 'Silicone Prep Mat & Ruler', desc: 'Non-slip silicone rolling mat printed with metric and standard culinary fraction guides.' },
+          { icon: 'fa-solid fa-book-open', title: 'The Junior Academy Cookbook', desc: 'Spiral-bound, wipe-clean recipe guide with 50 kid-tested breakfast, lunch, and dinner recipes.' },
+          { icon: 'fa-solid fa-box', title: 'Gift-Ready Presentation Box', desc: 'Packaged in a vibrant collector's gift box with milestone sticker passport included.' }
+        ],
+        timeline: [
+          { num: '01', title: 'Unbox & Fit Canvas Apron', desc: 'Adjust neck strap and waist ties; place the child's personalized name tag into the clear pocket.' },
+          { num: '02', title: 'Knife Safety Orientation', desc: 'Follow Chapter 1 of the illustrated guide to practice the "Bear Claw" knife grip with soft fruits like bananas.' },
+          { num: '03', title: 'Pick Your First Recipe', desc: 'Select from 50 graded recipes categorized by difficulty (1 Sprout = Beginner to 3 Sprouts = Advanced).' },
+          { num: '04', title: 'Earn Your Mastery Badge', desc: 'Place completion stickers into your home chef passport after preparing each delicious dish!' }
+        ],
+        pricing: [
+          { name: 'Essential Knife & Finger Guard', price: '$29.99', period: 'cutlery kit', desc: 'The fundamental knife safety set for home prep.', features: ['3-Piece nylon safety knives', 'Flexible silicone finger guard', 'Illustrated knife technique card', 'Dishwasher safe BPA-free'], btnText: 'Order Cutlery Set', featured: false },
+          { name: 'Complete Starter Kit (Best Value)', price: '$49.99', period: 'deluxe box', desc: 'Our complete bestselling kitchen bundle.', features: ['3 Nylon safety knives', 'Non-slip fraction silicone mat', 'Adjustable heavy canvas apron', '50-Recipe Junior Cookbook'], btnText: 'Order Deluxe Kit', featured: true },
+          { name: 'Sibling Twin Pack Bundle', price: '$79.99', period: '2 complete kits (Save $20)', desc: 'Equip two siblings with individual gear.', features: ['Two full deluxe kit bundles', 'Two personalized aprons', 'Shared family recipe manual', 'Free priority doorstep shipping'], btnText: 'Order Sibling Bundle', featured: false }
+        ],
+        faqs: [
+          { q: 'How can the knives cut vegetables without cutting skin?', a: 'Our blades utilize micro-serrations optimized for fiber tension in vegetables and bread, but lack the acute sharpness required to penetrate flexible human skin.' },
+          { q: 'Are all components dishwasher safe?', a: 'Yes! The knives, finger guards, and silicone prep mats are 100% top-rack dishwasher safe. The canvas apron is machine washable in cold water.' },
+          { q: 'Can I pick up my kit at the Austin studio?', a: 'Yes! Select "Front Desk Pickup" at checkout to pick up your kit at our Austin studio with zero shipping fees within 2 hours of ordering.' }
+        ]
+      }
+    };
+
+    function getSelectedServiceKey() {
+      const params = new URLSearchParams(window.location.search);
+      let s = params.get('service');
+      if (s && SERVICES_DATA[s]) return s;
+
+      let h = window.location.hash.replace('#', '');
+      if (h && SERVICES_DATA[h]) return h;
+
+      return 'weekly-classes';
+    }
+
+    function renderServiceDetails(serviceKey) {
+      const data = SERVICES_DATA[serviceKey] || SERVICES_DATA['weekly-classes'];
+
+      // Update Page Meta
+      document.title = `${data.title} | Little Chefs Academy`;
+      const titleEl = document.getElementById('page-title');
+      if (titleEl) titleEl.innerText = `${data.title} | Little Chefs Academy`;
+
+      // Update Banner
+      document.getElementById('banner-breadcrumb-title').innerText = data.title;
+      document.getElementById('banner-title').innerText = data.title;
+      document.getElementById('banner-tag').innerHTML = data.tag;
+      document.getElementById('banner-desc').innerText = data.shortDesc;
+
+      // Update Banner Pills
+      const pillsContainer = document.getElementById('banner-pills-container');
+      pillsContainer.innerHTML = data.bannerPills.map(p => `
+        <span class="banner-label-pill ${p.pillClass}">
+          <i class="${p.icon}"></i> ${p.text}
+        </span>
+      `).join('');
+
+      // Update Hero Image & Overview
+      document.getElementById('service-hero-img').src = data.heroImg;
+      document.getElementById('overview-heading').innerText = data.overviewHeading;
+      document.getElementById('overview-lead').innerText = data.overviewLead;
+      document.getElementById('overview-body').innerText = data.overviewBody;
+
+      // Update What's Included Grid (Compact)
+      const incGrid = document.getElementById('included-grid');
+      incGrid.innerHTML = data.included.map(item => `
+        <div class="col-sm-6">
+          <div class="custom-card p-3 h-100 border">
+            <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 dark:bg-orange-950/60 dark:text-orange-400 flex items-center justify-center fs-5 mb-2">
+              <i class="${item.icon}"></i>
+            </div>
+            <h6 class="font-heading fw-bold mb-1 fs-6">${item.title}</h6>
+            <p class="text-muted text-xs mb-0">${item.desc}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Update Timeline (Compact)
+      const timelineCont = document.getElementById('timeline-container');
+      timelineCont.innerHTML = data.timeline.map(step => `
+        <div class="service-phase-card">
+          <div class="service-phase-num">${step.num}</div>
+          <div>
+            <h6 class="font-heading fw-bold mb-0.5 fs-6">${step.title}</h6>
+            <p class="text-muted text-xs mb-0">${step.desc}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Update Pricing Grid (Compact)
+      const pricingGrid = document.getElementById('pricing-grid');
+      pricingGrid.innerHTML = data.pricing.map(plan => `
+        <div class="col-md-4">
+          <div class="service-pricing-box ${plan.featured ? 'featured' : ''}">
+            ${plan.featured ? '<span class="badge bg-orange-500 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold position-absolute top-0 start-50 translate-middle">POPULAR</span>' : ''}
+            <h6 class="font-heading fw-bold mb-1 fs-6">${plan.name}</h6>
+            <p class="text-muted text-xs mb-2">${plan.desc}</p>
+            <div class="my-2">
+              <span class="fs-3 fw-bold font-heading text-primary">${plan.price}</span>
+              <span class="text-muted text-xs d-block">${plan.period}</span>
+            </div>
+            <ul class="list-unstyled text-start text-xs mb-3 flex-grow-1">
+              ${plan.features.map(f => `<li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> ${f}</li>`).join('')}
+            </ul>
+            <a href="dashboard.html" class="btn ${plan.featured ? 'btn-primary-custom' : 'btn-outline-custom'} btn-sm w-100 rounded-full font-bold">
+              ${plan.btnText}
+            </a>
+          </div>
+        </div>
+      `).join('');
+
+      // Update FAQ Accordion
+      const faqAccordion = document.getElementById('serviceFaqAccordion');
+      faqAccordion.innerHTML = data.faqs.map((faq, i) => `
+        <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+          <h2 class="accordion-header" id="heading-${i}">
+            <button class="accordion-button ${i === 0 ? '' : 'collapsed'} font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${i}" aria-expanded="${i === 0 ? 'true' : 'false'}" aria-controls="collapse-${i}">
+              ${faq.q}
+            </button>
+          </h2>
+          <div id="collapse-${i}" class="accordion-collapse collapse ${i === 0 ? 'show' : ''}" aria-labelledby="heading-${i}" data-bs-parent="#serviceFaqAccordion">
+            <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+              ${faq.a}
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Update Sidebar - Clean Price Rendering (Fixes "From" bug!)
+      document.getElementById('sidebar-pill').innerText = data.badge.split('&bull;')[0].trim();
+      document.getElementById('sidebar-price').innerText = data.price;
+      document.getElementById('sidebar-service-title').innerText = `Reserve: ${data.title.split(' ')[0]} ${data.title.split(' ')[1] || ''}`;
+      document.getElementById('spec-duration').innerText = data.specs.duration;
+
+      // Update Active Navigation Pill & Sidebar Links
+      document.querySelectorAll('#service-switcher-tabs a').forEach(a => {
+        if (a.getAttribute('data-service') === serviceKey) {
+          a.classList.add('active');
+        } else {
+          a.classList.remove('active');
+        }
+      });
+
+      document.querySelectorAll('#sidebar-services-nav a').forEach(a => {
+        if (a.getAttribute('data-nav') === serviceKey) {
+          a.classList.add('bg-orange-100', 'dark:bg-slate-800', 'border-primary');
+        } else {
+          a.classList.remove('bg-orange-100', 'dark:bg-slate-800', 'border-primary');
+        }
+      });
+
+      // Update Related Services Showcase (Compact 160px image)
+      const otherKeys = Object.keys(SERVICES_DATA).filter(k => k !== serviceKey).slice(0, 3);
+      const relatedRow = document.getElementById('related-services-row');
+      relatedRow.innerHTML = otherKeys.map(k => {
+        const item = SERVICES_DATA[k];
+        return `
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column border shadow-sm">
+              <div class="position-relative" style="height: 160px;">
+                <img src="${item.heroImg}" alt="${item.title}" class="w-100 h-100 object-cover">
+                <span class="badge bg-orange-500 text-white position-absolute top-2.5 start-2.5 fw-bold text-xs">${item.price}</span>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column">
+                <h6 class="font-heading fw-bold mb-1 fs-6">
+                  <a href="?service=${k}#${k}" class="text-dark dark:text-white hover:text-primary text-decoration-none">
+                    ${item.title}
+                  </a>
+                </h6>
+                <p class="text-muted text-xs mb-2 flex-grow-1">${item.shortDesc}</p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted text-xs"><i class="fa-solid fa-clock me-1"></i> ${item.specs.duration}</small>
+                  <a href="?service=${k}#${k}" class="btn-service-action py-1 px-2.5 text-xs w-auto">
+                    Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const initialKey = getSelectedServiceKey();
+      renderServiceDetails(initialKey);
+
+      document.querySelectorAll('#service-switcher-tabs a, #sidebar-services-nav a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const s = link.getAttribute('data-service') || link.getAttribute('data-nav');
+          if (s && SERVICES_DATA[s]) {
+            e.preventDefault();
+            history.pushState(null, '', `?service=${s}#${s}`);
+            renderServiceDetails(s);
+            window.scrollTo({ top: 380, behavior: 'smooth' });
+          }
+        });
+      });
+
+      window.addEventListener('popstate', () => {
+        renderServiceDetails(getSelectedServiceKey());
+      });
+
+      let seats = 1;
+      const seatsCountEl = document.getElementById('seatsCount');
+      const incBtn = document.getElementById('incSeatsBtn');
+      const decBtn = document.getElementById('decSeatsBtn');
+      if (incBtn && decBtn) {
+        incBtn.addEventListener('click', () => {
+          if (seats < 12) { seats++; seatsCountEl.innerText = seats; }
+        });
+        decBtn.addEventListener('click', () => {
+          if (seats > 1) { seats--; seatsCountEl.innerText = seats; }
+        });
+      }
+
+      const dateInput = document.getElementById('bookingDateInput');
+      if (dateInput) {
+        const today = new Date();
+        const nextSat = new Date();
+        nextSat.setDate(today.getDate() + ((6 - today.getDay() + 7) % 7 || 7));
+        dateInput.value = nextSat.toISOString().split('T')[0];
+      }
+    });
+  </script>
+</body>
+</html>

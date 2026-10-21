@@ -1,0 +1,827 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culinary Summer Camps &amp; Holiday Immersions | Little Chefs Academy</title>
+  <meta name="description" content="Week-long immersive culinary summer camps for kids & teens (ages 6&ndash;16). Cook hot 2-course lunch daily, explore kitchen science, and celebrate at Friday Parent Banquet.">
+  <meta name="keywords" content="kids culinary summer camp, children cooking camps, Austin kids baking camp, summer cooking immersion, teen chef summer program">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Culinary Summer Camps &amp; Holiday Immersions | Little Chefs Academy">
+  <meta property="og:description" content="5-day immersive culinary expeditions. Daily hot lunch, mystery basket challenges, and Friday graduation banquets.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: ['selector', '[data-theme="dark"]'],
+        corePlugins: {
+          preflight: false,
+          visibility: false,
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Skip to content for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="brand-title">
+            <span class="brand-name">Little Chefs</span>
+            <span class="brand-tagline">Academy &amp; Camps</span>
+          </div>
+        </a>
+
+        <!-- Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4 text-white"></i>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+                                                <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down home-chevron"></i>
+              </a>
+              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 - Classic Academy</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 - Modern Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+
+          <!-- Inside Hamburger Menu (Mobile) & Navbar Actions (Desktop) -->
+          <div class="navbar-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 py-3 py-lg-0 border-top border-lg-0 mt-3 mt-lg-0">
+            <!-- Theme & RTL Toggles (Inside Hamburger Menu on mobile, inline on desktop) -->
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2 mb-2 mb-lg-0">
+              <button class="btn btn-icon-round theme-toggle-btn d-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="rtl-btn-pill rtl-toggle-btn d-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+                <span class="rtl-text">RTL</span>
+                <i class="fa-solid fa-right-left ms-2"></i>
+              </button>
+            </div>
+
+            <!-- Parent Portal Login Button -->
+            <a href="login.html" class="btn btn-parent-login text-center">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb & Page Banner -->
+    <section class="page-header-banner banner-services">
+      <div class="container text-center py-3">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <div class="page-breadcrumb-pill">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <a href="services.html">Services</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="breadcrumb-current">Summer Camps</span>
+          </div>
+        </nav>
+        <span class="section-tag"><i class="fa-solid fa-campground"></i> Summer 2026 Registration Open</span>
+        <h1 class="section-title mb-2">Culinary Summer Camps &amp; Immersions</h1>
+        <p class="text-muted max-w-2xl mx-auto mb-0">
+          5-day week-long culinary expeditions with hands-on cooking, daily scratch hot lunches, kitchen science labs, and our celebratory Friday Parent Banquet.
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section">
+          <span class="banner-label-pill pill-primary">
+            <i class="fa-solid fa-calendar-days"></i> 5-Day Weekly Sessions (Mon&ndash;Fri)
+          </span>
+          <span class="banner-label-pill pill-success">
+            <i class="fa-solid fa-clock"></i> Full &amp; Half-Day Options
+          </span>
+          <span class="banner-label-pill pill-warning">
+            <i class="fa-solid fa-utensils"></i> Hot 2-Course Lunch Daily
+          </span>
+          <span class="banner-label-pill pill-info">
+            <i class="fa-solid fa-trophy"></i> Friday Parent Graduation Banquet
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-shield-heart text-danger"></i> 100% Nut-Safe Sanctuary
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Main Service Content Section -->
+    <section class="py-4 py-lg-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+
+          <!-- Left Column: Detailed Service Body -->
+          <div class="col-lg-8">
+            <!-- Hero Feature Image -->
+            <div class="rounded-2xl overflow-hidden shadow-md mb-4 position-relative" style="height: 300px;">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80" alt="Campers baking pastries and breads in camp" class="w-100 h-100 object-cover">
+              <div class="position-absolute bottom-3 start-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border shadow-sm">
+                <span class="text-xs fw-bold text-primary font-heading"><i class="fa-solid fa-campground me-1"></i> Hands-On Summer Kitchen Camp</span>
+              </div>
+            </div>
+
+            <!-- Program Overview -->
+            <div class="mb-4">
+              <span class="section-tag mb-2"><i class="fa-solid fa-circle-info"></i> Camp Overview</span>
+              <h3 class="font-heading fw-bold mb-2 fs-4">Unforgettable 5-Day Kitchen Adventures</h3>
+              <p class="text-muted mb-3">
+                Campers cook complete hot 2-course lunches every single day, explore edible food science, and host a magnificent Friday graduation banquet for their families!
+              </p>
+              <p class="text-muted small mb-3">
+                Our summer camp program runs Monday through Friday in convenient full-day (9am&ndash;3pm) and morning half-day (9am&ndash;12pm) formats. Every week features a unique, deeply engaging theme&mdash;from Hand-Rolled Pasta &amp; French Boulangerie to Global Street Food Journeys and Junior Iron Chef Mystery Basket challenges.
+              </p>
+              <p class="text-muted small mb-0">
+                Children are grouped by age tier (Ages 6&ndash;9, 10&ndash;12, and 13&ndash;16) with dedicated chef educators maintaining a safe 1:5 mentor ratio. Every camper leaves with newly forged culinary independence, lifelong food enthusiasm, and an embroidered keepsake chef apron.
+              </p>
+            </div>
+
+            <!-- 4 Rotating Weekly Camp Themes -->
+            <div class="mb-4">
+              <h4 class="font-heading fw-bold mb-3 fs-5">4 Immersive Weekly Camp Themes</h4>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-amber-500 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Theme 1</span>
+                      <h6 class="font-heading fw-bold mb-0">Global Street Food Fiesta</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Journey around the culinary world: authentic Mexican street tacos &amp; churros, hand-pleated Japanese dumplings, Greek souvlaki with tzatziki, and Indian samosas.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-globe me-1"></i> Cultural gastronomy &amp; spices</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-amber-500 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Theme 2</span>
+                      <h6 class="font-heading fw-bold mb-0">Junior Iron Chef &amp; Pastry Wars</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Exciting culinary challenges, mystery basket recipe invention, piping French macarons, blindfold aroma recognition games, and artistic plating battles.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-trophy me-1"></i> Creative problem solving &amp; baking</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-amber-500 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Theme 3</span>
+                      <h6 class="font-heading fw-bold mb-0">STEM Food Lab &amp; Molecular Chemistry</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Investigate sourdough wild yeast fermentation, calcium-alginate fruit boba spherification, emulsification science, and the physics of candy glass.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-flask-vial me-1"></i> Edible chemistry &amp; science experiments</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-amber-500 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Theme 4</span>
+                      <h6 class="font-heading fw-bold mb-0">Farm-to-Table &amp; Herb Courtyard</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Daily harvesting from our sunny outdoor courtyard raised beds, plant anatomy, scratch hand-cranked pasta, herb focaccias, and farmer's market galettes.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-seedling me-1"></i> Botany, ecology &amp; fresh harvesting</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- What's Included Grid -->
+            <div class="mb-4">
+              <h4 class="font-heading fw-bold mb-3 fs-5">What's Included in Every Camp Week</h4>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Daily Hot 2-Course Lunch</h6>
+                    <p class="text-muted text-xs mb-0">Campers cook and feast on fresh, hot, balanced entrees and desserts every single day&mdash;no packed lunches required!</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Personalized Embroidered Apron</h6>
+                    <p class="text-muted text-xs mb-0">High-grade 10oz canvas chef apron custom embroidered with your camper's name, theirs to keep forever.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Courtyard Botany &amp; Gardening</h6>
+                    <p class="text-muted text-xs mb-0">Daily organic herb harvesting, plant propagation experiments, and sensory smell tests in our private garden.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Friday Parent Graduation Banquet</h6>
+                    <p class="text-muted text-xs mb-0">Two complimentary parent tasting passes to our Friday 2:00 PM banquet, chef showcase, and graduation awards.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Daily Schedule Breakdown -->
+            <div class="mb-4">
+              <span class="section-tag mb-2"><i class="fa-solid fa-clock"></i> Camp Daily Rhythm</span>
+              <h4 class="font-heading fw-bold mb-3 fs-5">A Day in the Life of a Little Chef Camper (9 AM &ndash; 3 PM)</h4>
+              <div class="d-flex flex-column gap-2">
+                <div class="service-phase-card">
+                  <div class="service-phase-num">01</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">9:00 AM &ndash; Morning Kitchen Huddle &amp; Pastry Bakery Lab</h6>
+                    <p class="text-muted text-xs mb-0">Hand hygiene, donning uniforms, reviewing the day's culinary roadmap, and baking breakfast scones, brioche buns, or fruit galettes.</p>
+                  </div>
+                </div>
+                <div class="service-phase-card">
+                  <div class="service-phase-num">02</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">10:45 AM &ndash; Courtyard Botany Harvest &amp; Ingredient Prep</h6>
+                    <p class="text-muted text-xs mb-0">Snip fresh herbs in the courtyard, practice safe knife cuts (julienne, dice, mince), and prep fresh produce for savory lunch.</p>
+                  </div>
+                </div>
+                <div class="service-phase-card">
+                  <div class="service-phase-num">03</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">11:30 AM &ndash; Savory Induction Cooking &amp; Communal Feast</h6>
+                    <p class="text-muted text-xs mb-0">Chefs activate cooktops to simmer, sautÃ©, and sear their hot 2-course meal, followed by dining together at our family harvest table.</p>
+                  </div>
+                </div>
+                <div class="service-phase-card">
+                  <div class="service-phase-num">04</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">1:30 PM &ndash; Mystery Basket Challenge, Science Lab &amp; Pack Up</h6>
+                    <p class="text-muted text-xs mb-0">Edible food science experiments, plating battles, recording reflections in their recipe binders, and packing afternoon baked goods.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Safety Sanctuary Banner -->
+            <div class="p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 mb-4">
+              <div class="d-flex gap-3 align-items-center">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center fs-5 flex-shrink-0">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                  <h6 class="font-heading fw-bold text-emerald-950 dark:text-emerald-100 mb-0.5">100% Nut-Safe &amp; Allergy-Guaranteed Camp</h6>
+                  <p class="text-muted text-xs mb-0">
+                    Our entire facility is tree-nut and peanut-free. All culinary staff are certified in Pediatric First Aid and Epipen administration. Customized allergy substitutes provided seamlessly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing Options -->
+            <div class="mb-4">
+              <div class="text-center mb-3">
+                <span class="section-tag mb-1"><i class="fa-solid fa-tags"></i> Transparent Camp Rates</span>
+                <h4 class="font-heading fw-bold mb-1 fs-5">Summer 2026 Camp Options</h4>
+                <p class="text-muted text-xs mb-0">Flexible half-day and full-day schedules designed for busy family summers.</p>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="service-pricing-box">
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Morning Half-Day Camp</h6>
+                    <p class="text-muted text-xs mb-2">Perfect for younger campers easing into kitchen training.</p>
+                    <div class="my-2">
+                      <span class="fs-3 fw-bold font-heading text-primary">$285</span>
+                      <span class="text-muted text-xs d-block">per week (9am &ndash; 12pm)</span>
+                    </div>
+                    <ul class="list-unstyled text-start text-xs mb-3 flex-grow-1">
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Daily 3 hours hands-on baking</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Daily take-home pastry box</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Keepsake embroidered apron</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Friday award ceremony pass</li>
+                    </ul>
+                    <a href="dashboard.html" class="btn btn-outline-custom btn-sm w-100 rounded-full font-bold">
+                      Reserve Half-Day
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="service-pricing-box featured">
+                    <span class="badge bg-orange-500 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold position-absolute top-0 start-50 translate-middle">RECOMMENDED</span>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Full-Day Camp Immersion</h6>
+                    <p class="text-muted text-xs mb-2">Our flagship full-experience culinary summer adventure.</p>
+                    <div class="my-2">
+                      <span class="fs-3 fw-bold font-heading text-primary">$395</span>
+                      <span class="text-muted text-xs d-block">per week (9am &ndash; 3pm)</span>
+                    </div>
+                    <ul class="list-unstyled text-start text-xs mb-3 flex-grow-1">
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Full 6 hours hands-on daily</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Fresh hot 2-course lunch included</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Friday Banquet (2 guest tickets)</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Full camp photo album download</li>
+                    </ul>
+                    <a href="dashboard.html" class="btn btn-primary-custom btn-sm w-100 rounded-full font-bold">
+                      Reserve Full-Day
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="service-pricing-box">
+                    <h6 class="font-heading fw-bold mb-1 fs-6">2-Week Multi-Camp Pass</h6>
+                    <p class="text-muted text-xs mb-2">Experience 2 unique themes with bundled savings.</p>
+                    <div class="my-2">
+                      <span class="fs-3 fw-bold font-heading text-primary">$720</span>
+                      <span class="text-muted text-xs d-block">2 full weeks (Save $70)</span>
+                    </div>
+                    <ul class="list-unstyled text-start text-xs mb-3 flex-grow-1">
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Two full 5-day camp tracks</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Free 3-pc safety knife kit</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Priority theme selection</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Transferrable between siblings</li>
+                    </ul>
+                    <a href="dashboard.html" class="btn btn-outline-custom btn-sm w-100 rounded-full font-bold">
+                      Get 2-Week Pass
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQs -->
+            <div class="mb-3">
+              <span class="section-tag mb-2"><i class="fa-solid fa-circle-question"></i> Camp FAQs</span>
+              <h4 class="font-heading fw-bold mb-3 fs-5">Frequently Asked Questions About Summer Camps</h4>
+              <div class="accordion custom-accordion" id="campsFaqAccordion">
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="campFaqHeading1">
+                    <button class="accordion-button font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#campFaqCollapse1" aria-expanded="true" aria-controls="campFaqCollapse1">
+                      Is before and after extended care available?
+                    </button>
+                  </h2>
+                  <div id="campFaqCollapse1" class="accordion-collapse collapse show" aria-labelledby="campFaqHeading1" data-bs-parent="#campsFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      Yes! Early drop-off begins at 8:00 AM and extended pick-up runs until 5:00 PM. Extended care includes quiet culinary board games, cookbook story sessions, and supervised garden exploration for a flat $50/week add-on.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="campFaqHeading2">
+                    <button class="accordion-button collapsed font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#campFaqCollapse2" aria-expanded="false" aria-controls="campFaqCollapse2">
+                      Do campers need to bring a packed lunch or snacks?
+                    </button>
+                  </h2>
+                  <div id="campFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="campFaqHeading2" data-bs-parent="#campsFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      No packed lunches required! Every single day in full-day camp, campers prep, cook, and feast on their own hot, healthy 2-course lunch plus an organic fruit snack. Please send a reusable water bottle.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="campFaqHeading3">
+                    <button class="accordion-button collapsed font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#campFaqCollapse3" aria-expanded="false" aria-controls="campFaqCollapse3">
+                      What is the Friday Parent Banquet?
+                    </button>
+                  </h2>
+                  <div id="campFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="campFaqHeading3" data-bs-parent="#campsFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      On Friday at 2:00 PM, family members are invited into our studio dining hall. The young chefs serve a tasting buffet of their favorite recipes from the week, followed by our chef medal ceremony!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="campFaqHeading4">
+                    <button class="accordion-button collapsed font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#campFaqCollapse4" aria-expanded="false" aria-controls="campFaqCollapse4">
+                      What is your camp cancellation and transfer policy?
+                    </button>
+                  </h2>
+                  <div id="campFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="campFaqHeading4" data-bs-parent="#campsFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      You can transfer your camper to any other open week up to 14 days prior to camp start at zero charge. Full refunds are provided up to 30 days before the session starts.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Sidebar Widget -->
+          <div class="col-lg-4">
+            
+            <!-- Compact Booking Widget -->
+            <aside class="service-booking-card mb-3" style="position: -webkit-sticky; position: sticky; top: 90px; z-index: 25;">
+              <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                <span class="badge-pill badge-featured text-xs">Summer 2026 Open</span>
+                <div class="text-end">
+                  <span class="text-xs text-muted d-block">Starting from</span>
+                  <span class="fs-4 fw-bold font-heading text-primary" id="camp-price-display">$395 / wk</span>
+                </div>
+              </div>
+
+              <h5 class="font-heading fw-bold mb-1 fs-6">Reserve a Camp Workstation</h5>
+              <p class="text-muted text-xs mb-3">
+                Capped at 16 campers per cohort with a strict 1:5 chef-to-student ratio.
+              </p>
+
+              <!-- Booking Form -->
+              <form id="campBookingForm" class="d-flex flex-column gap-2.5 mb-3">
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1" for="campThemeSelect">CAMP THEME</label>
+                  <select class="form-select form-select-sm rounded-lg shadow-none text-xs" id="campThemeSelect">
+                    <option value="theme1" selected>Global Street Food Fiesta</option>
+                    <option value="theme2">Junior Iron Chef &amp; Pastry Wars</option>
+                    <option value="theme3">STEM Food Lab &amp; Molecular Science</option>
+                    <option value="theme4">Farm-to-Table &amp; Herb Courtyard</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1" for="campSessionWeekSelect">COHORT WEEK (JUNE&ndash;AUG 2026)</label>
+                  <select class="form-select form-select-sm rounded-lg shadow-none text-xs" id="campSessionWeekSelect">
+                    <option value="w1">Week 1: June 8 &ndash; June 12 (8 spots left)</option>
+                    <option value="w2">Week 2: June 15 &ndash; June 19 (6 spots left)</option>
+                    <option value="w3">Week 3: June 22 &ndash; June 26 (Almost full)</option>
+                    <option value="w4">Week 4: July 6 &ndash; July 10 (10 spots left)</option>
+                    <option value="w5">Week 5: July 13 &ndash; July 17 (7 spots left)</option>
+                    <option value="w6">Week 6: July 20 &ndash; July 24 (9 spots left)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1" for="campFormatSelect">FORMAT</label>
+                  <select class="form-select form-select-sm rounded-lg shadow-none text-xs" id="campFormatSelect">
+                    <option value="full" selected>Full-Day Immersion (9 AM &ndash; 3 PM) - $395</option>
+                    <option value="half">Morning Half-Day (9 AM &ndash; 12 PM) - $285</option>
+                  </select>
+                </div>
+
+                <div>
+                  <div class="d-flex align-items-center justify-content-between p-2 border rounded-lg bg-subtle">
+                    <span class="text-xs fw-medium">Number of Campers</span>
+                    <div class="d-flex align-items-center gap-1.5">
+                      <button type="button" class="btn btn-sm btn-icon-round border bg-white dark:bg-slate-800" style="width: 26px; height: 26px; font-size: 0.75rem;" id="decCampersBtn">-</button>
+                      <span class="fw-bold px-2 font-heading text-sm" id="campersCount">1</span>
+                      <button type="button" class="btn btn-sm btn-icon-round border bg-white dark:bg-slate-800" style="width: 26px; height: 26px; font-size: 0.75rem;" id="incCampersBtn">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-check text-xs">
+                  <input class="form-check-input shadow-none" type="checkbox" id="extendedCareCheck">
+                  <label class="form-check-label text-muted" for="extendedCareCheck">
+                    Add Extended Care (8:00 AM &ndash; 5:00 PM) +$50/wk
+                  </label>
+                </div>
+
+                <div class="py-1 px-2.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-900/60 text-xs text-orange-900 dark:text-orange-200">
+                  <i class="fa-solid fa-gift me-1 text-orange-600"></i> Free personalized embroidered apron with early enrollment!
+                </div>
+
+                <a href="dashboard.html" class="btn btn-primary-custom w-100 py-2.5 rounded-full font-bold text-sm shadow-sm hover:shadow">
+                  <i class="fa-solid fa-calendar-check me-1.5"></i> Register via Parent Portal
+                </a>
+                <a href="contact.html" class="text-center text-xs text-muted hover:text-primary text-decoration-none py-1">
+                  <i class="fa-solid fa-download me-1"></i> Download full camp brochure PDF &rarr;
+                </a>
+              </form>
+
+              <!-- Quick Specs 2x2 Grid -->
+              <h6 class="font-heading fw-bold text-xs uppercase tracking-wider text-muted mb-2 border-top pt-2.5">Key Specifications</h6>
+              <div class="service-spec-grid">
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-user-group text-primary"></i>
+                  <div class="spec-content">
+                    <span>Chef Ratio</span>
+                    <strong>1:5 Dedicated</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-clock text-primary"></i>
+                  <div class="spec-content">
+                    <span>Schedule</span>
+                    <strong>Mon&ndash;Fri 9am&ndash;3pm</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-bowl-food text-warning"></i>
+                  <div class="spec-content">
+                    <span>Meals</span>
+                    <strong>Daily Lunch Incl.</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-shield-virus text-success"></i>
+                  <div class="spec-content">
+                    <span>Safety</span>
+                    <strong class="text-success">100% Nut-Safe</strong>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Compact Help / Tour Callout -->
+              <div class="mt-3 pt-2.5 border-top text-center">
+                <div class="text-xs text-muted mb-1"><i class="fa-solid fa-phone text-primary me-1"></i> Questions? Call (512) 555-CHEF</div>
+                <a href="contact.html" class="btn btn-xs btn-outline-custom rounded-full px-3 py-1 text-xs">Schedule Free Studio Tour</a>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Related Services -->
+    <section class="py-4 bg-subtle border-top">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <span class="section-tag mb-1"><i class="fa-solid fa-sparkles"></i> More Experiences</span>
+            <h4 class="font-heading fw-bold mb-0 fs-5">Other Culinary Offerings You Might Love</h4>
+          </div>
+          <a href="services.html" class="btn btn-outline-custom btn-sm-custom text-xs d-none d-sm-inline-flex">
+            All Services &rarr;
+          </a>
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column border shadow-sm">
+              <div class="position-relative" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=700&q=80" alt="Age-Grouped Weekly Cooking Classes" class="w-100 h-100 object-cover">
+                <span class="badge bg-orange-500 text-white position-absolute top-2.5 start-2.5 fw-bold text-xs">$45 / class</span>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column">
+                <h6 class="font-heading fw-bold mb-1 fs-6">
+                  <a href="service-weekly-classes.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
+                    Age-Grouped Weekly Cooking Classes
+                  </a>
+                </h6>
+                <p class="text-muted text-xs mb-2 flex-grow-1">Semester &amp; drop-in sessions across 4 age tiers with dedicated induction workstations.</p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted text-xs"><i class="fa-solid fa-clock me-1"></i> 90&ndash;120 Mins</small>
+                  <a href="service-weekly-classes.html" class="btn-service-action py-1 px-2.5 text-xs w-auto">
+                    Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column border shadow-sm">
+              <div class="position-relative" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=700&q=80" alt="Private Birthday Cooking Parties" class="w-100 h-100 object-cover">
+                <span class="badge bg-orange-500 text-white position-absolute top-2.5 start-2.5 fw-bold text-xs">$450 (12 Kids)</span>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column">
+                <h6 class="font-heading fw-bold mb-1 fs-6">
+                  <a href="service-birthday-parties.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
+                    Private Birthday Cooking Parties
+                  </a>
+                </h6>
+                <p class="text-muted text-xs mb-2 flex-grow-1">Exclusive studio buyout where kids stretch artisan pizzas and decorate cupcakes.</p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted text-xs"><i class="fa-solid fa-cake-candles me-1"></i> 2 Hours Private</small>
+                  <a href="service-birthday-parties.html" class="btn-service-action py-1 px-2.5 text-xs w-auto">
+                    Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column border shadow-sm">
+              <div class="position-relative" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80" alt="School Field Trips &amp; STEM Labs" class="w-100 h-100 object-cover">
+                <span class="badge bg-orange-500 text-white position-absolute top-2.5 start-2.5 fw-bold text-xs">$18 / student</span>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column">
+                <h6 class="font-heading fw-bold mb-1 fs-6">
+                  <a href="service-stem-field-trips.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
+                    School Field Trips &amp; STEM Labs
+                  </a>
+                </h6>
+                <p class="text-muted text-xs mb-2 flex-grow-1">Standards-aligned food chemistry workshops and herb courtyard tours for schools.</p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted text-xs"><i class="fa-solid fa-graduation-cap me-1"></i> Grades K&ndash;12</small>
+                  <a href="service-stem-field-trips.html" class="btn-service-action py-1 px-2.5 text-xs w-auto">
+                    Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-5 cta-banner-section text-white text-center">
+      <div class="container py-3">
+        <h2 class="font-heading fw-bold mb-3">Reserve Your Camper's Workstation Today</h2>
+        <p class="text-orange-100 max-w-xl mx-auto mb-4">
+          Popular summer weeks fill quickly due to our 16-camper capacity cap. Secure your spot in the parent portal!
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section mb-4">
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-calendar-check"></i> Instant Online Enrollment
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-users"></i> Strict 1:5 Mentor Ratio
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-tag"></i> 10% Sibling Discount
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-shield-heart"></i> 100% Nut-Safe Certified
+          </span>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="dashboard.html" class="btn btn-light text-orange-600 font-bold px-4 py-3 rounded-full shadow-lg hover:bg-orange-50">
+            <i class="fa-solid fa-lock me-2"></i> Register via Parent Dashboard
+          </a>
+          <a href="contact.html" class="btn btn-outline-light font-bold px-4 py-3 rounded-full">
+            <i class="fa-solid fa-envelope me-2"></i> Contact Camp Directors
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="brand-title">
+              <span class="brand-name">Little Chefs</span>
+              <span class="brand-tagline">Academy &amp; Camps</span>
+            </div>
+          </a>
+          <p class="text-muted mb-4">
+            Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
+          </p>
+          <div class="d-flex gap-3 fs-5 footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Facebook Login" title="Redirect to Facebook Login Page"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Instagram Login" title="Redirect to Instagram Login Page"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="YouTube Login" title="Redirect to YouTube Login Page"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Pinterest Login" title="Redirect to Pinterest Login Page"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-widget-title font-heading">Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="index-2.html"><i class="fa-solid fa-angle-right"></i> Home 2 (Modern)</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i> Classes</a></li>
+            <li><a href="camps.html"><i class="fa-solid fa-angle-right"></i> Summer Camps</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-weekly-classes.html"><i class="fa-solid fa-kitchen-set"></i> Weekly Classes</a></li>
+            <li><a href="service-summer-camps.html"><i class="fa-solid fa-campground"></i> Summer Camps</a></li>
+            <li><a href="service-birthday-parties.html"><i class="fa-solid fa-cake-candles"></i> Birthday Parties</a></li>
+            <li><a href="service-stem-field-trips.html"><i class="fa-solid fa-school"></i> STEM Field Trips</a></li>
+            <li><a href="service-parent-and-me.html"><i class="fa-solid fa-people-roof"></i> Parent &amp; Me</a></li>
+            <li><a href="service-starter-kits.html"><i class="fa-solid fa-bag-shopping"></i> Starter Kits</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Visit Our Kitchen</h5>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary me-2"></i> 452 Gourmet Way, Suite 100, Austin, TX 78701</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> (512) 555-CHEF (2433)</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-envelope text-primary me-2"></i> hello@littlechefsacademy.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+        <p class="mb-0">&copy; 2026 Little Chefs Academy. All rights reserved.</p>
+        <div class="d-flex gap-4">
+          <a href="about.html#safety" class="text-muted hover:text-primary">Safety Protocols</a>
+          <a href="contact.html#faq" class="text-muted hover:text-primary">Parent FAQs</a>
+          <a href="404.html" class="text-muted hover:text-primary">404 Error Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let campers = 1;
+      const campersCountEl = document.getElementById('campersCount');
+      const incBtn = document.getElementById('incCampersBtn');
+      const decBtn = document.getElementById('decCampersBtn');
+      const priceDisplay = document.getElementById('camp-price-display');
+      const formatSelect = document.getElementById('campFormatSelect');
+      const extCheck = document.getElementById('extendedCareCheck');
+
+      function updateCampPricing() {
+        const isFull = formatSelect.value === 'full';
+        let base = isFull ? 395 : 285;
+        let ext = (extCheck && extCheck.checked) ? 50 : 0;
+        let totalPerCamper = base + ext;
+
+        let total = campers === 1 
+          ? totalPerCamper 
+          : Math.round(totalPerCamper + (campers - 1) * totalPerCamper * 0.9);
+
+        priceDisplay.innerText = `$${total} / wk`;
+      }
+
+      if (incBtn && decBtn) {
+        incBtn.addEventListener('click', () => {
+          if (campers < 6) {
+            campers++;
+            campersCountEl.innerText = campers;
+            updateCampPricing();
+          }
+        });
+        decBtn.addEventListener('click', () => {
+          if (campers > 1) {
+            campers--;
+            campersCountEl.innerText = campers;
+            updateCampPricing();
+          }
+        });
+      }
+
+      if (formatSelect) formatSelect.addEventListener('change', updateCampPricing);
+      if (extCheck) extCheck.addEventListener('change', updateCampPricing);
+    });
+  </script>
+</body>
+</html>

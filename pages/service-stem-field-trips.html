@@ -1,0 +1,819 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Field Trips &amp; STEM Kitchen Labs | Little Chefs Academy</title>
+  <meta name="description" content="Standards-aligned culinary STEM field trips for grades K&ndash;12, homeschool co-ops, and scout troops in Austin, TX. TEKS & NGSS aligned yeast fermentation and chemistry labs.">
+  <meta name="keywords" content="school culinary field trip, STEM kitchen lab for kids, school field trips Austin, homeschool cooking lab, food science field trip">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="School Field Trips &amp; STEM Kitchen Labs | Little Chefs Academy">
+  <meta property="og:description" content="Turn measuring cups into fractions, sautÃ© pans into thermal physics, and yeast into biological fermentation!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: ['selector', '[data-theme="dark"]'],
+        corePlugins: {
+          preflight: false,
+          visibility: false,
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Skip to content for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="brand-title">
+            <span class="brand-name">Little Chefs</span>
+            <span class="brand-tagline">Academy &amp; Camps</span>
+          </div>
+        </a>
+
+        <!-- Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4 text-white"></i>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+                                                <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down home-chevron"></i>
+              </a>
+              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 - Classic Academy</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 - Modern Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+
+          <!-- Inside Hamburger Menu (Mobile) & Navbar Actions (Desktop) -->
+          <div class="navbar-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 py-3 py-lg-0 border-top border-lg-0 mt-3 mt-lg-0">
+            <!-- Theme & RTL Toggles (Inside Hamburger Menu on mobile, inline on desktop) -->
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2 mb-2 mb-lg-0">
+              <button class="btn btn-icon-round theme-toggle-btn d-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="rtl-btn-pill rtl-toggle-btn d-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+                <span class="rtl-text">RTL</span>
+                <i class="fa-solid fa-right-left ms-2"></i>
+              </button>
+            </div>
+
+            <!-- Parent Portal Login Button -->
+            <a href="login.html" class="btn btn-parent-login text-center">
+              <i class="fa-solid fa-lock me-1"></i> Parent Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb & Page Banner -->
+    <section class="page-header-banner banner-services">
+      <div class="container text-center py-3">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <div class="page-breadcrumb-pill">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <a href="services.html">Services</a>
+            <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="breadcrumb-current">STEM Field Trips</span>
+          </div>
+        </nav>
+        <span class="section-tag"><i class="fa-solid fa-school"></i> TEKS &amp; NGSS Standards Aligned</span>
+        <h1 class="section-title mb-2">School Field Trips &amp; STEM Kitchen Labs</h1>
+        <p class="text-muted max-w-2xl mx-auto mb-0">
+          Interactive edible food science laboratories for public/private schools, homeschool co-ops, and scout troops. Bridging culinary arts with chemistry, biology, and applied mathematics.
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section">
+          <span class="banner-label-pill pill-primary">
+            <i class="fa-solid fa-flask-vial"></i> Hands-on Chemistry Labs
+          </span>
+          <span class="banner-label-pill pill-success">
+            <i class="fa-solid fa-seedling"></i> Herb Courtyard Botany
+          </span>
+          <span class="banner-label-pill pill-warning">
+            <i class="fa-solid fa-calculator"></i> Applied Culinary Math
+          </span>
+          <span class="banner-label-pill pill-info">
+            <i class="fa-solid fa-chalkboard-user"></i> Teacher Packets Included
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-bus text-danger"></i> Dedicated Bus Drop-Off
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Main Service Content Section -->
+    <section class="py-4 py-lg-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+
+          <!-- Left Column: Detailed Service Body -->
+          <div class="col-lg-8">
+            <!-- Hero Feature Image -->
+            <div class="rounded-2xl overflow-hidden shadow-md mb-4 position-relative" style="height: 300px;">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80" alt="Students conducting kitchen chemistry experiments" class="w-100 h-100 object-cover">
+              <div class="position-absolute bottom-3 start-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border shadow-sm">
+                <span class="text-xs fw-bold text-primary font-heading"><i class="fa-solid fa-flask me-1"></i> Active STEM Kitchen Laboratory</span>
+              </div>
+            </div>
+
+            <!-- Program Overview -->
+            <div class="mb-4">
+              <span class="section-tag mb-2"><i class="fa-solid fa-circle-info"></i> Curriculum Overview</span>
+              <h3 class="font-heading fw-bold mb-2 fs-4">Where Science, Math &amp; Nutrition Come Alive</h3>
+              <p class="text-muted mb-3">
+                Turn measuring cups into fractions, sautÃ© pans into thermal physics, and yeast dough into biological fermentation!
+              </p>
+              <p class="text-muted small mb-3">
+                Little Chefs Academy hosts engaging school field trips engineered collaboratively by certified science educators and professional executive chefs. Each trip bridges core curriculum concepts with tangible, edible laboratory experiments students never forget.
+              </p>
+              <p class="text-muted small mb-0">
+                Our modern 4,500 sq. ft. campus accommodates cohorts from 15 up to 60 students simultaneously with rotating interactive stations. Teachers receive comprehensive pre-trip lesson prep worksheets and post-trip assessment quizzes. Chaperones and educators attend 100% free with access to our teacher work lounge.
+              </p>
+            </div>
+
+            <!-- 4 STEM Culinary Laboratory Stations -->
+            <div class="mb-4">
+              <h4 class="font-heading fw-bold mb-3 fs-5">4 Core STEM Curriculum Modules</h4>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-emerald-600 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Biology Lab</span>
+                      <h6 class="font-heading fw-bold mb-0">Fermentation &amp; Yeast Ecology</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Investigate microscopic Saccharomyces cerevisiae. Students test yeast gas production with balloon flasks under variable sugar and temperature controls while kneading scratch dough.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-microscope me-1"></i> Cellular respiration &amp; gluten elasticity</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-emerald-600 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Physics Lab</span>
+                      <h6 class="font-heading fw-bold mb-0">Thermodynamics &amp; Maillard Reaction</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Explore conduction, convection, and electromagnetic induction heating. Observe caramelization, non-enzymatic browning, and phase transitions in baking breads.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-fire me-1"></i> Heat transfer &amp; chemical change</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-emerald-600 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Chemistry Lab</span>
+                      <h6 class="font-heading fw-bold mb-0">Emulsions, pH &amp; Molecular Density</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Create stable emulsions using natural lecithin surfactants. Test acidity and alkalinity of fresh foods using red cabbage indicator solutions and digital pH probes.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-flask me-1"></i> Surfactants, polar bonds &amp; pH scale</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-card p-3 h-100 border bg-subtle">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-emerald-600 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold">Botany &amp; Math</span>
+                      <h6 class="font-heading fw-bold mb-0">Courtyard Botany &amp; Fraction Math</h6>
+                    </div>
+                    <p class="text-muted text-xs mb-2">Dissect edible flower petals and herb foliage in our courtyard garden. Scale multi-yield recipes calculating proportional volume fractions and gram conversions.</p>
+                    <small class="text-primary text-xs fw-semibold"><i class="fa-solid fa-seedling me-1"></i> Plant anatomy &amp; applied fractions</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- What's Included Grid -->
+            <div class="mb-4">
+              <h4 class="font-heading fw-bold mb-3 fs-5">Everything Included for Your Class</h4>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Interactive Science Experiments</h6>
+                    <p class="text-muted text-xs mb-0">Yeast balloon gas collection, acid-base color tests, and safe induction cookstation physics for all students.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-pizza-slice"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Scratch Herb Focaccia Bread</h6>
+                    <p class="text-muted text-xs mb-0">Every student measures, kneads, proves, and bakes their own personal herb-infused focaccia flatbread to eat &amp; take home.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Teacher Curriculum Packet</h6>
+                    <p class="text-muted text-xs mb-0">Pre-trip classroom preparation worksheets, NGSS/TEKS alignment rubrics, and post-trip assessment quizzes.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="custom-card p-3 h-100 border">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 flex items-center justify-center fs-5 mb-2">
+                      <i class="fa-solid fa-bus"></i>
+                    </div>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Free Chaperones &amp; Bus Drop-Off</h6>
+                    <p class="text-muted text-xs mb-0">Teachers and required adult chaperones attend free. Designated bus turnaround lane and free reserved parking.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Field Trip Experience Flow -->
+            <div class="mb-4">
+              <span class="section-tag mb-2"><i class="fa-solid fa-timeline"></i> The Field Trip Schedule</span>
+              <h4 class="font-heading fw-bold mb-3 fs-5">Typical 2 to 2.5-Hour Laboratory Flow</h4>
+              <div class="d-flex flex-column gap-2">
+                <div class="service-phase-card">
+                  <div class="service-phase-num">01</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">0:00 &ndash; 0:20: Bus Arrival, Safety &amp; Hypothesis Briefing</h6>
+                    <p class="text-muted text-xs mb-0">Students stow backpacks, sanitize hands at sensor stations, put on lab aprons, and formulate scientific hypotheses in lab booklets.</p>
+                  </div>
+                </div>
+                <div class="service-phase-card">
+                  <div class="service-phase-num">02</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">0:20 &ndash; 1:00: Biological Fermentation &amp; Dough Kneading</h6>
+                    <p class="text-muted text-xs mb-0">Active yeast respiration experiments, measuring thermal water thresholds, and kneading high-gluten bread doughs.</p>
+                  </div>
+                </div>
+                <div class="service-phase-card">
+                  <div class="service-phase-num">03</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">1:00 &ndash; 1:35: Courtyard Botany Tour &amp; Herb Infusion</h6>
+                    <p class="text-muted text-xs mb-0">Harvesting rosemary, basil, and thyme in our outdoor garden; conducting sensory aroma tests and studying chlorophyll taxonomy.</p>
+                  </div>
+                </div>
+                <div class="service-phase-card">
+                  <div class="service-phase-num">04</div>
+                  <div>
+                    <h6 class="font-heading fw-bold mb-0.5 fs-6">1:35 &ndash; 2:15: Oven Bake, Maillard Evaluation &amp; Scientific Tasting</h6>
+                    <p class="text-muted text-xs mb-0">Observing non-enzymatic browning in deck ovens, calculating volume expansion, scientific flavor tasting, and packing take-home flatbreads.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Safety Sanctuary Banner -->
+            <div class="p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 mb-4">
+              <div class="d-flex gap-3 align-items-center">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center fs-5 flex-shrink-0">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                  <h6 class="font-heading fw-bold text-emerald-950 dark:text-emerald-100 mb-0.5">Strict School Safety &amp; Allergen Sanctuary</h6>
+                  <p class="text-muted text-xs mb-0">
+                    Our entire academy is strictly peanut and tree-nut free. Certified in Pediatric First Aid. Cool-touch induction cooktops prevent flame or burn risks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing Tiers -->
+            <div class="mb-4">
+              <div class="text-center mb-3">
+                <span class="section-tag mb-1"><i class="fa-solid fa-tags"></i> Transparent School Rates</span>
+                <h4 class="font-heading fw-bold mb-1 fs-5">Field Trip Pricing Tiers</h4>
+                <p class="text-muted text-xs mb-0">Discounted group rates for educational institutions and scout troops.</p>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="service-pricing-box">
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Homeschool &amp; Scout Troop</h6>
+                    <p class="text-muted text-xs mb-2">Ideal for smaller learning pods and troops.</p>
+                    <div class="my-2">
+                      <span class="fs-3 fw-bold font-heading text-primary">$22</span>
+                      <span class="text-muted text-xs d-block">per student (10&ndash;18 kids)</span>
+                    </div>
+                    <ul class="list-unstyled text-start text-xs mb-3 flex-grow-1">
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Full 2-hour laboratory workshop</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Individual focaccia baking</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Scout culinary badge criteria</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Printable lab worksheet packet</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline-custom btn-sm w-100 rounded-full font-bold">
+                      Book Troop Trip
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="service-pricing-box featured">
+                    <span class="badge bg-orange-500 text-white rounded-pill px-2.5 py-0.5 text-xs fw-bold position-absolute top-0 start-50 translate-middle">MOST BOOKED</span>
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Standard Grade Cohort</h6>
+                    <p class="text-muted text-xs mb-2">Our flagship field trip for school classes.</p>
+                    <div class="my-2">
+                      <span class="fs-3 fw-bold font-heading text-primary">$18</span>
+                      <span class="text-muted text-xs d-block">per student (19&ndash;35 kids)</span>
+                    </div>
+                    <ul class="list-unstyled text-start text-xs mb-3 flex-grow-1">
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> 2.5-Hour interactive STEM lab</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Yeast balloon gas experiment</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Teacher pre-trip lesson guide</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Free admission for chaperones</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary-custom btn-sm w-100 rounded-full font-bold">
+                      Book School Trip
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="service-pricing-box">
+                    <h6 class="font-heading fw-bold mb-1 fs-6">Multi-Class Grade Buyout</h6>
+                    <p class="text-muted text-xs mb-2">Exclusive entire academy campus reservation.</p>
+                    <div class="my-2">
+                      <span class="fs-3 fw-bold font-heading text-primary">$16</span>
+                      <span class="text-muted text-xs d-block">per student (36&ndash;60 kids)</span>
+                    </div>
+                    <ul class="list-unstyled text-start text-xs mb-3 flex-grow-1">
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Split-cohort rotating stations</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Botany tour + indoor cooktop lab</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Custom TEKS alignment module</li>
+                      <li class="mb-1.5"><i class="fa-solid fa-circle-check text-success me-1.5"></i> Dedicated bus staging lane</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline-custom btn-sm w-100 rounded-full font-bold">
+                      Reserve Grade Buyout
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQs -->
+            <div class="mb-3">
+              <span class="section-tag mb-2"><i class="fa-solid fa-circle-question"></i> Educator FAQs</span>
+              <h4 class="font-heading fw-bold mb-3 fs-5">Frequently Asked Questions for Educators</h4>
+              <div class="accordion custom-accordion" id="fieldTripFaqAccordion">
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="tripFaqH1">
+                    <button class="accordion-button font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqC1" aria-expanded="true" aria-controls="tripFaqC1">
+                      Is there parking for large yellow school buses?
+                    </button>
+                  </h2>
+                  <div id="tripFaqC1" class="accordion-collapse collapse show" aria-labelledby="tripFaqH1" data-bs-parent="#fieldTripFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      Yes! Our Austin campus features a dedicated bus turnaround lane and free reserved parallel parking stalls directly in front of our main entryway for safe student drop-off and pickup.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="tripFaqH2">
+                    <button class="accordion-button collapsed font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqC2" aria-expanded="false" aria-controls="tripFaqC2">
+                      Can our school pay using a District Purchase Order (PO)?
+                    </button>
+                  </h2>
+                  <div id="tripFaqC2" class="accordion-collapse collapse" aria-labelledby="tripFaqH2" data-bs-parent="#fieldTripFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      Yes! Little Chefs Academy is an approved educational vendor for Austin ISD, Round Rock ISD, Eanes ISD, Leander ISD, and surrounding Central Texas districts. We accept formal POs with Net-30 invoicing terms.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="tripFaqH3">
+                    <button class="accordion-button collapsed font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqC3" aria-expanded="false" aria-controls="tripFaqC3">
+                      How many teachers and chaperones can attend?
+                    </button>
+                  </h2>
+                  <div id="tripFaqC3" class="accordion-collapse collapse" aria-labelledby="tripFaqH3" data-bs-parent="#fieldTripFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      We recommend approximately 1 adult chaperone per 8 to 10 students. All teachers and required chaperones attend 100% free of charge with complimentary artisan espresso and quiet Wi-Fi work lounge access.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded-xl overflow-hidden mb-2">
+                  <h2 class="accordion-header" id="tripFaqH4">
+                    <button class="accordion-button collapsed font-heading fw-bold py-2.5 px-3 text-sm" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqC4" aria-expanded="false" aria-controls="tripFaqC4">
+                      Are curriculum modules customizable for specific grade standards?
+                    </button>
+                  </h2>
+                  <div id="tripFaqC4" class="accordion-collapse collapse" aria-labelledby="tripFaqH4" data-bs-parent="#fieldTripFaqAccordion">
+                    <div class="accordion-body text-muted text-xs pt-0 pb-2.5 px-3">
+                      Absolutely! We tailor our laboratory worksheets to your grade level's specific TEKS science objectives&mdash;whether 3rd grade plant life cycles, 5th grade states of matter, or 8th grade chemical reactions.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Sidebar Widget -->
+          <div class="col-lg-4">
+            
+            <!-- Compact Booking Widget -->
+            <aside class="service-booking-card mb-3" style="position: -webkit-sticky; position: sticky; top: 90px; z-index: 25;">
+              <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                <span class="badge-pill badge-spot text-xs">School Field Trips</span>
+                <div class="text-end">
+                  <span class="text-xs text-muted d-block">Starting from</span>
+                  <span class="fs-4 fw-bold font-heading text-primary" id="trip-price-display">$18 / student</span>
+                </div>
+              </div>
+
+              <h5 class="font-heading fw-bold mb-1 fs-6">Request Field Trip Date</h5>
+              <p class="text-muted text-xs mb-3">
+                Approved ISD Vendor. Formal purchase orders (PO) accepted.
+              </p>
+
+              <!-- Booking Form -->
+              <form id="tripBookingForm" class="d-flex flex-column gap-2.5 mb-3">
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1" for="tripSchoolInput">SCHOOL / ORGANIZATION NAME</label>
+                  <input type="text" class="form-control form-control-sm rounded-lg shadow-none text-xs" id="tripSchoolInput" placeholder="e.g. Oak Hill Elementary">
+                </div>
+
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1" for="tripGradeSelect">GRADE LEVEL</label>
+                  <select class="form-select form-select-sm rounded-lg shadow-none text-xs" id="tripGradeSelect">
+                    <option value="k2">Kindergarten &ndash; 2nd Grade (Sensory Botany)</option>
+                    <option value="35" selected>3rd &ndash; 5th Grade (Fractions &amp; Matter)</option>
+                    <option value="68">6th &ndash; 8th Grade (Cellular Respiration)</option>
+                    <option value="high">High School (Applied Culinary Chemistry)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label text-xs fw-bold font-heading text-muted mb-1" for="tripDateInput">PREFERRED TRIP DATE</label>
+                  <input type="date" class="form-control form-control-sm rounded-lg shadow-none text-xs" id="tripDateInput">
+                </div>
+
+                <div>
+                  <div class="d-flex align-items-center justify-content-between p-2 border rounded-lg bg-subtle">
+                    <span class="text-xs fw-medium">Estimated Students</span>
+                    <div class="d-flex align-items-center gap-1.5">
+                      <button type="button" class="btn btn-sm btn-icon-round border bg-white dark:bg-slate-800" style="width: 26px; height: 26px; font-size: 0.75rem;" id="decStudentsBtn">-</button>
+                      <span class="fw-bold px-2 font-heading text-sm" id="studentsCount">25</span>
+                      <button type="button" class="btn btn-sm btn-icon-round border bg-white dark:bg-slate-800" style="width: 26px; height: 26px; font-size: 0.75rem;" id="incStudentsBtn">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-check text-xs">
+                  <input class="form-check-input shadow-none" type="checkbox" id="districtPoCheck" checked>
+                  <label class="form-check-label text-muted" for="districtPoCheck">
+                    Paying via District Purchase Order (PO)
+                  </label>
+                </div>
+
+                <div class="py-1 px-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900/60 text-xs text-emerald-900 dark:text-emerald-200">
+                  <i class="fa-solid fa-chalkboard-user me-1 text-emerald-600"></i> Free teacher &amp; chaperone passes included!
+                </div>
+
+                <a href="contact.html" class="btn btn-primary-custom w-100 py-2.5 rounded-full font-bold text-sm shadow-sm hover:shadow">
+                  <i class="fa-solid fa-envelope-open-text me-1.5"></i> Request School Quote / Date
+                </a>
+                <a href="contact.html" class="text-center text-xs text-muted hover:text-primary text-decoration-none py-1">
+                  <i class="fa-solid fa-file-pdf me-1"></i> Download TEKS Alignment Matrix &rarr;
+                </a>
+              </form>
+
+              <!-- Quick Specs 2x2 Grid -->
+              <h6 class="font-heading fw-bold text-xs uppercase tracking-wider text-muted mb-2 border-top pt-2.5">Key Specifications</h6>
+              <div class="service-spec-grid">
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-flask text-emerald-600"></i>
+                  <div class="spec-content">
+                    <span>Curriculum</span>
+                    <strong>TEKS Aligned</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-clock text-primary"></i>
+                  <div class="spec-content">
+                    <span>Duration</span>
+                    <strong>2 to 2.5 Hours</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-users text-primary"></i>
+                  <div class="spec-content">
+                    <span>Group Size</span>
+                    <strong>15&ndash;60 Students</strong>
+                  </div>
+                </div>
+                <div class="service-spec-pill">
+                  <i class="fa-solid fa-bus text-danger"></i>
+                  <div class="spec-content">
+                    <span>Bus Access</span>
+                    <strong>Dedicated Lane</strong>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Compact Help / Tour Callout -->
+              <div class="mt-3 pt-2.5 border-top text-center">
+                <div class="text-xs text-muted mb-1"><i class="fa-solid fa-phone text-primary me-1"></i> Questions? Call (512) 555-CHEF</div>
+                <a href="contact.html" class="btn btn-xs btn-outline-custom rounded-full px-3 py-1 text-xs">Schedule Free Studio Tour</a>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Related Services -->
+    <section class="py-4 bg-subtle border-top">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <span class="section-tag mb-1"><i class="fa-solid fa-sparkles"></i> More Experiences</span>
+            <h4 class="font-heading fw-bold mb-0 fs-5">Other Culinary Offerings You Might Love</h4>
+          </div>
+          <a href="services.html" class="btn btn-outline-custom btn-sm-custom text-xs d-none d-sm-inline-flex">
+            All Services &rarr;
+          </a>
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column border shadow-sm">
+              <div class="position-relative" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=700&q=80" alt="Age-Grouped Weekly Cooking Classes" class="w-100 h-100 object-cover">
+                <span class="badge bg-orange-500 text-white position-absolute top-2.5 start-2.5 fw-bold text-xs">$45 / class</span>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column">
+                <h6 class="font-heading fw-bold mb-1 fs-6">
+                  <a href="service-weekly-classes.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
+                    Age-Grouped Weekly Cooking Classes
+                  </a>
+                </h6>
+                <p class="text-muted text-xs mb-2 flex-grow-1">Semester &amp; drop-in sessions across 4 age tiers with dedicated induction workstations.</p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted text-xs"><i class="fa-solid fa-clock me-1"></i> 90&ndash;120 Mins</small>
+                  <a href="service-weekly-classes.html" class="btn-service-action py-1 px-2.5 text-xs w-auto">
+                    Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column border shadow-sm">
+              <div class="position-relative" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Culinary Summer Camps &amp; Immersions" class="w-100 h-100 object-cover">
+                <span class="badge bg-orange-500 text-white position-absolute top-2.5 start-2.5 fw-bold text-xs">$395 / week</span>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column">
+                <h6 class="font-heading fw-bold mb-1 fs-6">
+                  <a href="service-summer-camps.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
+                    Culinary Summer Camps &amp; Immersions
+                  </a>
+                </h6>
+                <p class="text-muted text-xs mb-2 flex-grow-1">Week-long expeditions with daily hot lunches, herb harvesting, and Friday banquet.</p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted text-xs"><i class="fa-solid fa-campground me-1"></i> 5-Day Weekly</small>
+                  <a href="service-summer-camps.html" class="btn-service-action py-1 px-2.5 text-xs w-auto">
+                    Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column border shadow-sm">
+              <div class="position-relative" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="Young Chef Starter Kits &amp; Cutlery" class="w-100 h-100 object-cover">
+                <span class="badge bg-orange-500 text-white position-absolute top-2.5 start-2.5 fw-bold text-xs">$49.99 Kit</span>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column">
+                <h6 class="font-heading fw-bold mb-1 fs-6">
+                  <a href="service-starter-kits.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
+                    Young Chef Starter Kits &amp; Cutlery
+                  </a>
+                </h6>
+                <p class="text-muted text-xs mb-2 flex-grow-1">Certified child-safe nylon knives, silicone measurement mats, and 50-recipe cookbook.</p>
+                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                  <small class="text-muted text-xs"><i class="fa-solid fa-box me-1"></i> Home Kitchen</small>
+                  <a href="service-starter-kits.html" class="btn-service-action py-1 px-2.5 text-xs w-auto">
+                    Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-5 cta-banner-section text-white text-center">
+      <div class="container py-3">
+        <h2 class="font-heading fw-bold mb-3">Bring Hands-On STEM Science to Your Students</h2>
+        <p class="text-orange-100 max-w-xl mx-auto mb-4">
+          Fall and Spring field trip calendar slots fill quickly. Request an official quote or hold your date today!
+        </p>
+
+        <!-- Banner Label Section -->
+        <div class="banner-labels-section mb-4">
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-school"></i> TEKS &amp; NGSS Standards Aligned
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-file-invoice-dollar"></i> District PO Billing Accepted
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-chalkboard-user"></i> Free Chaperone Passes
+          </span>
+          <span class="banner-label-pill">
+            <i class="fa-solid fa-bus"></i> School Bus Parking Stalls
+          </span>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-light text-orange-600 font-bold px-4 py-3 rounded-full shadow-lg hover:bg-orange-50">
+            <i class="fa-solid fa-paper-plane me-2"></i> Request School Field Trip Quote
+          </a>
+          <a href="tel:5125552433" class="btn btn-outline-light font-bold px-4 py-3 rounded-full">
+            <i class="fa-solid fa-phone me-2"></i> Call Field Trip Coordinator
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="brand-title">
+              <span class="brand-name">Little Chefs</span>
+              <span class="brand-tagline">Academy &amp; Camps</span>
+            </div>
+          </a>
+          <p class="text-muted mb-4">
+            Inspiring the next generation of culinary artists through joyful, safety-certified, hands-on cooking classes, summer camps, and family culinary events.
+          </p>
+          <div class="d-flex gap-3 fs-5 footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Facebook Login" title="Redirect to Facebook Login Page"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Instagram Login" title="Redirect to Instagram Login Page"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="YouTube Login" title="Redirect to YouTube Login Page"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer" class="footer-social-btn text-muted hover:text-primary" aria-label="Pinterest Login" title="Redirect to Pinterest Login Page"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-widget-title font-heading">Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="index-2.html"><i class="fa-solid fa-angle-right"></i> Home 2 (Modern)</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i> Classes</a></li>
+            <li><a href="camps.html"><i class="fa-solid fa-angle-right"></i> Summer Camps</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-weekly-classes.html"><i class="fa-solid fa-kitchen-set"></i> Weekly Classes</a></li>
+            <li><a href="service-summer-camps.html"><i class="fa-solid fa-campground"></i> Summer Camps</a></li>
+            <li><a href="service-birthday-parties.html"><i class="fa-solid fa-cake-candles"></i> Birthday Parties</a></li>
+            <li><a href="service-stem-field-trips.html"><i class="fa-solid fa-school"></i> STEM Field Trips</a></li>
+            <li><a href="service-parent-and-me.html"><i class="fa-solid fa-people-roof"></i> Parent &amp; Me</a></li>
+            <li><a href="service-starter-kits.html"><i class="fa-solid fa-bag-shopping"></i> Starter Kits</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Visit Our Kitchen</h5>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary me-2"></i> 452 Gourmet Way, Suite 100, Austin, TX 78701</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> (512) 555-CHEF (2433)</p>
+          <p class="text-muted small mb-2"><i class="fa-solid fa-envelope text-primary me-2"></i> hello@littlechefsacademy.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+        <p class="mb-0">&copy; 2026 Little Chefs Academy. All rights reserved.</p>
+        <div class="d-flex gap-4">
+          <a href="about.html#safety" class="text-muted hover:text-primary">Safety Protocols</a>
+          <a href="contact.html#faq" class="text-muted hover:text-primary">Parent FAQs</a>
+          <a href="404.html" class="text-muted hover:text-primary">404 Error Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let students = 25;
+      const studentsCountEl = document.getElementById('studentsCount');
+      const incBtn = document.getElementById('incStudentsBtn');
+      const decBtn = document.getElementById('decStudentsBtn');
+      const priceDisplay = document.getElementById('trip-price-display');
+
+      function updateTripPricing() {
+        let rate = 18;
+        if (students < 19) {
+          rate = 22;
+        } else if (students >= 36) {
+          rate = 16;
+        }
+        let total = students * rate;
+        priceDisplay.innerText = `$${rate} / student ($${total})`;
+      }
+
+      if (incBtn && decBtn) {
+        incBtn.addEventListener('click', () => {
+          if (students < 60) {
+            students += 5;
+            studentsCountEl.innerText = students;
+            updateTripPricing();
+          }
+        });
+        decBtn.addEventListener('click', () => {
+          if (students > 10) {
+            students -= 5;
+            studentsCountEl.innerText = students;
+            updateTripPricing();
+          }
+        });
+      }
+
+      // Default upcoming date
+      const dateInput = document.getElementById('tripDateInput');
+      if (dateInput) {
+        const today = new Date();
+        const nextMonth = new Date();
+        nextMonth.setDate(today.getDate() + 21);
+        dateInput.value = nextMonth.toISOString().split('T')[0];
+      }
+    });
+  </script>
+</body>
+</html>

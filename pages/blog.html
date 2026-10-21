@@ -65,23 +65,24 @@
           </div>
         </a>
 
-        <!-- Mobile Toggles Container -->
-        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
-          <button class="btn btn-icon-round theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout" title="Switch text direction">
-            <span class="rtl-text">RTL</span>
-            <i class="fa-solid fa-right-left ms-1"></i>
-          </button>
-          <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fs-4 text-white"></i>
-          </button>
-        </div>
+        <!-- Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4 text-white"></i>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarMain">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                                <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down home-chevron"></i>
+              </a>
+              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 - Classic Academy</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 - Modern Studio</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -90,20 +91,21 @@
             <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
           </ul>
 
-          <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
-            <!-- Settings / Theme Toggle (Matching user screenshot) -->
-            <button class="btn btn-icon-round theme-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
-              <i class="fa-solid fa-moon"></i>
-            </button>
+          <!-- Inside Hamburger Menu (Mobile) & Navbar Actions (Desktop) -->
+          <div class="navbar-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 py-3 py-lg-0 border-top border-lg-0 mt-3 mt-lg-0">
+            <!-- Theme & RTL Toggles (Inside Hamburger Menu on mobile, inline on desktop) -->
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2 mb-2 mb-lg-0">
+              <button class="btn btn-icon-round theme-toggle-btn d-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="rtl-btn-pill rtl-toggle-btn d-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+                <span class="rtl-text">RTL</span>
+                <i class="fa-solid fa-right-left ms-2"></i>
+              </button>
+            </div>
 
-            <!-- RTL Pill Button (Matching user screenshot) -->
-            <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
-              <span class="rtl-text">RTL</span>
-              <i class="fa-solid fa-right-left ms-2"></i>
-            </button>
-
-            <!-- Parent Portal Login Button (Matching user screenshot) -->
-            <a href="login.html" class="btn btn-parent-login">
+            <!-- Parent Portal Login Button -->
+            <a href="login.html" class="btn btn-parent-login text-center">
               <i class="fa-solid fa-lock me-1"></i> Parent Login
             </a>
           </div>
@@ -196,7 +198,7 @@
                 <span class="blog-tag-pill"><i class="fa-solid fa-kitchen-set"></i> Ages 6&ndash;12</span>
               </div>
               <h2 class="font-heading fw-bold mb-3">
-                <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">10 Essential Kitchen Knife Skills Every Child Should Learn by Age 8</a>
+                <a href="blog-knife-skills.html" class="text-dark dark:text-white hover:text-primary">10 Essential Kitchen Knife Skills Every Child Should Learn by Age 8</a>
               </h2>
               <p class="text-muted mb-4">
                 Teaching knife safety doesn't mean keeping children away from cutlery. Discover the "Bear Claw" grip, nylon safety blades, and how slicing cucumbers builds spatial dexterity and self-reliance.
@@ -206,7 +208,7 @@
                   <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=100&q=80" alt="Chef Maya Vance" class="w-9 h-9 rounded-full object-cover">
                   <small class="fw-bold">Chef Maya Vance • 6 min read</small>
                 </div>
-                <a href="blog-detail.html" class="btn btn-sm btn-primary-custom">Read Article &rarr;</a>
+                <a href="blog-knife-skills.html" class="btn btn-sm btn-primary-custom">Read Article &rarr;</a>
               </div>
             </div>
           </div>
@@ -227,7 +229,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">Rainbow Smoothie Bowls: Making Veggies Taste Like Dessert</a>
+                  <a href="blog-smoothie-bowls.html" class="text-dark dark:text-white hover:text-primary">Rainbow Smoothie Bowls: Making Veggies Taste Like Dessert</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   How our chefs sneak spinach, zucchini, and cauliflower into velvety strawberry-banana bowls that kids eagerly devour.
@@ -242,7 +244,7 @@
                     <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=80&q=80" alt="Chef Priya Patel avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Priya Patel</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Recipe &rarr;</a>
+                  <a href="blog-smoothie-bowls.html" class="text-primary fw-bold text-sm hover:underline">Read Recipe &rarr;</a>
                 </div>
               </div>
             </div>
@@ -295,7 +297,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 3 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">The "One Bite Rule" vs. "Sensory Food Play" for Picky Eaters</a>
+                  <a href="blog-picky-eaters.html" class="text-dark dark:text-white hover:text-primary">The "One Bite Rule" vs. "Sensory Food Play" for Picky Eaters</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   Why forcing kids to swallow new foods creates kitchen friction, and why letting them chop, smell, and knead produces lasting curiosity.
@@ -310,7 +312,7 @@
                     <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=80&q=80" alt="Chef Maya Vance avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Maya Vance</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Guide &rarr;</a>
+                  <a href="blog-picky-eaters.html" class="text-primary fw-bold text-sm hover:underline">Read Guide &rarr;</a>
                 </div>
               </div>
             </div>
@@ -329,7 +331,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">Fluffy Personal Pan Pizzas: Teaching Kneading & Fractions</a>
+                  <a href="blog-personal-pan-pizzas.html" class="text-dark dark:text-white hover:text-primary">Fluffy Personal Pan Pizzas: Teaching Kneading & Fractions</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   How measuring flour fractions and kneading active yeast dough transforms a weekend family dinner into an intuitive math and motor skills lesson.
@@ -344,7 +346,7 @@
                     <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=80&q=80" alt="Chef Marco Bellini avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Marco Bellini</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Recipe &rarr;</a>
+                  <a href="blog-personal-pan-pizzas.html" class="text-primary fw-bold text-sm hover:underline">Read Recipe &rarr;</a>
                 </div>
               </div>
             </div>
@@ -363,7 +365,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">The Stove & Oven Transition: Readiness Checklist for Real Heat</a>
+                  <a href="blog-stove-safety.html" class="text-dark dark:text-white hover:text-primary">The Stove & Oven Transition: Readiness Checklist for Real Heat</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   Clear developmental milestones to evaluate before moving children from cold assembly prep to managing burners, hot saute pans, and heavy oven trays.
@@ -378,7 +380,7 @@
                     <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=80&q=80" alt="Chef Maya Vance avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Maya Vance</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Checklist &rarr;</a>
+                  <a href="blog-stove-safety.html" class="text-primary fw-bold text-sm hover:underline">Read Checklist &rarr;</a>
                 </div>
               </div>
             </div>
@@ -397,7 +399,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">The Magic of Emulsions: Whisking Homemade Vinaigrettes & Mayo</a>
+                  <a href="blog-emulsions.html" class="text-dark dark:text-white hover:text-primary">The Magic of Emulsions: Whisking Homemade Vinaigrettes & Mayo</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   Why oil and vinegar repel each other until mustard or egg yolk joins the party. An edible physics experiment that makes young chefs love crisp salads.
@@ -412,7 +414,7 @@
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Chef Liam Chen avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Liam Chen</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Science Lab &rarr;</a>
+                  <a href="blog-emulsions.html" class="text-primary fw-bold text-sm hover:underline">Read Science Lab &rarr;</a>
                 </div>
               </div>
             </div>
@@ -431,7 +433,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 7 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">Dumplings Around the Globe: Gyoza, Pierogi & Empanada Folds</a>
+                  <a href="blog-global-dumplings.html" class="text-dark dark:text-white hover:text-primary">Dumplings Around the Globe: Gyoza, Pierogi & Empanada Folds</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   Exploring world geography and family traditions through pocket doughs. Includes 4 easy crimping methods that build fine motor dexterity in kids.
@@ -446,7 +448,7 @@
                     <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=80&q=80" alt="Chef Priya Patel avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Priya Patel</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Recipe &rarr;</a>
+                  <a href="blog-global-dumplings.html" class="text-primary fw-bold text-sm hover:underline">Read Recipe &rarr;</a>
                 </div>
               </div>
             </div>
@@ -465,7 +467,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">Secret Ingredient Brownies: How Black Beans Create Fudgy Magic</a>
+                  <a href="blog-secret-brownies.html" class="text-dark dark:text-white hover:text-primary">Secret Ingredient Brownies: How Black Beans Create Fudgy Magic</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   The most requested bake in our Teen Masterclass. Zero refined flour, packed with plant protein and fiber, yet delightfully rich, gooey, and chocolatey.
@@ -480,7 +482,7 @@
                     <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=80&q=80" alt="Chef Marco Bellini avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Marco Bellini</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Bake Guide &rarr;</a>
+                  <a href="blog-secret-brownies.html" class="text-primary fw-bold text-sm hover:underline">Read Bake Guide &rarr;</a>
                 </div>
               </div>
             </div>
@@ -499,7 +501,7 @@
                   <span><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
                 </div>
                 <h4 class="font-heading fw-bold mb-2">
-                  <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">Windowsill Herb Gardening & Scallion Regrowing for Kids</a>
+                  <a href="blog-windowsill-gardening.html" class="text-dark dark:text-white hover:text-primary">Windowsill Herb Gardening & Scallion Regrowing for Kids</a>
                 </h4>
                 <p class="text-muted small mb-3">
                   Connect gardening to cooking with 3 scrap-vegetable water experiments. Watch green onions shoot up 2 inches in 48 hours right on your kitchen counter.
@@ -514,7 +516,7 @@
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Chef Liam Chen avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Liam Chen</small>
                   </div>
-                  <a href="blog-detail.html" class="text-primary fw-bold text-sm hover:underline">Read Project &rarr;</a>
+                  <a href="blog-windowsill-gardening.html" class="text-primary fw-bold text-sm hover:underline">Read Project &rarr;</a>
                 </div>
               </div>
             </div>
@@ -550,6 +552,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Main Footer -->
@@ -578,7 +581,8 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h5 class="footer-widget-title font-heading">Explore</h5>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="index-2.html"><i class="fa-solid fa-angle-right"></i> Home 2 (Modern)</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
             <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
             <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i> Classes</a></li>
@@ -622,5 +626,8 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/main.js"></script>
+
+  
+
 </body>
 </html>

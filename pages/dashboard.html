@@ -60,24 +60,25 @@
           </div>
         </a>
 
-        <!-- Mobile Controls Container -->
-        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
-          <button class="btn btn-icon-round theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout" title="Switch text direction">
-            <span class="rtl-text">RTL</span>
-            <i class="fa-solid fa-right-left ms-1"></i>
-          </button>
-          <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDashboard" aria-controls="navbarDashboard" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fs-4 text-white"></i>
-          </button>
-        </div>
+        <!-- Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDashboard" aria-controls="navbarDashboard" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4 text-white"></i>
+        </button>
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarDashboard">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                                <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down home-chevron"></i>
+              </a>
+              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 - Classic Academy</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 - Modern Studio</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -86,14 +87,16 @@
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a></li>
           </ul>
 
-          <!-- Right Side Nav Elements -->
-          <div class="d-flex align-items-center gap-2 py-2 py-lg-0">
-            <!-- Theme & RTL (Matching user screenshot) -->
-            <button class="btn btn-icon-round theme-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme"><i class="fa-solid fa-moon"></i></button>
-            <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
-              <span class="rtl-text">RTL</span>
-              <i class="fa-solid fa-right-left ms-2"></i>
-            </button>
+          <!-- Right Side Nav Elements (Inside Hamburger Menu on mobile, inline on desktop) -->
+          <div class="navbar-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 py-2 py-lg-0 border-top border-lg-0 mt-3 mt-lg-0">
+            <!-- Theme & RTL Toggles (Inside Hamburger Menu on mobile, inline on desktop) -->
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2 mb-2 mb-lg-0">
+              <button class="btn btn-icon-round theme-toggle-btn d-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme"><i class="fa-solid fa-moon"></i></button>
+              <button class="rtl-btn-pill rtl-toggle-btn d-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+                <span class="rtl-text">RTL</span>
+                <i class="fa-solid fa-right-left ms-2"></i>
+              </button>
+            </div>
 
             <!-- Notification Bell -->
             <button class="btn btn-outline-custom position-relative p-2" aria-label="Notifications" onclick="window.showToast('Kitchen Announcement', 'Photos from Saturday\'s Handmade Gnocchi session are now live in your gallery!', 'info')">
@@ -351,6 +354,108 @@
                 </div>
               </div>
             </div>
+
+            <!-- Chef Observations & Skill Milestones Row -->
+            <div class="row g-4 mt-1">
+              <!-- Chef Feedback & Observations -->
+              <div class="col-lg-7">
+                <div class="custom-card p-4 h-100">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="font-heading fw-bold mb-0">
+                      <i class="fa-solid fa-comment-dots text-primary me-2"></i> Chef Instructor Observations
+                    </h5>
+                    <span class="badge bg-emerald-100 text-emerald-700 text-xs">Updated Yesterday</span>
+                  </div>
+
+                  <div class="d-flex flex-column gap-3">
+                    <!-- Note for Leo -->
+                    <div class="p-3 bg-subtle rounded-2xl border">
+                      <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="d-flex align-items-center gap-2">
+                          <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=80&q=80" alt="Leo Miller" class="w-8 h-8 rounded-full object-cover border border-orange-400">
+                          <div>
+                            <strong class="text-sm font-heading d-block">Leo Miller</strong>
+                            <small class="text-muted">Observation by Chef Marco Rossi</small>
+                          </div>
+                        </div>
+                        <span class="badge badge-pill badge-age text-xs">Gnocchi & Herb Lab</span>
+                      </div>
+                      <p class="small text-muted mb-0 fst-italic">
+                        "Leo showed remarkable patience while feeling the hydration of the potato dough. He followed the 3-finger safety claw technique flawlessly with our nylon prep blades!"
+                      </p>
+                    </div>
+
+                    <!-- Note for Mia -->
+                    <div class="p-3 bg-subtle rounded-2xl border">
+                      <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="d-flex align-items-center gap-2">
+                          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=80&q=80" alt="Mia Miller" class="w-8 h-8 rounded-full object-cover border border-purple-400">
+                          <div>
+                            <strong class="text-sm font-heading d-block">Mia Miller</strong>
+                            <small class="text-muted">Observation by Chef Maya Vance</small>
+                          </div>
+                        </div>
+                        <span class="badge badge-pill badge-diet text-xs">French Macaron Masterclass</span>
+                      </div>
+                      <p class="small text-muted mb-0 fst-italic">
+                        "Mia's macarons developed a perfect glossy shell and textbook ruffles. Her piping precision at 45-degree angle has reached intermediate bakery standard."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill Progression Tracker -->
+              <div class="col-lg-5">
+                <div class="custom-card p-4 h-100">
+                  <h5 class="font-heading fw-bold mb-3">
+                    <i class="fa-solid fa-award text-warning me-2"></i> Certification Milestones
+                  </h5>
+
+                  <!-- Leo Milestone -->
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-1 text-xs">
+                      <div>
+                        <strong class="font-heading d-block">Leo: Silver Chef Whisk</strong>
+                        <span class="text-muted">18 of 25 culinary hours completed</span>
+                      </div>
+                      <span class="badge bg-orange-100 text-orange-700 fw-bold">72%</span>
+                    </div>
+                    <div class="milestone-progress mb-1">
+                      <div class="milestone-progress-bar" style="width: 72%;"></div>
+                    </div>
+                    <small class="text-muted text-xs">Next unlock: Master Flambé & Sauté Safety badge</small>
+                  </div>
+
+                  <!-- Mia Milestone -->
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-1 text-xs">
+                      <div>
+                        <strong class="font-heading d-block">Mia: Gold Chef Toque</strong>
+                        <span class="text-muted">26 of 35 culinary hours completed</span>
+                      </div>
+                      <span class="badge bg-purple-100 text-purple-700 fw-bold">74%</span>
+                    </div>
+                    <div class="milestone-progress mb-1">
+                      <div class="milestone-progress-bar" style="width: 74%;"></div>
+                    </div>
+                    <small class="text-muted text-xs">Next unlock: Junior Kitchen Instructor Assistant badge</small>
+                  </div>
+
+                  <!-- Quick Readiness Checklist -->
+                  <div class="pt-3 border-top mt-3">
+                    <div class="d-flex align-items-center gap-2 text-xs text-muted mb-1">
+                      <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                      <span>Kitchen Dress Code: Closed-toe shoes & hair ties ready</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 text-xs text-muted">
+                      <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                      <span>Sanitized Stations #3 & Lab #1 Reserved</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
 
@@ -499,14 +604,19 @@
                 <p class="text-muted mb-0">Track booked sessions, kitchen island assignments, and export to your phone calendar.</p>
               </div>
 
-              <!-- Child Filter Dropdown -->
-              <div class="d-flex align-items-center gap-2">
-                <label for="scheduleFilterChild" class="small fw-bold text-nowrap">Filter Schedule:</label>
-                <select class="form-select form-select-custom py-2" id="scheduleFilterChild">
-                  <option value="all">All Children</option>
-                  <option value="child-1">Leo Miller</option>
-                  <option value="child-2">Mia Miller</option>
-                </select>
+              <!-- Controls in Schedule Header -->
+              <div class="d-flex flex-wrap align-items-center gap-2">
+                <button type="button" class="btn btn-outline-custom btn-sm-custom" data-bs-toggle="modal" data-bs-target="#stationFloorplanModal">
+                  <i class="fa-solid fa-map-location-dot me-1"></i> Studio Floorplan
+                </button>
+                <div class="d-flex align-items-center gap-2">
+                  <label for="scheduleFilterChild" class="small fw-bold text-nowrap">Filter:</label>
+                  <select class="form-select form-select-custom py-1.5" id="scheduleFilterChild">
+                    <option value="all">All Children</option>
+                    <option value="child-1">Leo Miller</option>
+                    <option value="child-2">Mia Miller</option>
+                  </select>
+                </div>
               </div>
             </div>
 
@@ -653,8 +763,8 @@
                     </div>
                   </div>
 
-                  <button type="button" class="btn btn-primary-custom btn-sm-custom w-100" onclick="window.showToast('Recipe Card Ready', 'Opening interactive step-by-step cooking view...', 'info')">
-                    <i class="fa-solid fa-kitchen-set me-1"></i> Start Cooking at Home
+                  <button type="button" class="btn btn-primary-custom btn-sm-custom w-100" data-bs-toggle="modal" data-bs-target="#cookAlongModal">
+                    <i class="fa-solid fa-kitchen-set me-1"></i> Start Cooking at Home (Interactive Mode)
                   </button>
                 </div>
               </div>
@@ -682,8 +792,8 @@
                     </div>
                   </div>
 
-                  <button type="button" class="btn btn-primary-custom btn-sm-custom w-100" onclick="window.showToast('Recipe Card Ready', 'Opening interactive step-by-step cooking view...', 'info')">
-                    <i class="fa-solid fa-kitchen-set me-1"></i> Start Cooking at Home
+                  <button type="button" class="btn btn-primary-custom btn-sm-custom w-100" data-bs-toggle="modal" data-bs-target="#cookAlongModal">
+                    <i class="fa-solid fa-kitchen-set me-1"></i> Start Cooking at Home (Interactive Mode)
                   </button>
                 </div>
               </div>
@@ -819,6 +929,159 @@
           <a href="#" class="btn btn-primary-custom btn-sm-custom" id="lightboxDownloadBtn" download>
             <i class="fa-solid fa-download me-1"></i> Download High-Resolution (Original)
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Modal 4: Interactive Studio Station Floorplan -->
+  <div class="modal fade" id="stationFloorplanModal" tabindex="-1" aria-labelledby="floorplanModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <h4 class="modal-title font-heading fw-bold" id="floorplanModalLabel">
+              <i class="fa-solid fa-map-location-dot text-primary me-2"></i> Studio Workstation Layout
+            </h4>
+            <p class="text-muted small mb-0">See where your children will be stationed in our sanitized culinary studio.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="studio-floorplan-grid mb-3">
+            <!-- Station 1 -->
+            <div class="floorplan-station">
+              <span class="badge bg-secondary-subtle text-secondary position-absolute top-2 end-2 text-xs">Prep Zone</span>
+              <h6 class="font-heading fw-bold mb-1"><i class="fa-solid fa-kitchen-set text-secondary me-1"></i> Island Station #1</h6>
+              <p class="small text-muted mb-2">Knife Skills & Veggie Prep Station (Induction)</p>
+              <span class="badge bg-light text-dark border text-xs">Available</span>
+            </div>
+
+            <!-- Station 2 -->
+            <div class="floorplan-station">
+              <span class="badge bg-secondary-subtle text-secondary position-absolute top-2 end-2 text-xs">Cooking Zone</span>
+              <h6 class="font-heading fw-bold mb-1"><i class="fa-solid fa-fire-burner text-warning me-1"></i> Island Station #2</h6>
+              <p class="small text-muted mb-2">Sauté, Pan-Seering & Stovetop Lab</p>
+              <span class="badge bg-light text-dark border text-xs">Available</span>
+            </div>
+
+            <!-- Station 3 (Highlighted for Leo) -->
+            <div class="floorplan-station highlight">
+              <span class="badge bg-danger text-white position-absolute top-2 end-2 text-xs">100% Nut-Safe</span>
+              <h6 class="font-heading fw-bold mb-1 text-primary"><i class="fa-solid fa-shield-virus me-1"></i> Island Station #3 (Assigned)</h6>
+              <p class="small text-muted mb-2">Dedicated Nut-Free Sanctuary Workstation</p>
+              <span class="badge bg-orange-500 text-white text-xs fw-bold"><i class="fa-solid fa-user-check me-1"></i> Leo Miller (Sat 10:00 AM)</span>
+            </div>
+
+            <!-- Pastry Lab 1 (Highlighted for Mia) -->
+            <div class="floorplan-station highlight">
+              <span class="badge bg-purple-600 text-white position-absolute top-2 end-2 text-xs">Pastry Lab</span>
+              <h6 class="font-heading fw-bold mb-1 text-purple-600"><i class="fa-solid fa-cake-candles me-1"></i> Pastry Lab #1 (Assigned)</h6>
+              <p class="small text-muted mb-2">Marble Counters & Multi-Deck Baking Ovens</p>
+              <span class="badge bg-purple-600 text-white text-xs fw-bold"><i class="fa-solid fa-user-check me-1"></i> Mia Miller (Sun 01:30 PM)</span>
+            </div>
+          </div>
+
+          <!-- Sanitation Note -->
+          <div class="p-3 bg-subtle rounded-2xl border d-flex align-items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 d-flex align-items-center justify-center fs-5 flex-shrink-0">
+              <i class="fa-solid fa-pump-medical"></i>
+            </div>
+            <div>
+              <strong class="text-sm font-heading d-block">Sanitization Guarantee</strong>
+              <small class="text-muted">Every island station is deep-cleaned between sessions with organic, food-safe sanitizers. Chef Marco and Chef Maya oversee personal glove and wash protocols.</small>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-primary-custom btn-sm-custom" data-bs-dismiss="modal">Got It</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Interactive Cook-Along Mode -->
+  <div class="modal fade" id="cookAlongModal" tabindex="-1" aria-labelledby="cookAlongModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span class="badge badge-pill badge-featured mb-1">Interactive Family Cook-Along</span>
+            <h4 class="modal-title font-heading fw-bold" id="cookAlongModalLabel">
+              <i class="fa-solid fa-kitchen-set text-primary me-2"></i> Scratch Ricotta & Herb Gnocchi
+            </h4>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Portion Scaler -->
+          <div class="d-flex justify-content-between align-items-center p-3 bg-subtle rounded-2xl border mb-3">
+            <span class="text-sm fw-bold font-heading"><i class="fa-solid fa-utensils text-primary me-1"></i> Adjust Family Portions:</span>
+            <div class="btn-group btn-group-sm" role="group">
+              <button type="button" class="btn btn-outline-custom active portion-btn" data-servings="2">2 Servings</button>
+              <button type="button" class="btn btn-outline-custom portion-btn" data-servings="4">4 Servings (Default)</button>
+              <button type="button" class="btn btn-outline-custom portion-btn" data-servings="6">6 Servings</button>
+            </div>
+          </div>
+
+          <!-- Digital Kitchen Timer -->
+          <div class="p-3 bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800 rounded-2xl mb-4 text-center">
+            <small class="text-orange-700 dark:text-orange-300 fw-bold text-xs text-uppercase d-block mb-1">
+              <i class="fa-solid fa-stopwatch me-1"></i> Simmer & Boil Timer
+            </small>
+            <div class="display-6 fw-bold font-heading text-slate-900 dark:text-white mb-2" id="cookTimerDisplay">03:00</div>
+            <div class="d-flex justify-content-center gap-2">
+              <button type="button" class="btn btn-sm btn-primary-custom" id="cookTimerStartBtn">
+                <i class="fa-solid fa-play me-1"></i> Start
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-custom d-none" id="cookTimerPauseBtn">
+                <i class="fa-solid fa-pause me-1"></i> Pause
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-custom" id="cookTimerResetBtn">
+                <i class="fa-solid fa-rotate-left me-1"></i> Reset
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Step-by-Step Checklist -->
+          <h6 class="font-heading fw-bold mb-3"><i class="fa-solid fa-list-check text-primary me-1"></i> Step-by-Step Kid Instructions:</h6>
+          <div class="d-flex flex-column gap-2 mb-3">
+            <label class="d-flex align-items-start gap-3 p-3 bg-subtle rounded-xl border cursor-pointer">
+              <input type="checkbox" class="cook-step-checkbox mt-1">
+              <div>
+                <strong class="font-heading text-sm d-block text-slate-900 dark:text-white">Step 1: Drain the Ricotta</strong>
+                <span class="text-muted small">Spread ricotta on paper towels for 10 minutes to absorb excess whey. This ensures tender, non-gummy gnocchi!</span>
+              </div>
+            </label>
+            <label class="d-flex align-items-start gap-3 p-3 bg-subtle rounded-xl border cursor-pointer">
+              <input type="checkbox" class="cook-step-checkbox mt-1">
+              <div>
+                <strong class="font-heading text-sm d-block text-slate-900 dark:text-white">Step 2: Fold Dough Gently</strong>
+                <span class="text-muted small">Mix ricotta, egg yolk, grated parmesan, and flour until soft dough forms. Do not over-knead!</span>
+              </div>
+            </label>
+            <label class="d-flex align-items-start gap-3 p-3 bg-subtle rounded-xl border cursor-pointer">
+              <input type="checkbox" class="cook-step-checkbox mt-1">
+              <div>
+                <strong class="font-heading text-sm d-block text-slate-900 dark:text-white">Step 3: Roll & Cut Pillows</strong>
+                <span class="text-muted small">Roll into 3/4-inch ropes and slice with safe knife. Press gently with a fork to create sauce grooves.</span>
+              </div>
+            </label>
+            <label class="d-flex align-items-start gap-3 p-3 bg-subtle rounded-xl border cursor-pointer">
+              <input type="checkbox" class="cook-step-checkbox mt-1">
+              <div>
+                <strong class="font-heading text-sm d-block text-slate-900 dark:text-white">Step 4: Boil Until Floating</strong>
+                <span class="text-muted small">Drop gently in boiling water. When they float to top, cook for 1 more minute and transfer to sage butter!</span>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-outline-custom btn-sm-custom" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success btn-sm-custom" onclick="window.showToast('🎉 Chef Award Unlocked!', 'Congratulations on completing this recipe at home! 25 bonus experience points added to Leo\'s profile.', 'success')">
+            <i class="fa-solid fa-circle-check me-1"></i> Mark Recipe Completed
+          </button>
         </div>
       </div>
     </div>

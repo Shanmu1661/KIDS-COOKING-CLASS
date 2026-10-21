@@ -669,5 +669,168 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // -------------------------------------------------------------------------
+  // 14. INTERACTIVE PARENT PORTAL SIMULATOR (DASHBOARD PREVIEW SECTION)
+  // -------------------------------------------------------------------------
+  const portalChildTabs = document.querySelectorAll('.portal-child-tab');
+  const portalCardBody = document.getElementById('portalCardBody');
+
+  if (portalChildTabs.length > 0 && portalCardBody) {
+    const portalData = {
+      leo: {
+        name: 'Leo Miller',
+        age: 8,
+        group: 'Little Chefs (Ages 6-9)',
+        avatar: 'https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80',
+        allergyBadge: '<span class="text-danger fw-bold"><i class="fa-solid fa-shield-virus me-1"></i>Peanut-Free Sanitized Station</span>',
+        passType: 'Semester Pass Active',
+        passBadgeClass: 'bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300',
+        milestoneTitle: 'Level 2: Junior Sous Chef',
+        milestoneHours: '18 / 25 Hours',
+        milestonePercent: 72,
+        milestoneAward: 'Silver Chef Whisk Award',
+        nextClassTitle: 'Handmade Gnocchi & Fresh Herb Pesto',
+        nextClassDate: 'Sat, Oct 24 • 10:00 AM – 12:30 PM',
+        nextClassChef: 'Chef Marco Rossi',
+        nextClassStation: 'Station Island #3 (Nut-Free Zone)',
+        badges: [
+          { icon: 'fa-shield-heart', text: 'Knife Safety 101' },
+          { icon: 'fa-wheat-awn', text: 'Dough Roller' },
+          { icon: 'fa-carrot', text: 'Rainbow Salad Star' }
+        ],
+        photosCount: 18,
+        photoThumbs: [
+          { img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80', caption: 'Rolling dough' },
+          { img: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=300&q=80', caption: 'Sauce tasting' },
+          { img: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=300&q=80', caption: 'Fresh pizza' }
+        ]
+      },
+      mia: {
+        name: 'Mia Miller',
+        age: 11,
+        group: 'Junior Gourmet (Ages 10-13)',
+        avatar: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=150&q=80',
+        allergyBadge: '<span class="text-emerald-600 fw-bold"><i class="fa-solid fa-circle-check me-1"></i>No Allergies • All Stations Cleared</span>',
+        passType: 'Masterclass Pass Active',
+        passBadgeClass: 'bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300',
+        milestoneTitle: 'Level 3: Pastry Artisan',
+        milestoneHours: '26 / 35 Hours',
+        milestonePercent: 74,
+        milestoneAward: 'Gold Chef Toque Award',
+        nextClassTitle: 'French Macarons & Buttercream Piping',
+        nextClassDate: 'Sun, Oct 25 • 01:30 PM – 04:00 PM',
+        nextClassChef: 'Chef Maya Vance',
+        nextClassStation: 'Pastry Lab #1 (Marble Counter)',
+        badges: [
+          { icon: 'fa-bowl-rice', text: 'Fresh Pasta Artisan' },
+          { icon: 'fa-fire-burner', text: 'Sauté Captain' },
+          { icon: 'fa-cake-candles', text: 'Pastry Puffer' },
+          { icon: 'fa-flask', text: 'Kitchen Chemist' }
+        ],
+        photosCount: 24,
+        photoThumbs: [
+          { img: 'https://images.unsplash.com/photo-1488477304112-4944851de03d?auto=format&fit=crop&w=300&q=80', caption: 'Triple berry tart' },
+          { img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=300&q=80', caption: 'French macarons' },
+          { img: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=300&q=80', caption: 'Piping skills' }
+        ]
+      }
+    };
+
+    function renderPortalChild(key) {
+      const data = portalData[key];
+      if (!data) return;
+
+      portalCardBody.style.opacity = '0';
+      portalCardBody.style.transform = 'translateY(6px)';
+
+      setTimeout(() => {
+        portalCardBody.innerHTML = `
+          <!-- Child Profile Bar -->
+          <div class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom">
+            <div class="d-flex align-items-center gap-3">
+              <div class="position-relative">
+                <img src="${data.avatar}" alt="${data.name}" class="w-14 h-14 rounded-full border-3 border-orange-500 object-cover shadow-sm">
+                <span class="position-absolute bottom-0 end-0 p-1 bg-emerald-500 border border-white rounded-full" title="Active Account"></span>
+              </div>
+              <div>
+                <h5 class="mb-0 fw-bold font-heading text-slate-900 dark:text-white">${data.name} <span class="text-muted fs-6 fw-normal">(${data.group})</span></h5>
+                <div class="d-flex align-items-center gap-2 mt-1">
+                  <small class="d-flex align-items-center gap-1">${data.allergyBadge}</small>
+                </div>
+              </div>
+            </div>
+            <span class="badge ${data.passBadgeClass} px-3 py-1.5 rounded-pill font-heading text-xs">
+              ${data.passType}
+            </span>
+          </div>
+
+          <!-- Milestone Progress Bar -->
+          <div class="p-3 bg-subtle rounded-2xl mb-3 border">
+            <div class="d-flex justify-content-between align-items-center mb-1 text-xs">
+              <span class="fw-bold font-heading text-slate-900 dark:text-white"><i class="fa-solid fa-award text-warning me-1"></i> ${data.milestoneTitle}</span>
+              <span class="text-muted fw-bold">${data.milestoneHours}</span>
+            </div>
+            <div class="milestone-progress mb-1.5">
+              <div class="milestone-progress-bar" style="width: ${data.milestonePercent}%;"></div>
+            </div>
+            <div class="d-flex justify-content-between text-xs text-muted">
+              <span>Target: <strong>${data.milestoneAward}</strong></span>
+              <span class="text-primary fw-bold">${data.milestonePercent}% Completed</span>
+            </div>
+          </div>
+
+          <!-- Upcoming Session Ticket Card -->
+          <div class="session-ticket-box p-3.5 bg-subtle rounded-2xl mb-3 border">
+            <div class="d-flex justify-content-between align-items-center text-xs mb-1.5">
+              <span class="text-muted fw-semibold"><i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Session:</span>
+              <span class="fw-bold text-primary"><i class="fa-regular fa-clock me-1"></i> ${data.nextClassDate}</span>
+            </div>
+            <h5 class="font-heading fw-bold mb-1.5 text-slate-900 dark:text-white fs-6">${data.nextClassTitle}</h5>
+            <div class="d-flex flex-wrap align-items-center gap-2 text-muted small text-xs">
+              <span><i class="fa-solid fa-user-tie text-secondary me-1"></i> ${data.nextClassChef}</span>
+              <span>•</span>
+              <span class="text-warning fw-bold"><i class="fa-solid fa-kitchen-set me-1"></i> ${data.nextClassStation}</span>
+            </div>
+          </div>
+
+          <!-- Badges Earned Strip -->
+          <div class="mb-3">
+            <label class="text-xs fw-bold text-muted d-block mb-1.5">Earned Skill Badges:</label>
+            <div class="d-flex flex-wrap gap-1.5">
+              ${data.badges.map(b => `<span class="badge-mini-pill"><i class="fa-solid ${b.icon} text-primary"></i> ${b.text}</span>`).join('')}
+            </div>
+          </div>
+
+          <!-- Photo Strip Preview -->
+          <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <div class="d-flex -space-x-2 overflow-hidden">
+                ${data.photoThumbs.map(p => `<img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="${p.img}" alt="${p.caption}">`).join('')}
+              </div>
+              <span class="text-xs text-muted"><strong>${data.photosCount} High-Res Photos</strong> in Gallery</span>
+            </div>
+            <a href="dashboard.html" class="fw-bold text-primary hover:underline text-xs d-inline-flex align-items-center gap-1">
+              Access Portal <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        `;
+        portalCardBody.style.opacity = '1';
+        portalCardBody.style.transform = 'translateY(0)';
+      }, 150);
+    }
+
+    portalChildTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        portalChildTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        renderPortalChild(tab.getAttribute('data-child'));
+      });
+    });
+
+    // Render default Leo child
+    renderPortalChild('leo');
+  }
+
 });
 

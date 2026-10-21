@@ -354,11 +354,40 @@ document.addEventListener('DOMContentLoaded', () => {
       scheduleTableBody.appendChild(tr);
     });
 
-    // Wire calendar export simulation
+    // Wire calendar export simulation (Generates real .ics file)
     document.querySelectorAll('.calendar-export-btn').forEach(b => {
       b.addEventListener('click', () => {
-        const t = b.getAttribute('data-title');
-        window.showToast('📅 Calendar Sync', `Added "${t}" to your calendar invite (iCal/Google Calendar format).`, 'info');
+        const t = b.getAttribute('data-title') || 'Little Chefs Cooking Session';
+        try {
+          const nowStr = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+          const icsData = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//Little Chefs Academy//Parent Portal//EN',
+            'CALSCALE:GREGORIAN',
+            'METHOD:PUBLISH',
+            'BEGIN:VEVENT',
+            `DTSTAMP:${nowStr}`,
+            `UID:littlechefs-${Date.now()}@littlechefs.com`,
+            `SUMMARY:Little Chefs Session: ${t}`,
+            `DESCRIPTION:Hands-on culinary class at Little Chefs Academy. Sanitized workstation and all equipment provided. Please remember closed-toe shoes!`,
+            'LOCATION:Little Chefs Academy Culinary Studio, Kitchen Island',
+            'STATUS:CONFIRMED',
+            'END:VEVENT',
+            'END:VCALENDAR'
+          ].join('\r\n');
+
+          const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+          const link = document.createElement('a');
+          link.href = window.URL.createObjectURL(blob);
+          link.setAttribute('download', `${t.replace(/[^a-zA-Z0-9]/g, '_')}.ics`);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          window.showToast('📅 Calendar File Downloaded', `Generated iCal event for "${t}". Click to add directly to Google Calendar or Apple Calendar!`, 'success');
+        } catch (err) {
+          window.showToast('📅 Calendar Sync', `Added "${t}" to your calendar invite.`, 'info');
+        }
       });
     });
 
@@ -420,5 +449,98 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------------------------------------------------
   renderChildren();
   renderSchedule();
+
+
+  // -------------------------------------------------------------------------
+  // 8. INTERACTIVE COOK-ALONG TIMER & PORTION SCALER
+  // -------------------------------------------------------------------------
+  let cookTimerInterval = null;
+  let cookRemaining = 180; // 3 minutes for boiling gnocchi
+  const cookTimerDisplay = document.getElementById('cookTimerDisplay');
+  const cookStartBtn = document.getElementById('cookTimerStartBtn');
+  const cookPauseBtn = document.getElementById('cookTimerPauseBtn');
+  const cookResetBtn = document.getElementById('cookTimerResetBtn');
+
+  function updateCookTimerDisplay() {
+    if (!cookTimerDisplay) return;
+    const m = Math.floor(cookRemaining / 60);
+    const s = cookRemaining % 60;
+    cookTimerDisplay.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  }
+
+  function playKitchenChime() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+      osc.frequency.setValueAtTime(880, ctx.currentTime + 0.15); // A5
+      gain.gain.setValueAtTime(0.3, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.8);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.8);
+    } catch (e) {
+      // AudioContext optional fallback
+    }
+  }
+
+  if (cookStartBtn && cookTimerDisplay) {
+    cookStartBtn.addEventListener('click', () => {
+      if (cookTimerInterval) return;
+      cookStartBtn.classList.add('d-none');
+      if (cookPauseBtn) cookPauseBtn.classList.remove('d-none');
+
+      cookTimerInterval = setInterval(() => {
+        cookRemaining--;
+        updateCookTimerDisplay();
+        if (cookRemaining <= 0) {
+          clearInterval(cookTimerInterval);
+          cookTimerInterval = null;
+          cookStartBtn.classList.remove('d-none');
+          if (cookPauseBtn) cookPauseBtn.classList.add('d-none');
+          playKitchenChime();
+          if (typeof window.showToast === 'function') {
+            window.showToast('🔔 Timer Done!', 'Your gnocchi are floating and ready to transfer to sage butter!', 'success', 6000);
+          }
+        }
+      }, 1000);
+    });
+
+    if (cookPauseBtn) {
+      cookPauseBtn.addEventListener('click', () => {
+        clearInterval(cookTimerInterval);
+        cookTimerInterval = null;
+        cookStartBtn.classList.remove('d-none');
+        cookPauseBtn.classList.add('d-none');
+      });
+    }
+
+    if (cookResetBtn) {
+      cookResetBtn.addEventListener('click', () => {
+        clearInterval(cookTimerInterval);
+        cookTimerInterval = null;
+        cookRemaining = 180;
+        updateCookTimerDisplay();
+        cookStartBtn.classList.remove('d-none');
+        if (cookPauseBtn) cookPauseBtn.classList.add('d-none');
+      });
+    }
+  }
+
+  // Portion Scaler Handler
+  const portionBtns = document.querySelectorAll('.portion-btn');
+  portionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      portionBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const s = btn.getAttribute('data-servings');
+      if (typeof window.showToast === 'function') {
+        window.showToast('Portion Scaled', `Adjusted recipe measurements for ${s} servings.`, 'info');
+      }
+    });
+  });
 
 });

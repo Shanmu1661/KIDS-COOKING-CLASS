@@ -68,7 +68,8 @@ child-cooking-class/
 │   ├── camps.html               # Summer culinary camps, weekly schedule & daily routine
 │   ├── gallery.html             # Young chef highlights & photo/video lightbox gallery
 │   ├── blog.html                # Culinary articles, kid recipes & food chemistry
-│   ├── blog-detail.html         # Single recipe with interactive timer & ingredient checklist
+│   ├── blog-detail.html         # Canonical blog detail page with proper layout, sticky sidebar & comments
+│   ├── blog-*.html              # 9+ dedicated blog detail guides (recipes, STEM experiments, safety)
 │   ├── contact.html             # Contact form with validation, map mockup, hours & FAQs
 │   ├── login.html               # Parent portal sign-in/register with demo auto-fill
 │   ├── dashboard.html           # Full parent portal with enrollment, schedules & photos

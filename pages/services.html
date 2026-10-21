@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -66,24 +66,25 @@
           </div>
         </a>
 
-        <!-- Mobile Toggles Container -->
-        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
-          <button class="btn btn-icon-round theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="rtl-btn-pill rtl-toggle-btn px-2.5 py-1 text-xs" aria-label="Toggle RTL layout" title="Switch text direction">
-            <span class="rtl-text">RTL</span>
-            <i class="fa-solid fa-right-left ms-1"></i>
-          </button>
-          <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fs-4 text-white"></i>
-          </button>
-        </div>
+        <!-- Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4 text-white"></i>
+        </button>
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarMain">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                                <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down home-chevron"></i>
+              </a>
+              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 - Classic Academy</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 - Modern Studio</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
@@ -92,21 +93,21 @@
             <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
           </ul>
 
-          <!-- Action Buttons -->
-          <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
-            <!-- Settings / Theme Toggle (Matching user screenshot) -->
-            <button class="btn btn-icon-round theme-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
-              <i class="fa-solid fa-moon"></i>
-            </button>
+          <!-- Inside Hamburger Menu (Mobile) & Navbar Actions (Desktop) -->
+          <div class="navbar-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 py-3 py-lg-0 border-top border-lg-0 mt-3 mt-lg-0">
+            <!-- Theme & RTL Toggles (Inside Hamburger Menu on mobile, inline on desktop) -->
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2 mb-2 mb-lg-0">
+              <button class="btn btn-icon-round theme-toggle-btn d-inline-flex" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="rtl-btn-pill rtl-toggle-btn d-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
+                <span class="rtl-text">RTL</span>
+                <i class="fa-solid fa-right-left ms-2"></i>
+              </button>
+            </div>
 
-            <!-- RTL Pill Button (Matching user screenshot) -->
-            <button class="rtl-btn-pill rtl-toggle-btn d-none d-lg-inline-flex" aria-label="Toggle RTL layout" title="Switch text direction">
-              <span class="rtl-text">RTL</span>
-              <i class="fa-solid fa-right-left ms-2"></i>
-            </button>
-
-            <!-- Parent Portal Login Button (Matching user screenshot) -->
-            <a href="login.html" class="btn btn-parent-login">
+            <!-- Parent Portal Login Button -->
+            <a href="login.html" class="btn btn-parent-login text-center">
               <i class="fa-solid fa-lock me-1"></i> Parent Login
             </a>
           </div>
@@ -156,141 +157,247 @@
     <!-- Services Grid Section -->
     <section class="py-5">
       <div class="container py-3">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Comprehensive Culinary Programs</span>
+          <h2 class="section-title">Our 6 Core Culinary Services</h2>
+          <p class="section-subtitle">
+            Safety-certified, joy-filled kitchen education engineered for every age and developmental milestone. Explore detailed curriculum paths, workstation setups, and schedules below.
+          </p>
+        </div>
+
         <div class="row g-4">
           
-          <!-- Service 1 -->
+          <!-- Service 1: Weekly Classes -->
           <div class="col-md-6 col-lg-4">
-            <div class="custom-card p-4 h-100 d-flex flex-column">
-              <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
-                <i class="fa-solid fa-kitchen-set"></i>
+            <div class="service-card">
+              <div class="service-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=700&q=80" alt="Child happily preparing fresh meal at cooking station" class="service-card-img" width="380" height="220" loading="lazy">
+                <div class="service-card-badges">
+                  <span class="badge-pill badge-featured">Ages 3 &ndash; 17</span>
+                  <span class="badge-pill badge-spot">Core Program</span>
+                </div>
+                <div class="service-card-price">From $45 / class</div>
               </div>
-              <span class="badge badge-pill badge-featured w-fit mb-2">Ages 3&ndash;17</span>
-              <h4 class="font-heading fw-bold mb-2">Age-Grouped Weekly Classes</h4>
-              <p class="text-muted small mb-4">
-                Structured semester and single drop-in weekend cooking sessions tailored specifically to 4 developmental age tiers: Tiny Tasters, Little Chefs, Junior Gourmet, and Teen Masterclass.
-              </p>
-              <ul class="class-meta-list mb-4">
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> 100% individual workstation</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Take-home recipe cards & portions</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> All ingredients & equipment provided</li>
-              </ul>
-              <div class="mt-auto">
-                <a href="classes.html" class="btn btn-primary-custom w-100 btn-sm-custom">Explore Classes &rarr;</a>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <div class="service-card-icon bg-orange-100 text-orange-600 dark:bg-orange-950/60 dark:text-orange-400">
+                    <i class="fa-solid fa-kitchen-set"></i>
+                  </div>
+                  <h4 class="font-heading fw-bold service-card-title">
+                    <a href="service-weekly-classes.html" class="hover:text-primary text-current text-decoration-none">Age-Grouped Weekly Classes</a>
+                  </h4>
+                </div>
+                <p class="service-card-desc">
+                  Structured semester &amp; drop-in sessions across 4 developmental age tiers: Tiny Tasters, Little Chefs, Junior Gourmet, and Teen Masterclass.
+                </p>
+                <ul class="service-meta-list">
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> 100% individual induction cooktop station</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Generous take-home family tasting portions</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> All ingredients, safety gear &amp; aprons included</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="service-weekly-classes.html" class="btn-service-action">
+                    <span>Explore Weekly Classes</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Service 2 -->
+          <!-- Service 2: Summer Camps -->
           <div class="col-md-6 col-lg-4">
-            <div class="custom-card p-4 h-100 d-flex flex-column">
-              <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
-                <i class="fa-solid fa-campground"></i>
+            <div class="service-card">
+              <div class="service-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Young chefs baking pastries and bread together in camp" class="service-card-img" width="380" height="220" loading="lazy">
+                <div class="service-card-badges">
+                  <span class="badge-pill badge-spot">Ages 6 &ndash; 16</span>
+                  <span class="badge-pill badge-age">5-Day Immersion</span>
+                </div>
+                <div class="service-card-price">$395 &ndash; $440 / wk</div>
               </div>
-              <span class="badge badge-pill badge-spot w-fit mb-2">Summer & Holidays</span>
-              <h4 class="font-heading fw-bold mb-2">Culinary Summer Camps</h4>
-              <p class="text-muted small mb-4">
-                5-day immersive culinary adventures covering Global Gastronomy, Master Pastry Arts, Farm-to-Kitchen Botany, and Junior Iron Chef Mystery Basket competitions.
-              </p>
-              <ul class="class-meta-list mb-4">
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Full-day (9am&ndash;3pm) & Half-day options</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Daily cooked hot family lunch included</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Friday Parent Graduation Banquet</li>
-              </ul>
-              <div class="mt-auto">
-                <a href="camps.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Camp Schedule &rarr;</a>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <div class="service-card-icon bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400">
+                    <i class="fa-solid fa-campground"></i>
+                  </div>
+                  <h4 class="font-heading fw-bold service-card-title">
+                    <a href="service-summer-camps.html" class="hover:text-primary text-current text-decoration-none">Culinary Summer Camps</a>
+                  </h4>
+                </div>
+                <p class="service-card-desc">
+                  Immersive week-long expeditions covering Global Gastronomy, French Patisserie, Farm Botany, and Junior Iron Chef mystery basket bake-offs.
+                </p>
+                <ul class="service-meta-list">
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Full-day (9am&ndash;3pm) &amp; half-day tracks</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Cooked hot 2-course family lunch daily</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Friday Parent Graduation Banquet &amp; ceremony</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="service-summer-camps.html" class="btn-service-action">
+                    <span>Explore Summer Camps</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Service 3 -->
+          <!-- Service 3: Birthday Parties -->
           <div class="col-md-6 col-lg-4">
-            <div class="custom-card p-4 h-100 d-flex flex-column">
-              <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
-                <i class="fa-solid fa-cake-candles"></i>
+            <div class="service-card">
+              <div class="service-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=700&q=80" alt="Kids celebrating birthday with decorated cupcakes" class="service-card-img" width="380" height="220" loading="lazy">
+                <div class="service-card-badges">
+                  <span class="badge-pill badge-age">All Ages</span>
+                  <span class="badge-pill badge-featured">Exclusive Studio</span>
+                </div>
+                <div class="service-card-price">$450 (Up to 12 Kids)</div>
               </div>
-              <span class="badge badge-pill badge-age w-fit mb-2">Celebrations</span>
-              <h4 class="font-heading fw-bold mb-2">Private Birthday Cooking Parties</h4>
-              <p class="text-muted small mb-4">
-                Exclusive rental of our commercial kitchen studio for your child's birthday! Kids make custom pizzas from scratch, bake cupcakes, and compete in a fun frosting face-off.
-              </p>
-              <ul class="class-meta-list mb-4">
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Up to 12 kids included (expandable)</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Custom embroidered chef aprons to keep</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Complete kitchen cleanup handled</li>
-              </ul>
-              <div class="mt-auto">
-                <a href="contact.html?service=party" class="btn btn-outline-custom w-100 btn-sm-custom">Inquire Birthday Dates &rarr;</a>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <div class="service-card-icon bg-purple-100 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400">
+                    <i class="fa-solid fa-cake-candles"></i>
+                  </div>
+                  <h4 class="font-heading fw-bold service-card-title">
+                    <a href="service-birthday-parties.html" class="hover:text-primary text-current text-decoration-none">Private Birthday Cooking Parties</a>
+                  </h4>
+                </div>
+                <p class="service-card-desc">
+                  Exclusive commercial kitchen studio rental for your child's birthday celebration! Kids stretch artisan pizzas, bake cupcakes, and enjoy zero cleanup for parents.
+                </p>
+                <ul class="service-meta-list">
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> 2 hours private studio access for 12 kids</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Custom celebration cake &amp; keepsake chef aprons</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> 100% kitchen prep &amp; dish sanitization handled</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="service-birthday-parties.html" class="btn-service-action">
+                    <span>Explore Birthday Parties</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Service 4 -->
+          <!-- Service 4: Field Trips -->
           <div class="col-md-6 col-lg-4">
-            <div class="custom-card p-4 h-100 d-flex flex-column">
-              <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
-                <i class="fa-solid fa-school"></i>
+            <div class="service-card">
+              <div class="service-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80" alt="Students conducting kitchen chemistry experiments" class="service-card-img" width="380" height="220" loading="lazy">
+                <div class="service-card-badges">
+                  <span class="badge-pill badge-diet">Grades K &ndash; 12</span>
+                  <span class="badge-pill badge-spot">TEKS Aligned</span>
+                </div>
+                <div class="service-card-price">From $18 / student</div>
               </div>
-              <span class="badge badge-pill badge-diet w-fit mb-2">Schools & Scouts</span>
-              <h4 class="font-heading fw-bold mb-2">School Field Trips & STEM Labs</h4>
-              <p class="text-muted small mb-4">
-                Interactive food chemistry field trips for elementary and middle school classes, homeschool co-ops, and Girl/Boy Scout troops earning culinary badges.
-              </p>
-              <ul class="class-meta-list mb-4">
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Hands-on yeast fermentation science</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Nutrition & sensory herb garden tour</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Curriculum-aligned worksheets</li>
-              </ul>
-              <div class="mt-auto">
-                <a href="contact.html?service=fieldtrip" class="btn btn-outline-custom w-100 btn-sm-custom">Book School Field Trip &rarr;</a>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <div class="service-card-icon bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400">
+                    <i class="fa-solid fa-school"></i>
+                  </div>
+                  <h4 class="font-heading fw-bold service-card-title">
+                    <a href="service-stem-field-trips.html" class="hover:text-primary text-current text-decoration-none">School Field Trips &amp; STEM Labs</a>
+                  </h4>
+                </div>
+                <p class="service-card-desc">
+                  Interactive standards-aligned food chemistry workshops and garden tours for public/private schools, homeschool co-ops, and scout troops.
+                </p>
+                <ul class="service-meta-list">
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Hands-on yeast fermentation science lab</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Sensory courtyard herb harvesting &amp; tour</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Teacher curriculum pack &amp; badge worksheets</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="service-stem-field-trips.html" class="btn-service-action">
+                    <span>Explore STEM Field Trips</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Service 5 -->
+          <!-- Service 5: Parent & Me -->
           <div class="col-md-6 col-lg-4">
-            <div class="custom-card p-4 h-100 d-flex flex-column">
-              <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
-                <i class="fa-solid fa-people-roof"></i>
+            <div class="service-card">
+              <div class="service-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Parent and toddler daughter rolling fresh dough together" class="service-card-img" width="380" height="220" loading="lazy">
+                <div class="service-card-badges">
+                  <span class="badge-pill badge-featured">Ages 3 &ndash; 12 + Adult</span>
+                  <span class="badge-pill badge-age">Sunday Duo</span>
+                </div>
+                <div class="service-card-price">$85 / Duo Station</div>
               </div>
-              <span class="badge badge-pill badge-featured w-fit mb-2">Family Bonding</span>
-              <h4 class="font-heading fw-bold mb-2">Parent & Me Workshops</h4>
-              <p class="text-muted small mb-4">
-                Special weekend sessions where parents and toddlers/kids team up to roll gnocchi, bake soft cinnamon pretzels, and create joyful kitchen memories together.
-              </p>
-              <ul class="class-meta-list mb-4">
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> 1 Parent + 1 Child per ticket</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Low-stress, guided instruction</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Complimentary tea & organic coffee</li>
-              </ul>
-              <div class="mt-auto">
-                <a href="classes.html#tiny-tasters" class="btn btn-outline-custom w-100 btn-sm-custom">Parent & Me Schedule &rarr;</a>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <div class="service-card-icon bg-blue-100 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400">
+                    <i class="fa-solid fa-people-roof"></i>
+                  </div>
+                  <h4 class="font-heading fw-bold service-card-title">
+                    <a href="service-parent-and-me.html" class="hover:text-primary text-current text-decoration-none">Parent &amp; Me Workshops</a>
+                  </h4>
+                </div>
+                <p class="service-card-desc">
+                  Weekend culinary bonding sessions where parent and child duos team up to roll potato gnocchi, bake soft pretzels, and enjoy zero prep or cleanup.
+                </p>
+                <ul class="service-meta-list">
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> 1 Parent + 1 Child per shared duo counter</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Low-stress, guided step-by-step instruction</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Complimentary organic espresso bar for adults</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="service-parent-and-me.html" class="btn-service-action">
+                    <span>Explore Parent &amp; Me</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Service 6 -->
+          <!-- Service 6: Starter Kits -->
           <div class="col-md-6 col-lg-4">
-            <div class="custom-card p-4 h-100 d-flex flex-column">
-              <div class="w-14 h-14 bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center fs-3 mb-3">
-                <i class="fa-solid fa-bag-shopping"></i>
+            <div class="service-card">
+              <div class="service-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="Kid-safe cooking tools, nylon knives and recipe book" class="service-card-img" width="380" height="220" loading="lazy">
+                <div class="service-card-badges">
+                  <span class="badge-pill badge-age">Ages 3 &amp; Up</span>
+                  <span class="badge-pill badge-spot">Home Kitchen</span>
+                </div>
+                <div class="service-card-price">$49.99 Complete Kit</div>
               </div>
-              <span class="badge badge-pill badge-age w-fit mb-2">Products</span>
-              <h4 class="font-heading fw-bold mb-2">Young Chef Starter Kits</h4>
-              <p class="text-muted small mb-4">
-                Take the kitchen magic home! Our starter kits include certified child-safe nylon knives, vegetable peelers, custom adjustable aprons, and our 50-Recipe Kid Cookbook.
-              </p>
-              <ul class="class-meta-list mb-4">
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> 3-Piece nylon safety serrated knives</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Finger guard shield & cutting mat</li>
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Available at our studio front desk</li>
-              </ul>
-              <div class="mt-auto">
-                <a href="contact.html?service=merch" class="btn btn-outline-custom w-100 btn-sm-custom">Inquire Starter Kit &rarr;</a>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <div class="service-card-icon bg-pink-100 text-pink-600 dark:bg-pink-950/60 dark:text-pink-400">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </div>
+                  <h4 class="font-heading fw-bold service-card-title">
+                    <a href="service-starter-kits.html" class="hover:text-primary text-current text-decoration-none">Young Chef Starter Kits</a>
+                  </h4>
+                </div>
+                <p class="service-card-desc">
+                  Take the kitchen excitement home! Certified child-safe nylon knives, silicone cutting mats, adjustable canvas aprons, and our 50-Recipe Kid Cookbook.
+                </p>
+                <ul class="service-meta-list">
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> 3-Piece nylon safety serrated knives (cut-proof)</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Flexible non-slip silicone mat &amp; fraction ruler</li>
+                  <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> Studio front-desk pickup or priority US delivery</li>
+                </ul>
+                <div class="mt-auto">
+                  <a href="service-starter-kits.html" class="btn-service-action">
+                    <span>Explore Starter Kits</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
+
       </div>
     </section>
 
@@ -405,7 +512,7 @@
                 <div class="text-xs text-orange-600 fw-bold font-heading mb-1"><i class="fa-solid fa-clock me-1"></i> 3 Hours</div>
                 <h5 class="font-heading fw-bold mb-2">French Boulangerie &amp; Pastry</h5>
                 <p class="text-muted small mb-3 flex-grow-1">
-                  Master the science of yeast lamination, pipe chocolate éclairs, bake buttery golden madeleines, and roll flaky fruit galettes from scratch.
+                  Master the science of yeast lamination, pipe chocolate Ã©clairs, bake buttery golden madeleines, and roll flaky fruit galettes from scratch.
                 </p>
                 <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                   <span class="fw-bold font-heading text-primary">$75 / chef</span>
@@ -466,7 +573,7 @@
         <div class="text-center mb-5">
           <span class="section-tag"><i class="fa-solid fa-table-list"></i> Program Comparison</span>
           <h2 class="section-title">Compare Our Core Culinary Programs</h2>
-          <p class="section-subtitle">Find the perfect culinary experience matching your child’s age and schedule.</p>
+          <p class="section-subtitle">Find the perfect culinary experience matching your child's age and schedule.</p>
         </div>
 
         <div class="custom-card p-0 overflow-hidden shadow-md">
@@ -500,7 +607,7 @@
                   <td class="text-end pe-4 fw-bold text-primary font-heading">$55 / session</td>
                 </tr>
                 <tr>
-                  <td class="ps-4 fw-bold">Junior Gourmet Sauté</td>
+                  <td class="ps-4 fw-bold">Junior Gourmet SautÃ©</td>
                   <td>Ages 10 &ndash; 13</td>
                   <td>2 Hours</td>
                   <td>1:5 Chef Ratio</td>
@@ -950,7 +1057,8 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h5 class="footer-widget-title font-heading">Explore</h5>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1 (Classic)</a></li>
+            <li><a href="index-2.html"><i class="fa-solid fa-angle-right"></i> Home 2 (Modern)</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
             <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
             <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i> Classes</a></li>
