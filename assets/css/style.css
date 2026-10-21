@@ -4698,3 +4698,125 @@ img, svg, video, canvas, iframe {
     width: auto !important;
   }
 }
+
+/* ==========================================================================
+   DESKTOP NAVBAR CENTERING & 1024px RESPONSIVE BREATHING ROOM
+   ========================================================================== */
+@media (min-width: 992px) {
+  /* Fluid container so 1024px+ displays never squeeze navbar elements */
+  .main-header .container,
+  .main-header .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1400px !important;
+    width: 100% !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  .main-header .navbar-collapse {
+    display: flex !important;
+    flex-grow: 1 !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin-left: 20px !important;
+  }
+
+  /* Centered Nav Links with generous margins */
+  .main-header .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 0 !important;
+    gap: 6px !important;
+    width: auto !important;
+  }
+
+  .main-header .nav-link {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.94rem;
+    color: #FFFFFF !important;
+    padding: 8px 12px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    transition: color 0.2s ease;
+  }
+
+  .main-header .nav-link.active {
+    color: var(--color-primary, #FF5E36) !important;
+    font-weight: 700 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  /* Right Action Buttons pinned to right */
+  .navbar-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    gap: 12px !important;
+    flex-shrink: 0 !important;
+    border-top: none !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Proportional scaling between 992px and 1240px (iPad Pro / 1024px screens) */
+@media (min-width: 992px) and (max-width: 1240px) {
+  .main-header .container,
+  .main-header .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .main-header .navbar-brand {
+    transform: scale(0.92);
+    transform-origin: left center;
+    margin-right: 0 !important;
+  }
+
+  .main-header .navbar-collapse {
+    margin-left: 8px !important;
+  }
+
+  .main-header .navbar-nav {
+    gap: 2px !important;
+  }
+
+  .main-header .nav-link {
+    padding: 6px 8px !important;
+    font-size: 0.86rem !important;
+  }
+
+  .navbar-actions {
+    gap: 8px !important;
+  }
+
+  .navbar-actions .btn-parent-login {
+    padding: 6px 12px !important;
+    font-size: 0.84rem !important;
+    white-space: nowrap !important;
+  }
+
+  .navbar-actions .rtl-btn-pill {
+    padding: 0 10px !important;
+    font-size: 0.8rem !important;
+    height: 36px !important;
+    min-height: 36px !important;
+  }
+
+  .navbar-actions .theme-toggle-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+  }
+}

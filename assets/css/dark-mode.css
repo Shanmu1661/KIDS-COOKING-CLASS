@@ -361,12 +361,14 @@
 
 [data-theme="dark"] .main-header .nav-link:hover {
   color: #FF5E36 !important;
-  background-color: rgba(255, 94, 54, 0.12) !important;
+  background-color: transparent !important;
+  background: transparent !important;
 }
 
 [data-theme="dark"] .main-header .nav-link.active {
   color: #FF5E36 !important;
-  background-color: rgba(255, 94, 54, 0.18) !important;
+  background-color: transparent !important;
+  background: transparent !important;
 }
 
 [data-theme="dark"] .main-header .btn-icon-round {
