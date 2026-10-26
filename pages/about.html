@@ -54,8 +54,7 @@
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <!-- Header & Navigation -->
-  <!-- Header & Navigation -->
-  <header class="main-header">
+  <header class="main-header sticky-top">
     <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
       <div class="container">
         <!-- Logo -->
@@ -70,7 +69,7 @@
         </a>
 
         <!-- Mobile Hamburger Button Only -->
-        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars fs-4 text-white"></i>
         </button>
 
@@ -243,7 +242,7 @@
               </div>
               <h5 class="font-heading fw-bold mb-2">Kitchen Chemistry & STEM</h5>
               <p class="text-muted small mb-3 flex-grow-1">
-                From yeast fermentation and Maillard browning to acid-base balancing and ratio arithmetic, children discover how science makes food delicious.
+                From yeast fermentation and Maillard browning to acid-base balancing and kitchen ratio arithmetic, children discover how food science makes every recipe delicious.
               </p>
               <ul class="class-meta-list text-xs mb-0">
                 <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Fractions via volumetric cups</li>
@@ -282,7 +281,7 @@
                 Food is the friendliest doorway to world cultures. Students explore heirloom recipes, historical cooking methods, and spices from over 24 countries.
               </p>
               <ul class="class-meta-list text-xs mb-0">
-                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Fresh handmade pasta & gnocchi</li>
+                <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Handmade pasta & gnocchi</li>
                 <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Asian dumpling & noodle arts</li>
                 <li class="class-meta-item"><i class="fa-solid fa-check text-success"></i> Latin masa & scratch salsas</li>
               </ul>
@@ -411,7 +410,7 @@
               </div>
               <h5 class="font-heading fw-bold mb-2">Ergonomic Kid Cutlery</h5>
               <p class="text-muted small mb-0 flex-grow-1">
-                Children use custom nylon safety serrated knives and finger guards designed to slice carrots and cucumbers easily without breaking skin.
+                Children use ergonomic nylon safety knives and finger guards designed to slice vegetables cleanly without risk of cuts.
               </p>
             </div>
           </div>
@@ -424,7 +423,7 @@
               </div>
               <h5 class="font-heading fw-bold mb-2">Induction Cool-Touch Tops</h5>
               <p class="text-muted small mb-0 flex-grow-1">
-                All cooking stations utilize induction burners that heat the cookware magnetic base directly without an open flame or scorching hot glass.
+                All cooking stations utilize induction burners that heat cookware magnetic bases directly without flames or scorching glass.
               </p>
             </div>
           </div>
@@ -437,7 +436,7 @@
               </div>
               <h5 class="font-heading fw-bold mb-2">Rigorous Allergen Isolation</h5>
               <p class="text-muted small mb-0 flex-grow-1">
-                Our entire teaching facility is completely tree nut and peanut-free. Separate color-coded cookware is dedicated for gluten-free and dairy-free students.
+                Our teaching facility is 100% nut-free, with dedicated color-coded cookware and sanitized stations for allergen-safe learning.
               </p>
             </div>
           </div>
@@ -450,7 +449,7 @@
               </div>
               <h5 class="font-heading fw-bold mb-2">Certified First Aid Staff</h5>
               <p class="text-muted small mb-0 flex-grow-1">
-                Every chef instructor holds active Red Cross Pediatric First Aid, CPR, and ServSafe Food Protection Manager certifications.
+                Every chef instructor holds active Red Cross Pediatric First Aid, CPR, and ServSafe Food Protection Manager credentials.
               </p>
             </div>
           </div>
@@ -476,6 +475,15 @@
                 <i class="fa-solid fa-heart-pulse"></i> 8 Years of Joyful Cooking
               </div>
               <h3 class="font-heading fw-bold mb-3">From Maya's Table to Austin's Flagship Studio</h3>
+
+              <!-- Story Feature Image -->
+              <div class="journey-hero-img-wrapper mb-4 overflow-hidden rounded-3 shadow-sm position-relative">
+                <img src="../assets/images/kids_cooking_academy_banner.jpg" alt="Children joyfully baking from scratch at Little Chefs Academy" class="w-100 object-cover rounded-3 journey-hero-img" style="height: 200px;" width="600" height="200" loading="lazy">
+                <div class="position-absolute bottom-2 start-2 bg-dark/75 text-white px-2.5 py-1 rounded-pill text-xs backdrop-blur-sm">
+                  <i class="fa-solid fa-heart text-danger me-1"></i> Scratch Cooking Since 2018
+                </div>
+              </div>
+
               <p class="text-muted mb-4">
                 What began with 8 neighborhood children baking fresh scones around a flour-dusted table has grown into an accredited, allergen-safe culinary sanctuary empowering thousands of confident young chefs.
               </p>
@@ -508,10 +516,13 @@
                 </div>
               </div>
 
-              <!-- Quote Card -->
-              <div class="p-3 rounded-3 bg-orange-50 dark:bg-slate-800 border-start border-4 border-orange-500">
-                <p class="small text-muted mb-1 fst-italic">"Every great chef was once a child who made a glorious, creative mess in the kitchen."</p>
-                <small class="fw-bold text-primary">&mdash; Chef Maya Vance, Founder</small>
+              <!-- Quote Card with Founder Portrait -->
+              <div class="p-3 rounded-3 bg-orange-50 dark:bg-slate-800 border-start border-4 border-orange-500 d-flex align-items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=160&q=80" alt="Executive Chef Maya Vance portrait" class="rounded-full flex-shrink-0 object-cover border border-2 border-primary shadow-sm" style="width: 52px; height: 52px;" width="52" height="52">
+                <div>
+                  <p class="small text-muted mb-1 fst-italic">"Every great chef was once a child who made a glorious, creative mess in the kitchen."</p>
+                  <small class="fw-bold text-primary">&mdash; Chef Maya Vance, Founder</small>
+                </div>
               </div>
             </div>
           </div>
@@ -924,14 +935,15 @@
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-3">
-          <h5 class="footer-widget-title font-heading">Age Programs</h5>
+                <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Our Services</h5>
           <ul class="footer-links">
-            <li><span class="footer-item"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</span></li>
+            <li><a href="service-weekly-classes.html"><i class="fa-solid fa-kitchen-set"></i> Weekly Classes</a></li>
+            <li><a href="service-summer-camps.html"><i class="fa-solid fa-campground"></i> Summer Camps</a></li>
+            <li><a href="service-birthday-parties.html"><i class="fa-solid fa-cake-candles"></i> Birthday Parties</a></li>
+            <li><a href="service-stem-field-trips.html"><i class="fa-solid fa-school"></i> STEM Field Trips</a></li>
+            <li><a href="service-parent-and-me.html"><i class="fa-solid fa-people-roof"></i> Parent &amp; Me</a></li>
+            <li><a href="service-starter-kits.html"><i class="fa-solid fa-bag-shopping"></i> Starter Kits</a></li>
           </ul>
         </div>
 

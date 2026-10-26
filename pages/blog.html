@@ -37,6 +37,7 @@
         corePlugins: {
           preflight: false,
           visibility: false,
+          container: false,
         }
       }
     }
@@ -54,7 +55,7 @@
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <!-- Header & Navigation -->
-  <header class="main-header">
+  <header class="main-header sticky-top">
     <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -66,7 +67,7 @@
         </a>
 
         <!-- Mobile Hamburger Button Only -->
-        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars fs-4 text-white"></i>
         </button>
 
@@ -153,7 +154,6 @@
     </section>
 
     <!-- Main Content & Articles Section -->
-    <!-- Main Content & Articles Section -->
     <section class="py-5">
       <div class="container py-3">
         
@@ -218,28 +218,28 @@
         <div class="row g-4">
           <!-- Article 1: Smoothie Bowls -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="recipes">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=600&q=80" alt="Colorful berry smoothie bowl garnished with chia seeds" class="w-100 h-100 object-cover">
                 <span class="badge bg-emerald-500 text-white position-absolute top-3 start-3 fw-bold">Nutrition</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Oct 14, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-smoothie-bowls.html" class="text-dark dark:text-white hover:text-primary">Rainbow Smoothie Bowls: Making Veggies Taste Like Dessert</a>
                 </h4>
-                <p class="text-muted small mb-3">
-                  How our chefs sneak spinach, zucchini, and cauliflower into velvety strawberry-banana bowls that kids eagerly devour.
+                <p class="text-muted small mb-3 blog-card-desc">
+                  How our chefs blend spinach, zucchini, and cauliflower into velvety strawberry-banana bowls that young chefs eagerly devour every morning.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">Vegetarian</span>
                   <span class="blog-tag-pill">Nut-Free</span>
                   <span class="blog-tag-pill">Ages 4+</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=80&q=80" alt="Chef Priya Patel avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Priya Patel</small>
@@ -252,28 +252,28 @@
 
           <!-- Article 2: Bread Chemistry -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="science">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=600&q=80" alt="Dough rising with bubbles in glass bowl" class="w-100 h-100 object-cover">
                 <span class="badge bg-amber-500 text-white position-absolute top-3 start-3 fw-bold">Kitchen Science</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Oct 08, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-detail.html" class="text-dark dark:text-white hover:text-primary">The Chemistry of Bread: Why Yeast Bubbles & Dough Rises</a>
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="text-muted small mb-3 blog-card-desc">
                   Turn your kitchen into a science lab! Discover the microbiology of fermentation and gluten strands in this hands-on weekend experiment.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">STEM Food Lab</span>
                   <span class="blog-tag-pill">Baking</span>
                   <span class="blog-tag-pill">Ages 6+</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Chef Liam Chen avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Liam Chen</small>
@@ -286,28 +286,28 @@
 
           <!-- Article 3: Picky Eaters Sensory Play -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="picky-eaters">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80" alt="Crispy melted cheese quesadillas" class="w-100 h-100 object-cover">
                 <span class="badge bg-purple-500 text-white position-absolute top-3 start-3 fw-bold">Picky Eaters</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Sep 29, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 3 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-picky-eaters.html" class="text-dark dark:text-white hover:text-primary">The "One Bite Rule" vs. "Sensory Food Play" for Picky Eaters</a>
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="text-muted small mb-3 blog-card-desc">
                   Why forcing kids to swallow new foods creates kitchen friction, and why letting them chop, smell, and knead produces lasting curiosity.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">Parenting Tips</span>
                   <span class="blog-tag-pill">Toddler & Junior</span>
                   <span class="blog-tag-pill">Sensory Play</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=80&q=80" alt="Chef Maya Vance avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Maya Vance</small>
@@ -320,28 +320,28 @@
 
           <!-- Article 4: Personal Pan Pizzas (EXTRA CARD) -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="baking">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Handcrafted pizza dough with mozzarella and fresh basil" class="w-100 h-100 object-cover">
                 <span class="badge bg-rose-500 text-white position-absolute top-3 start-3 fw-bold">Baking & Dough</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Sep 24, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-personal-pan-pizzas.html" class="text-dark dark:text-white hover:text-primary">Fluffy Personal Pan Pizzas: Teaching Kneading & Fractions</a>
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="text-muted small mb-3 blog-card-desc">
                   How measuring flour fractions and kneading active yeast dough transforms a weekend family dinner into an intuitive math and motor skills lesson.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">Italian Classics</span>
                   <span class="blog-tag-pill">Math In Kitchen</span>
                   <span class="blog-tag-pill">Ages 5+</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=80&q=80" alt="Chef Marco Bellini avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Marco Bellini</small>
@@ -354,28 +354,28 @@
 
           <!-- Article 5: Stove & Heat Readiness (EXTRA CARD) -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="safety">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Supervised cooking at kitchen counter near stainless pan" class="w-100 h-100 object-cover">
                 <span class="badge bg-blue-600 text-white position-absolute top-3 start-3 fw-bold">Kitchen Safety</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Sep 17, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-stove-safety.html" class="text-dark dark:text-white hover:text-primary">The Stove & Oven Transition: Readiness Checklist for Real Heat</a>
                 </h4>
-                <p class="text-muted small mb-3">
-                  Clear developmental milestones to evaluate before moving children from cold assembly prep to managing burners, hot saute pans, and heavy oven trays.
+                <p class="text-muted small mb-3 blog-card-desc">
+                  Developmental milestones to evaluate before moving children from cold prep to managing burners, hot saute pans, and warm oven trays.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">Stove Safety</span>
                   <span class="blog-tag-pill">Burner Etiquette</span>
                   <span class="blog-tag-pill">Ages 8+</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=80&q=80" alt="Chef Maya Vance avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Maya Vance</small>
@@ -388,28 +388,28 @@
 
           <!-- Article 6: Science of Emulsions (EXTRA CARD) -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="science">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Fresh green salad with whisked vinaigrette dressing" class="w-100 h-100 object-cover">
                 <span class="badge bg-amber-500 text-white position-absolute top-3 start-3 fw-bold">Kitchen Science</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Sep 10, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-emulsions.html" class="text-dark dark:text-white hover:text-primary">The Magic of Emulsions: Whisking Homemade Vinaigrettes & Mayo</a>
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="text-muted small mb-3 blog-card-desc">
                   Why oil and vinegar repel each other until mustard or egg yolk joins the party. An edible physics experiment that makes young chefs love crisp salads.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">STEM Food Science</span>
                   <span class="blog-tag-pill">Emulsions</span>
                   <span class="blog-tag-pill">Ages 6+</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Chef Liam Chen avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Liam Chen</small>
@@ -422,28 +422,28 @@
 
           <!-- Article 7: Global Dumplings (EXTRA CARD) -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="recipes">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=600&q=80" alt="Handmade steamed dumplings with dipping sauce" class="w-100 h-100 object-cover">
                 <span class="badge bg-indigo-600 text-white position-absolute top-3 start-3 fw-bold">Global Flavors</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Aug 28, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 7 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-global-dumplings.html" class="text-dark dark:text-white hover:text-primary">Dumplings Around the Globe: Gyoza, Pierogi & Empanada Folds</a>
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="text-muted small mb-3 blog-card-desc">
                   Exploring world geography and family traditions through pocket doughs. Includes 4 easy crimping methods that build fine motor dexterity in kids.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">Cultural Cuisine</span>
                   <span class="blog-tag-pill">Hand Pies</span>
                   <span class="blog-tag-pill">Ages 7+</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=80&q=80" alt="Chef Priya Patel avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Priya Patel</small>
@@ -456,28 +456,28 @@
 
           <!-- Article 8: Secret Ingredient Brownies (EXTRA CARD) -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="baking">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Fudgy dark chocolate brownies cut into squares" class="w-100 h-100 object-cover">
                 <span class="badge bg-orange-500 text-white position-absolute top-3 start-3 fw-bold">Healthy Baking</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Aug 19, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-secret-brownies.html" class="text-dark dark:text-white hover:text-primary">Secret Ingredient Brownies: How Black Beans Create Fudgy Magic</a>
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="text-muted small mb-3 blog-card-desc">
                   The most requested bake in our Teen Masterclass. Zero refined flour, packed with plant protein and fiber, yet delightfully rich, gooey, and chocolatey.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">Gluten-Free</span>
                   <span class="blog-tag-pill">Nutrient-Dense</span>
                   <span class="blog-tag-pill">All Ages</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=80&q=80" alt="Chef Marco Bellini avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Marco Bellini</small>
@@ -490,28 +490,28 @@
 
           <!-- Article 9: Windowsill Garden & Scallions (EXTRA CARD) -->
           <div class="col-md-6 col-lg-4 filter-item" data-category="recipes">
-            <div class="custom-card p-0 overflow-hidden h-100 d-flex flex-column">
-              <div class="position-relative" style="height: 220px;">
+            <div class="custom-card blog-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="blog-card-img-wrapper position-relative" style="height: 220px;">
                 <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80" alt="Fresh green herb plants growing in kitchen pots" class="w-100 h-100 object-cover">
                 <span class="badge bg-teal-600 text-white position-absolute top-3 start-3 fw-bold">Eco Kitchen</span>
               </div>
-              <div class="p-4 flex-grow-1 d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2">
+              <div class="p-4 flex-grow-1 d-flex flex-column blog-card-body">
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mb-2 blog-card-meta">
                   <span><i class="fa-regular fa-calendar me-1"></i> Aug 12, 2026</span>
                   <span><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
                 </div>
-                <h4 class="font-heading fw-bold mb-2">
+                <h4 class="font-heading fw-bold mb-2 blog-card-title">
                   <a href="blog-windowsill-gardening.html" class="text-dark dark:text-white hover:text-primary">Windowsill Herb Gardening & Scallion Regrowing for Kids</a>
                 </h4>
-                <p class="text-muted small mb-3">
-                  Connect gardening to cooking with 3 scrap-vegetable water experiments. Watch green onions shoot up 2 inches in 48 hours right on your kitchen counter.
+                <p class="text-muted small mb-3 blog-card-desc">
+                  Connect gardening to cooking with 3 scrap-vegetable water experiments. Watch green scallions shoot up 2 inches right on your sunny kitchen counter.
                 </p>
-                <div class="d-flex flex-wrap gap-1 mb-3">
+                <div class="d-flex flex-wrap gap-1 mb-3 blog-card-tags">
                   <span class="blog-tag-pill">Zero Waste</span>
                   <span class="blog-tag-pill">Garden to Table</span>
                   <span class="blog-tag-pill">Ages 4+</span>
                 </div>
-                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center blog-card-footer">
                   <div class="d-flex align-items-center gap-2">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Chef Liam Chen avatar" class="w-6 h-6 rounded-full object-cover">
                     <small class="text-muted">Chef Liam Chen</small>
@@ -528,10 +528,10 @@
           <nav aria-label="Blog Articles Pagination" class="d-inline-block">
             <ul class="pagination pagination-custom justify-content-center gap-1 mb-3">
               <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-chevron-left"></i></a></li>
-              <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+              <li class="page-item active" aria-current="page"><a class="page-link" href="blog.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="coming-soon.html" title="Page 2 - Coming Soon">2</a></li>
+              <li class="page-item"><a class="page-link" href="coming-soon.html" title="Page 3 - Coming Soon">3</a></li>
+              <li class="page-item"><a class="page-link" href="coming-soon.html" title="Next Page - Coming Soon" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
           </nav>
           <p class="text-muted small mb-0">Showing 9 of 24 published culinary academy guides</p>
@@ -592,14 +592,15 @@
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-3">
-          <h5 class="footer-widget-title font-heading">Age Programs</h5>
+                <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Our Services</h5>
           <ul class="footer-links">
-            <li><span class="footer-item"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</span></li>
+            <li><a href="service-weekly-classes.html"><i class="fa-solid fa-kitchen-set"></i> Weekly Classes</a></li>
+            <li><a href="service-summer-camps.html"><i class="fa-solid fa-campground"></i> Summer Camps</a></li>
+            <li><a href="service-birthday-parties.html"><i class="fa-solid fa-cake-candles"></i> Birthday Parties</a></li>
+            <li><a href="service-stem-field-trips.html"><i class="fa-solid fa-school"></i> STEM Field Trips</a></li>
+            <li><a href="service-parent-and-me.html"><i class="fa-solid fa-people-roof"></i> Parent &amp; Me</a></li>
+            <li><a href="service-starter-kits.html"><i class="fa-solid fa-bag-shopping"></i> Starter Kits</a></li>
           </ul>
         </div>
 

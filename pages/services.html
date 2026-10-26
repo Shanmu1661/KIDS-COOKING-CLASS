@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -54,7 +54,7 @@
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <!-- Header & Navigation -->
-  <header class="main-header">
+  <header class="main-header sticky-top">
     <nav class="navbar navbar-expand-lg w-100 py-2" aria-label="Main Navigation">
       <div class="container">
         <!-- Logo -->
@@ -67,7 +67,7 @@
         </a>
 
         <!-- Mobile Hamburger Button Only -->
-        <button class="navbar-toggler d-lg-none ms-auto border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars fs-4 text-white"></i>
         </button>
 
@@ -512,7 +512,7 @@
                 <div class="text-xs text-orange-600 fw-bold font-heading mb-1"><i class="fa-solid fa-clock me-1"></i> 3 Hours</div>
                 <h5 class="font-heading fw-bold mb-2">French Boulangerie &amp; Pastry</h5>
                 <p class="text-muted small mb-3 flex-grow-1">
-                  Master the science of yeast lamination, pipe chocolate Ã©clairs, bake buttery golden madeleines, and roll flaky fruit galettes from scratch.
+                  Master the science of yeast lamination, pipe chocolate &eacute;clairs, bake buttery golden madeleines, and roll flaky fruit galettes from scratch.
                 </p>
                 <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                   <span class="fw-bold font-heading text-primary">$75 / chef</span>
@@ -889,17 +889,49 @@
               </div>
             </div>
 
-            <!-- Dynamic Result Card -->
-            <div class="advisor-result-card" id="advisorResultCard">
-              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3">
-                <div>
-                  <span class="badge badge-pill badge-featured mb-1" id="advisorTag">Parent &amp; Me Sensory</span>
-                  <h4 class="font-heading fw-bold mb-1" id="advisorTitle">Tiny Tasters Kitchen Discovery</h4>
-                  <p class="text-muted small mb-0" id="advisorDesc">Fun sensory exploration with fruit shapes, mini pizzas, kneading soft dough, and kitchen safety songs.</p>
+            <!-- Dynamic Result Card: Full Service Card Type -->
+            <div class="mt-4 pt-3 border-top">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="text-xs text-uppercase fw-bold text-muted" style="letter-spacing: 0.05em;">
+                  <i class="fa-solid fa-wand-magic-sparkles text-primary me-1"></i> Your Recommended Match
+                </span>
+                <span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-500/30 px-2 py-1 rounded-pill text-xs fw-bold">
+                  <i class="fa-solid fa-check me-1"></i> Perfect Match
+                </span>
+              </div>
+
+              <div class="service-card advisor-service-card shadow-sm" id="advisorResultCard">
+                <div class="service-card-img-wrapper" style="height: 240px;">
+                  <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Recommended cooking program" class="service-card-img" id="advisorImg" width="600" height="240" loading="lazy">
+                  <div class="service-card-badges">
+                    <span class="badge-pill badge-age" id="advisorAgeBadge">Ages 3 &ndash; 5</span>
+                    <span class="badge-pill badge-featured" id="advisorTag">Parent &amp; Me Sensory</span>
+                  </div>
+                  <div class="service-card-price" id="advisorPrice">$45 / session</div>
                 </div>
-                <div class="text-sm-end text-nowrap">
-                  <div class="fw-bold font-heading fs-4 text-primary" id="advisorPrice">$45 / session</div>
-                  <a href="classes.html#tiny-tasters" class="btn btn-primary-custom btn-sm-custom mt-2" id="advisorLink">Book This Program &rarr;</a>
+                <div class="service-card-body">
+                  <div class="service-card-header">
+                    <div class="service-card-icon bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400" id="advisorIconWrapper">
+                      <i class="fa-solid fa-seedling" id="advisorIcon"></i>
+                    </div>
+                    <h4 class="font-heading fw-bold service-card-title mb-0">
+                      <a href="classes.html#tiny-tasters" class="hover:text-primary text-current text-decoration-none" id="advisorTitle">Tiny Tasters Kitchen Discovery</a>
+                    </h4>
+                  </div>
+                  <p class="service-card-desc" id="advisorDesc">
+                    Gentle sensory exploration with fruit shapes, mini flatbreads, soft dough kneading, and cheerful kitchen safety songs.
+                  </p>
+                  <ul class="service-meta-list" id="advisorMetaList">
+                    <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> <span id="advisorMeta1">Parent &amp; Me side-by-side workstation</span></li>
+                    <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> <span id="advisorMeta2">100% no-heat sensory play &amp; measuring fun</span></li>
+                    <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> <span id="advisorMeta3">Take-home child-crafted tasting portions</span></li>
+                  </ul>
+                  <div class="mt-auto pt-2">
+                    <a href="classes.html#tiny-tasters" class="btn btn-primary-custom w-100 d-flex align-items-center justify-content-center gap-2" id="advisorLink">
+                      <span id="advisorBtnText">Book Tiny Tasters Program</span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1067,14 +1099,15 @@
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-3">
-          <h5 class="footer-widget-title font-heading">Age Programs</h5>
+                <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="footer-widget-title font-heading">Our Services</h5>
           <ul class="footer-links">
-            <li><span class="footer-item"><i class="fa-solid fa-cookie"></i> Tiny Tasters (3-5)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-pizza-slice"></i> Little Chefs (6-9)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-bowl-food"></i> Junior Gourmet (10-13)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-cake-candles"></i> Teen Masterclass (14-17)</span></li>
-            <li><span class="footer-item"><i class="fa-solid fa-user-lock"></i> Parent Dashboard</span></li>
+            <li><a href="service-weekly-classes.html"><i class="fa-solid fa-kitchen-set"></i> Weekly Classes</a></li>
+            <li><a href="service-summer-camps.html"><i class="fa-solid fa-campground"></i> Summer Camps</a></li>
+            <li><a href="service-birthday-parties.html"><i class="fa-solid fa-cake-candles"></i> Birthday Parties</a></li>
+            <li><a href="service-stem-field-trips.html"><i class="fa-solid fa-school"></i> STEM Field Trips</a></li>
+            <li><a href="service-parent-and-me.html"><i class="fa-solid fa-people-roof"></i> Parent &amp; Me</a></li>
+            <li><a href="service-starter-kits.html"><i class="fa-solid fa-bag-shopping"></i> Starter Kits</a></li>
           </ul>
         </div>
 

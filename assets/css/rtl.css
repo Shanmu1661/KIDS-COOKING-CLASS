@@ -45,10 +45,9 @@
   left: -20px;
 }
 
-/* Card Badges and Overlays */
 [dir="rtl"] .class-card-badges,
 [dir="rtl"] .service-card-badges {
-  left: auto;
+  left: 14px;
   right: 14px;
 }
 

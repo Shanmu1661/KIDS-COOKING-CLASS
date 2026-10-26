@@ -507,10 +507,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const ageBtns = document.querySelectorAll('#advisorAgeGroup .advisor-choice-btn');
   const goalBtns = document.querySelectorAll('#advisorGoalGroup .advisor-choice-btn');
   const advisorTag = document.getElementById('advisorTag');
+  const advisorAgeBadge = document.getElementById('advisorAgeBadge');
   const advisorTitle = document.getElementById('advisorTitle');
   const advisorDesc = document.getElementById('advisorDesc');
   const advisorPrice = document.getElementById('advisorPrice');
   const advisorLink = document.getElementById('advisorLink');
+  const advisorImg = document.getElementById('advisorImg');
+  const advisorIcon = document.getElementById('advisorIcon');
+  const advisorIconWrapper = document.getElementById('advisorIconWrapper');
+  const advisorMeta1 = document.getElementById('advisorMeta1');
+  const advisorMeta2 = document.getElementById('advisorMeta2');
+  const advisorMeta3 = document.getElementById('advisorMeta3');
+  const advisorBtnText = document.getElementById('advisorBtnText');
 
   if (ageBtns.length > 0 && goalBtns.length > 0 && advisorTitle) {
     let selectedAge = '3-5';
@@ -520,121 +528,281 @@ document.addEventListener('DOMContentLoaded', () => {
       '3-5': {
         weekly: {
           tag: 'Parent & Me Sensory',
+          ageBadge: 'Ages 3–5',
           title: 'Tiny Tasters Kitchen Discovery',
           desc: 'Gentle sensory exploration with fruit shapes, mini flatbreads, soft dough kneading, and cheerful kitchen safety songs.',
           price: '$45 / session',
-          link: 'classes.html#tiny-tasters'
+          link: 'classes.html#tiny-tasters',
+          img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-seedling',
+          iconClass: 'bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400',
+          meta: [
+            'Parent & Me side-by-side workstation',
+            '100% no-heat sensory play & measuring fun',
+            'Take-home child-crafted tasting portions'
+          ],
+          btnText: 'Book Tiny Tasters Program'
         },
         camp: {
           tag: 'Half-Day Summer Mini',
-          title: 'Little Sprout Sensory Camp (Ages 3–5)',
+          ageBadge: 'Ages 3–5',
+          title: 'Little Sprout Sensory Camp',
           desc: 'Morning 9am–12pm tactile food fun with storybook recipes, fruit smoothies, and vegetable stamp crafting.',
           price: '$240 / week',
-          link: 'camps.html'
+          link: 'camps.html',
+          img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-campground',
+          iconClass: 'bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400',
+          meta: [
+            'Daily 9:00 AM – 12:00 PM half-day track',
+            'Storybook culinary theme days & parfaits',
+            'All organic ingredients & keepsake mini apron'
+          ],
+          btnText: 'Explore Sprout Camp'
         },
         party: {
           tag: 'Toddler Celebration',
+          ageBadge: 'Ages 3–5',
           title: 'Tiny Chef Cupcake & Cookie Bash',
           desc: 'Fun sensory cookie decorating party with pre-baked treats, colorful sprinkles, and chef hats for all little guests.',
           price: 'From $380',
-          link: 'contact.html?service=party'
+          link: 'service-birthday-parties.html',
+          img: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-cake-candles',
+          iconClass: 'bg-purple-100 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400',
+          meta: [
+            '90 min private studio rental with chef host',
+            'Rainbow frosting, sprinkles & cookie boxes',
+            'Zero cleanup for parents + custom chef hats'
+          ],
+          btnText: 'Plan Toddler Party'
         },
         workshop: {
           tag: 'Weekend Workshop',
+          ageBadge: 'Ages 3–5',
           title: 'Parent & Me Sweet Pretzel Rolling',
           desc: 'Spend a joyful Sunday morning rolling soft cinnamon-sugar pretzels side-by-side with your toddler.',
-          price: '$50 / pair',
-          link: 'classes.html#tiny-tasters'
+          price: '$50 / duo',
+          link: 'classes.html#tiny-tasters',
+          img: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-cookie-bite',
+          iconClass: 'bg-pink-100 text-pink-600 dark:bg-pink-950/60 dark:text-pink-400',
+          meta: [
+            '60-minute weekend parent-child duo session',
+            'Yeast dough shaping & warm butter dipping',
+            'Box of 6 warm pretzels to share at home'
+          ],
+          btnText: 'Reserve Workshop Spot'
         }
       },
       '6-9': {
         weekly: {
           tag: 'Fundamental Skills',
+          ageBadge: 'Ages 6–9',
           title: 'Little Chefs Foundation Class',
           desc: 'Individual workstation cooking where kids learn safe knife pinch-grips, measure wet & dry ingredients, and prepare balanced meals.',
           price: '$55 / session',
-          link: 'classes.html#little-chefs'
+          link: 'service-weekly-classes.html',
+          img: 'https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-kitchen-set',
+          iconClass: 'bg-orange-100 text-orange-600 dark:bg-orange-950/60 dark:text-orange-400',
+          meta: [
+            'Child-safe nylon blade knife mastery',
+            'Fresh handmade pasta & skillet quesadillas',
+            'Individual induction cooktop per child'
+          ],
+          btnText: 'Enroll in Little Chefs'
         },
         camp: {
-          tag: '5-Day Camp',
+          tag: '5-Day Immersion',
+          ageBadge: 'Ages 6–9',
           title: 'Global Gastronomy Summer Camp',
-          desc: 'Passport to 5 international cuisines! Homemade pasta, Mexican tacos, and Japanese hand rolls with daily hot lunch.',
+          desc: 'Passport to 5 international cuisines! Homemade pasta, Mexican street tacos, and Japanese sushi rolls with daily hot lunch.',
           price: '$395 / week',
-          link: 'camps.html'
+          link: 'service-summer-camps.html',
+          img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-earth-americas',
+          iconClass: 'bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400',
+          meta: [
+            'Full-day (9am–3pm) or half-day options',
+            'Daily hot 2-course lunch cooked by campers',
+            'Friday Parent Banquet with graduation apron'
+          ],
+          btnText: 'Explore Summer Camps'
         },
         party: {
           tag: 'Birthday Party',
+          ageBadge: 'Ages 6–9',
           title: 'Handmade Pizza & Cupcake Wars',
           desc: 'Kids stretch their own pizza dough, ladle scratch marinara, grate cheese, and compete in a frosting face-off!',
           price: 'From $450',
-          link: 'contact.html?service=party'
+          link: 'service-birthday-parties.html',
+          img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-cake-candles',
+          iconClass: 'bg-purple-100 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400',
+          meta: [
+            '2 hours exclusive kitchen studio rental',
+            'Personal artisan pizza & cupcake piping',
+            'Keepsake aprons & complete cleanup included'
+          ],
+          btnText: 'Book Birthday Party'
         },
         workshop: {
           tag: 'Weekend Workshop',
+          ageBadge: 'Ages 6–9',
           title: 'Handmade Gnocchi & Marinara Lab',
           desc: 'Boiling, ricing, and shaping pillowy potato gnocchi with classic slow-simmered tomato basil sauce.',
           price: '$65 / chef',
-          link: 'classes.html'
+          link: 'classes.html#little-chefs',
+          img: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-utensils',
+          iconClass: 'bg-pink-100 text-pink-600 dark:bg-pink-950/60 dark:text-pink-400',
+          meta: [
+            '90-min weekend intensive culinary lab',
+            'Wooden gnocchi board shaping technique',
+            'Family dinner portion to take home'
+          ],
+          btnText: 'Reserve Gnocchi Workshop'
         }
       },
       '10-13': {
         weekly: {
-          tag: 'Intermediate Cooking',
+          tag: 'Intermediate Academy',
+          ageBadge: 'Ages 10–13',
           title: 'Junior Gourmet Sauté & Emulsions',
           desc: 'Master induction sautéing, culinary chemistry, vinaigrette emulsions, yeast sandwich breads, and professional plating.',
           price: '$65 / session',
-          link: 'classes.html#junior-gourmet'
+          link: 'service-weekly-classes.html',
+          img: 'https://images.unsplash.com/photo-1514986888952-8cd320577b68?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-fire-burner',
+          iconClass: 'bg-orange-100 text-orange-600 dark:bg-orange-950/60 dark:text-orange-400',
+          meta: [
+            'Real chef knife grip & steel honing',
+            'Sauce reduction, emulsification & pan searing',
+            'Earn Sauté Master digital badges'
+          ],
+          btnText: 'Join Junior Gourmet'
         },
         camp: {
-          tag: '5-Day Camp',
+          tag: 'Challenge Camp',
+          ageBadge: 'Ages 10–13',
           title: 'Junior Iron Chef Mystery Basket Camp',
           desc: 'High-energy team cooking challenges with daily secret ingredients, time management, and presentation judging.',
           price: '$420 / week',
-          link: 'camps.html'
+          link: 'service-summer-camps.html',
+          img: 'https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-trophy',
+          iconClass: 'bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400',
+          meta: [
+            'Daily mystery ingredient basket challenge',
+            'Recipe formulation & culinary math',
+            'Team presentation & taste test showcases'
+          ],
+          btnText: 'Register for Iron Chef Camp'
         },
         party: {
-          tag: 'Birthday Party',
+          tag: 'Tween Celebration',
+          ageBadge: 'Ages 10–13',
           title: 'Gourmet Slider & Macaron Party',
           desc: 'Teens and tweens craft custom mini burgers on brioche buns, truffle parmesan fries, and pipe colorful macarons.',
           price: 'From $495',
-          link: 'contact.html?service=party'
+          link: 'service-birthday-parties.html',
+          img: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-burger',
+          iconClass: 'bg-purple-100 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400',
+          meta: [
+            '2.5 hours private commercial studio access',
+            'Artisan burgers, gourmet fries & French macarons',
+            'Mocktail mixology toast & celebration aprons'
+          ],
+          btnText: 'Book Gourmet Party'
         },
         workshop: {
           tag: 'Weekend Workshop',
+          ageBadge: 'Ages 10–13',
           title: 'French Boulangerie & Pastry Intensive',
           desc: '3-hour masterclass mastering flaky tart dough, laminated butter blocks, and chocolate choux puffs.',
           price: '$75 / chef',
-          link: 'classes.html'
+          link: 'classes.html',
+          img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-bread-slice',
+          iconClass: 'bg-pink-100 text-pink-600 dark:bg-pink-950/60 dark:text-pink-400',
+          meta: [
+            'Laminated pastry dough & blind baking',
+            'Scratch vanilla bean pastry cream',
+            'Box of 8 bakery-quality French pastries'
+          ],
+          btnText: 'Reserve Pastry Workshop'
         }
       },
       '14-17': {
         weekly: {
           tag: 'Advanced Academy',
+          ageBadge: 'Ages 14–17',
           title: 'Teen Masterclass Culinary Track',
           desc: 'Professional culinary pre-college preparation: mother sauces, precise julienne & brunoise cuts, handmade pasta, and sushi craftsmanship.',
           price: '$75 / session',
-          link: 'classes.html#teen-master'
+          link: 'service-weekly-classes.html',
+          img: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-award',
+          iconClass: 'bg-blue-100 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400',
+          meta: [
+            'Professional knife skills & station sanitation',
+            '5 French mother sauces & reduction chemistry',
+            'Portfolio of advanced culinary dishes'
+          ],
+          btnText: 'Apply for Teen Masterclass'
         },
         camp: {
-          tag: '5-Day Camp',
+          tag: '5-Day Immersion',
+          ageBadge: 'Ages 14–17',
           title: 'Master Pastry & Baking Arts Camp',
           desc: 'Full-day pastry immersion covering croissants, multi-layer tortes, mirror glazes, and artisan sourdough starters.',
           price: '$440 / week',
-          link: 'camps.html'
+          link: 'service-summer-camps.html',
+          img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-cake-candles',
+          iconClass: 'bg-amber-100 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400',
+          meta: [
+            'Croissant laminating, macarons & mirror glazes',
+            'Sourdough starter biology & hearth baking',
+            'Industry standard commercial baking tools'
+          ],
+          btnText: 'Explore Teen Camp'
         },
         party: {
           tag: 'Private Hire',
+          ageBadge: 'Ages 14–17',
           title: 'Teen Chef Kitchen Takeover',
           desc: 'Exclusive evening studio rental for friends to prepare a 3-course sit-down gourmet dinner under private chef mentorship.',
           price: 'From $550',
-          link: 'contact.html?service=party'
+          link: 'service-birthday-parties.html',
+          img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-champagne-glasses',
+          iconClass: 'bg-purple-100 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400',
+          meta: [
+            '3-course sit-down gourmet dinner prepared by teens',
+            'Appetizer, handmade entree, & plated dessert',
+            'Complete private kitchen studio rental'
+          ],
+          btnText: 'Book Teen Event'
         },
         workshop: {
           tag: 'Weekend Workshop',
+          ageBadge: 'Ages 14–17',
           title: 'Asian Street Food & Dumpling Masterclass',
           desc: 'Folding soup dumplings, balancing umami dipping broths, and hand-pulling savory noodles.',
           price: '$75 / chef',
-          link: 'classes.html'
+          link: 'classes.html',
+          img: 'https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=800&q=80',
+          icon: 'fa-solid fa-bowl-food',
+          iconClass: 'bg-pink-100 text-pink-600 dark:bg-pink-950/60 dark:text-pink-400',
+          meta: [
+            'Intricate dumpling pleated folds & wrappers',
+            'Scratch dashi & spicy chili crisp oil',
+            'Multi-course tasting feast & recipe binder'
+          ],
+          btnText: 'Reserve Dumpling Workshop'
         }
       }
     };
@@ -642,11 +810,33 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateAdvisor() {
       const match = recommendations[selectedAge]?.[selectedGoal];
       if (match) {
-        advisorTag.textContent = match.tag;
-        advisorTitle.textContent = match.title;
-        advisorDesc.textContent = match.desc;
-        advisorPrice.textContent = match.price;
-        advisorLink.href = match.link;
+        if (advisorTag) advisorTag.textContent = match.tag;
+        if (advisorAgeBadge) advisorAgeBadge.textContent = match.ageBadge || `Ages ${selectedAge}`;
+        if (advisorTitle) {
+          advisorTitle.textContent = match.title;
+          advisorTitle.href = match.link;
+        }
+        if (advisorDesc) advisorDesc.textContent = match.desc;
+        if (advisorPrice) advisorPrice.textContent = match.price;
+        if (advisorLink) advisorLink.href = match.link;
+        if (advisorImg && match.img) {
+          advisorImg.src = match.img;
+          advisorImg.alt = match.title;
+        }
+        if (advisorIcon && match.icon) {
+          advisorIcon.className = match.icon;
+        }
+        if (advisorIconWrapper && match.iconClass) {
+          advisorIconWrapper.className = `service-card-icon ${match.iconClass}`;
+        }
+        if (match.meta) {
+          if (advisorMeta1 && match.meta[0]) advisorMeta1.textContent = match.meta[0];
+          if (advisorMeta2 && match.meta[1]) advisorMeta2.textContent = match.meta[1];
+          if (advisorMeta3 && match.meta[2]) advisorMeta3.textContent = match.meta[2];
+        }
+        if (advisorBtnText && match.btnText) {
+          advisorBtnText.textContent = match.btnText;
+        }
       }
     }
 
@@ -667,6 +857,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateAdvisor();
       });
     });
+
+    // Run initial update to sync all properties on page load
+    updateAdvisor();
   }
 
 
