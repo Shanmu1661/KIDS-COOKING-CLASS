@@ -101,13 +101,23 @@
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
             <!-- Home Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                 <span>Home</span>
                 <i class="fa-solid fa-chevron-down home-chevron"></i>
               </a>
-              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item active" href="index.html">Home 1 - Classic Academy</a></li>
-                <li><a class="dropdown-item" href="index-2.html">Home 2 - Modern Studio</a></li>
+              <ul class="dropdown-menu home-mega-dropdown border-0" aria-labelledby="homeDropdown">
+                <li>
+                  <a class="dropdown-item home-dropdown-card active" href="index.html">
+                    <span class="home-dropdown-title">Home 1 – Classic Academy</span>
+                    <span class="home-dropdown-desc">Daily cooking labs, knife safety basics & foundational recipes</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item home-dropdown-card" href="index-2.html">
+                    <span class="home-dropdown-title">Home 2 – Modern Culinary Studio</span>
+                    <span class="home-dropdown-desc">Artisan baking, pastry labs & interactive gourmet workshops</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -231,7 +241,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="class-card">
               <div class="class-card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Toddler in chef hat enjoying dough kneading" class="class-card-img" width="300" height="220">
+                <img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=600&q=80" alt="Toddler in chef apron and hat kneading soft dough" class="class-card-img" width="300" height="220">
                 <div class="class-card-badges">
                   <span class="badge-pill badge-age">Ages 3 – 5</span>
                 </div>
@@ -247,9 +257,6 @@
                   <li class="class-meta-item"><i class="fa-solid fa-heart"></i> Parent & Me Welcome</li>
                   <li class="class-meta-item"><i class="fa-solid fa-shield-halved"></i> 100% No-Heat Safe</li>
                 </ul>
-                <div class="mt-auto pt-3">
-                  <a href="classes.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Curriculum</a>
-                </div>
               </div>
             </div>
           </div>
@@ -275,9 +282,6 @@
                   <li class="class-meta-item"><i class="fa-solid fa-utensils"></i> Individual Cooking Station</li>
                   <li class="class-meta-item"><i class="fa-solid fa-certificate"></i> Junior Knife Badge</li>
                 </ul>
-                <div class="mt-auto pt-3">
-                  <a href="classes.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Curriculum</a>
-                </div>
               </div>
             </div>
           </div>
@@ -302,9 +306,6 @@
                   <li class="class-meta-item"><i class="fa-solid fa-fire-burner"></i> Heat & Flame Safety</li>
                   <li class="class-meta-item"><i class="fa-solid fa-award"></i> Sauté Master Badge</li>
                 </ul>
-                <div class="mt-auto pt-3">
-                  <a href="classes.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Curriculum</a>
-                </div>
               </div>
             </div>
           </div>
@@ -329,12 +330,17 @@
                   <li class="class-meta-item"><i class="fa-solid fa-mortar-pestle"></i> Professional Prep Skills</li>
                   <li class="class-meta-item"><i class="fa-solid fa-graduation-cap"></i> Culinary Pre-College Prep</li>
                 </ul>
-                <div class="mt-auto pt-3">
-                  <a href="classes.html" class="btn btn-outline-custom w-100 btn-sm-custom">View Curriculum</a>
-                </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Common View Curriculum Button -->
+        <div class="text-center mt-5">
+          <a href="classes.html" class="btn btn-primary-custom d-inline-flex align-items-center gap-2">
+            <span>View Full Curriculum</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -415,7 +421,7 @@
     </section>
 
     <!-- Parent Dashboard Teaser & Features -->
-    <section class="py-5 py-lg-6">
+    <section class="py-5 py-lg-6 parent-dashboard-section" id="parent-dashboard-teaser">
       <div class="container py-4 py-lg-5">
         <div class="row align-items-center g-5">
           <div class="col-lg-6 order-2 order-lg-1">

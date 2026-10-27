@@ -30,8 +30,15 @@
 }
 
 [dir="rtl"] .main-header .dropdown-toggle::after {
-  margin-left: 0;
-  margin-right: 6px;
+  margin-left: 0 !important;
+  margin-right: 6px !important;
+}
+
+[dir="rtl"] .main-header .nav-notification-badge,
+[dir="rtl"] .main-header .nav-notification-btn .badge-dot,
+[dir="rtl"] .main-header .navbar-actions button:has(.fa-bell) .bg-danger {
+  right: auto !important;
+  left: 7px !important;
 }
 
 /* Floating Badges */
@@ -180,4 +187,8 @@
 [dir="rtl"] .btn-white-map-action {
   right: 12px !important;
   left: auto !important;
+}
+
+[dir="rtl"] .main-header .dropdown-menu.home-mega-dropdown .home-dropdown-card {
+  text-align: right !important;
 }

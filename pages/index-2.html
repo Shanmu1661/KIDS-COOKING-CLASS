@@ -97,13 +97,23 @@
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
                                     <!-- Home Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                 <span>Home</span>
                 <i class="fa-solid fa-chevron-down home-chevron"></i>
               </a>
-              <ul class="dropdown-menu border-0" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html">Home 1 - Classic Academy</a></li>
-                <li><a class="dropdown-item active" href="index-2.html">Home 2 - Modern Studio</a></li>
+              <ul class="dropdown-menu home-mega-dropdown border-0" aria-labelledby="homeDropdown">
+                <li>
+                  <a class="dropdown-item home-dropdown-card" href="index.html">
+                    <span class="home-dropdown-title">Home 1 – Classic Academy</span>
+                    <span class="home-dropdown-desc">Daily cooking labs, knife safety basics & foundational recipes</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item home-dropdown-card active" href="index-2.html">
+                    <span class="home-dropdown-title">Home 2 – Modern Culinary Studio</span>
+                    <span class="home-dropdown-desc">Artisan baking, pastry labs & interactive gourmet workshops</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -224,7 +234,7 @@
             </div>
           </div>
 
-          <!-- Right Hero Image Column with Floating Badges -->
+          <!-- Right Hero Image Column -->
           <div class="col-12 col-md-6 col-lg-6">
             <div class="hero-2-img-wrapper">
               <img src="../assets/images/home2_hero.jpg?v=20261021" 
@@ -234,32 +244,6 @@
                    class="hero-2-img w-100" 
                    width="600" 
                    height="480">
-
-              <!-- Floating Live Workshop Badge -->
-              <div class="home2-floating-badge d-none d-sm-flex" style="top: 24px; right: -12px;">
-                <div class="home2-badge-icon bg-orange-100 text-orange-600 dark:bg-orange-950 dark:text-orange-400">
-                  <i class="fa-solid fa-pizza-slice"></i>
-                </div>
-                <div>
-                  <div class="d-flex align-items-center gap-1.5 mb-0.5">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span class="badge-label">Live Workshop</span>
-                  </div>
-                  <strong class="text-xs font-heading d-block badge-title">Artisan Flatbread & Pesto Lab</strong>
-                  <span class="badge-date">This Saturday • Ages 7–12</span>
-                </div>
-              </div>
-
-              <!-- Floating Graduate Badge -->
-              <div class="home2-floating-badge d-none d-sm-flex" style="bottom: 24px; left: -12px;">
-                <div class="home2-badge-icon bg-emerald-100 text-emerald-600 dark:bg-emerald-950 dark:text-emerald-400">
-                  <i class="fa-solid fa-award"></i>
-                </div>
-                <div>
-                  <strong class="text-sm font-heading d-block badge-title">12,000+ Young Chefs</strong>
-                  <span class="badge-sub">Certified kitchen graduates since 2018</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -277,87 +261,87 @@
           </p>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 align-items-stretch">
           <!-- Pathway 1: Tiny Tasters -->
-          <div class="col-md-6 col-lg-3">
-            <div class="custom-card p-4 h-100 d-flex flex-column text-center position-relative">
-              <span class="badge bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 3–5</span>
-              <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+          <div class="col-md-6 col-lg-3 d-flex">
+            <div class="custom-card pathway-card p-4 w-100 h-100 d-flex flex-column text-center position-relative">
+              <span class="badge bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 3&ndash;5</span>
+              <div class="pathway-icon-box bg-amber-100 text-amber-600 dark:bg-amber-950 dark:text-amber-400 mx-auto mb-3">
                 <i class="fa-solid fa-cookie-bite"></i>
               </div>
-              <h4 class="font-heading fw-bold mb-2">Tiny Tasters</h4>
-              <p class="text-muted small flex-grow-1">
+              <h4 class="font-heading fw-bold mb-2 pathway-title">Tiny Tasters</h4>
+              <p class="text-muted small pathway-desc mb-3">
                 Sensory food play, dough rolling, measuring math, color-coded mixing bowls, and tasting fresh herbs without mealtime pressure.
               </p>
-              <div class="pt-3 border-top mt-auto">
-                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3">
+              <div class="pathway-footer pt-3 border-top mt-auto w-100">
+                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3 pathway-meta">
                   <span><i class="fa-regular fa-clock me-1"></i> 60 Min Sessions</span>
                   <span><i class="fa-solid fa-user-group me-1"></i> 1:4 Ratio</span>
                 </div>
-                <a href="classes.html#tiny-tasters" class="btn btn-sm btn-outline-custom w-100">Explore Curriculum</a>
+                <a href="classes.html#tiny-tasters" class="btn btn-sm btn-outline-custom w-100 pathway-btn">Explore Curriculum</a>
               </div>
             </div>
           </div>
 
           <!-- Pathway 2: Little Chefs -->
-          <div class="col-md-6 col-lg-3">
-            <div class="custom-card p-4 h-100 d-flex flex-column text-center position-relative border-primary-subtle">
-              <span class="badge bg-orange-500 text-white position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 6–9</span>
-              <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+          <div class="col-md-6 col-lg-3 d-flex">
+            <div class="custom-card pathway-card p-4 w-100 h-100 d-flex flex-column text-center position-relative">
+              <span class="badge bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300 position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 6&ndash;9</span>
+              <div class="pathway-icon-box bg-orange-100 text-orange-600 dark:bg-orange-950 dark:text-orange-400 mx-auto mb-3">
                 <i class="fa-solid fa-utensils"></i>
               </div>
-              <h4 class="font-heading fw-bold mb-2">Little Chefs</h4>
-              <p class="text-muted small flex-grow-1">
+              <h4 class="font-heading fw-bold mb-2 pathway-title">Little Chefs</h4>
+              <p class="text-muted small pathway-desc mb-3">
                 Ergonomic nylon knife ergonomics, stove induction safety, fresh pasta sheeting, pizza sauces, and dinner table independence.
               </p>
-              <div class="pt-3 border-top mt-auto">
-                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3">
+              <div class="pathway-footer pt-3 border-top mt-auto w-100">
+                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3 pathway-meta">
                   <span><i class="fa-regular fa-clock me-1"></i> 90 Min Sessions</span>
                   <span><i class="fa-solid fa-user-group me-1"></i> 1:5 Ratio</span>
                 </div>
-                <a href="classes.html#little-chefs" class="btn btn-sm btn-outline-custom w-100">Explore Curriculum</a>
+                <a href="classes.html#little-chefs" class="btn btn-sm btn-outline-custom w-100 pathway-btn">Explore Curriculum</a>
               </div>
             </div>
           </div>
 
           <!-- Pathway 3: Junior Gourmet -->
-          <div class="col-md-6 col-lg-3">
-            <div class="custom-card p-4 h-100 d-flex flex-column text-center position-relative">
-              <span class="badge bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 10–13</span>
-              <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+          <div class="col-md-6 col-lg-3 d-flex">
+            <div class="custom-card pathway-card p-4 w-100 h-100 d-flex flex-column text-center position-relative">
+              <span class="badge bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 10&ndash;13</span>
+              <div class="pathway-icon-box bg-blue-100 text-blue-600 dark:bg-blue-950 dark:text-blue-400 mx-auto mb-3">
                 <i class="fa-solid fa-bowl-food"></i>
               </div>
-              <h4 class="font-heading fw-bold mb-2">Junior Gourmet</h4>
-              <p class="text-muted small flex-grow-1">
-                Flavor balancing, sautéing techniques, mother sauces, bread chemistry, international dumplings, and family dinner leadership.
+              <h4 class="font-heading fw-bold mb-2 pathway-title">Junior Gourmet</h4>
+              <p class="text-muted small pathway-desc mb-3">
+                Flavor balancing, saut&eacute;ing techniques, mother sauces, bread chemistry, international dumplings, and family dinner leadership.
               </p>
-              <div class="pt-3 border-top mt-auto">
-                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3">
+              <div class="pathway-footer pt-3 border-top mt-auto w-100">
+                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3 pathway-meta">
                   <span><i class="fa-regular fa-clock me-1"></i> 2 Hour Sessions</span>
                   <span><i class="fa-solid fa-user-group me-1"></i> 1:6 Ratio</span>
                 </div>
-                <a href="classes.html#junior-gourmet" class="btn btn-sm btn-outline-custom w-100">Explore Curriculum</a>
+                <a href="classes.html#junior-gourmet" class="btn btn-sm btn-outline-custom w-100 pathway-btn">Explore Curriculum</a>
               </div>
             </div>
           </div>
 
           <!-- Pathway 4: Teen Masterclass -->
-          <div class="col-md-6 col-lg-3">
-            <div class="custom-card p-4 h-100 d-flex flex-column text-center position-relative">
-              <span class="badge bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 14–17</span>
-              <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-3 fs-3">
+          <div class="col-md-6 col-lg-3 d-flex">
+            <div class="custom-card pathway-card p-4 w-100 h-100 d-flex flex-column text-center position-relative">
+              <span class="badge bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 position-absolute top-3 end-3 text-xs fw-bold rounded-pill px-2.5 py-1">Ages 14&ndash;17</span>
+              <div class="pathway-icon-box bg-purple-100 text-purple-600 dark:bg-purple-950 dark:text-purple-400 mx-auto mb-3">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
-              <h4 class="font-heading fw-bold mb-2">Teen Masterclass</h4>
-              <p class="text-muted small flex-grow-1">
+              <h4 class="font-heading fw-bold mb-2 pathway-title">Teen Masterclass</h4>
+              <p class="text-muted small pathway-desc mb-3">
                 Professional culinary arts, chef knife sharpening, choux pastry, modern plating aesthetics, recipe development, and life readiness.
               </p>
-              <div class="pt-3 border-top mt-auto">
-                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3">
+              <div class="pathway-footer pt-3 border-top mt-auto w-100">
+                <div class="d-flex justify-content-between align-items-center text-xs text-muted mb-3 pathway-meta">
                   <span><i class="fa-regular fa-clock me-1"></i> 2.5 Hour Sessions</span>
                   <span><i class="fa-solid fa-user-group me-1"></i> 1:6 Ratio</span>
                 </div>
-                <a href="classes.html#teen-masterclass" class="btn btn-sm btn-outline-custom w-100">Explore Curriculum</a>
+                <a href="classes.html#teen-masterclass" class="btn btn-sm btn-outline-custom w-100 pathway-btn">Explore Curriculum</a>
               </div>
             </div>
           </div>
@@ -1108,21 +1092,35 @@
     </section>
 
     <!-- SECTION 10: RECIPE CLUB NEWSLETTER CTA -->
-    <section class="py-5">
+    <section class="py-5 recipe-newsletter-banner-section">
       <div class="container py-4">
-        <div class="custom-card p-4 p-lg-5 text-center bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10">
+        <div class="custom-card p-4 p-lg-5 text-center bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 backdrop-blur-md shadow-xl border-orange-200/50 dark:border-orange-500/20">
           <div class="max-w-xl mx-auto">
-            <div class="w-16 h-16 bg-orange-100 text-orange-600 dark:bg-orange-950 dark:text-orange-400 rounded-full flex items-center justify-center mx-auto mb-3 fs-3">
+            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 fs-3 shadow-md">
               <i class="fa-solid fa-envelope-open-text"></i>
             </div>
             <h3 class="font-heading fw-bold text-2xl sm:text-3xl mb-2">Join the Junior Recipe Club</h3>
             <p class="text-muted small mb-4">
               Get our monthly kid-tested recipe e-book (15 allergy-safe dinners kids can cook solo) and exclusive early-bird camp discounts delivered to your inbox.
             </p>
+
+            <!-- Banner Label Section -->
+            <div class="banner-labels-section mb-4 justify-content-center">
+              <span class="banner-label-pill pill-primary">
+                <i class="fa-solid fa-file-pdf"></i> Instant 15-Recipe PDF
+              </span>
+              <span class="banner-label-pill pill-success">
+                <i class="fa-solid fa-utensils"></i> Allergy-Safe Dinners
+              </span>
+              <span class="banner-label-pill pill-warning">
+                <i class="fa-solid fa-tag"></i> Early-Bird Camp Discounts
+              </span>
+            </div>
+
             <form class="d-flex flex-column flex-sm-row gap-2 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Your 15-Recipe E-Book is on its way.');">
-              <input type="email" class="form-control rounded-pill px-4 py-2.5" placeholder="Enter parent's email address..." required>
+              <input type="email" class="form-control rounded-pill px-4 py-2.5" placeholder="Enter parent's email address..." required aria-label="Parent email address">
               <button type="submit" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold text-nowrap">
-                Get Free E-Book
+                <i class="fa-solid fa-paper-plane me-1"></i> Get Free E-Book
               </button>
             </form>
             <p class="text-xs text-muted mt-3 mb-0">

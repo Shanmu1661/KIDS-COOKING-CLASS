@@ -6,6 +6,25 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Desktop Hover for Home Dropdown to sync aria-expanded
+  const homeDropdownItems = document.querySelectorAll('.main-header .nav-item.dropdown');
+  homeDropdownItems.forEach(item => {
+    const toggle = item.querySelector('.dropdown-toggle');
+    if (toggle) {
+      item.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 992) {
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+      item.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 992) {
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  });
+
   'use strict';
 
   // -------------------------------------------------------------------------
@@ -69,11 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       applyTheme(newTheme);
-      showToast(
-        newTheme === 'dark' ? '🌙 Dark Mode Activated' : '☀️ Light Mode Activated',
-        `Theme switched to ${newTheme} mode for optimal reading comfort.`,
-        'info'
-      );
     });
   });
 
@@ -104,11 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
       const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
       applyDirection(newDir);
-      showToast(
-        newDir === 'rtl' ? '🌐 RTL Mode Enabled' : '🌐 LTR Mode Restored',
-        `Layout direction updated to ${newDir.toUpperCase()}. Fully styled for Arabic and Hebrew text.`,
-        'info'
-      );
     });
   });
 
@@ -533,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
           desc: 'Gentle sensory exploration with fruit shapes, mini flatbreads, soft dough kneading, and cheerful kitchen safety songs.',
           price: '$45 / session',
           link: 'classes.html#tiny-tasters',
-          img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+          img: 'https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=800&q=80',
           icon: 'fa-solid fa-seedling',
           iconClass: 'bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400',
           meta: [
