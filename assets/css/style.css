@@ -1574,8 +1574,46 @@ a:hover {
   position: relative;
   overflow: hidden;
   padding: 80px 0 90px;
-  background: radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, rgba(255, 183, 3, 0.05) 50%, transparent 80%),
+  background-color: var(--bg-page);
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/hero_kitchen_bg.jpg?v=20261102');
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  opacity: 0.42;
+  z-index: 0;
+  pointer-events: none;
+  filter: contrast(1.05) brightness(1.02);
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 253, 249, 0.95) 0%, rgba(255, 253, 249, 0.82) 48%, rgba(255, 253, 249, 0.35) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, rgba(255, 183, 3, 0.05) 50%, transparent 80%),
               radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 991.98px) {
+  .hero-section::before {
+    opacity: 0.28;
+  }
+  .hero-section::after {
+    background: rgba(255, 253, 249, 0.90) !important;
+  }
 }
 
 .hero-title {

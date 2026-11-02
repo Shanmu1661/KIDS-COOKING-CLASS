@@ -192,3 +192,16 @@
 [dir="rtl"] .main-header .dropdown-menu.home-mega-dropdown .home-dropdown-card {
   text-align: right !important;
 }
+
+/* Hero Section 1 RTL Gradient Flip */
+[dir="rtl"] .hero-section::after {
+  background: linear-gradient(270deg, rgba(255, 253, 249, 0.95) 0%, rgba(255, 253, 249, 0.82) 48%, rgba(255, 253, 249, 0.35) 100%),
+              radial-gradient(circle at 90% 20%, rgba(255, 94, 54, 0.08) 0%, rgba(255, 183, 3, 0.05) 50%, transparent 80%),
+              radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 60%) !important;
+}
+
+[dir="rtl"][data-theme="dark"] .hero-section::after {
+  background: linear-gradient(270deg, rgba(11, 17, 32, 0.96) 0%, rgba(11, 17, 32, 0.88) 50%, rgba(11, 17, 32, 0.45) 100%),
+              radial-gradient(circle at 90% 20%, rgba(255, 94, 54, 0.10) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.10) 0%, transparent 60%) !important;
+}
