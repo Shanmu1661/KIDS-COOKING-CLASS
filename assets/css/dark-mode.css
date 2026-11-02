@@ -1399,12 +1399,12 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/parent_dashboard_bg.jpg?v=20261102') !important;
+  background-image: url('../images/home2_parent_dashboard_bg.jpg?v=20261102c') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  opacity: 0.42 !important;
-  filter: brightness(0.68) contrast(1.15) !important;
+  opacity: 0.48 !important;
+  filter: brightness(0.70) contrast(1.15) !important;
   z-index: 0 !important;
   pointer-events: none !important;
 }
@@ -1413,7 +1413,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(7, 13, 23, 0.88) 0%, rgba(10, 16, 28, 0.78) 50%, rgba(7, 13, 23, 0.88) 100%),
+  background: linear-gradient(135deg, rgba(7, 13, 23, 0.82) 0%, rgba(10, 16, 28, 0.68) 50%, rgba(7, 13, 23, 0.82) 100%),
               radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.10) 0%, transparent 60%) !important;
   opacity: 1 !important;
   z-index: 1 !important;

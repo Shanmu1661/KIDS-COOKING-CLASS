@@ -5318,22 +5318,22 @@ a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/parent_dashboard_bg.jpg?v=20261102');
+  background-image: url('../images/home2_parent_dashboard_bg.jpg?v=20261102c');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.92;
+  opacity: 0.95;
   z-index: 0;
   pointer-events: none;
-  filter: contrast(1.08) brightness(1.02);
+  filter: contrast(1.10) brightness(1.02);
 }
 
 .dashboard-feature-section::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 253, 249, 0.76) 0%, rgba(255, 250, 243, 0.60) 50%, rgba(255, 253, 249, 0.78) 100%),
-              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(255, 253, 249, 0.64) 0%, rgba(255, 250, 243, 0.44) 50%, rgba(255, 253, 249, 0.58) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.06) 0%, transparent 60%);
   z-index: 1;
   pointer-events: none;
 }
