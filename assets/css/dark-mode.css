@@ -1916,3 +1916,35 @@
   background: rgba(30, 41, 59, 0.88) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
+
+/* Home 2 Facility Section Dark Mode */
+[data-theme="dark"] .home2-facility-section {
+  background-color: #070d17 !important;
+  border-color: rgba(51, 65, 85, 0.5) !important;
+}
+
+[data-theme="dark"] .home2-facility-section::before {
+  background-image: url('../images/home2_facility_bg.jpg?v=20261102') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: 0.42 !important;
+  filter: brightness(0.68) contrast(1.15) !important;
+}
+
+[data-theme="dark"] .home2-facility-section::after {
+  background: linear-gradient(90deg, rgba(7, 13, 23, 0.90) 0%, rgba(10, 16, 28, 0.80) 50%, rgba(7, 13, 23, 0.55) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.10) 0%, transparent 60%) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .home2-facility-section .section-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
+}
+
+[data-theme="dark"] .home2-facility-section .btn-outline-custom {
+  background: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
