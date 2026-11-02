@@ -402,13 +402,16 @@ a:hover {
 }
 
 /* Testimonial Card Header Badges */
-.testimonial-card .badge,
-.testimonial-card .badge-pill {
+.testimonial-card .testimonial-program-badge,
+.testimonial-card .badge-pill.testimonial-program-badge,
+.testimonial-header-badge {
   font-size: 0.8125rem !important;
   font-weight: 700 !important;
   padding: 5px 12px !important;
   letter-spacing: 0.015em !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  border-radius: var(--radius-full, 9999px) !important;
+  white-space: nowrap !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -1978,8 +1981,8 @@ a:hover {
 .testimonial-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-xl);
-  padding: 28px;
+  border-radius: var(--radius-xl, 24px);
+  padding: 24px 22px;
   position: relative;
   transition: all var(--transition-normal);
   height: 100%;
@@ -2012,10 +2015,112 @@ a:hover {
   flex-direction: column;
 }
 
+.testimonial-card-title {
+  font-size: 1.06rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  color: var(--text-main);
+}
+
+.testimonial-quote-text {
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+  color: var(--text-muted);
+  margin-bottom: 14px !important;
+}
+
+.testimonial-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-bottom: 16px;
+}
+
+.testimonial-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  background: var(--bg-subtle, #F8F5F0) !important;
+  color: var(--text-muted, #64748B) !important;
+  border: 1px solid var(--border-color, #E2E8F0) !important;
+  box-shadow: none !important;
+}
+
 .testimonial-footer {
   margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+  border-top: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px;
+}
+
+.testimonial-author {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.testimonial-avatar {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}
+
+.testimonial-author-meta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author-name {
+  font-size: 0.94rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin-bottom: 2px !important;
+  white-space: nowrap !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  color: var(--text-main);
+}
+
+.testimonial-author-role {
+  font-size: 0.78rem !important;
+  color: var(--text-muted);
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  display: block;
+}
+
+.testimonial-meta-badge {
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  padding: 4px 9px !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  flex-shrink: 0 !important;
+  background: var(--bg-subtle, #F8F5F0) !important;
+  color: var(--text-muted, #64748B) !important;
+  border: 1px solid var(--border-color, #E2E8F0) !important;
+  box-shadow: none !important;
 }
 
 /* Testimonials Section (Parent Stories) */
@@ -5770,12 +5875,6 @@ img, svg, video, canvas, iframe {
   }
 }
 
-/* 6. Ultrawide / 4K Desktop Layouts (min-width: 1441px) */
-@media (min-width: 1441px) {
-  .container {
-    max-width: 1360px !important;
-  }
-
 /* Center all containers reliably across all viewports */
 .container,
 .container-fluid {
@@ -5783,6 +5882,11 @@ img, svg, video, canvas, iframe {
   margin-left: auto !important;
 }
 
+/* 6. Ultrawide / 4K Desktop Layouts (min-width: 1441px) */
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1360px !important;
+  }
 }
 
 /* ==========================================================================

@@ -708,6 +708,29 @@
   opacity: 0.18 !important;
 }
 
+[data-theme="dark"] .testimonial-tag,
+[data-theme="dark"] .testimonial-meta-badge {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #94A3B8 !important;
+  border-color: #1E293B !important;
+}
+
+[data-theme="dark"] .testimonial-author-name {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .testimonial-author-role {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .testimonial-card-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .testimonial-quote-text {
+  color: #94A3B8 !important;
+}
+
 /* Journey Roadmap in Dark Mode */
 [data-theme="dark"] .journey-hero-card {
   background: #111A2E !important;
