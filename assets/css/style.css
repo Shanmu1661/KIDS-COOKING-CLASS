@@ -6730,8 +6730,8 @@ img, svg, video, canvas, iframe {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0.68) 0%, rgba(255, 250, 242, 0.48) 50%, rgba(255, 253, 249, 0.68) 100%),
-              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.06) 0%, transparent 60%);
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.82) 0%, rgba(255, 250, 242, 0.56) 45%, rgba(255, 253, 249, 0.78) 100%),
+              radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.92) 0%, transparent 70%);
   z-index: 1;
   pointer-events: none;
 }
@@ -6741,17 +6741,49 @@ img, svg, video, canvas, iframe {
   z-index: 2;
 }
 
-.home2-chefs-section .section-title {
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+/* High-Contrast Frosted Header Box */
+.home2-chefs-header {
+  background: rgba(255, 253, 249, 0.92) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  border-radius: var(--radius-2xl, 24px) !important;
+  padding: 26px 32px 22px !important;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08) !important;
+}
+
+.home2-chefs-header .section-title {
+  color: #0F172A !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 10px !important;
+}
+
+.home2-chefs-header .section-subtitle {
+  color: #334155 !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
 }
 
 .home2-chefs-section .custom-card {
-  background: rgba(255, 255, 255, 0.94) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.95) !important;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal) !important;
+}
+
+.home2-chefs-section .custom-card h5 {
+  color: #0F172A !important;
+}
+
+.home2-chefs-section .custom-card p {
+  color: #475569 !important;
+  font-weight: 500 !important;
 }
 
 .home2-chefs-section .custom-card:hover {
