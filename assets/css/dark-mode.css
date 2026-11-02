@@ -160,6 +160,14 @@
   color: #F8FAFC;
 }
 
+[data-theme="dark"] .class-card-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .class-card-desc {
+  color: #94A3B8 !important;
+}
+
 [data-theme="dark"] .dashboard-preview-card {
   background-color: #111A2E !important;
   border-color: rgba(71, 85, 105, 0.45) !important;
