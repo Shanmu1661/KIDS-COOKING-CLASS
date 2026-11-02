@@ -45,9 +45,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261102u">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20261102u">
-  <link rel="stylesheet" href="../assets/css/rtl.css?v=20261102u">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261102v">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20261102v">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20261102v">
 </head>
 <body>
 
@@ -824,130 +824,6 @@
               </ul>
               <div class="mt-auto">
                 <a href="camps.html" class="btn btn-outline-custom w-100 font-bold">Claim Immersion Pass</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Program Matcher Widget Section -->
-    <section class="py-5">
-      <div class="container py-4">
-        <div class="text-center mb-5">
-          <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Personalized Matcher</span>
-          <h2 class="section-title">Find the Right Service for Your Child</h2>
-          <p class="section-subtitle">Answer 2 simple questions to get an instant tailored program recommendation with pricing and details.</p>
-        </div>
-
-        <div class="max-w-3xl mx-auto">
-          <div class="advisor-card-box">
-            <!-- Step 1: Age Group -->
-            <div class="mb-4">
-              <label class="form-label fw-bold font-heading mb-2">1. What is your child's age?</label>
-              <div class="row g-2" id="advisorAgeGroup">
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn active w-100 h-100" data-age="3-5">
-                    <i class="fa-solid fa-seedling text-success"></i>
-                    <span>Ages 3&ndash;5</span>
-                  </button>
-                </div>
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn w-100 h-100" data-age="6-9">
-                    <i class="fa-solid fa-spoon text-orange-500"></i>
-                    <span>Ages 6&ndash;9</span>
-                  </button>
-                </div>
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn w-100 h-100" data-age="10-13">
-                    <i class="fa-solid fa-fire-burner text-amber-500"></i>
-                    <span>Ages 10&ndash;13</span>
-                  </button>
-                </div>
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn w-100 h-100" data-age="14-17">
-                    <i class="fa-solid fa-award text-blue-500"></i>
-                    <span>Ages 14&ndash;17</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 2: Goal / Preference -->
-            <div class="mb-4">
-              <label class="form-label fw-bold font-heading mb-2">2. What type of culinary experience are you looking for?</label>
-              <div class="row g-2" id="advisorGoalGroup">
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn active w-100 h-100" data-goal="weekly">
-                    <i class="fa-solid fa-calendar text-primary"></i>
-                    <span>Weekly Class</span>
-                  </button>
-                </div>
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn w-100 h-100" data-goal="camp">
-                    <i class="fa-solid fa-campground text-amber-600"></i>
-                    <span>Summer Camp</span>
-                  </button>
-                </div>
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn w-100 h-100" data-goal="party">
-                    <i class="fa-solid fa-cake-candles text-purple-600"></i>
-                    <span>Birthday Party</span>
-                  </button>
-                </div>
-                <div class="col-6 col-sm-3 d-flex">
-                  <button type="button" class="advisor-choice-btn w-100 h-100" data-goal="workshop">
-                    <i class="fa-solid fa-cookie-bite text-pink-600"></i>
-                    <span>Weekend Workshop</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Dynamic Result Card: Full Service Card Type -->
-            <div class="mt-4 pt-3 border-top">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <span class="text-xs text-uppercase fw-bold text-muted" style="letter-spacing: 0.05em;">
-                  <i class="fa-solid fa-wand-magic-sparkles text-primary me-1"></i> Your Recommended Match
-                </span>
-                <span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-500/30 px-2 py-1 rounded-pill text-xs fw-bold">
-                  <i class="fa-solid fa-check me-1"></i> Perfect Match
-                </span>
-              </div>
-
-              <div class="service-card advisor-service-card shadow-sm" id="advisorResultCard">
-                <div class="service-card-img-wrapper" style="height: 240px;">
-                  <img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=800&q=80" alt="Recommended cooking program for toddlers" class="service-card-img" id="advisorImg" width="600" height="240" loading="lazy">
-                  <div class="service-card-badges">
-                    <span class="badge-pill badge-age" id="advisorAgeBadge">Ages 3 &ndash; 5</span>
-                    <span class="badge-pill badge-featured" id="advisorTag">Parent &amp; Me Sensory</span>
-                  </div>
-                  <div class="service-card-price" id="advisorPrice">$45 / session</div>
-                </div>
-                <div class="service-card-body">
-                  <div class="service-card-header">
-                    <div class="service-card-icon bg-emerald-100 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400" id="advisorIconWrapper">
-                      <i class="fa-solid fa-seedling" id="advisorIcon"></i>
-                    </div>
-                    <h4 class="font-heading fw-bold service-card-title mb-0">
-                      <a href="classes.html#tiny-tasters" class="hover:text-primary text-current text-decoration-none" id="advisorTitle">Tiny Tasters Kitchen Discovery</a>
-                    </h4>
-                  </div>
-                  <p class="service-card-desc" id="advisorDesc">
-                    Gentle sensory exploration with fruit shapes, mini flatbreads, soft dough kneading, and cheerful kitchen safety songs.
-                  </p>
-                  <ul class="service-meta-list" id="advisorMetaList">
-                    <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> <span id="advisorMeta1">Parent &amp; Me side-by-side workstation</span></li>
-                    <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> <span id="advisorMeta2">100% no-heat sensory play &amp; measuring fun</span></li>
-                    <li class="service-meta-item"><i class="fa-solid fa-circle-check text-success"></i> <span id="advisorMeta3">Take-home child-crafted tasting portions</span></li>
-                  </ul>
-                  <div class="mt-auto pt-2">
-                    <a href="classes.html#tiny-tasters" class="btn btn-primary-custom w-100 d-flex align-items-center justify-content-center gap-2" id="advisorLink">
-                      <span id="advisorBtnText">Book Tiny Tasters Program</span>
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
