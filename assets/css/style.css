@@ -4924,11 +4924,38 @@ a:hover {
 .hero-2-section {
   position: relative;
   padding: 60px 0 70px;
-  background: radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.07) 0%, transparent 40%),
-              var(--bg-main);
+  background-color: var(--bg-main, #FFFDF9);
   overflow: hidden;
   border-bottom: 1px solid var(--border-color);
+}
+
+.hero-2-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/home2_hero_bg.jpg?v=20261102');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.88;
+  z-index: 0;
+  pointer-events: none;
+  filter: contrast(1.06) brightness(1.02);
+}
+
+.hero-2-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 253, 249, 0.94) 0%, rgba(255, 253, 249, 0.84) 48%, rgba(255, 253, 249, 0.45) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-2-section > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .home2-search-box {
@@ -5099,10 +5126,6 @@ a:hover {
 /* Home 2 Hero Section & Image Fix */
 .hero-2-section {
   position: relative;
-  padding: 50px 0 60px;
-  background: radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.07) 0%, transparent 40%),
-              var(--bg-main, #FFFDF9);
   overflow: hidden;
   border-bottom: 1px solid var(--border-color);
 }
