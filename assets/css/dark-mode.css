@@ -1265,6 +1265,41 @@
   color: var(--text-muted) !important;
 }
 
+/* Dietary Accommodations Section Dark Mode Background */
+[data-theme="dark"] .dietary-section-bg {
+  background-color: #070d17 !important;
+  border-color: rgba(51, 65, 85, 0.6) !important;
+}
+
+[data-theme="dark"] .dietary-section-bg::before {
+  background-image: url('../images/classes_dietary_bg.jpg?v=20261102q') !important;
+  opacity: 0.44 !important;
+  filter: brightness(0.70) contrast(1.15) !important;
+}
+
+[data-theme="dark"] .dietary-section-bg::after {
+  background: linear-gradient(180deg, rgba(7, 13, 23, 0.85) 0%, rgba(10, 16, 28, 0.70) 50%, rgba(7, 13, 23, 0.86) 100%),
+              radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 60%) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .dietary-section-bg .section-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
+}
+
+[data-theme="dark"] .dietary-section-bg .section-subtitle {
+  color: #E2E8F0 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] .dietary-section-bg .dietary-showcase-card {
+  background: rgba(19, 30, 46, 0.90) !important;
+  backdrop-filter: blur(14px) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  border-left: 6px solid #10B981 !important;
+}
+
 /* Dietary Showcase Section in Dark Mode */
 [data-theme="dark"] .dietary-showcase-card {
   background: linear-gradient(135deg, #111A2E 0%, #0F172A 100%) !important;
