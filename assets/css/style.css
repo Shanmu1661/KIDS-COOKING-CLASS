@@ -6568,7 +6568,7 @@ img, svg, video, canvas, iframe {
   font-size: 0.75rem !important;
   font-weight: 600 !important;
   white-space: nowrap !important;
-  margin-bottom: 14px !important;
+  margin-bottom: 0 !important;
 }
 
 .pathway-btn {
