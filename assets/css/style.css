@@ -6777,13 +6777,15 @@ img, svg, video, canvas, iframe {
   transition: transform var(--transition-normal), box-shadow var(--transition-normal) !important;
 }
 
+[data-theme="light"] .home2-chefs-section .custom-card h5,
 .home2-chefs-section .custom-card h5 {
-  color: #0F172A !important;
+  color: #0F172A;
 }
 
+[data-theme="light"] .home2-chefs-section .custom-card p,
 .home2-chefs-section .custom-card p {
-  color: #475569 !important;
-  font-weight: 500 !important;
+  color: #475569;
+  font-weight: 500;
 }
 
 .home2-chefs-section .custom-card:hover {

@@ -2015,8 +2015,85 @@
 }
 
 [data-theme="dark"] .home2-chefs-section .custom-card {
-  background: rgba(30, 41, 59, 0.88) !important;
+  background: rgba(30, 41, 59, 0.92) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card h5 {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card p {
+  color: #E2E8F0 !important;
+  font-weight: 400 !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card span.text-primary,
+[data-theme="dark"] .home2-chefs-section .custom-card span.text-blue-600,
+[data-theme="dark"] .home2-chefs-section .custom-card span.text-emerald-600,
+[data-theme="dark"] .home2-chefs-section .custom-card span.text-purple-600 {
+  filter: brightness(1.3) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card .bg-orange-100 {
+  background-color: rgba(255, 94, 54, 0.25) !important;
+  color: #FF8A65 !important;
+  border: 1.5px solid rgba(255, 94, 54, 0.45) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.25) !important;
+  color: #93C5FD !important;
+  border: 1.5px solid rgba(59, 130, 246, 0.45) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.25) !important;
+  color: #6EE7B7 !important;
+  border: 1.5px solid rgba(16, 185, 129, 0.45) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card .bg-purple-100 {
+  background-color: rgba(168, 85, 247, 0.25) !important;
+  color: #D8B4FE !important;
+  border: 1.5px solid rgba(168, 85, 247, 0.45) !important;
+}
+
+/* Home 2 Method Pillars Dark Mode Text */
+[data-theme="dark"] .little-chefs-method-section .custom-card h5 {
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .little-chefs-method-section .custom-card p {
+  color: #CBD5E1 !important;
+}
+
+/* Home 2 Facility Section Dark Mode Text */
+[data-theme="dark"] .home2-facility-section h6 {
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .home2-facility-section p {
+  color: #CBD5E1 !important;
+}
+
+/* Home 2 Testimonials Section Dark Mode Text */
+[data-theme="dark"] .home2-testimonials-section .custom-card p {
+  color: #E2E8F0 !important;
+}
+[data-theme="dark"] .home2-testimonials-section .custom-card strong {
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .home2-testimonials-section .custom-card span {
+  color: #94A3B8 !important;
+}
+
+/* Home 2 Recipe Club Section Dark Mode Text */
+[data-theme="dark"] .home2-recipe-club-section h3 {
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .home2-recipe-club-section p {
+  color: #E2E8F0 !important;
 }
 
 /* Home 2 Recipe Club Dark Mode */
