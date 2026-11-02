@@ -5308,11 +5308,51 @@ a:hover {
    ========================================================================== */
 .dashboard-feature-section {
   position: relative;
-  background: radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.06) 0%, transparent 45%),
-              radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 45%),
-              var(--bg-subtle, #FAF7F2);
+  overflow: hidden;
+  background-color: var(--bg-main, #FFFDF9);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-feature-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/parent_dashboard_bg.jpg?v=20261102');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  z-index: 0;
+  pointer-events: none;
+  filter: contrast(1.08) brightness(1.02);
+}
+
+.dashboard-feature-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 253, 249, 0.76) 0%, rgba(255, 250, 243, 0.60) 50%, rgba(255, 253, 249, 0.78) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dashboard-feature-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.dashboard-feature-section .section-title {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.dashboard-feature-section .portal-feature-item {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06) !important;
 }
 
 .dashboard-card-topbar {
