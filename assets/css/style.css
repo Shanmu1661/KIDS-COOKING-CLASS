@@ -1606,6 +1606,37 @@ a:hover {
   z-index: 2;
 }
 
+/* Hero Section Secondary Button (2026 Summer Camps) High-Visibility Styling */
+.hero-section .btn-outline-custom {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 2px solid rgba(15, 23, 42, 0.22) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.09), 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  font-weight: 700 !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hero-section .btn-outline-custom i {
+  color: #FF5E36 !important;
+  font-size: 1.05rem !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.hero-section .btn-outline-custom:hover {
+  background: #FF5E36 !important;
+  border-color: #FF5E36 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 25px rgba(255, 94, 54, 0.35) !important;
+  transform: translateY(-2px) !important;
+}
+
+.hero-section .btn-outline-custom:hover i {
+  color: #FFFFFF !important;
+  transform: scale(1.15) !important;
+}
+
 @media (max-width: 991.98px) {
   .hero-section::before {
     opacity: 0.72;

@@ -1848,6 +1848,28 @@
   background: linear-gradient(90deg, rgba(11, 17, 32, 0.75) 0%, rgba(11, 17, 32, 0.50) 50%, rgba(11, 17, 32, 0.20) 100%) !important;
 }
 
+[data-theme="dark"] .hero-section .btn-outline-custom {
+  background: rgba(30, 41, 59, 0.90) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.40) !important;
+}
+
+[data-theme="dark"] .hero-section .btn-outline-custom i {
+  color: #FF5E36 !important;
+}
+
+[data-theme="dark"] .hero-section .btn-outline-custom:hover {
+  background: #FF5E36 !important;
+  border-color: #FF5E36 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 25px rgba(255, 94, 54, 0.45) !important;
+}
+
+[data-theme="dark"] .hero-section .btn-outline-custom:hover i {
+  color: #FFFFFF !important;
+}
+
 @media (max-width: 991.98px) {
   [data-theme="dark"] .hero-section::before {
     opacity: 0.35 !important;
