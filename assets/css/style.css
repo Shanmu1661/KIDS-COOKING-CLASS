@@ -1581,23 +1581,22 @@ a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/hero_kitchen_bg.jpg?v=20261102');
+  background-image: url('../images/hero_kitchen_bg.jpg?v=20261102b');
   background-size: cover;
-  background-position: center 40%;
+  background-position: center 35%;
   background-repeat: no-repeat;
-  opacity: 0.42;
+  opacity: 0.88;
   z-index: 0;
   pointer-events: none;
-  filter: contrast(1.05) brightness(1.02);
+  filter: contrast(1.08) brightness(1.02);
 }
 
 .hero-section::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 253, 249, 0.95) 0%, rgba(255, 253, 249, 0.82) 48%, rgba(255, 253, 249, 0.35) 100%),
-              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, rgba(255, 183, 3, 0.05) 50%, transparent 80%),
-              radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+  background: linear-gradient(90deg, rgba(255, 253, 249, 0.48) 0%, rgba(255, 253, 249, 0.22) 50%, rgba(255, 253, 249, 0.05) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.06) 0%, transparent 70%);
   z-index: 1;
   pointer-events: none;
 }
@@ -1609,10 +1608,10 @@ a:hover {
 
 @media (max-width: 991.98px) {
   .hero-section::before {
-    opacity: 0.28;
+    opacity: 0.72;
   }
   .hero-section::after {
-    background: rgba(255, 253, 249, 0.90) !important;
+    background: rgba(255, 253, 249, 0.65) !important;
   }
 }
 
@@ -1621,6 +1620,7 @@ a:hover {
   line-height: 1.15;
   margin-bottom: 20px;
   font-weight: 700;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
 }
 
 .hero-highlight {
@@ -1631,6 +1631,7 @@ a:hover {
   font-size: 1.18rem;
   color: var(--text-muted);
   margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.80);
 }
 
 .hero-image-wrapper {
