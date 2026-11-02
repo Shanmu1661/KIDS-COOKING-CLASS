@@ -1977,3 +1977,34 @@
   border-color: rgba(255, 255, 255, 0.15) !important;
   color: #ffffff !important;
 }
+
+/* Home 2 Chef Mentors Dark Mode */
+[data-theme="dark"] .home2-chefs-section {
+  background-color: #070d17 !important;
+  border-color: rgba(51, 65, 85, 0.5) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section::before {
+  background-image: url('../images/home2_chefs_bg.jpg?v=20261102d') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: 0.44 !important;
+  filter: brightness(0.68) contrast(1.15) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section::after {
+  background: linear-gradient(180deg, rgba(7, 13, 23, 0.86) 0%, rgba(10, 16, 28, 0.74) 50%, rgba(7, 13, 23, 0.88) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.10) 0%, transparent 60%) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .section-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card {
+  background: rgba(30, 41, 59, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}

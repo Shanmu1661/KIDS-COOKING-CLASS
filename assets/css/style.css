@@ -6709,3 +6709,61 @@ img, svg, video, canvas, iframe {
   border-color: var(--color-primary, #FF5E36) !important;
   color: #ffffff !important;
 }
+
+/* ==========================================================================
+   HOME 2 - CERTIFIED CHEF INSTRUCTORS & MENTORS SECTION
+   ========================================================================== */
+.home2-chefs-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-main, #FFFDF9);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.home2-chefs-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/home2_chefs_bg.jpg?v=20261102d');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.94;
+  z-index: 0;
+  pointer-events: none;
+  filter: contrast(1.10) brightness(1.02);
+}
+
+.home2-chefs-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.68) 0%, rgba(255, 250, 242, 0.48) 50%, rgba(255, 253, 249, 0.68) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.06) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home2-chefs-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.home2-chefs-section .section-title {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.home2-chefs-section .custom-card {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal) !important;
+}
+
+.home2-chefs-section .custom-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12) !important;
+}
