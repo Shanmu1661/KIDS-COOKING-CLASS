@@ -745,6 +745,15 @@
   border-color: #1E293B !important;
 }
 
+[data-theme="dark"] .journey-stat-card {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  border-color: rgba(51, 65, 85, 0.7) !important;
+}
+
+[data-theme="dark"] .journey-stat-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
 [data-theme="dark"] .journey-card {
   background: #111A2E !important;
   border-color: #1E293B !important;

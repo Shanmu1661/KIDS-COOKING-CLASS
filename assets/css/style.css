@@ -3649,6 +3649,30 @@ a:hover {
   transition: all var(--transition-normal);
 }
 
+/* Milestone Quick Metric Cards (About Us Page) */
+.journey-stat-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 104px;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.journey-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.journey-stat-card small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  line-height: 1.25;
+}
+
 .journey-track {
   position: relative;
 }
