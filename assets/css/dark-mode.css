@@ -2007,3 +2007,29 @@
   background: rgba(30, 41, 59, 0.88) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
+
+/* Home 2 Recipe Club Dark Mode */
+[data-theme="dark"] .home2-recipe-club-section {
+  background-color: #070d17 !important;
+  border-color: rgba(51, 65, 85, 0.5) !important;
+}
+
+[data-theme="dark"] .home2-recipe-club-section::before {
+  background-image: url('../images/home2_recipe_club_bg.jpg?v=20261102f') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: 0.45 !important;
+  filter: brightness(0.70) contrast(1.15) !important;
+}
+
+[data-theme="dark"] .home2-recipe-club-section::after {
+  background: linear-gradient(135deg, rgba(7, 13, 23, 0.85) 0%, rgba(10, 16, 28, 0.70) 50%, rgba(7, 13, 23, 0.85) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.10) 0%, transparent 60%) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .home2-recipe-club-section .custom-card {
+  background: rgba(30, 41, 59, 0.90) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}

@@ -6758,3 +6758,51 @@ img, svg, video, canvas, iframe {
   transform: translateY(-6px) !important;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12) !important;
 }
+
+/* ==========================================================================
+   HOME 2 - JUNIOR RECIPE CLUB NEWSLETTER SECTION
+   ========================================================================== */
+.home2-recipe-club-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-main, #FFFDF9);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.home2-recipe-club-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/home2_recipe_club_bg.jpg?v=20261102f');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.94;
+  z-index: 0;
+  pointer-events: none;
+  filter: contrast(1.10) brightness(1.02);
+}
+
+.home2-recipe-club-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 253, 249, 0.65) 0%, rgba(255, 250, 243, 0.45) 50%, rgba(255, 253, 249, 0.60) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.06) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home2-recipe-club-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.home2-recipe-club-section .custom-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10) !important;
+}
