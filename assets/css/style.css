@@ -4833,13 +4833,16 @@ a:hover {
   font-weight: 700;
   font-size: 1.15rem;
   line-height: 1.35;
+  height: 3.15rem;
   min-height: 3.15rem;
+  max-height: 3.15rem;
   margin-bottom: 0.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-wrap: balance;
+  flex-shrink: 0;
 }
 
 .blog-card-title a,
@@ -4859,13 +4862,16 @@ a:hover {
   font-size: 0.875rem;
   line-height: 1.6;
   color: var(--text-muted);
+  height: 4.2rem;
   min-height: 4.2rem;
+  max-height: 4.2rem;
   margin-bottom: 0.75rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-wrap: pretty;
+  flex-shrink: 0;
 }
 
 .blog-card-tags,
@@ -4873,20 +4879,58 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: auto !important;
+  margin-top: 0 !important;
   margin-bottom: 0.75rem !important;
-  min-height: 28px;
+  height: 58px;
+  min-height: 58px;
+  max-height: 58px;
+  overflow: hidden;
+  align-content: flex-start;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .blog-card-footer,
 .filter-item .custom-card .blog-card-footer {
-  margin-top: auto;
+  margin-top: auto !important;
   padding-top: 0.85rem;
   border-top: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.blog-card-footer > div:first-child,
+.filter-item .custom-card .blog-card-footer > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.blog-card-footer small,
+.filter-item .custom-card .blog-card-footer small {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: inline-block;
+  max-width: 140px;
+}
+
+.blog-card-footer a,
+.filter-item .custom-card .blog-card-footer a,
+.blog-card-btn {
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
 }
 
 
