@@ -2152,3 +2152,13 @@
   background: rgba(30, 41, 59, 0.88) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
+
+/* About Page Origin Story Trust Highlights in Dark Mode */
+[data-theme="dark"] .about-highlight-item span {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .about-highlight-item i {
+  color: #34D399 !important;
+}
+
