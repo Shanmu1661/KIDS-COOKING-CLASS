@@ -2833,6 +2833,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 1.5rem 1.25rem !important;
 }
 
 .learning-pillars-bg-section .custom-card:hover {
@@ -2864,16 +2865,21 @@ a:hover {
 
 .learning-pillars-bg-section .class-meta-item {
   min-height: 22px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  line-height: 1.35 !important;
 }
 
 .learning-pillars-bg-section .class-meta-item i {
-  flex-shrink: 0;
-  width: 16px;
+  flex-shrink: 0 !important;
+  width: 16px !important;
+  min-width: 16px !important;
   text-align: center;
+  margin-top: 2px !important;
 }
 
 /* Kitchen Safety First Standards Section (About Us Page) */
