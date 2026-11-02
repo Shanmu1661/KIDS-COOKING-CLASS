@@ -423,102 +423,160 @@
 
     <!-- Parent Dashboard Teaser & Features -->
     <section class="py-5 py-lg-6 parent-dashboard-section" id="parent-dashboard-teaser">
-      <div class="container py-4 py-lg-5">
+      <div class="container py-3 py-lg-4">
         <div class="row align-items-center g-5">
+          <!-- Left Column: Elevated Parent Portal Preview Card -->
           <div class="col-lg-6 order-2 order-lg-1">
-            <div class="custom-card dashboard-preview-card p-4 p-md-5 shadow-2xl border-orange-200 dark:border-slate-700">
-              <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="position-relative">
-                    <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" alt="Leo Miller child avatar" class="w-14 h-14 rounded-full border-3 border-orange-500 object-cover shadow-sm">
-                    <span class="position-absolute bottom-0 end-0 p-1 bg-emerald-500 border border-white rounded-full" title="Active Account"></span>
-                  </div>
-                  <div>
-                    <h5 class="mb-1 fw-bold font-heading">Leo Miller <span class="text-muted fs-6 fw-normal">(Age 8)</span></h5>
-                    <small class="text-emerald-600 font-semibold d-flex align-items-center gap-1">
-                      <i class="fa-solid fa-circle-check"></i> Peanut-Free Station Assigned
-                    </small>
-                  </div>
-                </div>
-                <span class="badge bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300 px-3 py-2 rounded-pill font-heading">
-                  Active Pass
-                </span>
+            <div class="position-relative">
+              <!-- Floating Live Activity Pill (Top Right) -->
+              <div class="dashboard-floating-pill-top bg-white dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700/60 shadow-sm rounded-full px-3 py-1 d-inline-flex align-items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs fw-bold text-emerald-700 dark:text-emerald-400 font-heading">Live Studio Feed &bull; Station 3</span>
               </div>
 
-              <!-- Upcoming Session Ticket Card -->
-              <div class="session-ticket-box p-3.5 p-md-4 bg-subtle rounded-3 mb-4 border">
-                <div class="d-flex justify-content-between align-items-center text-sm mb-2">
-                  <span class="text-muted fw-semibold"><i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Session:</span>
-                  <span class="fw-bold text-primary"><i class="fa-regular fa-clock me-1"></i> Sat, Oct 24 • 10:00 AM</span>
+              <div class="custom-card dashboard-preview-card p-4 p-md-5">
+                <!-- Child Header Row -->
+                <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="position-relative">
+                      <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" alt="Leo Miller child avatar" class="w-14 h-14 rounded-full border-3 border-orange-500 object-cover shadow-sm">
+                      <span class="position-absolute bottom-0 end-0 p-1 bg-emerald-500 border border-white rounded-full" title="Active Account"></span>
+                    </div>
+                    <div>
+                      <h5 class="mb-1 fw-bold font-heading text-dark dark:text-white">Leo Miller <span class="text-muted fs-6 fw-normal">(Age 8)</span></h5>
+                      <span class="badge bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800/60 px-2.5 py-1 rounded-pill small font-semibold d-inline-flex align-items-center gap-1.5">
+                        <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i> Peanut-Free Station Assigned
+                      </span>
+                    </div>
+                  </div>
+                  <span class="badge bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300 px-3 py-2 rounded-pill font-heading fw-bold">
+                    <i class="fa-solid fa-crown text-warning me-1"></i> Active Pass
+                  </span>
                 </div>
-                <h5 class="font-heading fw-bold mb-2">Handmade Gnocchi & Fresh Herb Pesto</h5>
-                <div class="d-flex flex-wrap align-items-center gap-3 text-muted small">
-                  <span><i class="fa-solid fa-user-tie text-secondary me-1"></i> Instructor: Chef Marco Rossi</span>
-                  <span>•</span>
-                  <span><i class="fa-solid fa-kitchen-set text-warning me-1"></i> Station #3</span>
+
+                <!-- Upcoming Session Ticket Card -->
+                <div class="session-ticket-box p-3.5 p-md-4 mb-4">
+                  <div class="d-flex justify-content-between align-items-center text-xs mb-2">
+                    <span class="text-muted fw-bold uppercase tracking-wider">
+                      <i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Masterclass:
+                    </span>
+                    <span class="badge bg-white dark:bg-slate-700 text-primary border shadow-xs px-2.5 py-1 rounded-pill fw-bold">
+                      <i class="fa-regular fa-clock me-1"></i> Sat, Oct 24 &bull; 10:00 AM
+                    </span>
+                  </div>
+                  <h5 class="font-heading fw-bold mb-2 text-dark dark:text-white">Handmade Gnocchi &amp; Fresh Herb Pesto</h5>
+                  <div class="d-flex flex-wrap align-items-center gap-3 text-muted small mb-3">
+                    <span class="d-inline-flex align-items-center gap-1.5">
+                      <i class="fa-solid fa-user-tie text-secondary"></i> Instructor: Chef Marco Rossi
+                    </span>
+                    <span>&bull;</span>
+                    <span class="d-inline-flex align-items-center gap-1.5">
+                      <i class="fa-solid fa-kitchen-set text-warning"></i> Station #3
+                    </span>
+                    <span>&bull;</span>
+                    <span class="d-inline-flex align-items-center gap-1.5 text-emerald-600 dark:text-emerald-400 fw-semibold">
+                      <i class="fa-solid fa-shield-halved"></i> 100% Nut-Safe
+                    </span>
+                  </div>
+
+                  <!-- Live Session Progress -->
+                  <div class="pt-1">
+                    <div class="d-flex justify-content-between align-items-center text-xs mb-1.5">
+                      <span class="text-muted fw-semibold">Curriculum Progress: Step 3 of 4</span>
+                      <span class="text-primary fw-bold font-heading">75% &bull; Dough Resting</span>
+                    </div>
+                    <div class="progress" style="height: 6px; border-radius: 999px; background: rgba(0,0,0,0.06);">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 75%; border-radius: 999px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Footer with Photo count & Access Portal Link -->
+                <div class="d-flex justify-content-between align-items-center pt-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="dashboard-avatar-stack">
+                      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
+                      <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
+                      <img src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
+                    </div>
+                    <div>
+                      <span class="text-xs fw-bold text-dark dark:text-white d-block">18 Session Photos</span>
+                      <small class="text-muted" style="font-size: 0.72rem;">Uploaded by Chef Marco</small>
+                    </div>
+                  </div>
+                  <a href="dashboard.html" class="btn btn-sm btn-primary-custom rounded-pill px-3 py-1.5 text-xs fw-bold d-inline-flex align-items-center gap-1.5 shadow-xs">
+                    <span>Access Portal</span>
+                    <i class="fa-solid fa-arrow-right text-2xs"></i>
+                  </a>
                 </div>
               </div>
 
-              <!-- Footer with Photo count & Access Portal Link -->
-              <div class="d-flex justify-content-between align-items-center pt-2">
-                <span class="d-flex align-items-center gap-2 text-sm text-muted">
-                  <i class="fa-solid fa-camera text-primary fs-5"></i>
-                  <span><strong class="text-main">18 Photos</strong> in Album</span>
-                </span>
-                <a href="dashboard.html" class="fw-bold text-primary hover:underline d-inline-flex align-items-center gap-1">
-                  Access Portal <i class="fa-solid fa-arrow-right"></i>
-                </a>
+              <!-- Floating Micro Badge (Bottom Left) -->
+              <div class="dashboard-floating-pill-bottom bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg rounded-2xl p-2.5 d-none d-sm-flex align-items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center text-emerald-600 text-xs flex-shrink-0">
+                  <i class="fa-solid fa-medal"></i>
+                </div>
+                <div class="text-xs">
+                  <div class="fw-bold text-dark dark:text-white">Milestone Unlocked!</div>
+                  <div class="text-muted" style="font-size: 0.72rem;">Gnocchi Master Badge Level 1</div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Right Column: Header & 2x2 Feature Cards -->
           <div class="col-lg-6 order-1 order-lg-2">
             <span class="section-tag"><i class="fa-solid fa-shield-halved"></i> Peace of Mind</span>
             <h2 class="section-title">A Seamless Parent Dashboard for Stress-Free Scheduling</h2>
             <p class="text-muted mb-4 lead fs-6">
               We know busy parents value transparency and convenience. Our parent portal gives you instant control over every detail of your child's culinary education.
             </p>
-            <div class="row g-4 mb-4">
+            <div class="row g-3 g-md-4 mb-4">
               <div class="col-sm-6">
-                <div class="d-flex gap-3">
-                  <div class="fs-3 text-primary"><i class="fa-solid fa-calendar-days"></i></div>
-                  <div>
-                    <h5 class="font-heading fw-bold mb-1">Live Class Enrollment</h5>
-                    <p class="text-muted small">Reserve open spots in weekend workshops, multi-week semesters, or camp slots with one click.</p>
+                <div class="parent-feature-card">
+                  <div class="parent-feature-icon bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400">
+                    <i class="fa-solid fa-calendar-days"></i>
                   </div>
+                  <h5 class="parent-feature-title">Live Class Enrollment</h5>
+                  <p class="parent-feature-desc">Reserve open spots in weekend workshops, multi-week semesters, or camp slots with one click.</p>
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="d-flex gap-3">
-                  <div class="fs-3 text-success"><i class="fa-solid fa-camera-retro"></i></div>
-                  <div>
-                    <h5 class="font-heading fw-bold mb-1">Private Session Photos</h5>
-                    <p class="text-muted small">High-resolution candid photos uploaded by chef instructors after every session to download and share.</p>
+                <div class="parent-feature-card">
+                  <div class="parent-feature-icon bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400">
+                    <i class="fa-solid fa-camera-retro"></i>
                   </div>
+                  <h5 class="parent-feature-title">Private Session Photos</h5>
+                  <p class="parent-feature-desc">High-resolution candid photos uploaded by chef instructors after every session to download and share.</p>
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="d-flex gap-3">
-                  <div class="fs-3 text-warning"><i class="fa-solid fa-notes-medical"></i></div>
-                  <div>
-                    <h5 class="font-heading fw-bold mb-1">Allergy & Dietary Profiles</h5>
-                    <p class="text-muted small">Detailed allergy tags sent directly to the chef's tablet so workstations are sanitized and allergen-safe.</p>
+                <div class="parent-feature-card">
+                  <div class="parent-feature-icon bg-amber-50 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400">
+                    <i class="fa-solid fa-notes-medical"></i>
                   </div>
+                  <h5 class="parent-feature-title">Allergy &amp; Dietary Profiles</h5>
+                  <p class="parent-feature-desc">Detailed allergy tags sent directly to the chef's tablet so workstations are sanitized and allergen-safe.</p>
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="d-flex gap-3">
-                  <div class="fs-3 text-purple-500"><i class="fa-solid fa-book-bookmark"></i></div>
-                  <div>
-                    <h5 class="font-heading fw-bold mb-1">Digital Recipe Vault</h5>
-                    <p class="text-muted small">Every recipe cooked in class is saved to your account with step-by-step cook-at-home instructions.</p>
+                <div class="parent-feature-card">
+                  <div class="parent-feature-icon bg-purple-50 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400">
+                    <i class="fa-solid fa-book-bookmark"></i>
                   </div>
+                  <h5 class="parent-feature-title">Digital Recipe Vault</h5>
+                  <p class="parent-feature-desc">Every recipe cooked in class is saved to your account with step-by-step cook-at-home instructions.</p>
                 </div>
               </div>
             </div>
-            <div class="pt-2">
-              <a href="dashboard.html" class="btn btn-secondary-custom">
-                <i class="fa-solid fa-right-to-bracket"></i> Launch Parent Dashboard Demo
+            <div class="d-flex flex-wrap align-items-center gap-3 pt-2">
+              <a href="dashboard.html" class="btn btn-secondary-custom d-inline-flex align-items-center gap-2">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span>Launch Parent Dashboard Demo</span>
               </a>
+              <span class="text-muted small d-inline-flex align-items-center gap-1.5">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i> Free interactive preview
+              </span>
             </div>
           </div>
         </div>

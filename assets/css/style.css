@@ -2490,7 +2490,7 @@ a:hover {
 .parent-dashboard-section {
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-surface);
+  background-color: #FFFDF9;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -2499,23 +2499,23 @@ a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/parent_dashboard_bg.jpg?v=20261026b');
-  background-size: cover;
-  background-position: center 40%;
-  background-repeat: no-repeat;
-  opacity: 0.72;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 85% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 40%);
   z-index: 0;
   pointer-events: none;
-  filter: contrast(1.08) brightness(1.04);
 }
 
 .parent-dashboard-section::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 253, 249, 0.20) 0%, rgba(255, 253, 249, 0.40) 40%, rgba(255, 253, 249, 0.65) 100%),
-              radial-gradient(circle at 15% 35%, rgba(255, 94, 54, 0.06) 0%, transparent 55%),
-              radial-gradient(circle at 85% 65%, rgba(16, 185, 129, 0.06) 0%, transparent 55%);
+  background-image: radial-gradient(rgba(255, 94, 54, 0.07) 1px, transparent 1px), radial-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  opacity: 0.6;
   z-index: 1;
   pointer-events: none;
 }
@@ -2523,34 +2523,128 @@ a:hover {
 .parent-dashboard-section .section-title {
   color: #0F172A !important;
   font-weight: 800 !important;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
+  letter-spacing: -0.015em;
 }
 
 .parent-dashboard-section .lead {
-  color: #334155 !important;
-  font-weight: 600 !important;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+  color: #475569 !important;
+  font-weight: 500 !important;
+  line-height: 1.65;
 }
 
-.parent-dashboard-section .feature-glass-card,
-.parent-dashboard-section .row.g-4.mb-4 > .col-sm-6 > .d-flex {
-  background: rgba(255, 255, 255, 0.86) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.9) !important;
-  border-radius: var(--radius-md) !important;
-  padding: 16px 18px !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05) !important;
+/* Feature Cards (2x2 Grid) */
+.parent-feature-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(226, 232, 240, 0.95) !important;
+  border-radius: 20px !important;
+  padding: 22px 20px !important;
   height: 100% !important;
-  transition: all var(--transition-fast) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
 }
 
-.parent-dashboard-section .feature-glass-card:hover,
-.parent-dashboard-section .row.g-4.mb-4 > .col-sm-6 > .d-flex:hover {
-  transform: translateY(-2px) !important;
-  background: rgba(255, 255, 255, 0.96) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09) !important;
-  border-color: rgba(255, 94, 54, 0.35) !important;
+.parent-feature-card:hover {
+  transform: translateY(-4px) !important;
+  background: #FFFFFF !important;
+  border-color: rgba(255, 94, 54, 0.38) !important;
+  box-shadow: 0 16px 32px -8px rgba(255, 94, 54, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.parent-feature-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  border-radius: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 14px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.parent-feature-card:hover .parent-feature-icon {
+  transform: scale(1.08) rotate(3deg) !important;
+}
+
+.parent-feature-title {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+  margin-bottom: 6px !important;
+  font-family: var(--font-heading, inherit) !important;
+}
+
+.parent-feature-desc {
+  font-size: 0.86rem !important;
+  color: #64748B !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Dashboard Preview Teaser Card (Elevated Left Card) */
+.dashboard-preview-card {
+  position: relative !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(255, 94, 54, 0.18) !important;
+  border-radius: 26px !important;
+  padding: 32px !important;
+  box-shadow: 0 25px 60px -15px rgba(255, 94, 54, 0.14), 0 10px 24px -8px rgba(15, 23, 42, 0.08) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+}
+
+.dashboard-preview-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 32px 70px -15px rgba(255, 94, 54, 0.20), 0 12px 28px -6px rgba(15, 23, 42, 0.10) !important;
+}
+
+.session-ticket-box {
+  background: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 18px !important;
+  transition: border-color 0.2s ease, background 0.2s ease !important;
+}
+
+.session-ticket-box:hover {
+  background: #F1F5F9 !important;
+  border-color: rgba(255, 94, 54, 0.30) !important;
+}
+
+/* Dashboard Floating Badges & Avatar Stack */
+.dashboard-floating-pill-top {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  z-index: 5;
+}
+
+.dashboard-floating-pill-bottom {
+  position: absolute;
+  bottom: -16px;
+  left: 20px;
+  z-index: 5;
+}
+
+.dashboard-avatar-stack {
+  display: inline-flex;
+  align-items: center;
+}
+
+.dashboard-avatar-stack img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-avatar-stack img:not(:first-child) {
+  margin-left: -8px;
 }
 
 .parent-dashboard-section > .container {
