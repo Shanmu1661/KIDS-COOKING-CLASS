@@ -204,16 +204,6 @@
 }
 
 /* RTL Support for Parent Dashboard */
-[dir="rtl"] .dashboard-floating-pill-top {
-  right: auto !important;
-  left: 24px !important;
-}
-
-[dir="rtl"] .dashboard-floating-pill-bottom {
-  left: auto !important;
-  right: 20px !important;
-}
-
 [dir="rtl"] .dashboard-avatar-stack img:not(:first-child) {
   margin-left: 0 !important;
   margin-right: -8px !important;

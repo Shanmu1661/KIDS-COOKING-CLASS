@@ -427,99 +427,80 @@
         <div class="row align-items-center g-5">
           <!-- Left Column: Elevated Parent Portal Preview Card -->
           <div class="col-lg-6 order-2 order-lg-1">
-            <div class="position-relative">
-              <!-- Floating Live Activity Pill (Top Right) -->
-              <div class="dashboard-floating-pill-top bg-white dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700/60 shadow-sm rounded-full px-3 py-1 d-inline-flex align-items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="text-xs fw-bold text-emerald-700 dark:text-emerald-400 font-heading">Live Studio Feed &bull; Station 3</span>
+            <div class="custom-card dashboard-preview-card p-4 p-md-5">
+              <!-- Child Header Row -->
+              <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" alt="Leo Miller child avatar" class="w-14 h-14 rounded-full border-3 border-orange-500 object-cover shadow-sm">
+                    <span class="position-absolute bottom-0 end-0 p-1 bg-emerald-500 border border-white rounded-full" title="Active Account"></span>
+                  </div>
+                  <div>
+                    <h5 class="mb-1 fw-bold font-heading text-dark dark:text-white">Leo Miller <span class="text-muted fs-6 fw-normal">(Age 8)</span></h5>
+                    <span class="badge bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800/60 px-2.5 py-1 rounded-pill small font-semibold d-inline-flex align-items-center gap-1.5">
+                      <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i> Peanut-Free Station Assigned
+                    </span>
+                  </div>
+                </div>
+                <span class="badge bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300 px-3 py-2 rounded-pill font-heading fw-bold">
+                  <i class="fa-solid fa-crown text-warning me-1"></i> Active Pass
+                </span>
               </div>
 
-              <div class="custom-card dashboard-preview-card p-4 p-md-5">
-                <!-- Child Header Row -->
-                <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="position-relative">
-                      <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=150&q=80" alt="Leo Miller child avatar" class="w-14 h-14 rounded-full border-3 border-orange-500 object-cover shadow-sm">
-                      <span class="position-absolute bottom-0 end-0 p-1 bg-emerald-500 border border-white rounded-full" title="Active Account"></span>
-                    </div>
-                    <div>
-                      <h5 class="mb-1 fw-bold font-heading text-dark dark:text-white">Leo Miller <span class="text-muted fs-6 fw-normal">(Age 8)</span></h5>
-                      <span class="badge bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800/60 px-2.5 py-1 rounded-pill small font-semibold d-inline-flex align-items-center gap-1.5">
-                        <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i> Peanut-Free Station Assigned
-                      </span>
-                    </div>
-                  </div>
-                  <span class="badge bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300 px-3 py-2 rounded-pill font-heading fw-bold">
-                    <i class="fa-solid fa-crown text-warning me-1"></i> Active Pass
+              <!-- Upcoming Session Ticket Card -->
+              <div class="session-ticket-box p-3.5 p-md-4 mb-4">
+                <div class="d-flex justify-content-between align-items-center text-xs mb-2">
+                  <span class="text-muted fw-bold uppercase tracking-wider">
+                    <i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Masterclass:
+                  </span>
+                  <span class="badge bg-white dark:bg-slate-700 text-primary border shadow-xs px-2.5 py-1 rounded-pill fw-bold">
+                    <i class="fa-regular fa-clock me-1"></i> Sat, Oct 24 &bull; 10:00 AM
+                  </span>
+                </div>
+                <h5 class="font-heading fw-bold mb-2 text-dark dark:text-white">Handmade Gnocchi &amp; Fresh Herb Pesto</h5>
+                <div class="d-flex flex-wrap align-items-center gap-3 text-muted small mb-3">
+                  <span class="d-inline-flex align-items-center gap-1.5">
+                    <i class="fa-solid fa-user-tie text-secondary"></i> Instructor: Chef Marco Rossi
+                  </span>
+                  <span>&bull;</span>
+                  <span class="d-inline-flex align-items-center gap-1.5">
+                    <i class="fa-solid fa-kitchen-set text-warning"></i> Station #3
+                  </span>
+                  <span>&bull;</span>
+                  <span class="d-inline-flex align-items-center gap-1.5 text-emerald-600 dark:text-emerald-400 fw-semibold">
+                    <i class="fa-solid fa-shield-halved"></i> 100% Nut-Safe
                   </span>
                 </div>
 
-                <!-- Upcoming Session Ticket Card -->
-                <div class="session-ticket-box p-3.5 p-md-4 mb-4">
-                  <div class="d-flex justify-content-between align-items-center text-xs mb-2">
-                    <span class="text-muted fw-bold uppercase tracking-wider">
-                      <i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Masterclass:
-                    </span>
-                    <span class="badge bg-white dark:bg-slate-700 text-primary border shadow-xs px-2.5 py-1 rounded-pill fw-bold">
-                      <i class="fa-regular fa-clock me-1"></i> Sat, Oct 24 &bull; 10:00 AM
-                    </span>
+                <!-- Live Session Progress -->
+                <div class="pt-1">
+                  <div class="d-flex justify-content-between align-items-center text-xs mb-1.5">
+                    <span class="text-muted fw-semibold">Curriculum Progress: Step 3 of 4</span>
+                    <span class="text-primary fw-bold font-heading">75% &bull; Dough Resting</span>
                   </div>
-                  <h5 class="font-heading fw-bold mb-2 text-dark dark:text-white">Handmade Gnocchi &amp; Fresh Herb Pesto</h5>
-                  <div class="d-flex flex-wrap align-items-center gap-3 text-muted small mb-3">
-                    <span class="d-inline-flex align-items-center gap-1.5">
-                      <i class="fa-solid fa-user-tie text-secondary"></i> Instructor: Chef Marco Rossi
-                    </span>
-                    <span>&bull;</span>
-                    <span class="d-inline-flex align-items-center gap-1.5">
-                      <i class="fa-solid fa-kitchen-set text-warning"></i> Station #3
-                    </span>
-                    <span>&bull;</span>
-                    <span class="d-inline-flex align-items-center gap-1.5 text-emerald-600 dark:text-emerald-400 fw-semibold">
-                      <i class="fa-solid fa-shield-halved"></i> 100% Nut-Safe
-                    </span>
+                  <div class="progress" style="height: 6px; border-radius: 999px; background: rgba(0,0,0,0.06);">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%; border-radius: 999px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-
-                  <!-- Live Session Progress -->
-                  <div class="pt-1">
-                    <div class="d-flex justify-content-between align-items-center text-xs mb-1.5">
-                      <span class="text-muted fw-semibold">Curriculum Progress: Step 3 of 4</span>
-                      <span class="text-primary fw-bold font-heading">75% &bull; Dough Resting</span>
-                    </div>
-                    <div class="progress" style="height: 6px; border-radius: 999px; background: rgba(0,0,0,0.06);">
-                      <div class="progress-bar bg-primary" role="progressbar" style="width: 75%; border-radius: 999px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Footer with Photo count & Access Portal Link -->
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="dashboard-avatar-stack">
-                      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
-                      <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
-                      <img src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
-                    </div>
-                    <div>
-                      <span class="text-xs fw-bold text-dark dark:text-white d-block">18 Session Photos</span>
-                      <small class="text-muted" style="font-size: 0.72rem;">Uploaded by Chef Marco</small>
-                    </div>
-                  </div>
-                  <a href="dashboard.html" class="btn btn-sm btn-primary-custom rounded-pill px-3 py-1.5 text-xs fw-bold d-inline-flex align-items-center gap-1.5 shadow-xs">
-                    <span>Access Portal</span>
-                    <i class="fa-solid fa-arrow-right text-2xs"></i>
-                  </a>
                 </div>
               </div>
 
-              <!-- Floating Micro Badge (Bottom Left) -->
-              <div class="dashboard-floating-pill-bottom bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg rounded-2xl p-2.5 d-none d-sm-flex align-items-center gap-2.5">
-                <div class="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center text-emerald-600 text-xs flex-shrink-0">
-                  <i class="fa-solid fa-medal"></i>
+              <!-- Footer with Photo count & Access Portal Link -->
+              <div class="d-flex justify-content-between align-items-center pt-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="dashboard-avatar-stack">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
+                    <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
+                    <img src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&w=80&q=80" alt="Session candid photo thumbnail">
+                  </div>
+                  <div>
+                    <span class="text-xs fw-bold text-dark dark:text-white d-block">18 Session Photos</span>
+                    <small class="text-muted" style="font-size: 0.72rem;">Uploaded by Chef Marco</small>
+                  </div>
                 </div>
-                <div class="text-xs">
-                  <div class="fw-bold text-dark dark:text-white">Milestone Unlocked!</div>
-                  <div class="text-muted" style="font-size: 0.72rem;">Gnocchi Master Badge Level 1</div>
-                </div>
+                <a href="dashboard.html" class="btn btn-sm btn-primary-custom rounded-pill px-3 py-1.5 text-xs fw-bold d-inline-flex align-items-center gap-1.5 shadow-xs">
+                  <span>Access Portal</span>
+                  <i class="fa-solid fa-arrow-right text-2xs"></i>
+                </a>
               </div>
             </div>
           </div>

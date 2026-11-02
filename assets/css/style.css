@@ -2641,21 +2641,7 @@ a:hover {
   border-color: rgba(255, 94, 54, 0.30) !important;
 }
 
-/* Dashboard Floating Badges & Avatar Stack */
-.dashboard-floating-pill-top {
-  position: absolute;
-  top: -14px;
-  right: 24px;
-  z-index: 5;
-}
-
-.dashboard-floating-pill-bottom {
-  position: absolute;
-  bottom: -16px;
-  left: 20px;
-  z-index: 5;
-}
-
+/* Dashboard Avatar Stack */
 .dashboard-avatar-stack {
   display: inline-flex;
   align-items: center;
