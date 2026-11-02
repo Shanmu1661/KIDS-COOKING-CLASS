@@ -3887,14 +3887,7 @@ a:hover {
 }
 
 .service-step-number {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: rgba(var(--color-primary-rgb), 0.2);
-  line-height: 1;
+  display: none !important;
 }
 
 .service-step-icon {

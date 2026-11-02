@@ -1210,7 +1210,7 @@
 }
 
 [data-theme="dark"] .service-step-number {
-  color: rgba(255, 255, 255, 0.12);
+  display: none !important;
 }
 
 [data-theme="dark"] .pricing-package-card.featured {
