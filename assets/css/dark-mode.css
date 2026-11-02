@@ -821,8 +821,7 @@
 }
 
 [data-theme="dark"] .recipe-newsletter-banner-section::before {
-  opacity: 0.25 !important;
-  filter: brightness(0.85) contrast(1.15) !important;
+  display: none !important;
 }
 
 [data-theme="dark"] .recipe-newsletter-banner-section::after {

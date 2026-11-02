@@ -2708,16 +2708,7 @@ a:hover {
 }
 
 .recipe-newsletter-banner-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../images/kid_recipe_guide_banner.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0.22;
-  z-index: 0;
-  pointer-events: none;
+  display: none !important;
 }
 
 .recipe-newsletter-banner-section::after {
