@@ -228,20 +228,20 @@
                 <div class="row g-4 mb-3">
                   <div class="col-md-5">
                     <h6 class="font-heading fw-bold text-xs text-uppercase tracking-wider text-muted mb-2">Ingredients Checklist:</h6>
-                    <ul class="list-unstyled text-xs text-muted mb-0 d-flex flex-column gap-1.5">
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 24 round dumpling wrappers or gyoza skins</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1/2 lb ground chicken, turkey, or minced firm tofu</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1 cup finely shredded napa cabbage (salted & squeezed dry)</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1/2 cup grated sweet carrots</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 2 scallions, thinly sliced</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1 tbsp tamari soy sauce & 1 tsp toasted sesame oil</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1 small bowl of water (for finger sealing)</li>
+                    <ul class="list-unstyled text-xs text-muted mb-0 d-flex flex-column gap-1">
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>24 round dumpling wrappers or gyoza skins</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1/2 lb ground chicken, turkey, or minced firm tofu</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1 cup finely shredded napa cabbage (salted & squeezed dry)</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1/2 cup grated sweet carrots</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>2 scallions, thinly sliced</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1 tbsp tamari soy sauce & 1 tsp toasted sesame oil</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1 small bowl of water (for finger sealing)</label></li>
                     </ul>
                   </div>
 
                   <div class="col-md-7">
                     <h6 class="font-heading fw-bold text-xs text-uppercase tracking-wider text-muted mb-2">Step-by-Step Instructions:</h6>
-                    <ol class="text-xs text-muted ps-3 mb-0 d-flex flex-column gap-1.5">
+                    <ol class="text-xs text-muted ps-4 mb-0">
                       <li><strong>The Filling Mix:</strong> Combine protein, squeezed cabbage, carrots, scallions, and tamari in a bowl. Stir until sticky.</li>
                       <li><strong>The Water Moat:</strong> Place 1 tsp filling in wrapper center. Dip finger in water and trace the outer circular edge.</li>
                       <li><strong>The Fold:</strong> Choose your style! Fold in half and press with fork tines (Pierogi) or accordion pleat the top edge (Gyoza).</li>
@@ -260,31 +260,35 @@
               </div>
               <div class="d-flex align-items-center gap-2">
                 <span class="text-xs text-muted fw-bold">Share:</span>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://littlechefsacademy.com/pages/blog-global-dumplings.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-round text-muted hover:text-primary" title="Share on Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/intent/tweet?text=Global Dumpling Folds&url=https://littlechefsacademy.com/pages/blog-global-dumplings.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-round text-muted hover:text-primary" title="Share on X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://pinterest.com/pin/create/button/?url=https://littlechefsacademy.com/pages/blog-global-dumplings.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-round text-muted hover:text-primary" title="Pin on Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-                <button type="button" class="btn btn-sm btn-icon-round text-muted hover:text-primary" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" title="Copy Article Link"><i class="fa-solid fa-link"></i></button>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://littlechefsacademy.com/pages/blog-global-dumplings.html" target="_blank" rel="noopener noreferrer" class="article-share-btn" title="Share on Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/intent/tweet?text=Global Dumpling Folds&url=https://littlechefsacademy.com/pages/blog-global-dumplings.html" target="_blank" rel="noopener noreferrer" class="article-share-btn" title="Share on X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://pinterest.com/pin/create/button/?url=https://littlechefsacademy.com/pages/blog-global-dumplings.html" target="_blank" rel="noopener noreferrer" class="article-share-btn" title="Pin on Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                <button type="button" class="article-share-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" title="Copy Article Link"><i class="fa-solid fa-link"></i></button>
               </div>
             </div>
 
             <!-- Previous / Next Navigation Bar -->
             <div class="row g-3 mb-5">
               <div class="col-sm-6">
-                <a href="blog-emulsions.html" class="custom-card p-3 border h-100 text-decoration-none d-flex align-items-center gap-2 hover:bg-subtle transition-all">
-                  <i class="fa-solid fa-arrow-left text-primary"></i>
-                  <div>
-                    <span class="text-xs text-muted d-block">&larr; Previous Guide</span>
+                <a href="blog-emulsions.html" class="custom-card blog-nav-card p-3 border hover:bg-subtle gap-3">
+                  <div class="rounded-full bg-primary/10 text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <span class="text-xs text-muted d-block">Previous Guide</span>
                     <strong class="text-xs text-dark dark:text-white line-clamp-1">The Magic of Emulsions</strong>
                   </div>
                 </a>
               </div>
               <div class="col-sm-6 text-end">
-                <a href="blog-secret-brownies.html" class="custom-card p-3 border h-100 text-decoration-none d-flex align-items-center justify-content-end gap-2 hover:bg-subtle transition-all">
-                  <div>
-                    <span class="text-xs text-muted d-block">Next Guide &rarr;</span>
+                <a href="blog-secret-brownies.html" class="custom-card blog-nav-card p-3 border hover:bg-subtle justify-content-end text-end gap-3">
+                  <div class="min-w-0 text-end">
+                    <span class="text-xs text-muted d-block">Next Guide</span>
                     <strong class="text-xs text-dark dark:text-white line-clamp-1">Secret Ingredient Brownies</strong>
                   </div>
-                  <i class="fa-solid fa-arrow-right text-primary"></i>
+                  <div class="rounded-full bg-primary/10 text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
                 </a>
               </div>
             </div>
@@ -298,28 +302,32 @@
 
 
               <div class="custom-card p-3 mb-3 border bg-subtle">
-                <div class="d-flex justify-content-between align-items-center mb-1.5">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="w-7 h-7 rounded-full bg-primary/20 text-primary d-flex align-items-center justify-content-center text-xs fw-bold">KR</div>
-                    <strong class="text-xs font-heading">Kavita Rao</strong>
+                <div class="d-flex gap-3">
+                  <div class="blog-comment-avatar bg-primary/20 text-primary">KR</div>
+                  <div class="flex-grow-1 min-w-0">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <strong class="text-xs font-heading text-dark dark:text-white">Kavita Rao</strong>
+                      <span class="text-xs text-muted flex-shrink-0 ms-2"><i class="fa-regular fa-clock me-1"></i> 2 weeks ago</span>
+                    </div>
+                    <p class="text-xs text-muted mb-0 leading-relaxed">
+                      "Making dumplings as a family was the most fun we've had on a Friday night in months. The fork press method was perfect for my 5-year-old."
+                    </p>
                   </div>
-                  <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 2 weeks ago</span>
                 </div>
-                <p class="text-xs text-muted mb-0">
-                  "Making dumplings as a family was the most fun we've had on a Friday night in months. The fork press method was perfect for my 5-year-old."
-                </p>
               </div>
               <div class="custom-card p-3 mb-3 border bg-subtle">
-                <div class="d-flex justify-content-between align-items-center mb-1.5">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="w-7 h-7 rounded-full bg-primary/20 text-primary d-flex align-items-center justify-content-center text-xs fw-bold">CP</div>
-                    <strong class="text-xs font-heading">Chef Priya Patel</strong>
+                <div class="d-flex gap-3">
+                  <div class="blog-comment-avatar bg-primary/20 text-primary">CP</div>
+                  <div class="flex-grow-1 min-w-0">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <strong class="text-xs font-heading text-dark dark:text-white">Chef Priya Patel</strong>
+                      <span class="text-xs text-muted flex-shrink-0 ms-2"><i class="fa-regular fa-clock me-1"></i> 2 weeks ago</span>
+                    </div>
+                    <p class="text-xs text-muted mb-0 leading-relaxed">
+                      "The secret is squeezing all moisture out of the shredded cabbage first so wrappers don't get soggy. Enjoy rolling!"
+                    </p>
                   </div>
-                  <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 2 weeks ago</span>
                 </div>
-                <p class="text-xs text-muted mb-0">
-                  "The secret is squeezing all moisture out of the shredded cabbage first so wrappers don't get soggy. Enjoy rolling!"
-                </p>
               </div>
 
               <!-- Leave a Comment Form -->
@@ -359,7 +367,7 @@
               <div class="mb-3 pb-3 border-bottom">
                 <form action="blog.html" method="GET" class="position-relative">
                   <input type="search" name="q" class="form-control form-control-sm rounded-pill pe-5 text-xs" placeholder="Search guides & recipes...">
-                  <button type="submit" class="btn btn-link position-absolute end-0 top-0 bottom-0 text-muted hover:text-primary px-3" aria-label="Search">
+                  <button type="submit" class="btn btn-link position-absolute end-0 top-0 bottom-0 text-muted hover:text-primary px-3 d-flex align-items-center justify-content-center text-decoration-none" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass text-xs"></i>
                   </button>
                 </form>
@@ -419,29 +427,29 @@
               <!-- Trending Guides -->
               <div class="mb-3 pb-3 border-bottom">
                 <h6 class="font-heading fw-bold mb-2.5 fs-6"><i class="fa-solid fa-fire text-danger me-1.5"></i> Trending Guides</h6>
-                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1200&q=80" alt="Secret Ingredient Brownies" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
-                    <div>
-                      <a href="blog-secret-brownies.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug">
+                <ul class="list-unstyled mb-0 d-flex flex-column gap-2.5">
+                  <li class="d-flex align-items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1200&q=80" alt="Secret Ingredient Brownies" class="rounded-lg object-cover flex-shrink-0" style="width: 48px; height: 48px;">
+                    <div class="min-w-0">
+                      <a href="blog-secret-brownies.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug mb-1">
                         Secret Ingredient Brownies: How Black Beans Create Fudgy Magic
                       </a>
                       <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
                     </div>
                   </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80" alt="Windowsill Herb Gardening" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
-                    <div>
-                      <a href="blog-windowsill-gardening.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug">
+                  <li class="d-flex align-items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80" alt="Windowsill Herb Gardening" class="rounded-lg object-cover flex-shrink-0" style="width: 48px; height: 48px;">
+                    <div class="min-w-0">
+                      <a href="blog-windowsill-gardening.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug mb-1">
                         Windowsill Herb Gardening & Scallion Regrowing for Kids
                       </a>
                       <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
                     </div>
                   </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=1200&q=80" alt="Essential Knife Skills" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
-                    <div>
-                      <a href="blog-knife-skills.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug">
+                  <li class="d-flex align-items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=1200&q=80" alt="Essential Knife Skills" class="rounded-lg object-cover flex-shrink-0" style="width: 48px; height: 48px;">
+                    <div class="min-w-0">
+                      <a href="blog-knife-skills.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug mb-1">
                         10 Essential Kitchen Knife Skills Every Child Should Learn by Age 8
                       </a>
                       <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
@@ -490,14 +498,14 @@
               </div>
               <div class="p-3 flex-grow-1 d-flex flex-column">
                 <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 4 min read</span>
-                <h6 class="font-heading fw-bold mb-2">
+                <h6 class="font-heading fw-bold related-blog-card-title mb-2">
                   <a href="blog-secret-brownies.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
                     Secret Ingredient Brownies: How Black Beans Create Fudgy Magic
                   </a>
                 </h6>
                 <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
                   <small class="text-muted text-xs">Chef Marco Bellini</small>
-                  <a href="blog-secret-brownies.html" class="text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
+                  <a href="blog-secret-brownies.html" class="blog-card-btn text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
                 </div>
               </div>
             </div>
@@ -510,14 +518,14 @@
               </div>
               <div class="p-3 flex-grow-1 d-flex flex-column">
                 <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
-                <h6 class="font-heading fw-bold mb-2">
+                <h6 class="font-heading fw-bold related-blog-card-title mb-2">
                   <a href="blog-windowsill-gardening.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
                     Windowsill Herb Gardening & Scallion Regrowing for Kids
                   </a>
                 </h6>
                 <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
                   <small class="text-muted text-xs">Chef Liam Chen</small>
-                  <a href="blog-windowsill-gardening.html" class="text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
+                  <a href="blog-windowsill-gardening.html" class="blog-card-btn text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
                 </div>
               </div>
             </div>
@@ -530,14 +538,14 @@
               </div>
               <div class="p-3 flex-grow-1 d-flex flex-column">
                 <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
-                <h6 class="font-heading fw-bold mb-2">
+                <h6 class="font-heading fw-bold related-blog-card-title mb-2">
                   <a href="blog-knife-skills.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
                     10 Essential Kitchen Knife Skills Every Child Should Learn by Age 8
                   </a>
                 </h6>
                 <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
                   <small class="text-muted text-xs">Chef Maya Vance</small>
-                  <a href="blog-knife-skills.html" class="text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
+                  <a href="blog-knife-skills.html" class="blog-card-btn text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
                 </div>
               </div>
             </div>

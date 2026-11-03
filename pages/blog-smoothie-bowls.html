@@ -245,19 +245,19 @@
                 <div class="row g-4 mb-3">
                   <div class="col-md-5">
                     <h6 class="font-heading fw-bold text-xs text-uppercase tracking-wider text-muted mb-2">Ingredients Checklist:</h6>
-                    <ul class="list-unstyled text-xs text-muted mb-0 d-flex flex-column gap-1.5">
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1 cup frozen wild blueberries or organic strawberries</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1 ripe banana, sliced into coins and frozen</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1/2 cup steamed & chilled cauliflower florets</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1/2 small raw zucchini, peeled and sliced</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1/2 cup unsweetened oat milk or coconut water</li>
-                      <li><input type="checkbox" class="form-check-input me-1.5"> 1 tbsp pure maple syrup or local wildflower honey</li>
+                    <ul class="list-unstyled text-xs text-muted mb-0 d-flex flex-column gap-1">
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1 cup frozen wild blueberries or organic strawberries</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1 ripe banana, sliced into coins and frozen</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1/2 cup steamed & chilled cauliflower florets</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1/2 small raw zucchini, peeled and sliced</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1/2 cup unsweetened oat milk or coconut water</label></li>
+                      <li class="recipe-ingredient-item"><input type="checkbox" class="form-check-input"><label>1 tbsp pure maple syrup or local wildflower honey</label></li>
                     </ul>
                   </div>
 
                   <div class="col-md-7">
                     <h6 class="font-heading fw-bold text-xs text-uppercase tracking-wider text-muted mb-2">Step-by-Step Instructions:</h6>
-                    <ol class="text-xs text-muted ps-3 mb-0 d-flex flex-column gap-1.5">
+                    <ol class="text-xs text-muted ps-4 mb-0">
                       <li><strong>The Gravity Layer:</strong> Pour oat milk into the blender first. Add cauliflower and zucchini near the blades, then top with berries and frozen banana.</li>
                       <li><strong>The High-Power Pulse:</strong> Blend on low for 15 seconds to crush chunks, then blend on high for 45 seconds until thick and spoonable.</li>
                       <li><strong>The Mosaic Plating:</strong> Divide into chilled bowls. Arrange chia seeds, sliced kiwi, and toasted rolled oats in colorful rainbow stripes.</li>
@@ -275,31 +275,35 @@
               </div>
               <div class="d-flex align-items-center gap-2">
                 <span class="text-xs text-muted fw-bold">Share:</span>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://littlechefsacademy.com/pages/blog-smoothie-bowls.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-round text-muted hover:text-primary" title="Share on Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/intent/tweet?text=Rainbow Smoothie Bowls&url=https://littlechefsacademy.com/pages/blog-smoothie-bowls.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-round text-muted hover:text-primary" title="Share on X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://pinterest.com/pin/create/button/?url=https://littlechefsacademy.com/pages/blog-smoothie-bowls.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-round text-muted hover:text-primary" title="Pin on Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-                <button type="button" class="btn btn-sm btn-icon-round text-muted hover:text-primary" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" title="Copy Article Link"><i class="fa-solid fa-link"></i></button>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://littlechefsacademy.com/pages/blog-smoothie-bowls.html" target="_blank" rel="noopener noreferrer" class="article-share-btn" title="Share on Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/intent/tweet?text=Rainbow Smoothie Bowls&url=https://littlechefsacademy.com/pages/blog-smoothie-bowls.html" target="_blank" rel="noopener noreferrer" class="article-share-btn" title="Share on X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://pinterest.com/pin/create/button/?url=https://littlechefsacademy.com/pages/blog-smoothie-bowls.html" target="_blank" rel="noopener noreferrer" class="article-share-btn" title="Pin on Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                <button type="button" class="article-share-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" title="Copy Article Link"><i class="fa-solid fa-link"></i></button>
               </div>
             </div>
 
             <!-- Previous / Next Navigation Bar -->
             <div class="row g-3 mb-5">
               <div class="col-sm-6">
-                <a href="blog-knife-skills.html" class="custom-card p-3 border h-100 text-decoration-none d-flex align-items-center gap-2 hover:bg-subtle transition-all">
-                  <i class="fa-solid fa-arrow-left text-primary"></i>
-                  <div>
-                    <span class="text-xs text-muted d-block">&larr; Previous Guide</span>
+                <a href="blog-knife-skills.html" class="custom-card blog-nav-card p-3 border hover:bg-subtle gap-3">
+                  <div class="rounded-full bg-primary/10 text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <span class="text-xs text-muted d-block">Previous Guide</span>
                     <strong class="text-xs text-dark dark:text-white line-clamp-1">Essential Knife Skills</strong>
                   </div>
                 </a>
               </div>
               <div class="col-sm-6 text-end">
-                <a href="blog-picky-eaters.html" class="custom-card p-3 border h-100 text-decoration-none d-flex align-items-center justify-content-end gap-2 hover:bg-subtle transition-all">
-                  <div>
-                    <span class="text-xs text-muted d-block">Next Guide &rarr;</span>
+                <a href="blog-picky-eaters.html" class="custom-card blog-nav-card p-3 border hover:bg-subtle justify-content-end text-end gap-3">
+                  <div class="min-w-0 text-end">
+                    <span class="text-xs text-muted d-block">Next Guide</span>
                     <strong class="text-xs text-dark dark:text-white line-clamp-1">Picky Eaters & Food Play</strong>
                   </div>
-                  <i class="fa-solid fa-arrow-right text-primary"></i>
+                  <div class="rounded-full bg-primary/10 text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
                 </a>
               </div>
             </div>
@@ -313,28 +317,32 @@
 
 
               <div class="custom-card p-3 mb-3 border bg-subtle">
-                <div class="d-flex justify-content-between align-items-center mb-1.5">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="w-7 h-7 rounded-full bg-primary/20 text-primary d-flex align-items-center justify-content-center text-xs fw-bold">AH</div>
-                    <strong class="text-xs font-heading">Amanda Hayes (Mom to Maya, Age 5)</strong>
+                <div class="d-flex gap-3">
+                  <div class="blog-comment-avatar bg-primary/20 text-primary">AH</div>
+                  <div class="flex-grow-1 min-w-0">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <strong class="text-xs font-heading text-dark dark:text-white">Amanda Hayes (Mom to Maya, Age 5)</strong>
+                      <span class="text-xs text-muted flex-shrink-0 ms-2"><i class="fa-regular fa-clock me-1"></i> 2 days ago</span>
+                    </div>
+                    <p class="text-xs text-muted mb-0 leading-relaxed">
+                      "The steamed cauliflower trick blew my mind! My daughter ate the whole bowl and had no clue there was cauliflower in it."
+                    </p>
                   </div>
-                  <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 2 days ago</span>
                 </div>
-                <p class="text-xs text-muted mb-0">
-                  "The steamed cauliflower trick blew my mind! My daughter ate the whole bowl and had no clue there was cauliflower in it."
-                </p>
               </div>
               <div class="custom-card p-3 mb-3 border bg-subtle">
-                <div class="d-flex justify-content-between align-items-center mb-1.5">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="w-7 h-7 rounded-full bg-primary/20 text-primary d-flex align-items-center justify-content-center text-xs fw-bold">CD</div>
-                    <strong class="text-xs font-heading">Chef David Miller</strong>
+                <div class="d-flex gap-3">
+                  <div class="blog-comment-avatar bg-primary/20 text-primary">CD</div>
+                  <div class="flex-grow-1 min-w-0">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <strong class="text-xs font-heading text-dark dark:text-white">Chef David Miller</strong>
+                      <span class="text-xs text-muted flex-shrink-0 ms-2"><i class="fa-regular fa-clock me-1"></i> 4 days ago</span>
+                    </div>
+                    <p class="text-xs text-muted mb-0 leading-relaxed">
+                      "Chilling the steamed florets first is key. It completely deactivates sulfur odor and creates that soft-serve ice cream texture."
+                    </p>
                   </div>
-                  <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 4 days ago</span>
                 </div>
-                <p class="text-xs text-muted mb-0">
-                  "Chilling the steamed florets first is key. It completely deactivates sulfur odor and creates that soft-serve ice cream texture."
-                </p>
               </div>
 
               <!-- Leave a Comment Form -->
@@ -374,7 +382,7 @@
               <div class="mb-3 pb-3 border-bottom">
                 <form action="blog.html" method="GET" class="position-relative">
                   <input type="search" name="q" class="form-control form-control-sm rounded-pill pe-5 text-xs" placeholder="Search guides & recipes...">
-                  <button type="submit" class="btn btn-link position-absolute end-0 top-0 bottom-0 text-muted hover:text-primary px-3" aria-label="Search">
+                  <button type="submit" class="btn btn-link position-absolute end-0 top-0 bottom-0 text-muted hover:text-primary px-3 d-flex align-items-center justify-content-center text-decoration-none" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass text-xs"></i>
                   </button>
                 </form>
@@ -434,29 +442,29 @@
               <!-- Trending Guides -->
               <div class="mb-3 pb-3 border-bottom">
                 <h6 class="font-heading fw-bold mb-2.5 fs-6"><i class="fa-solid fa-fire text-danger me-1.5"></i> Trending Guides</h6>
-                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80" alt="Picky Eaters & Food Play" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
-                    <div>
-                      <a href="blog-picky-eaters.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug">
+                <ul class="list-unstyled mb-0 d-flex flex-column gap-2.5">
+                  <li class="d-flex align-items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80" alt="Picky Eaters & Food Play" class="rounded-lg object-cover flex-shrink-0" style="width: 48px; height: 48px;">
+                    <div class="min-w-0">
+                      <a href="blog-picky-eaters.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug mb-1">
                         The "One Bite Rule" vs. "Sensory Food Play" for Picky Eaters
                       </a>
                       <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 3 min read</span>
                     </div>
                   </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80" alt="Pan Pizzas & Fractions" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
-                    <div>
-                      <a href="blog-personal-pan-pizzas.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug">
+                  <li class="d-flex align-items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80" alt="Pan Pizzas & Fractions" class="rounded-lg object-cover flex-shrink-0" style="width: 48px; height: 48px;">
+                    <div class="min-w-0">
+                      <a href="blog-personal-pan-pizzas.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug mb-1">
                         Fluffy Personal Pan Pizzas: Teaching Kneading & Fractions
                       </a>
                       <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
                     </div>
                   </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt="Stove & Heat Readiness" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
-                    <div>
-                      <a href="blog-stove-safety.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug">
+                  <li class="d-flex align-items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt="Stove & Heat Readiness" class="rounded-lg object-cover flex-shrink-0" style="width: 48px; height: 48px;">
+                    <div class="min-w-0">
+                      <a href="blog-stove-safety.html" class="text-xs fw-bold text-dark dark:text-white hover:text-primary text-decoration-none d-block leading-snug mb-1">
                         The Stove & Oven Transition: Readiness Checklist for Real Heat
                       </a>
                       <span class="text-xs text-muted"><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
@@ -505,14 +513,14 @@
               </div>
               <div class="p-3 flex-grow-1 d-flex flex-column">
                 <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 3 min read</span>
-                <h6 class="font-heading fw-bold mb-2">
+                <h6 class="font-heading fw-bold related-blog-card-title mb-2">
                   <a href="blog-picky-eaters.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
                     The "One Bite Rule" vs. "Sensory Food Play" for Picky Eaters
                   </a>
                 </h6>
                 <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
                   <small class="text-muted text-xs">Chef Maya Vance</small>
-                  <a href="blog-picky-eaters.html" class="text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
+                  <a href="blog-picky-eaters.html" class="blog-card-btn text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
                 </div>
               </div>
             </div>
@@ -525,14 +533,14 @@
               </div>
               <div class="p-3 flex-grow-1 d-flex flex-column">
                 <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
-                <h6 class="font-heading fw-bold mb-2">
+                <h6 class="font-heading fw-bold related-blog-card-title mb-2">
                   <a href="blog-personal-pan-pizzas.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
                     Fluffy Personal Pan Pizzas: Teaching Kneading & Fractions
                   </a>
                 </h6>
                 <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
                   <small class="text-muted text-xs">Chef Marco Bellini</small>
-                  <a href="blog-personal-pan-pizzas.html" class="text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
+                  <a href="blog-personal-pan-pizzas.html" class="blog-card-btn text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
                 </div>
               </div>
             </div>
@@ -545,14 +553,14 @@
               </div>
               <div class="p-3 flex-grow-1 d-flex flex-column">
                 <span class="text-xs text-muted mb-1"><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
-                <h6 class="font-heading fw-bold mb-2">
+                <h6 class="font-heading fw-bold related-blog-card-title mb-2">
                   <a href="blog-stove-safety.html" class="text-dark dark:text-white hover:text-primary text-decoration-none">
                     The Stove & Oven Transition: Readiness Checklist for Real Heat
                   </a>
                 </h6>
                 <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
                   <small class="text-muted text-xs">Chef Maya Vance</small>
-                  <a href="blog-stove-safety.html" class="text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
+                  <a href="blog-stove-safety.html" class="blog-card-btn text-primary fw-bold text-xs hover:underline text-decoration-none">Read &rarr;</a>
                 </div>
               </div>
             </div>
