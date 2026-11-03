@@ -2344,3 +2344,24 @@
   color: #34D399 !important;
 }
 
+/* Blog Detail Page Social Share & Component Dark Mode */
+[data-theme="dark"] .article-share-btn {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .article-share-btn i {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .article-share-btn:hover {
+  background: rgba(255, 94, 54, 0.2) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] .article-share-btn:hover i {
+  color: var(--color-primary) !important;
+}
+
