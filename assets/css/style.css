@@ -5078,6 +5078,31 @@ div[style*="bottom:16px; left:16px;"] {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
 }
 
+/* Card Badge Header & Metadata Alignment */
+.custom-card .d-flex.justify-content-between {
+  flex-wrap: wrap !important;
+  gap: 8px 12px !important;
+}
+
+.custom-card .d-flex.justify-content-between > span.text-muted,
+.custom-card .d-flex.justify-content-between > span.text-xs,
+.custom-card .d-flex.justify-content-between > span {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Hands-on Lab Experiment Cards */
+.custom-card.border-2.border-amber-500\/20,
+.custom-card.bg-amber-50\/20 {
+  background-color: rgba(254, 243, 199, 0.35) !important;
+}
+
+[data-theme="dark"] .custom-card.border-2.border-amber-500\/20,
+[data-theme="dark"] .custom-card.dark\:bg-amber-950\/20 {
+  background-color: rgba(69, 26, 3, 0.25) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
 /* ==========================================================================
    BLOG DETAIL PAGES RESPONSIVE SUITE (ALL VIEWPORTS & DEVICES)
    ========================================================================== */
