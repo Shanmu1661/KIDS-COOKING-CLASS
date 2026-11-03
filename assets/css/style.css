@@ -5063,6 +5063,223 @@ aside .border-bottom ul.list-unstyled li.d-flex a {
   margin-bottom: 3px !important;
 }
 
+/* Hero Camera Badge Base & Dark Mode */
+div[style*="bottom: 16px; left: 16px;"],
+div[style*="bottom:16px; left:16px;"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+}
+
+[data-theme="dark"] div[style*="bottom: 16px; left: 16px;"],
+[data-theme="dark"] div[style*="bottom:16px; left:16px;"] {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* ==========================================================================
+   BLOG DETAIL PAGES RESPONSIVE SUITE (ALL VIEWPORTS & DEVICES)
+   ========================================================================== */
+
+/* 1. Universal Page Header Banner & Sticky Sidebar Responsive Scaling (Tablet & Mobile) */
+@media (max-width: 991.98px) {
+  .page-header-banner,
+  .page-header-banner.banner-services,
+  .page-header-banner.banner-blog {
+    min-height: 290px !important;
+    height: auto !important;
+    padding: 55px 0 60px !important;
+  }
+
+  .page-header-banner .section-title,
+  .page-header-banner .hero-title,
+  .page-header-banner h1,
+  .page-header-banner h2 {
+    font-size: clamp(1.75rem, 4.5vw, 2.6rem) !important;
+  }
+
+  /* De-stickify sidebar on tablets & mobiles to prevent sticky overlap */
+  aside.service-booking-card,
+  .service-booking-card[style*="sticky"] {
+    position: static !important;
+    top: auto !important;
+    margin-top: 2.5rem !important;
+    z-index: auto !important;
+  }
+
+  /* Responsive Hero Image Height */
+  div[style*="height: 400px;"],
+  div[style*="height:400px;"],
+  .blog-hero-image-wrapper {
+    height: 320px !important;
+  }
+}
+
+/* 2. Responsive Mobile Landscape & Large Mobile (< 768px) */
+@media (max-width: 767.98px) {
+  .page-header-banner,
+  .page-header-banner.banner-services,
+  .page-header-banner.banner-blog {
+    min-height: 230px !important;
+    padding: 40px 0 44px !important;
+  }
+
+  .page-header-banner .section-title,
+  .page-header-banner .hero-title,
+  .page-header-banner h1,
+  .page-header-banner h2 {
+    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+    word-break: break-word;
+  }
+
+  .page-breadcrumb-pill {
+    padding: 6px 14px !important;
+    font-size: 0.82rem !important;
+    max-width: 100% !important;
+  }
+
+  .page-breadcrumb-pill .breadcrumb-current {
+    max-width: 150px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+
+  /* Hero Image Height */
+  div[style*="height: 400px;"],
+  div[style*="height:400px;"],
+  .blog-hero-image-wrapper {
+    height: 240px !important;
+  }
+
+  /* In-Article 2-Column Images */
+  div[style*="height: 220px;"],
+  div[style*="height:220px;"] {
+    height: 200px !important;
+  }
+
+  /* Hero Camera Badge */
+  div[style*="bottom: 16px; left: 16px;"] {
+    bottom: 12px !important;
+    left: 12px !important;
+    max-width: calc(100% - 24px) !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 0.72rem !important;
+    padding: 4px 10px !important;
+  }
+
+  div[style*="bottom: 16px; left: 16px;"] span {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+
+  /* Recipe Spotlight & Experiment Cards */
+  .custom-card.border-2.border-amber-500\/20 {
+    padding: 20px 16px !important;
+  }
+}
+
+/* 3. Responsive Mobile Portrait (< 576px) */
+@media (max-width: 575.98px) {
+  .page-header-banner,
+  .page-header-banner.banner-services,
+  .page-header-banner.banner-blog {
+    min-height: 195px !important;
+    padding: 30px 0 34px !important;
+  }
+
+  .page-header-banner .section-title,
+  .page-header-banner .hero-title,
+  .page-header-banner h1,
+  .page-header-banner h2 {
+    font-size: clamp(1.28rem, 5.5vw, 1.75rem) !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .page-breadcrumb-pill {
+    padding: 5px 10px !important;
+    font-size: 0.75rem !important;
+    gap: 6px !important;
+  }
+
+  .page-breadcrumb-pill .breadcrumb-current {
+    max-width: 110px !important;
+  }
+
+  .page-header-banner .text-muted.text-xs {
+    gap: 6px 8px !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Hero Image Height on Mobile Phones */
+  div[style*="height: 400px;"],
+  div[style*="height:400px;"],
+  .blog-hero-image-wrapper {
+    height: 200px !important;
+    border-radius: 12px !important;
+  }
+
+  /* In-Article 2-Column Images on Mobile */
+  div[style*="height: 220px;"],
+  div[style*="height:220px;"] {
+    height: 175px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Full Width Print Recipe Button on Mobile */
+  .custom-card .btn-outline-custom {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Blog Navigation Prev/Next Cards */
+  .blog-nav-card {
+    padding: 12px 14px !important;
+  }
+
+  .blog-nav-card strong {
+    font-size: 0.8rem !important;
+  }
+
+  /* Blog Comment Avatars */
+  .blog-comment-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Prevent Footer Row Gutter Horizontal Overflow */
+  .row.g-5 {
+    --bs-gutter-x: 1.25rem !important;
+    --bs-gutter-y: 1.75rem !important;
+  }
+}
+
+/* 4. Ultra-Compact Mobile Phones (< 380px) */
+@media (max-width: 380px) {
+  .page-breadcrumb-pill .breadcrumb-current {
+    max-width: 85px !important;
+  }
+
+  div[style*="height: 400px;"],
+  div[style*="height:400px;"],
+  .blog-hero-image-wrapper {
+    height: 180px !important;
+  }
+}
+
 
 
 /* --------------------------------------------------------------------------
