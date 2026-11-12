@@ -576,7 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
           desc: 'Fun sensory cookie decorating party with pre-baked treats, colorful sprinkles, and chef hats for all little guests.',
           price: 'From $380',
           link: 'service-birthday-parties.html',
-          img: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80',
+          img: '../assets/images/birthday_cooking_party.jpg',
           icon: 'fa-solid fa-cake-candles',
           iconClass: 'bg-purple-100 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400',
           meta: [
