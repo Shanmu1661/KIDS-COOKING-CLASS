@@ -1570,6 +1570,17 @@
   border-color: #334155 !important;
 }
 
+[data-theme="dark"] .recipe-spotlight-badge {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .recipe-spotlight-badge .badge-text {
+  color: #F8FAFC !important;
+}
+
 /* Enhanced Dashboard Dark Mode */
 [data-theme="dark"] .dashboard-feature-section {
   background-color: #070d17 !important;
