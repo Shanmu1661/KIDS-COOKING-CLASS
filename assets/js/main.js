@@ -1035,46 +1035,170 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // HERO KIDS COOKING VIDEO CONTROLLER
+  // DEDICATED KIDS COOKING VIDEO CONTROLLER
   // -------------------------------------------------------------------------
-  const heroVideo = document.getElementById('heroCookingVideo');
+  const studioVideo = document.getElementById('studioCookingVideo') || document.getElementById('heroCookingVideo');
+  const studioPlayPauseBtn = document.getElementById('studioPlayPauseBtn');
+  const studioMuteBtn = document.getElementById('studioMuteBtn');
+  const studioFullscreenBtn = document.getElementById('studioFullscreenBtn');
+  const studioSceneText = document.getElementById('videoCurrentSceneText');
+  const studioCapsules = document.querySelectorAll('.scene-switcher-capsule .capsule-btn');
 
-  if (heroVideo) {
+  if (studioVideo) {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Respect user motion preference
     if (prefersReducedMotion) {
-      heroVideo.pause();
+      studioVideo.pause();
+      if (studioPlayPauseBtn) {
+        studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        studioPlayPauseBtn.setAttribute('aria-label', 'Play Video');
+      }
     } else {
-      const playPromise = heroVideo.play();
+      const playPromise = studioVideo.play();
       if (playPromise !== undefined) {
-        playPromise.catch(() => {});
+        playPromise.catch(() => {
+          if (studioPlayPauseBtn) {
+            studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            studioPlayPauseBtn.setAttribute('aria-label', 'Play Video');
+          }
+        });
       }
     }
 
-    // Click anywhere on video to toggle play/pause
-    heroVideo.style.cursor = 'pointer';
-    heroVideo.addEventListener('click', () => {
-      if (heroVideo.paused || heroVideo.ended) {
-        heroVideo.play().catch(() => {});
+    // Play/Pause button
+    if (studioPlayPauseBtn) {
+      studioPlayPauseBtn.addEventListener('click', () => {
+        if (studioVideo.paused || studioVideo.ended) {
+          studioVideo.play().then(() => {
+            studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            studioPlayPauseBtn.setAttribute('aria-label', 'Pause Video');
+          }).catch(() => {});
+        } else {
+          studioVideo.pause();
+          studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+          studioPlayPauseBtn.setAttribute('aria-label', 'Play Video');
+        }
+      });
+    }
+
+    // Direct click on video to toggle
+    studioVideo.style.cursor = 'pointer';
+    studioVideo.addEventListener('click', () => {
+      if (studioVideo.paused || studioVideo.ended) {
+        studioVideo.play().then(() => {
+          if (studioPlayPauseBtn) {
+            studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            studioPlayPauseBtn.setAttribute('aria-label', 'Pause Video');
+          }
+        }).catch(() => {});
       } else {
-        heroVideo.pause();
+        studioVideo.pause();
+        if (studioPlayPauseBtn) {
+          studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+          studioPlayPauseBtn.setAttribute('aria-label', 'Play Video');
+        }
       }
+    });
+
+    // Mute / Unmute
+    if (studioMuteBtn) {
+      studioMuteBtn.addEventListener('click', () => {
+        studioVideo.muted = !studioVideo.muted;
+        if (studioVideo.muted) {
+          studioMuteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+          studioMuteBtn.setAttribute('aria-label', 'Unmute Sound');
+        } else {
+          studioVideo.volume = 1.0;
+          studioMuteBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+          studioMuteBtn.setAttribute('aria-label', 'Mute Sound');
+        }
+      });
+    }
+
+    // Fullscreen
+    if (studioFullscreenBtn) {
+      studioFullscreenBtn.addEventListener('click', () => {
+        const stage = studioVideo.closest('.video-stage') || studioVideo;
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+          if (stage.requestFullscreen) {
+            stage.requestFullscreen().catch(() => studioVideo.requestFullscreen());
+          } else if (studioVideo.webkitEnterFullscreen) {
+            studioVideo.webkitEnterFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          }
+        }
+      });
+
+      document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement) {
+          studioFullscreenBtn.innerHTML = '<i class="fa-solid fa-compress"></i>';
+          studioFullscreenBtn.setAttribute('aria-label', 'Exit Fullscreen');
+        } else {
+          studioFullscreenBtn.innerHTML = '<i class="fa-solid fa-expand"></i>';
+          studioFullscreenBtn.setAttribute('aria-label', 'View Fullscreen');
+        }
+      });
+    }
+
+    // Scene Switcher Capsules
+    studioCapsules.forEach(capsule => {
+      capsule.addEventListener('click', () => {
+        studioCapsules.forEach(c => {
+          c.classList.remove('active');
+          c.setAttribute('aria-selected', 'false');
+        });
+        capsule.classList.add('active');
+        capsule.setAttribute('aria-selected', 'true');
+
+        const videoSrc = capsule.getAttribute('data-video');
+        const sceneTitle = capsule.getAttribute('data-title') || 'Kitchen In Action';
+
+        if (videoSrc) {
+          studioVideo.style.opacity = '0.5';
+          studioVideo.src = videoSrc;
+          studioVideo.load();
+          studioVideo.play().then(() => {
+            studioVideo.style.opacity = '1';
+            if (studioPlayPauseBtn) {
+              studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+              studioPlayPauseBtn.setAttribute('aria-label', 'Pause Video');
+            }
+          }).catch(() => {
+            studioVideo.style.opacity = '1';
+          });
+
+          if (studioSceneText) {
+            studioSceneText.innerHTML = `${sceneTitle} &bull; Live Action`;
+          }
+        }
+      });
     });
 
     // Auto-pause when scrolled out of view to preserve device performance
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (!entry.isIntersecting && !heroVideo.paused) {
-            heroVideo.pause();
-          } else if (entry.isIntersecting && heroVideo.paused && !prefersReducedMotion) {
-            heroVideo.play().catch(() => {});
+          if (!entry.isIntersecting && !studioVideo.paused) {
+            studioVideo.pause();
+            if (studioPlayPauseBtn) {
+              studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+              studioPlayPauseBtn.setAttribute('aria-label', 'Play Video');
+            }
+          } else if (entry.isIntersecting && studioVideo.paused && !prefersReducedMotion) {
+            studioVideo.play().then(() => {
+              if (studioPlayPauseBtn) {
+                studioPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                studioPlayPauseBtn.setAttribute('aria-label', 'Pause Video');
+              }
+            }).catch(() => {});
           }
         });
       }, { threshold: 0.25 });
 
-      observer.observe(heroVideo);
+      observer.observe(studioVideo);
     }
   }
 
