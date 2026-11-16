@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="grad-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="#FFF7ED" stroke="url(#grad-gold)" stroke-width="2.5" filter="url(#shadow)"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#FDBA74" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="60" cy="60" r="42" fill="url(#grad-orange)"/>
+  <g transform="translate(60, 51) scale(0.95)">
+    <rect x="-14" y="-13" width="28" height="34" rx="4" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="-8" y="-16" width="16" height="6" rx="2" fill="#F59E0B"/>
+    <path d="M-6 4 L-1 9 L8 -2" fill="none" stroke="#EA580C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="-8" y1="-5" x2="8" y2="-5" stroke="#FED7AA" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(60, 88)">
+    <rect x="-38" y="-8" width="76" height="16" rx="8" fill="url(#grad-gold)" filter="url(#shadow)"/>
+    <text x="0" y="3.5" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="800" fill="#78350F" text-anchor="middle" letter-spacing="0.5">SERVSAFE</text>
+  </g>
+  <polygon points="60,20 62,24 66,24 63,27 64,31 60,28 56,31 57,27 54,24 58,24" fill="#FDE68A"/>
+</svg>

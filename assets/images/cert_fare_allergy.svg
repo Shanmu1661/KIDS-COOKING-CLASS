@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow-g" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="#ECFDF5" stroke="url(#grad-emerald)" stroke-width="2.5" filter="url(#shadow-g)"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#A7F3D0" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="60" cy="60" r="42" fill="url(#grad-green)"/>
+  <g transform="translate(60, 50) scale(0.98)">
+    <path d="M0 -15 C10 -15 16 -10 16 0 C16 12 8 20 0 24 C-8 20 -16 12 -16 0 C-16 -10 -10 -15 0 -15 Z" fill="#FFFFFF" filter="url(#shadow-g)"/>
+    <path d="M-5 3 L-1 7 L7 -2" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0 -9 C3 -7 5 -4 5 -1 C3 -1 1 -3 0 -9 Z" fill="#10B981"/>
+    <path d="M0 -9 C-3 -7 -5 -4 -5 -1 C-3 -1 -1 -3 0 -9 Z" fill="#34D399"/>
+  </g>
+  <g transform="translate(60, 88)">
+    <rect x="-38" y="-8" width="76" height="16" rx="8" fill="#A7F3D0" filter="url(#shadow-g)"/>
+    <text x="0" y="3.5" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="800" fill="#065F46" text-anchor="middle" letter-spacing="0.5">FARE ALLERGY</text>
+  </g>
+  <polygon points="60,20 62,24 66,24 63,27 64,31 60,28 56,31 57,27 54,24 58,24" fill="#A7F3D0"/>
+</svg>
