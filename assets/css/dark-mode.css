@@ -2208,14 +2208,20 @@
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  opacity: 0.28 !important;
-  filter: brightness(0.65) contrast(1.15) !important;
+  opacity: 0.52 !important;
+  filter: brightness(0.70) contrast(1.15) !important;
 }
 
 [data-theme="dark"] .home2-facility-section::after {
-  background: linear-gradient(135deg, rgba(7, 13, 23, 0.94) 0%, rgba(10, 16, 28, 0.88) 50%, rgba(7, 13, 23, 0.92) 100%),
+  background: linear-gradient(180deg, rgba(7, 13, 23, 0.86) 0%, rgba(10, 16, 28, 0.65) 50%, rgba(7, 13, 23, 0.86) 100%),
               radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.10) 0%, transparent 60%) !important;
   opacity: 1 !important;
+}
+
+[data-theme="dark"] .home2-facility-header {
+  background: rgba(15, 23, 42, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
 }
 
 [data-theme="dark"] .home2-facility-section .section-title {
@@ -2228,7 +2234,7 @@
 }
 
 [data-theme="dark"] .facility-feature-item {
-  background: rgba(30, 41, 59, 0.88) !important;
+  background: rgba(30, 41, 59, 0.90) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
 }
