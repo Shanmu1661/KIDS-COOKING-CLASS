@@ -215,10 +215,80 @@
             </div>
           </div>
 
-          <!-- Hero Media -->
+          <!-- Hero Media Video Section -->
           <div class="col-lg-6">
-            <div class="hero-image-wrapper">
-              <img src="../assets/images/home_hero_cooking_class.jpg" alt="Children joyfully participating in hands-on cooking classes at Little Chefs Academy" class="hero-main-img" width="600" height="480">
+            <div class="hero-image-wrapper hero-video-wrapper">
+              <div class="hero-video-container">
+                <video id="heroCookingVideo" 
+                       class="hero-main-video" 
+                       width="600" 
+                       height="480" 
+                       autoplay 
+                       muted 
+                       loop 
+                       playsinline 
+                       preload="auto"
+                       poster="../assets/images/home_hero_cooking_class.jpg"
+                       aria-label="Video of children joyfully participating in hands-on cooking classes at Little Chefs Academy">
+                  <source src="../assets/videos/two_girls_baking.mp4" type="video/mp4">
+                  <source src="../assets/videos/kids_cooking_hero.mp4" type="video/mp4">
+                  <source src="../assets/videos/kids_making_dough.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video playback.
+                </video>
+
+                <!-- In-Kitchen Live Video Status Pill -->
+                <div class="hero-video-badge" id="heroVideoStatus">
+                  <span class="live-dot" aria-hidden="true"></span>
+                  <span class="video-badge-text">Kids In The Kitchen &bull; Live Fun</span>
+                </div>
+
+                <!-- Video Controls (Play/Pause, Sound, Fullscreen) -->
+                <div class="hero-video-controls" role="group" aria-label="Hero video playback controls">
+                  <button type="button" class="hero-video-btn" id="heroPlayPauseBtn" title="Pause / Play Video" aria-label="Pause Video">
+                    <i class="fa-solid fa-pause"></i>
+                  </button>
+                  <button type="button" class="hero-video-btn" id="heroMuteBtn" title="Unmute / Mute Sound" aria-label="Unmute Video">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                  </button>
+                  <button type="button" class="hero-video-btn" id="heroFullscreenBtn" title="View Fullscreen" aria-label="View Fullscreen">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
+
+                <!-- Scene Switcher Pills -->
+                <div class="hero-video-scenes" role="tablist" aria-label="Cooking activities video switcher">
+                  <button type="button" class="scene-pill active" data-video="../assets/videos/two_girls_baking.mp4" data-title="Baking Cookies Together" aria-selected="true" role="tab">
+                    <i class="fa-solid fa-cookie-bite text-warning"></i> Baking Fun
+                  </button>
+                  <button type="button" class="scene-pill" data-video="../assets/videos/kids_cooking_hero.mp4" data-title="Whisking & Mixing Bowls" aria-selected="false" role="tab">
+                    <i class="fa-solid fa-blender text-info"></i> Mixing Bowl
+                  </button>
+                  <button type="button" class="scene-pill" data-video="../assets/videos/kids_making_dough.mp4" data-title="Hands-On Dough Kneading" aria-selected="false" role="tab">
+                    <i class="fa-solid fa-bread-slice text-primary"></i> Pizza Dough
+                  </button>
+                </div>
+              </div>
+
+              <!-- Floating Interactive Badges -->
+              <div class="floating-badge floating-badge-1 d-none d-sm-flex">
+                <div class="floating-badge-icon bg-warning-subtle text-warning">
+                  <i class="fa-solid fa-fire-burner"></i>
+                </div>
+                <div>
+                  <div class="fw-bold text-sm">100% Hands-On</div>
+                  <small class="text-muted">Real cooking tools</small>
+                </div>
+              </div>
+
+              <div class="floating-badge floating-badge-2 d-none d-sm-flex">
+                <div class="floating-badge-icon bg-success-subtle text-success">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                  <div class="fw-bold text-sm">Chef Certified</div>
+                  <small class="text-muted">Kid-safe stations</small>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -245,7 +315,6 @@
                 <div class="class-card-badges">
                   <span class="badge-pill badge-age">Ages 3 – 5</span>
                 </div>
-                <div class="class-card-price">$45</div>
               </div>
               <div class="class-card-body">
                 <h4 class="font-heading fw-bold class-card-title">Tiny Tasters</h4>
@@ -270,7 +339,6 @@
                   <span class="badge-pill badge-age">Ages 6 – 9</span>
                   <span class="badge-pill badge-featured">Popular</span>
                 </div>
-                <div class="class-card-price">$55</div>
               </div>
               <div class="class-card-body">
                 <h4 class="font-heading fw-bold class-card-title">Little Chefs</h4>
@@ -294,7 +362,6 @@
                 <div class="class-card-badges">
                   <span class="badge-pill badge-age">Ages 10 – 13</span>
                 </div>
-                <div class="class-card-price">$65</div>
               </div>
               <div class="class-card-body">
                 <h4 class="font-heading fw-bold class-card-title">Junior Gourmet</h4>
@@ -318,7 +385,6 @@
                 <div class="class-card-badges">
                   <span class="badge-pill badge-age">Ages 14 – 17</span>
                 </div>
-                <div class="class-card-price">$75</div>
               </div>
               <div class="class-card-body">
                 <h4 class="font-heading fw-bold class-card-title">Teen Masterclass</h4>
