@@ -1046,6 +1046,10 @@
   padding: 1.5rem 1.25rem !important;
 }
 
+[data-theme="dark"] .learning-pillars-bg-section .custom-card.pillar-card {
+  padding: 0 !important;
+}
+
 [data-theme="dark"] .learning-pillars-bg-section .custom-card:hover {
   transform: translateY(-5px) !important;
   border-color: #FF5E36 !important;
