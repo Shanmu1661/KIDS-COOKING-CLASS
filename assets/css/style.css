@@ -7671,6 +7671,41 @@ img, svg, video, canvas, iframe {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12) !important;
 }
 
+.little-chefs-method-section .method-card {
+  padding: 0 !important;
+  border-radius: var(--radius-xl) !important;
+  overflow: hidden !important;
+}
+
+.method-card-img-wrapper {
+  position: relative;
+  height: 190px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-subtle);
+  flex-shrink: 0;
+}
+
+.method-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.method-card:hover .method-card-img {
+  transform: scale(1.08);
+}
+
+.method-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+}
+
 /* ==========================================================================
    HOME 2 - PURPOSE-BUILT FACILITY & AMENITIES SECTION
    ========================================================================== */
