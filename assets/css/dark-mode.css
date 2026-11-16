@@ -1185,6 +1185,10 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
+[data-theme="dark"] .class-amenities-bg-section .custom-card.amenity-card {
+  padding: 0 !important;
+}
+
 [data-theme="dark"] .class-amenities-bg-section .custom-card h4 {
   color: #F8FAFC !important;
 }

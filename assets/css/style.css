@@ -3605,6 +3605,35 @@ a:hover {
   border-color: rgba(var(--color-primary-rgb), 0.5);
 }
 
+/* Class Amenities Card Image Styling */
+.class-amenities-bg-section .custom-card.amenity-card {
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: var(--radius-xl, 20px) !important;
+}
+
+.class-amenities-bg-section .amenity-card-img-wrapper {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-subtle, #f8fafc);
+  flex-shrink: 0;
+}
+
+.class-amenities-bg-section .amenity-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.class-amenities-bg-section .custom-card.amenity-card:hover .amenity-card-img {
+  transform: scale(1.08);
+}
+
 /* Studio Tour / Registration CTA Banner */
 .cta-banner-section {
   position: relative;
