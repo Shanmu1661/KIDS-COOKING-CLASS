@@ -6223,8 +6223,12 @@ div[style*="bottom:16px; left:16px;"] {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 253, 249, 0.72) 0%, rgba(255, 253, 249, 0.54) 48%, rgba(255, 253, 249, 0.22) 100%),
-              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 60%);
+  background: linear-gradient(90deg, 
+    rgba(255, 253, 249, 0.94) 0%, 
+    rgba(255, 253, 249, 0.88) 35%, 
+    rgba(255, 253, 249, 0.72) 58%, 
+    rgba(255, 253, 249, 0.25) 100%),
+    radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 60%);
   z-index: 1;
   pointer-events: none;
 }
@@ -6311,43 +6315,93 @@ div[style*="bottom:16px; left:16px;"] {
   flex-shrink: 0;
 }
 
-/* Quick Trust Stat Pills - Accessible Contrast in White/Light & Dark Modes */
-.hero-2-trust-pills,
-.home2-trust-item,
-.hero-2-trust-pills .d-flex {
-  color: var(--text-main, #1E293B) !important;
+/* Hero 2 Subtitle Enhanced Contrast */
+.hero-2-section .hero-subtitle {
+  color: #1E293B !important;
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
 }
 
-.hero-2-trust-pills .fw-bold {
-  color: var(--text-main, #1E293B) !important;
+/* Quick Trust Stat Pills - Ultra-Crisp Pill Badges & High Contrast */
+.hero-2-trust-pills {
+  gap: 12px !important;
 }
 
-.hero-2-trust-pills .text-muted,
-.hero-2-trust-pills > span.text-muted {
-  color: var(--text-muted, #64748B) !important;
+.home2-trust-item {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  padding: 8px 16px !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid #CBD5E1 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #0F172A !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-[data-theme="light"] .hero-2-trust-pills,
-[data-theme="light"] .home2-trust-item,
-[data-theme="light"] .hero-2-trust-pills .fw-bold,
-[data-theme="light"] .hero-2-trust-pills .d-flex {
+.home2-trust-item:hover {
+  transform: translateY(-2px);
+  background: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12) !important;
+  border-color: #94A3B8 !important;
+}
+
+.home2-trust-item .fw-bold {
+  color: #0F172A !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+}
+
+.home2-trust-item .trust-count,
+.home2-trust-item .text-muted {
+  color: #334155 !important;
+  font-weight: 600 !important;
+  font-size: 0.8125rem !important;
+}
+
+[data-theme="light"] .hero-2-section .hero-subtitle {
   color: #1E293B !important;
 }
 
-[data-theme="light"] .hero-2-trust-pills .text-muted,
-[data-theme="light"] .hero-2-trust-pills > span.text-muted {
-  color: #64748B !important;
+[data-theme="light"] .home2-trust-item {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
 }
 
-[data-theme="dark"] .hero-2-trust-pills,
-[data-theme="dark"] .home2-trust-item,
-[data-theme="dark"] .hero-2-trust-pills .fw-bold,
-[data-theme="dark"] .hero-2-trust-pills .d-flex {
+[data-theme="light"] .home2-trust-item .fw-bold {
+  color: #0F172A !important;
+}
+
+[data-theme="light"] .home2-trust-item .trust-count,
+[data-theme="light"] .home2-trust-item .text-muted {
+  color: #334155 !important;
+}
+
+[data-theme="dark"] .hero-2-section .hero-subtitle {
+  color: #E2E8F0 !important;
+}
+
+[data-theme="dark"] .home2-trust-item {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border-color: rgba(51, 65, 85, 0.9) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
   color: #F8FAFC !important;
 }
 
-[data-theme="dark"] .hero-2-trust-pills .text-muted,
-[data-theme="dark"] .hero-2-trust-pills > span.text-muted {
+[data-theme="dark"] .home2-trust-item:hover {
+  border-color: #FF5E36 !important;
+}
+
+[data-theme="dark"] .home2-trust-item .fw-bold {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .home2-trust-item .trust-count,
+[data-theme="dark"] .home2-trust-item .text-muted {
   color: #CBD5E1 !important;
 }
 
