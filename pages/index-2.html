@@ -1114,38 +1114,77 @@
     <!-- SECTION 10: RECIPE CLUB NEWSLETTER CTA -->
     <section class="py-5 home2-recipe-club-section" id="recipe-club-newsletter">
       <div class="container py-4">
-        <div class="custom-card p-4 p-lg-5 text-center bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 backdrop-blur-md shadow-xl border-orange-200/50 dark:border-orange-500/20">
-          <div class="max-w-xl mx-auto">
-            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 fs-3 shadow-md">
-              <i class="fa-solid fa-envelope-open-text"></i>
+        <div class="custom-card recipe-club-card overflow-hidden p-0 border shadow-2xl">
+          <div class="row g-0 align-items-stretch">
+            <!-- Left E-Book Showcase Visual -->
+            <div class="col-lg-5 position-relative recipe-club-media">
+              <img src="../assets/images/kid_recipe_guide_banner.jpg" 
+                   alt="Little Chefs 15 Kid-Friendly Recipe E-Book Guide" 
+                   class="w-100 h-100 object-cover d-block recipe-club-img"
+                   loading="lazy">
+              <!-- Overlay Pill Badge -->
+              <div class="position-absolute top-4 start-4 d-inline-flex align-items-center gap-2 bg-white/95 dark:bg-slate-900/95 px-3 py-1.5 rounded-full shadow-md text-xs font-heading fw-bold text-slate-800 dark:text-white border border-slate-200/60 dark:border-slate-700/60">
+                <i class="fa-solid fa-gift text-primary"></i> Free PDF Download
+              </div>
+              <div class="position-absolute bottom-4 start-4 end-4 bg-slate-900/85 backdrop-blur-md text-white p-3 rounded-2xl border border-white/20 d-none d-sm-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-bold font-heading text-sm text-white">15 Solo Dinners for Kids</div>
+                  <div class="text-xs text-white/80">Step-by-step illustrated guide</div>
+                </div>
+                <span class="badge bg-amber-400 text-slate-950 fw-bold px-2.5 py-1 rounded-pill text-xs">
+                  ★ 4.9 Rating
+                </span>
+              </div>
             </div>
-            <h3 class="font-heading fw-bold text-2xl sm:text-3xl mb-2">Join the Junior Recipe Club</h3>
-            <p class="text-muted small mb-4">
-              Get our monthly kid-tested recipe e-book (15 allergy-safe dinners kids can cook solo) and exclusive early-bird camp discounts delivered to your inbox.
-            </p>
 
-            <!-- Banner Label Section -->
-            <div class="banner-labels-section mb-4 justify-content-center">
-              <span class="banner-label-pill pill-primary">
-                <i class="fa-solid fa-file-pdf"></i> Instant 15-Recipe PDF
-              </span>
-              <span class="banner-label-pill pill-success">
-                <i class="fa-solid fa-utensils"></i> Allergy-Safe Dinners
-              </span>
-              <span class="banner-label-pill pill-warning">
-                <i class="fa-solid fa-tag"></i> Early-Bird Camp Discounts
-              </span>
+            <!-- Right Content & Form Column -->
+            <div class="col-lg-7 p-4 p-md-5 d-flex flex-column justify-content-center bg-white dark:bg-slate-900">
+              <div class="mb-3">
+                <span class="section-tag mb-2 d-inline-flex align-items-center gap-2">
+                  <i class="fa-solid fa-envelope-open-text text-primary"></i> MONTHLY DISCOVERY CLUB
+                </span>
+                <h3 class="font-heading fw-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-2">
+                  Join the Junior Recipe Club
+                </h3>
+                <p class="text-muted small leading-relaxed mb-0">
+                  Get our monthly kid-tested recipe e-book (15 allergy-safe dinners kids can cook solo) and exclusive early-bird camp discounts delivered straight to your inbox.
+                </p>
+              </div>
+
+              <!-- Feature Checkmarks / Pills -->
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="recipe-benefit-badge">
+                  <i class="fa-solid fa-file-pdf text-rose-500"></i> Instant 15-Recipe PDF
+                </span>
+                <span class="recipe-benefit-badge">
+                  <i class="fa-solid fa-shield-heart text-emerald-500"></i> 100% Nut-Safe &amp; Allergy-Aware
+                </span>
+                <span class="recipe-benefit-badge">
+                  <i class="fa-solid fa-ticket text-amber-500"></i> Early-Bird Camp Discounts
+                </span>
+              </div>
+
+              <!-- Signup Form -->
+              <form class="recipe-club-form mb-3" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Your 15-Recipe E-Book is on its way.');">
+                <div class="input-group recipe-input-group shadow-sm">
+                  <span class="input-group-text bg-white dark:bg-slate-800 border-end-0 ps-3 text-muted">
+                    <i class="fa-regular fa-envelope"></i>
+                  </span>
+                  <input type="email" class="form-control border-start-0 ps-2 py-3 font-heading" placeholder="Enter parent's email address..." required aria-label="Parent email address">
+                  <button type="submit" class="btn btn-primary px-4 fw-bold font-heading d-flex align-items-center gap-2 text-nowrap">
+                    <span>Get Free E-Book</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Trust Micro-Copy -->
+              <div class="d-flex flex-wrap align-items-center gap-3 text-xs text-muted">
+                <span><i class="fa-solid fa-lock text-emerald-500 me-1"></i> Zero spam • Unsubscribe anytime</span>
+                <span>•</span>
+                <span><i class="fa-solid fa-users text-blue-500 me-1"></i> Sent to 3,400+ Austin families</span>
+              </div>
             </div>
-
-            <form class="d-flex flex-column flex-sm-row gap-2 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Your 15-Recipe E-Book is on its way.');">
-              <input type="email" class="form-control rounded-pill px-4 py-2.5" placeholder="Enter parent's email address..." required aria-label="Parent email address">
-              <button type="submit" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold text-nowrap">
-                <i class="fa-solid fa-paper-plane me-1"></i> Get Free E-Book
-              </button>
-            </form>
-            <p class="text-xs text-muted mt-3 mb-0">
-              <i class="fa-solid fa-lock me-1"></i> Zero spam. Unsubscribe at any time with one click.
-            </p>
           </div>
         </div>
       </div>
