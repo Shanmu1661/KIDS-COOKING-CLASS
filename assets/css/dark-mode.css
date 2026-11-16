@@ -2305,6 +2305,11 @@
   color: #ffffff !important;
 }
 
+[data-theme="dark"] .home2-facility-video-wrapper {
+  border-color: rgba(51, 65, 85, 0.7) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5) !important;
+}
+
 /* Home 2 Chef Mentors Dark Mode */
 [data-theme="dark"] .home2-chefs-section {
   background-color: #070d17 !important;

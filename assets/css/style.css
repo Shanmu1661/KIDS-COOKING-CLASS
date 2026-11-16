@@ -8302,6 +8302,34 @@ img, svg, video, canvas, iframe {
   color: #ffffff !important;
 }
 
+/* Home 2 Facility Showcase Video Player */
+.home2-facility-video-wrapper {
+  border-radius: var(--radius-2xl, 24px) !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15) !important;
+  background-color: #0F172A !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.home2-facility-video {
+  width: 100% !important;
+  height: 440px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+@media (max-width: 991.98px) {
+  .home2-facility-video {
+    height: 340px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home2-facility-video {
+    height: 240px !important;
+  }
+}
+
 /* ==========================================================================
    HOME 2 - CERTIFIED CHEF INSTRUCTORS & MENTORS SECTION
    ========================================================================== */
