@@ -858,36 +858,127 @@
     </section>
 
     <!-- Newsletter & Free Recipe Starter Pack CTA -->
-    <section class="py-5 recipe-newsletter-banner-section">
-      <div class="container py-4">
-        <div class="custom-card bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 p-5 text-center">
-          <div class="max-w-2xl mx-auto">
-            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 fs-3 shadow-md">
-              <i class="fa-solid fa-envelope-open-text"></i>
-            </div>
-            <h2 class="font-heading fw-bold mb-2">Get Our Free "10 Kid-Approved Recipes" Guide</h2>
-            <p class="text-muted mb-4">Join 4,000+ parents who receive our weekend family cooking tips, kitchen safety worksheets, and early-access camp discounts.</p>
-            
-            <!-- Banner Label Section -->
-            <div class="banner-labels-section mb-4">
-              <span class="banner-label-pill pill-primary">
-                <i class="fa-solid fa-file-pdf"></i> Instant PDF Guide
-              </span>
-              <span class="banner-label-pill pill-success">
-                <i class="fa-solid fa-utensils"></i> 10 Kid-Approved Recipes
-              </span>
-              <span class="banner-label-pill pill-warning">
-                <i class="fa-solid fa-heart"></i> 4,000+ Happy Families
-              </span>
+    <section class="py-5 recipe-newsletter-banner-section" id="newsletter-guide">
+      <div class="container py-2">
+        <div class="recipe-guide-showcase-card">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <!-- Left Column: Compelling Guide Offer & Highlights -->
+            <div class="col-lg-7">
+              <div class="pe-lg-3">
+                <span class="badge-tag-custom mb-3">
+                  <i class="fa-solid fa-gift text-primary me-1"></i> Complimentary Starter Kit
+                </span>
+                <h2 class="section-title text-start mb-3">
+                  Get Our Free <span class="text-primary">"10 Kid-Approved Recipes"</span> Guide
+                </h2>
+                <p class="section-description text-start mb-4">
+                  Join 4,000+ parents who cook together on weekends. Packed with 20-minute allergy-safe dinners kids can prep solo, kitchen safety checklists, and colorful printable recipe cards.
+                </p>
+
+                <!-- Value Props / Feature Checklist -->
+                <div class="row g-3 mb-4">
+                  <div class="col-sm-6">
+                    <div class="guide-perk-item">
+                      <div class="perk-icon-wrap bg-orange-100 text-primary">
+                        <i class="fa-solid fa-book-open"></i>
+                      </div>
+                      <div>
+                        <strong class="d-block text-sm font-heading perk-title">Step-by-Step Illustrated Cards</strong>
+                        <span class="text-xs text-muted">Kid-tested instructions with photo stages</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="guide-perk-item">
+                      <div class="perk-icon-wrap bg-emerald-100 text-emerald-600">
+                        <i class="fa-solid fa-shield-heart"></i>
+                      </div>
+                      <div>
+                        <strong class="d-block text-sm font-heading perk-title">100% Nut-Safe &amp; Picky-Proof</strong>
+                        <span class="text-xs text-muted">Allergy-conscious substitutions included</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="guide-perk-item">
+                      <div class="perk-icon-wrap bg-blue-100 text-blue-600">
+                        <i class="fa-solid fa-clock"></i>
+                      </div>
+                      <div>
+                        <strong class="d-block text-sm font-heading perk-title">20-Min Weeknight Prep</strong>
+                        <span class="text-xs text-muted">Designed for busy families and real kitchen fun</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="guide-perk-item">
+                      <div class="perk-icon-wrap bg-purple-100 text-purple-600">
+                        <i class="fa-solid fa-award"></i>
+                      </div>
+                      <div>
+                        <strong class="d-block text-sm font-heading perk-title">Junior Chef Certificate</strong>
+                        <span class="text-xs text-muted">Printable reward badge after cooking 5 meals</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Trust Badges Bar -->
+                <div class="guide-trust-pill-group">
+                  <span class="guide-trust-pill">
+                    <i class="fa-solid fa-file-pdf text-danger"></i> Instant 24-Page PDF
+                  </span>
+                  <span class="guide-trust-pill">
+                    <i class="fa-solid fa-star text-amber-500"></i> 4.9/5 Parent Rating
+                  </span>
+                  <span class="guide-trust-pill">
+                    <i class="fa-solid fa-users text-primary"></i> 4,000+ Enrolled Families
+                  </span>
+                </div>
+              </div>
             </div>
 
-            <form class="newsletter-form d-flex flex-column flex-sm-row gap-2 justify-content-center max-w-lg mx-auto">
-              <input type="email" class="form-control-custom" placeholder="Enter your email address" required aria-label="Parent email address">
-              <button type="submit" class="btn btn-primary-custom text-nowrap">
-                <i class="fa-solid fa-paper-plane"></i> Send Free Guide
-              </button>
-            </form>
-            <p class="text-xs text-muted mt-3"><i class="fa-solid fa-lock me-1"></i> We respect your privacy. No spam ever. Unsubscribe anytime.</p>
+            <!-- Right Column: Elevated Opt-In Action Box -->
+            <div class="col-lg-5">
+              <div class="guide-form-card">
+                <div class="guide-form-header text-center mb-4">
+                  <div class="guide-icon-avatar mb-3">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                  </div>
+                  <h4 class="font-heading fw-bold mb-1">Download Your Free Guide</h4>
+                  <p class="text-xs text-muted mb-0">Delivered instantly to your inbox. No credit card required.</p>
+                </div>
+
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you! Your 10 Kid-Approved Recipes Guide has been emailed to you.');">
+                  <div class="mb-3">
+                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">Parent's Email Address</label>
+                    <div class="input-group-custom">
+                      <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
+                      <input type="email" class="form-control-guide" placeholder="parent@example.com" required aria-label="Parent email address">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">Child's Age Group (Optional)</label>
+                    <select class="form-select-guide" aria-label="Child age preference">
+                      <option value="all" selected>All Ages (3–17 Years)</option>
+                      <option value="3-5">Tiny Tasters (Ages 3–5)</option>
+                      <option value="6-9">Little Chefs (Ages 6–9)</option>
+                      <option value="10-13">Junior Gourmet (Ages 10–13)</option>
+                      <option value="14-17">Teen Culinary Master (Ages 14–17)</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary-custom w-100 py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Send Free Recipe Guide
+                  </button>
+                </form>
+
+                <div class="guide-form-footer text-center mt-3 pt-2">
+                  <span class="text-xs text-muted d-inline-flex align-items-center gap-1.5">
+                    <i class="fa-solid fa-lock text-emerald-500"></i> We respect your privacy. No spam ever.
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -2956,25 +2956,38 @@ a:hover {
   z-index: 2;
 }
 
-/* Free Recipe Guide / Newsletter Section */
+/* ==========================================================================
+   ENHANCED RECIPE NEWSLETTER / FREE GUIDE SHOWCASE SECTION
+   ========================================================================== */
 .recipe-newsletter-banner-section {
   position: relative;
-  background-color: var(--bg-surface);
+  overflow: hidden;
+  background-color: var(--bg-main, #FFFDF9);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  overflow: hidden;
+  padding: 70px 0;
 }
 
 .recipe-newsletter-banner-section::before {
-  display: none !important;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/home2_recipe_club_bg.jpg?v=20261102g');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.90;
+  filter: contrast(1.05) brightness(1.02);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .recipe-newsletter-banner-section::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 15% 25%, rgba(255, 94, 54, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 85% 75%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(255, 253, 249, 0.82) 0%, rgba(255, 250, 243, 0.70) 50%, rgba(255, 253, 249, 0.85) 100%),
+              radial-gradient(circle at 10% 20%, rgba(255, 94, 54, 0.08) 0%, transparent 60%);
   z-index: 1;
   pointer-events: none;
 }
@@ -2982,6 +2995,180 @@ a:hover {
 .recipe-newsletter-banner-section > .container {
   position: relative;
   z-index: 2;
+}
+
+/* Showcase Card Inside Container */
+.recipe-guide-showcase-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-2xl, 24px);
+  padding: 44px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(255, 94, 54, 0.05);
+  transition: all var(--transition-normal);
+}
+
+@media (max-width: 767.98px) {
+  .recipe-newsletter-banner-section {
+    padding: 45px 0;
+  }
+  .recipe-guide-showcase-card {
+    padding: 24px 18px;
+  }
+}
+
+/* Badge Tag */
+.badge-tag-custom {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: rgba(255, 94, 54, 0.12);
+  color: var(--color-primary, #FF5E36);
+  border: 1px solid rgba(255, 94, 54, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Perks Grid */
+.guide-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: var(--radius-lg, 12px);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.guide-perk-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.perk-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.perk-title {
+  color: var(--heading-color, #0F172A);
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+
+/* Trust Pills Group */
+.guide-trust-pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.guide-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+/* Right Column: Form Card */
+.guide-form-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(255, 94, 54, 0.22);
+  border-radius: var(--radius-xl, 18px);
+  padding: 32px 28px;
+  box-shadow: 0 12px 32px rgba(255, 94, 54, 0.10);
+  position: relative;
+}
+
+.guide-icon-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary, #FF5E36) 0%, #FF8A50 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(255, 94, 54, 0.35);
+}
+
+.input-group-custom {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group-custom .input-icon {
+  position: absolute;
+  left: 14px;
+  color: #94A3B8;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+[dir="rtl"] .input-group-custom .input-icon {
+  left: auto;
+  right: 14px;
+}
+
+.form-control-guide {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--radius-lg, 10px);
+  font-size: 0.9rem;
+  color: #0F172A;
+  background-color: #F8FAFC;
+  transition: all var(--transition-fast);
+}
+
+[dir="rtl"] .form-control-guide {
+  padding: 12px 40px 12px 14px;
+}
+
+.form-control-guide:focus {
+  outline: none;
+  border-color: var(--color-primary, #FF5E36);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(255, 94, 54, 0.15);
+}
+
+.form-select-guide {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--radius-lg, 10px);
+  font-size: 0.88rem;
+  color: #0F172A;
+  background-color: #F8FAFC;
+  transition: all var(--transition-fast);
+}
+
+.form-select-guide:focus {
+  outline: none;
+  border-color: var(--color-primary, #FF5E36);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(255, 94, 54, 0.15);
 }
 
 /* About Page Origin Story Trust Highlights */
