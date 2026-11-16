@@ -8213,6 +8213,61 @@ img, svg, video, canvas, iframe {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12) !important;
 }
 
+/* Chef Mentors Avatars */
+.home2-chefs-section .chef-mentor-avatar-wrap {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto 16px;
+  position: relative;
+}
+
+.home2-chefs-section .chef-mentor-avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-bounce, 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.home2-chefs-section .custom-card:hover .chef-mentor-avatar {
+  transform: scale(1.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.home2-chefs-section .chef-mentor-avatar.avatar-orange {
+  border: 3.5px solid #FFEDD5;
+}
+
+.home2-chefs-section .chef-mentor-avatar.avatar-blue {
+  border: 3.5px solid #DBEAFE;
+}
+
+.home2-chefs-section .chef-mentor-avatar.avatar-emerald {
+  border: 3.5px solid #D1FAE5;
+}
+
+.home2-chefs-section .chef-mentor-avatar.avatar-purple {
+  border: 3.5px solid #F3E8FF;
+}
+
+.home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-orange {
+  border-color: #FF5E36;
+}
+
+.home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-blue {
+  border-color: #2563EB;
+}
+
+.home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-emerald {
+  border-color: #059669;
+}
+
+.home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-purple {
+  border-color: #7C3AED;
+}
+
 /* ==========================================================================
    HOME 2 - JUNIOR RECIPE CLUB NEWSLETTER SECTION
    ========================================================================== */

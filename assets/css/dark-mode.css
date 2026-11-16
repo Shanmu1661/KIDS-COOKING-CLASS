@@ -2337,6 +2337,42 @@
   border: 1.5px solid rgba(168, 85, 247, 0.45) !important;
 }
 
+[data-theme="dark"] .home2-chefs-section .chef-mentor-avatar {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .chef-mentor-avatar.avatar-orange {
+  border-color: rgba(255, 94, 54, 0.55) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .chef-mentor-avatar.avatar-blue {
+  border-color: rgba(59, 130, 246, 0.55) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .chef-mentor-avatar.avatar-emerald {
+  border-color: rgba(16, 185, 129, 0.55) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .chef-mentor-avatar.avatar-purple {
+  border-color: rgba(168, 85, 247, 0.55) !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-orange {
+  border-color: #FF8A65 !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-blue {
+  border-color: #93C5FD !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-emerald {
+  border-color: #6EE7B7 !important;
+}
+
+[data-theme="dark"] .home2-chefs-section .custom-card:hover .chef-mentor-avatar.avatar-purple {
+  border-color: #D8B4FE !important;
+}
+
 /* Home 2 Method Pillars Dark Mode Text */
 [data-theme="dark"] .little-chefs-method-section .custom-card h5 {
   color: #FFFFFF !important;
