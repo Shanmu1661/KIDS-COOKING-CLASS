@@ -1038,11 +1038,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // HERO KIDS COOKING VIDEO CONTROLLER
   // -------------------------------------------------------------------------
   const heroVideo = document.getElementById('heroCookingVideo');
-  const heroPlayPauseBtn = document.getElementById('heroPlayPauseBtn');
-  const heroMuteBtn = document.getElementById('heroMuteBtn');
-  const heroFullscreenBtn = document.getElementById('heroFullscreenBtn');
-  const heroVideoStatus = document.getElementById('heroVideoStatus');
-  const scenePills = document.querySelectorAll('.hero-video-scenes .scene-pill');
 
   if (heroVideo) {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1050,126 +1045,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Respect user motion preference
     if (prefersReducedMotion) {
       heroVideo.pause();
-      if (heroPlayPauseBtn) {
-        heroPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-        heroPlayPauseBtn.setAttribute('aria-label', 'Play Video');
-        heroPlayPauseBtn.title = 'Play Video';
-      }
     } else {
-      // Auto-play muted video safely
       const playPromise = heroVideo.play();
       if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Fallback if browser requires user gesture
-          if (heroPlayPauseBtn) {
-            heroPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-            heroPlayPauseBtn.setAttribute('aria-label', 'Play Video');
-            heroPlayPauseBtn.title = 'Play Video';
-          }
-        });
+        playPromise.catch(() => {});
       }
     }
 
-    // Play/Pause Toggle
-    if (heroPlayPauseBtn) {
-      heroPlayPauseBtn.addEventListener('click', () => {
-        if (heroVideo.paused || heroVideo.ended) {
-          heroVideo.play().then(() => {
-            heroPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-            heroPlayPauseBtn.setAttribute('aria-label', 'Pause Video');
-            heroPlayPauseBtn.title = 'Pause Video';
-          }).catch(err => console.log('Playback error:', err));
-        } else {
-          heroVideo.pause();
-          heroPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-          heroPlayPauseBtn.setAttribute('aria-label', 'Play Video');
-          heroPlayPauseBtn.title = 'Play Video';
-        }
-      });
-    }
-
-    // Mute/Unmute Toggle
-    if (heroMuteBtn) {
-      heroMuteBtn.addEventListener('click', () => {
-        heroVideo.muted = !heroVideo.muted;
-        if (heroVideo.muted) {
-          heroMuteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
-          heroMuteBtn.setAttribute('aria-label', 'Unmute Video');
-          heroMuteBtn.title = 'Unmute Sound';
-        } else {
-          heroVideo.volume = 1.0;
-          heroMuteBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
-          heroMuteBtn.setAttribute('aria-label', 'Mute Video');
-          heroMuteBtn.title = 'Mute Sound';
-        }
-      });
-    }
-
-    // Fullscreen Toggle
-    if (heroFullscreenBtn) {
-      heroFullscreenBtn.addEventListener('click', () => {
-        const container = heroVideo.closest('.hero-video-container') || heroVideo;
-        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-          if (container.requestFullscreen) {
-            container.requestFullscreen().catch(() => heroVideo.requestFullscreen());
-          } else if (heroVideo.webkitEnterFullscreen) {
-            heroVideo.webkitEnterFullscreen();
-          }
-        } else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          }
-        }
-      });
-
-      document.addEventListener('fullscreenchange', () => {
-        if (document.fullscreenElement) {
-          heroFullscreenBtn.innerHTML = '<i class="fa-solid fa-compress"></i>';
-          heroFullscreenBtn.setAttribute('aria-label', 'Exit Fullscreen');
-          heroFullscreenBtn.title = 'Exit Fullscreen';
-        } else {
-          heroFullscreenBtn.innerHTML = '<i class="fa-solid fa-expand"></i>';
-          heroFullscreenBtn.setAttribute('aria-label', 'View Fullscreen');
-          heroFullscreenBtn.title = 'View Fullscreen';
-        }
-      });
-    }
-
-    // Interactive Scene Switcher Pills
-    scenePills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        scenePills.forEach(p => {
-          p.classList.remove('active');
-          p.setAttribute('aria-selected', 'false');
-        });
-        pill.classList.add('active');
-        pill.setAttribute('aria-selected', 'true');
-
-        const videoSrc = pill.getAttribute('data-video');
-        const sceneTitle = pill.getAttribute('data-title') || 'Kids In Action';
-
-        if (videoSrc) {
-          heroVideo.style.opacity = '0.5';
-          heroVideo.src = videoSrc;
-          heroVideo.load();
-          heroVideo.play().then(() => {
-            heroVideo.style.opacity = '1';
-            if (heroPlayPauseBtn) {
-              heroPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-              heroPlayPauseBtn.setAttribute('aria-label', 'Pause Video');
-            }
-          }).catch(() => {
-            heroVideo.style.opacity = '1';
-          });
-
-          if (heroVideoStatus) {
-            const statusText = heroVideoStatus.querySelector('.video-badge-text');
-            if (statusText) {
-              statusText.innerHTML = `${sceneTitle} &bull; Live Fun`;
-            }
-          }
-        }
-      });
+    // Click anywhere on video to toggle play/pause
+    heroVideo.style.cursor = 'pointer';
+    heroVideo.addEventListener('click', () => {
+      if (heroVideo.paused || heroVideo.ended) {
+        heroVideo.play().catch(() => {});
+      } else {
+        heroVideo.pause();
+      }
     });
 
     // Auto-pause when scrolled out of view to preserve device performance
@@ -1178,17 +1068,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
           if (!entry.isIntersecting && !heroVideo.paused) {
             heroVideo.pause();
-            if (heroPlayPauseBtn) {
-              heroPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-              heroPlayPauseBtn.setAttribute('aria-label', 'Play Video');
-            }
           } else if (entry.isIntersecting && heroVideo.paused && !prefersReducedMotion) {
-            heroVideo.play().then(() => {
-              if (heroPlayPauseBtn) {
-                heroPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-                heroPlayPauseBtn.setAttribute('aria-label', 'Pause Video');
-              }
-            }).catch(() => {});
+            heroVideo.play().catch(() => {});
           }
         });
       }, { threshold: 0.25 });
