@@ -5026,6 +5026,19 @@ a:hover {
   flex-grow: 1;
 }
 
+.workshop-pill-badge {
+  background-color: rgba(var(--color-primary-rgb), 0.1) !important;
+  color: var(--color-primary) !important;
+  border: 1px solid rgba(var(--color-primary-rgb), 0.25) !important;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 /* Safety & Standards Cards */
 .safety-feature-card {
   background: var(--bg-surface);

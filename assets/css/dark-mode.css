@@ -1432,6 +1432,12 @@
   display: none !important;
 }
 
+[data-theme="dark"] .workshop-pill-badge {
+  background-color: rgba(255, 94, 54, 0.18) !important;
+  color: #FF8A65 !important;
+  border-color: rgba(255, 94, 54, 0.4) !important;
+}
+
 [data-theme="dark"] .pricing-package-card.featured {
   border-color: var(--color-primary);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
