@@ -548,16 +548,81 @@
       </div>
     </section>
 
-    <!-- Newsletter Subscription Box -->
-    <section class="py-5 bg-subtle">
+    <!-- Blog Culinary Academy Readers Club & Recipe Guide Section -->
+    <section class="py-5 py-lg-6 blog-newsletter-section" id="blog-recipe-club">
       <div class="container py-3">
-        <div class="custom-card p-5 text-center max-w-2xl mx-auto shadow-sm">
-          <h3 class="font-heading fw-bold mb-2">Subscribe to Weekly Kitchen Fun</h3>
-          <p class="text-muted small mb-4">Every Thursday, get one simple recipe to make with your kids this weekend, plus early-bird camp reminders.</p>
-          <form class="newsletter-form d-flex flex-column flex-sm-row gap-2 justify-content-center">
-            <input type="email" class="form-control-custom" placeholder="Enter your email" required aria-label="Email address">
-            <button type="submit" class="btn btn-primary-custom text-nowrap">Subscribe Free</button>
-          </form>
+        <div class="custom-card recipe-club-card overflow-hidden p-0 border shadow-2xl">
+          <div class="row g-0 align-items-stretch">
+            <!-- Left E-Book Showcase Visual -->
+            <div class="col-lg-5 position-relative recipe-club-media">
+              <img src="../assets/images/kid_recipe_guide_banner.jpg" 
+                   alt="Little Chefs 25 Kid-Friendly Recipe E-Book and Culinary Guide" 
+                   class="w-100 h-100 object-cover d-block recipe-club-img"
+                   loading="lazy">
+              <!-- Overlay Pill Badge -->
+              <div class="position-absolute top-4 start-4 d-inline-flex align-items-center gap-2 bg-white/95 dark:bg-slate-900/95 px-3 py-1.5 rounded-full shadow-md text-xs font-heading fw-bold text-slate-800 dark:text-white border border-slate-200/60 dark:border-slate-700/60">
+                <i class="fa-solid fa-gift text-primary"></i> Free PDF Download
+              </div>
+              <div class="position-absolute bottom-4 start-4 end-4 bg-slate-900/85 backdrop-blur-md text-white p-3 rounded-2xl border border-white/20 d-none d-sm-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-bold font-heading text-sm text-white">25 Kid-Safe Academy Recipes</div>
+                  <div class="text-xs text-white/80">Printable weekend cookbook &amp; science lab</div>
+                </div>
+                <span class="badge bg-amber-400 text-slate-950 fw-bold px-2.5 py-1 rounded-pill text-xs">
+                  ★ 4.9 Rating
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Content & Form Column -->
+            <div class="col-lg-7 p-4 p-md-5 d-flex flex-column justify-content-center bg-white dark:bg-slate-900">
+              <div class="mb-3">
+                <span class="section-tag mb-2 d-inline-flex align-items-center gap-2">
+                  <i class="fa-solid fa-book-open-reader text-primary"></i> CULINARY READERS CLUB
+                </span>
+                <h3 class="font-heading fw-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-2">
+                  Bring the Academy Kitchen Magic Home
+                </h3>
+                <p class="text-muted small leading-relaxed mb-0">
+                  Every Thursday, our chef educators share one kid-tested weekend dinner, simple kitchen science experiments, printable grocery checklists, and early camp announcements.
+                </p>
+              </div>
+
+              <!-- Feature Checkmarks / Pills -->
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="recipe-benefit-badge">
+                  <i class="fa-solid fa-file-pdf text-rose-500"></i> Free 25-Recipe E-Book
+                </span>
+                <span class="recipe-benefit-badge">
+                  <i class="fa-solid fa-flask-vial text-purple-500"></i> Kitchen Science Tips
+                </span>
+                <span class="recipe-benefit-badge">
+                  <i class="fa-solid fa-shield-heart text-emerald-500"></i> 100% Nut-Safe &amp; Tested
+                </span>
+              </div>
+
+              <!-- Signup Form -->
+              <form class="recipe-club-form mb-3" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Your 25-Recipe E-Book is on its way.');">
+                <div class="input-group recipe-input-group shadow-sm">
+                  <span class="input-group-text bg-white dark:bg-slate-800 border-end-0 ps-3 text-muted">
+                    <i class="fa-regular fa-envelope"></i>
+                  </span>
+                  <input type="email" class="form-control border-start-0 ps-2 py-3 font-heading" placeholder="Enter parent's email address..." required aria-label="Parent email address">
+                  <button type="submit" class="btn btn-primary px-4 fw-bold font-heading d-flex align-items-center gap-2 text-nowrap">
+                    <span>Get Free Cookbook</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Trust Micro-Copy -->
+              <div class="d-flex flex-wrap align-items-center gap-3 text-xs text-muted">
+                <span><i class="fa-solid fa-lock text-emerald-500 me-1"></i> Zero spam • Unsubscribe in 1 click</span>
+                <span>•</span>
+                <span><i class="fa-solid fa-users text-blue-500 me-1"></i> Sent to 3,400+ Austin families</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

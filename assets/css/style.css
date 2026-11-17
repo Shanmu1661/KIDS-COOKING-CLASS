@@ -8577,9 +8577,10 @@ img, svg, video, canvas, iframe {
 }
 
 /* ==========================================================================
-   HOME 2 - JUNIOR RECIPE CLUB NEWSLETTER SECTION
+   HOME 2 & BLOG - JUNIOR RECIPE CLUB NEWSLETTER SECTION
    ========================================================================== */
-.home2-recipe-club-section {
+.home2-recipe-club-section,
+.blog-newsletter-section {
   position: relative;
   overflow: hidden;
   background-color: var(--bg-main, #FFFDF9);
@@ -8587,7 +8588,8 @@ img, svg, video, canvas, iframe {
   border-bottom: 1px solid var(--border-color);
 }
 
-.home2-recipe-club-section::before {
+.home2-recipe-club-section::before,
+.blog-newsletter-section::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -8601,7 +8603,8 @@ img, svg, video, canvas, iframe {
   filter: contrast(1.10) brightness(1.02);
 }
 
-.home2-recipe-club-section::after {
+.home2-recipe-club-section::after,
+.blog-newsletter-section::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -8611,12 +8614,14 @@ img, svg, video, canvas, iframe {
   pointer-events: none;
 }
 
-.home2-recipe-club-section > .container {
+.home2-recipe-club-section > .container,
+.blog-newsletter-section > .container {
   position: relative;
   z-index: 2;
 }
 
-.home2-recipe-club-section .custom-card {
+.home2-recipe-club-section .custom-card,
+.blog-newsletter-section .custom-card {
   background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
