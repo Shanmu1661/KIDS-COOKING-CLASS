@@ -708,6 +708,52 @@ a:hover {
   color: #FFFFFF;
 }
 
+/* Know More Button in Main Header */
+.btn-know-more,
+.main-header .btn-know-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 94, 54, 0.08) !important;
+  color: var(--color-primary, #FF5E36) !important;
+  border: 1.5px solid var(--color-primary, #FF5E36) !important;
+  border-radius: var(--radius-full, 9999px) !important;
+  padding: 8px 20px !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  min-height: 40px;
+}
+
+.btn-know-more:hover,
+.main-header .btn-know-more:hover {
+  background: var(--color-primary, #FF5E36) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 94, 54, 0.35) !important;
+}
+
+.btn-know-more i {
+  font-size: 0.88rem;
+}
+
+[data-theme="dark"] .btn-know-more,
+[data-theme="dark"] .main-header .btn-know-more {
+  background: rgba(255, 122, 69, 0.12) !important;
+  color: #FFA07A !important;
+  border-color: rgba(255, 122, 69, 0.6) !important;
+}
+
+[data-theme="dark"] .btn-know-more:hover,
+[data-theme="dark"] .main-header .btn-know-more:hover {
+  background: linear-gradient(135deg, #FF6239 0%, #FF451A 100%) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+}
+
 /* --------------------------------------------------------------------------
    DASHBOARD HEADER CONTROLS (Notification Bell & Profile Contrast Fixes)
    -------------------------------------------------------------------------- */
@@ -7789,6 +7835,7 @@ img, svg, video, canvas, iframe {
   }
 
   .navbar-actions .btn-parent-login,
+  .navbar-actions .btn-know-more,
   .navbar-actions .btn-primary-custom,
   .navbar-actions .btn-outline-custom {
     width: 100% !important;
@@ -7810,6 +7857,7 @@ img, svg, video, canvas, iframe {
   }
   
   .navbar-actions .btn-parent-login,
+  .navbar-actions .btn-know-more,
   .navbar-actions .btn-primary-custom,
   .navbar-actions .btn-outline-custom {
     width: auto !important;
