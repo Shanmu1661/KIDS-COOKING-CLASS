@@ -1340,6 +1340,17 @@
   color: #94A3B8 !important;
 }
 
+[data-theme="dark"] .service-step-img-wrapper {
+  background-color: #0f172a !important;
+}
+
+[data-theme="dark"] .step-badge-pill {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border-color: rgba(51, 65, 85, 0.8) !important;
+  color: #FF5E36 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
 /* Services Pricing Section Dark Mode Background */
 [data-theme="dark"] .services-pricing-bg-section {
   background-color: #070d17 !important;
