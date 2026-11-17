@@ -7282,6 +7282,67 @@ div[style*="bottom:16px; left:16px;"] {
   text-decoration: underline;
 }
 
+/* Auth Form Strict Validation Feedback & Badges */
+.login-input-group.is-invalid-group {
+  border-color: #EF4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+}
+
+.login-input-group.is-valid-group {
+  border-color: #10B981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2) !important;
+}
+
+.login-invalid-feedback {
+  color: #EF4444;
+  font-size: 0.8125rem;
+  margin-top: 6px;
+  display: none;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.login-input-group.is-invalid-group + .login-invalid-feedback,
+.login-input-group.is-invalid-group ~ .login-invalid-feedback,
+.login-input-group.is-invalid-group ~ div .login-invalid-feedback,
+.login-checkbox.is-invalid-custom ~ .login-invalid-feedback,
+.is-feedback-visible {
+  display: block !important;
+}
+
+.login-validation-badge {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.login-input-group.is-valid-group .login-validation-badge.valid-badge {
+  display: inline-flex;
+  color: #10B981;
+}
+
+.login-input-group.is-invalid-group .login-validation-badge.invalid-badge {
+  display: inline-flex;
+  color: #EF4444;
+}
+
+[data-theme="light"] .login-invalid-feedback {
+  color: #DC2626 !important;
+}
+
+[data-theme="light"] .login-input-group.is-invalid-group {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2) !important;
+}
+
+[data-theme="light"] .login-input-group.is-valid-group {
+  border-color: #10B981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2) !important;
+}
+
 /* Light Mode Overrides for Login */
 [data-theme="light"] .login-page-body {
   background-color: #F8FAFC !important;

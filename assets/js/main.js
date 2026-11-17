@@ -395,6 +395,364 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
+  // 6B. AUTH FORMS VALIDATION (LOGIN & REGISTER PAGES)
+  // -------------------------------------------------------------------------
+  function initAuthFormsValidation() {
+    const loginForm = document.getElementById('parentLoginForm');
+    const registerForm = document.getElementById('parentRegisterForm');
+    const sendResetBtn = document.getElementById('sendResetCodeBtn');
+    const resetEmailInput = document.getElementById('resetEmailInput');
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const nameRegex = /^[A-Za-zÀ-ÿ\s'-]{2,50}$/;
+    const phoneRegex = /^(\+?1\s?)?\(?[0-9]{3}\)?[\s\.-]?[0-9]{3}[\s\.-]?[0-9]{4}$/;
+
+    function setAuthFieldState(input, isValid, feedbackMsg) {
+      if (!input) return isValid;
+      const group = input.closest('.login-input-group');
+      const container = input.closest('.mb-3.5') || input.closest('.mb-3') || (input.parentElement ? input.parentElement.parentElement : null);
+      const feedback = container ? container.querySelector('.login-invalid-feedback') : null;
+
+      if (!isValid) {
+        if (group) {
+          group.classList.remove('is-valid-group');
+          group.classList.add('is-invalid-group');
+        }
+        input.classList.remove('is-valid-custom');
+        input.classList.add('is-invalid-custom');
+        if (feedback) {
+          if (feedbackMsg) feedback.textContent = feedbackMsg;
+          feedback.classList.add('is-feedback-visible');
+        }
+      } else {
+        if (group) {
+          group.classList.remove('is-invalid-group');
+          group.classList.add('is-valid-group');
+        }
+        input.classList.remove('is-invalid-custom');
+        input.classList.add('is-valid-custom');
+        if (feedback) {
+          feedback.classList.remove('is-feedback-visible');
+        }
+      }
+      return isValid;
+    }
+
+    function clearAuthFieldState(input) {
+      if (!input) return;
+      const group = input.closest('.login-input-group');
+      if (group) {
+        group.classList.remove('is-valid-group', 'is-invalid-group');
+      }
+      input.classList.remove('is-valid-custom', 'is-invalid-custom');
+      const container = input.closest('.mb-3.5') || input.closest('.mb-3');
+      const feedback = container ? container.querySelector('.login-invalid-feedback') : null;
+      if (feedback) feedback.classList.remove('is-feedback-visible');
+    }
+
+    // 1. SIGN IN FORM VALIDATION
+    if (loginForm) {
+      const loginEmail = document.getElementById('loginEmail');
+      const loginPassword = document.getElementById('loginPassword');
+
+      function validateLoginEmail(showError = true) {
+        if (!loginEmail) return true;
+        const val = loginEmail.value.trim();
+        if (!val) {
+          return showError ? setAuthFieldState(loginEmail, false, 'Please enter your account email address.') : false;
+        }
+        const valid = emailRegex.test(val);
+        return showError ? setAuthFieldState(loginEmail, valid, 'Please enter a valid email address (e.g. name@example.com).') : valid;
+      }
+
+      function validateLoginPassword(showError = true) {
+        if (!loginPassword) return true;
+        const val = loginPassword.value;
+        if (!val) {
+          return showError ? setAuthFieldState(loginPassword, false, 'Please enter your account password.') : false;
+        }
+        const valid = val.length >= 6;
+        return showError ? setAuthFieldState(loginPassword, valid, 'Password must be at least 6 characters long.') : valid;
+      }
+
+      if (loginEmail) {
+        loginEmail.addEventListener('blur', () => {
+          if (loginEmail.value.trim()) validateLoginEmail(true);
+        });
+        loginEmail.addEventListener('input', () => {
+          const group = loginEmail.closest('.login-input-group');
+          if (group && (group.classList.contains('is-invalid-group') || group.classList.contains('is-valid-group'))) {
+            validateLoginEmail(true);
+          }
+        });
+      }
+
+      if (loginPassword) {
+        loginPassword.addEventListener('blur', () => {
+          if (loginPassword.value) validateLoginPassword(true);
+        });
+        loginPassword.addEventListener('input', () => {
+          const group = loginPassword.closest('.login-input-group');
+          if (group && (group.classList.contains('is-invalid-group') || group.classList.contains('is-valid-group'))) {
+            validateLoginPassword(true);
+          }
+        });
+      }
+
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailValid = validateLoginEmail(true);
+        const passValid = validateLoginPassword(true);
+
+        if (!emailValid || !passValid) {
+          showToast('Sign In Incomplete', 'Please check highlighted fields and ensure correct credentials.', 'error');
+          if (!emailValid && loginEmail) loginEmail.focus();
+          else if (!passValid && loginPassword) loginPassword.focus();
+          return;
+        }
+
+        const submitBtn = document.getElementById('submitLoginBtn');
+        const origBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status"></span> Signing In...`;
+        }
+
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnHtml;
+          }
+          const emailVal = loginEmail.value.trim();
+          showToast('Welcome Back!', `Signed in successfully as ${emailVal}. Loading dashboard...`, 'success');
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 600);
+        }, 800);
+      });
+    }
+
+    // 2. CREATE ACCOUNT FORM VALIDATION
+    if (registerForm) {
+      const regParentName = document.getElementById('regParentName');
+      const regEmail = document.getElementById('regEmail');
+      const regPhone = document.getElementById('regPhone');
+      const regPassword = document.getElementById('regPassword');
+      const termsCheck = document.getElementById('termsCheck');
+      const regPasswordMeter = document.getElementById('regPasswordMeter');
+      const regPasswordFill = document.getElementById('regPasswordFill');
+      const regPasswordStrengthText = document.getElementById('regPasswordStrengthText');
+
+      function validateRegName(showError = true) {
+        if (!regParentName) return true;
+        const val = regParentName.value.trim();
+        if (!val) {
+          return showError ? setAuthFieldState(regParentName, false, 'Please provide your full name.') : false;
+        }
+        const hasNoDigits = !/\d/.test(val);
+        const matchesNamePattern = nameRegex.test(val);
+        const hasEnoughLetters = (val.match(/[A-Za-zÀ-ÿ]/g) || []).length >= 2;
+        const valid = hasNoDigits && matchesNamePattern && hasEnoughLetters;
+        return showError ? setAuthFieldState(regParentName, valid, 'Please enter a valid full name (letters only, no numbers).') : valid;
+      }
+
+      function validateRegEmail(showError = true) {
+        if (!regEmail) return true;
+        const val = regEmail.value.trim();
+        if (!val) {
+          return showError ? setAuthFieldState(regEmail, false, 'Please provide your email address.') : false;
+        }
+        const valid = emailRegex.test(val);
+        return showError ? setAuthFieldState(regEmail, valid, 'Please provide a valid email address (e.g. name@example.com).') : valid;
+      }
+
+      function validateRegPhone(showError = true) {
+        if (!regPhone) return true;
+        const val = regPhone.value.trim();
+        const digits = val.replace(/\D/g, '');
+        if (!val) {
+          return showError ? setAuthFieldState(regPhone, false, 'Please provide an emergency contact phone number.') : false;
+        }
+        const valid = (digits.length === 10 && phoneRegex.test(val)) || (digits.length >= 10 && digits.length <= 15);
+        return showError ? setAuthFieldState(regPhone, valid, 'Please provide a valid 10-digit phone number (e.g. (512) 555-0199).') : valid;
+      }
+
+      function updatePasswordMeter(val) {
+        if (!regPasswordMeter || !regPasswordFill || !regPasswordStrengthText) return;
+        if (!val) {
+          regPasswordMeter.classList.add('d-none');
+          regPasswordStrengthText.classList.add('d-none');
+          return;
+        }
+        regPasswordMeter.classList.remove('d-none');
+        regPasswordStrengthText.classList.remove('d-none');
+
+        let strength = 0;
+        if (val.length >= 8) strength += 30;
+        if (/[A-Z]/.test(val)) strength += 20;
+        if (/[0-9]/.test(val)) strength += 25;
+        if (/[^A-Za-z0-9]/.test(val)) strength += 25;
+
+        regPasswordFill.style.width = strength + '%';
+        if (strength < 40) {
+          regPasswordFill.style.backgroundColor = '#EF4444';
+          regPasswordStrengthText.textContent = 'Weak';
+          regPasswordStrengthText.style.color = '#EF4444';
+        } else if (strength < 75) {
+          regPasswordFill.style.backgroundColor = '#F59E0B';
+          regPasswordStrengthText.textContent = 'Medium';
+          regPasswordStrengthText.style.color = '#F59E0B';
+        } else {
+          regPasswordFill.style.backgroundColor = '#10B981';
+          regPasswordStrengthText.textContent = 'Strong';
+          regPasswordStrengthText.style.color = '#10B981';
+        }
+      }
+
+      function validateRegPassword(showError = true) {
+        if (!regPassword) return true;
+        const val = regPassword.value;
+        if (!val) {
+          return showError ? setAuthFieldState(regPassword, false, 'Please create a secure password.') : false;
+        }
+        const valid = val.length >= 8;
+        return showError ? setAuthFieldState(regPassword, valid, 'Password must be at least 8 characters long.') : valid;
+      }
+
+      function validateTerms(showError = true) {
+        if (!termsCheck) return true;
+        const valid = termsCheck.checked;
+        const feedback = document.getElementById('termsFeedback');
+        if (!valid) {
+          termsCheck.classList.add('is-invalid-custom');
+          if (feedback && showError) feedback.classList.add('is-feedback-visible');
+        } else {
+          termsCheck.classList.remove('is-invalid-custom');
+          if (feedback) feedback.classList.remove('is-feedback-visible');
+        }
+        return valid;
+      }
+
+      if (regParentName) {
+        regParentName.addEventListener('blur', () => {
+          if (regParentName.value.trim()) validateRegName(true);
+        });
+        regParentName.addEventListener('input', () => {
+          const group = regParentName.closest('.login-input-group');
+          if (group && (group.classList.contains('is-invalid-group') || group.classList.contains('is-valid-group'))) {
+            validateRegName(true);
+          }
+        });
+      }
+
+      if (regEmail) {
+        regEmail.addEventListener('blur', () => {
+          if (regEmail.value.trim()) validateRegEmail(true);
+        });
+        regEmail.addEventListener('input', () => {
+          const group = regEmail.closest('.login-input-group');
+          if (group && (group.classList.contains('is-invalid-group') || group.classList.contains('is-valid-group'))) {
+            validateRegEmail(true);
+          }
+        });
+      }
+
+      if (regPhone) {
+        regPhone.addEventListener('blur', () => {
+          if (regPhone.value.trim()) validateRegPhone(true);
+        });
+        regPhone.addEventListener('input', () => {
+          const group = regPhone.closest('.login-input-group');
+          if (group && (group.classList.contains('is-invalid-group') || group.classList.contains('is-valid-group'))) {
+            validateRegPhone(true);
+          }
+        });
+      }
+
+      if (regPassword) {
+        regPassword.addEventListener('input', () => {
+          updatePasswordMeter(regPassword.value);
+          const group = regPassword.closest('.login-input-group');
+          if (group && (group.classList.contains('is-invalid-group') || group.classList.contains('is-valid-group'))) {
+            validateRegPassword(true);
+          }
+        });
+        regPassword.addEventListener('blur', () => {
+          if (regPassword.value) validateRegPassword(true);
+        });
+      }
+
+      if (termsCheck) {
+        termsCheck.addEventListener('change', () => validateTerms(true));
+      }
+
+      registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameOk = validateRegName(true);
+        const emailOk = validateRegEmail(true);
+        const phoneOk = validateRegPhone(true);
+        const passOk = validateRegPassword(true);
+        const termsOk = validateTerms(true);
+
+        if (!nameOk || !emailOk || !phoneOk || !passOk || !termsOk) {
+          showToast('Registration Incomplete', 'Please check highlighted fields and ensure correct formatting.', 'error');
+          if (!nameOk && regParentName) regParentName.focus();
+          else if (!emailOk && regEmail) regEmail.focus();
+          else if (!phoneOk && regPhone) regPhone.focus();
+          else if (!passOk && regPassword) regPassword.focus();
+          else if (!termsOk && termsCheck) termsCheck.focus();
+          return;
+        }
+
+        const submitBtn = document.getElementById('submitRegisterBtn');
+        const origBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status"></span> Creating Account...`;
+        }
+
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnHtml;
+          }
+          const nameVal = regParentName.value.trim();
+          showToast('Account Created!', `Welcome to Little Chefs Academy, ${nameVal}! Redirecting to dashboard...`, 'success');
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 600);
+        }, 900);
+      });
+    }
+
+    // 3. RESET PASSWORD MODAL VALIDATION
+    if (sendResetBtn && resetEmailInput) {
+      sendResetBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const val = resetEmailInput.value.trim();
+        const valid = emailRegex.test(val);
+        setAuthFieldState(resetEmailInput, valid, 'Please enter a valid email address.');
+        if (!valid) {
+          resetEmailInput.focus();
+          showToast('Invalid Email', 'Please enter a valid email address to receive password reset instructions.', 'error');
+          return;
+        }
+
+        const modalEl = document.getElementById('forgotPasswordModal');
+        if (modalEl && typeof bootstrap !== 'undefined') {
+          const bsModal = bootstrap.Modal.getInstance(modalEl);
+          if (bsModal) bsModal.hide();
+        }
+        showToast('Reset Link Sent', `Password recovery link has been emailed to ${val}.`, 'info');
+        resetEmailInput.value = '';
+        clearAuthFieldState(resetEmailInput);
+      });
+    }
+  }
+
+  initAuthFormsValidation();
+
+  // -------------------------------------------------------------------------
   // 7. PASSWORD STRENGTH METER
   // -------------------------------------------------------------------------
   const passwordInputs = document.querySelectorAll('.password-meter-input');

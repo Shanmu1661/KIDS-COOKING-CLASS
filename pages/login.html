@@ -69,30 +69,36 @@
         <form id="parentLoginForm" novalidate>
           <!-- Email Address Input -->
           <div class="mb-3.5">
-            <label for="loginEmail" class="login-field-label">Email Address</label>
+            <label for="loginEmail" class="login-field-label">Email Address <span class="text-danger">*</span></label>
             <div class="login-input-group">
               <span class="login-input-icon">
                 <i class="fa-regular fa-envelope"></i>
               </span>
-              <input type="email" class="login-input-field" id="loginEmail" placeholder="name@example.com" required autocomplete="email">
+              <input type="email" class="login-input-field" id="loginEmail" placeholder="name@example.com" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email" title="Please enter a valid email address (e.g. name@example.com)">
+              <span class="login-validation-badge valid-badge" title="Valid format"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="login-validation-badge invalid-badge" title="Invalid format"><i class="fa-solid fa-circle-exclamation"></i></span>
             </div>
+            <div class="login-invalid-feedback" id="loginEmailFeedback">Please enter a valid email address (e.g. name@example.com).</div>
           </div>
 
           <!-- Password Input -->
           <div class="mb-3.5">
             <div class="d-flex justify-content-between align-items-center mb-1.5">
-              <label for="loginPassword" class="login-field-label mb-0">Password</label>
+              <label for="loginPassword" class="login-field-label mb-0">Password <span class="text-danger">*</span></label>
               <a href="#" class="login-forgot-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot password?</a>
             </div>
             <div class="login-input-group">
               <span class="login-input-icon">
                 <i class="fa-solid fa-lock"></i>
               </span>
-              <input type="password" class="login-input-field" id="loginPassword" placeholder="Enter your password" required autocomplete="current-password">
+              <input type="password" class="login-input-field" id="loginPassword" placeholder="Enter your password" required minlength="6" maxlength="64" autocomplete="current-password" title="Password must be at least 6 characters">
+              <span class="login-validation-badge valid-badge" title="Valid format"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="login-validation-badge invalid-badge" title="Invalid format"><i class="fa-solid fa-circle-exclamation"></i></span>
               <button type="button" class="login-password-toggle text-muted" id="togglePasswordBtn" aria-label="Toggle password visibility">
                 <i class="fa-regular fa-eye"></i>
               </button>
             </div>
+            <div class="login-invalid-feedback" id="loginPasswordFeedback">Please enter your password (minimum 6 characters).</div>
           </div>
 
           <!-- Remember Me Checkbox -->
@@ -155,57 +161,79 @@
         <form id="parentRegisterForm" novalidate>
           <!-- Parent Full Name -->
           <div class="mb-3.5">
-            <label for="regParentName" class="login-field-label">Parent Full Name</label>
+            <label for="regParentName" class="login-field-label">Parent Full Name <span class="text-danger">*</span></label>
             <div class="login-input-group">
               <span class="login-input-icon">
                 <i class="fa-regular fa-user"></i>
               </span>
-              <input type="text" class="login-input-field" id="regParentName" placeholder="Sarah Miller" required minlength="3" autocomplete="name">
+              <input type="text" class="login-input-field" id="regParentName" name="parentName" placeholder="e.g. Sarah Miller" required minlength="2" maxlength="50" pattern="^[A-Za-zÀ-ÿ\s'-]{2,50}$" autocomplete="name" title="Letters, spaces, hyphens, and apostrophes only (no numbers)">
+              <span class="login-validation-badge valid-badge" title="Valid format"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="login-validation-badge invalid-badge" title="Invalid format"><i class="fa-solid fa-circle-exclamation"></i></span>
             </div>
+            <div class="login-invalid-feedback" id="regParentNameFeedback">Please provide a valid full name (letters only, no numbers).</div>
           </div>
 
           <!-- Email Address -->
           <div class="mb-3.5">
-            <label for="regEmail" class="login-field-label">Email Address</label>
+            <label for="regEmail" class="login-field-label">Email Address <span class="text-danger">*</span></label>
             <div class="login-input-group">
               <span class="login-input-icon">
                 <i class="fa-regular fa-envelope"></i>
               </span>
-              <input type="email" class="login-input-field" id="regEmail" placeholder="name@example.com" required autocomplete="email">
+              <input type="email" class="login-input-field" id="regEmail" name="email" placeholder="name@example.com" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email" title="Valid email address required (e.g. name@example.com)">
+              <span class="login-validation-badge valid-badge" title="Valid format"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="login-validation-badge invalid-badge" title="Invalid format"><i class="fa-solid fa-circle-exclamation"></i></span>
             </div>
+            <div class="login-invalid-feedback" id="regEmailFeedback">Please provide a valid email address (e.g. name@example.com).</div>
           </div>
 
           <!-- Phone Number -->
           <div class="mb-3.5">
-            <label for="regPhone" class="login-field-label">Emergency Contact Phone</label>
+            <label for="regPhone" class="login-field-label">Emergency Contact Phone <span class="text-danger">*</span></label>
             <div class="login-input-group">
               <span class="login-input-icon">
                 <i class="fa-solid fa-phone"></i>
               </span>
-              <input type="tel" class="login-input-field" id="regPhone" placeholder="(512) 555-0199" required autocomplete="tel">
+              <input type="tel" class="login-input-field" id="regPhone" name="phone" placeholder="(512) 555-0199" required maxlength="14" pattern="^(\+?1\s?)?\(?[0-9]{3}\)?[\s\.-]?[0-9]{3}[\s\.-]?[0-9]{4}$" autocomplete="tel" inputmode="numeric" title="10-digit phone number (e.g. (512) 555-0199)">
+              <span class="login-validation-badge valid-badge" title="Valid format"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="login-validation-badge invalid-badge" title="Invalid format"><i class="fa-solid fa-circle-exclamation"></i></span>
             </div>
+            <div class="login-invalid-feedback" id="regPhoneFeedback">Please provide a valid 10-digit phone number (e.g. (512) 555-0199).</div>
           </div>
 
           <!-- Password -->
           <div class="mb-3.5">
-            <label for="regPassword" class="login-field-label">Create Password</label>
+            <label for="regPassword" class="login-field-label">Create Password <span class="text-danger">*</span></label>
             <div class="login-input-group">
               <span class="login-input-icon">
                 <i class="fa-solid fa-lock"></i>
               </span>
-              <input type="password" class="login-input-field" id="regPassword" placeholder="Minimum 8 characters" required minlength="8" autocomplete="new-password">
+              <input type="password" class="login-input-field" id="regPassword" name="password" placeholder="Minimum 8 characters" required minlength="8" maxlength="64" autocomplete="new-password" title="Password must be at least 8 characters">
+              <span class="login-validation-badge valid-badge" title="Valid format"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="login-validation-badge invalid-badge" title="Invalid format"><i class="fa-solid fa-circle-exclamation"></i></span>
               <button type="button" class="login-password-toggle text-muted" id="toggleRegPasswordBtn" aria-label="Toggle password visibility">
                 <i class="fa-regular fa-eye"></i>
               </button>
             </div>
+            <!-- Dynamic Password Strength Bar -->
+            <div class="password-strength-bar mt-2 d-none" id="regPasswordMeter">
+              <div class="password-strength-fill" id="regPasswordFill"></div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-1">
+              <div class="login-invalid-feedback" id="regPasswordFeedback">Password must be at least 8 characters long.</div>
+              <small class="text-muted d-none" id="regPasswordStrengthText" style="font-size: 0.75rem; font-weight: 600;"></small>
+            </div>
           </div>
 
           <!-- Terms Checkbox -->
-          <div class="d-flex align-items-start gap-2 mb-4">
-            <input type="checkbox" class="login-checkbox mt-1" id="termsCheck" required checked>
-            <label class="login-checkbox-label" for="termsCheck">
-              I agree to the <a href="about.html#safety" class="text-primary hover:underline">Kitchen Safety Policy</a> & Terms
-            </label>
+          <div class="mb-4">
+            <div class="d-flex align-items-start gap-2">
+              <input type="checkbox" class="login-checkbox mt-1" id="termsCheck" required checked>
+              <label class="login-checkbox-label" for="termsCheck">
+                I agree to the <a href="about.html#safety" class="text-primary hover:underline">Kitchen Safety Policy</a> & Terms <span class="text-danger">*</span>
+              </label>
+            </div>
+            <div class="login-invalid-feedback" id="termsFeedback">You must agree to the Kitchen Safety Policy & Terms to create an account.</div>
           </div>
 
           <!-- Submit Register Button -->
@@ -262,13 +290,16 @@
         <div class="modal-body">
           <p class="text-muted small mb-3">Enter your account email address and we'll send a 6-digit verification code to reset your password.</p>
           <div class="mb-3">
-            <label class="login-field-label">Email Address</label>
+            <label class="login-field-label">Email Address <span class="text-danger">*</span></label>
             <div class="login-input-group">
               <span class="login-input-icon">
                 <i class="fa-regular fa-envelope"></i>
               </span>
-              <input type="email" class="login-input-field" id="resetEmailInput" placeholder="name@example.com">
+              <input type="email" class="login-input-field" id="resetEmailInput" placeholder="name@example.com" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email">
+              <span class="login-validation-badge valid-badge" title="Valid format"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="login-validation-badge invalid-badge" title="Invalid format"><i class="fa-solid fa-circle-exclamation"></i></span>
             </div>
+            <div class="login-invalid-feedback" id="resetEmailFeedback">Please enter a valid account email address.</div>
           </div>
         </div>
         <div class="modal-footer border-0 pt-0 d-flex justify-content-between">
@@ -329,37 +360,7 @@
         });
       }
 
-      // Handle Sign In Submit
-      const loginForm = document.getElementById('parentLoginForm');
-      if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const email = document.getElementById('loginEmail').value.trim();
-          if (email) {
-            window.showToast('Welcome back!', `Signed in as ${email}. Redirecting to your Parent Dashboard...`, 'success');
-            setTimeout(() => {
-              window.location.href = 'dashboard.html';
-            }, 800);
-          }
-        });
-      }
-
-      // Handle Register Submit
-      const registerForm = document.getElementById('parentRegisterForm');
-      if (registerForm) {
-        registerForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const name = document.getElementById('regParentName').value.trim();
-          if (name) {
-            window.showToast('Account Created!', `Welcome to Little Chefs Academy, ${name}! Redirecting to dashboard...`, 'success');
-            setTimeout(() => {
-              window.location.href = 'dashboard.html';
-            }, 800);
-          }
-        });
-      }
-
-      // Handle Social Logins
+      // Social Logins Handler
       document.querySelectorAll('.social-login-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const provider = btn.getAttribute('data-provider') || 'Social Provider';
@@ -368,13 +369,6 @@
             window.location.href = 'dashboard.html';
           }, 800);
         });
-      });
-
-      // Handle Reset Code Button
-      document.getElementById('sendResetCodeBtn')?.addEventListener('click', () => {
-        const resetModal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
-        if (resetModal) resetModal.hide();
-        window.showToast('Reset Link Sent', 'Password recovery instructions have been emailed to you.', 'info');
       });
     });
   </script>

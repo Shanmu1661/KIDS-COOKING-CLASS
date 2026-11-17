@@ -208,3 +208,14 @@
   margin-left: 0 !important;
   margin-right: -8px !important;
 }
+
+/* RTL Support for Auth Forms */
+[dir="rtl"] .login-input-icon {
+  margin-right: 0 !important;
+  margin-left: 14px !important;
+}
+
+[dir="rtl"] .login-validation-badge {
+  margin-left: 0 !important;
+  margin-right: 8px !important;
+}
