@@ -202,21 +202,89 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // -------------------------------------------------------------------------
-  // 6. CLIENT-SIDE FORM VALIDATION ENGINE
+  // 6. CLIENT-SIDE FORM VALIDATION ENGINE & STRICT INPUT FORMATTING
   // -------------------------------------------------------------------------
   const forms = document.querySelectorAll('.needs-validation-custom');
+
+  // Strict Phone Auto-Formatter Helper: (XXX) XXX-XXXX
+  function formatPhoneNumber(val) {
+    const digits = val.replace(/\D/g, '').substring(0, 10);
+    if (digits.length === 0) return '';
+    if (digits.length <= 3) return `(${digits}`;
+    if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
+  }
+
+  // Attach live formatters & strict character filters
+  function attachStrictInputFormatters() {
+    // 1. Phone number inputs: auto-formatting + block non-digits
+    const phoneInputs = document.querySelectorAll('input[type="tel"], #contactPhone');
+    phoneInputs.forEach(phone => {
+      phone.addEventListener('input', () => {
+        phone.value = formatPhoneNumber(phone.value);
+        if (phone.classList.contains('is-valid-custom') || phone.classList.contains('is-invalid-custom')) {
+          validateField(phone);
+        }
+      });
+      phone.addEventListener('keydown', (e) => {
+        // Allow navigation, delete, copy/paste
+        if (['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'].includes(e.key) ||
+            (e.ctrlKey || e.metaKey)) {
+          return;
+        }
+        // Block non-digits
+        if (!/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+    });
+
+    // 2. Name inputs: letters, spaces, hyphens, and apostrophes only (strictly forbid numbers & symbols)
+    const nameInputs = document.querySelectorAll('#contactName, input[name="parentName"], input[autocomplete="name"]');
+    nameInputs.forEach(nameInput => {
+      nameInput.addEventListener('keydown', (e) => {
+        if (['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End', 'Enter'].includes(e.key) ||
+            (e.ctrlKey || e.metaKey)) {
+          return;
+        }
+        // Block numbers
+        if (/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+      nameInput.addEventListener('input', () => {
+        // Strip any pasted digits immediately
+        if (/\d/.test(nameInput.value)) {
+          nameInput.value = nameInput.value.replace(/\d/g, '');
+        }
+        if (nameInput.classList.contains('is-valid-custom') || nameInput.classList.contains('is-invalid-custom')) {
+          validateField(nameInput);
+        }
+      });
+    });
+  }
+
+  attachStrictInputFormatters();
 
   forms.forEach(form => {
     const inputs = form.querySelectorAll('input, select, textarea');
 
     // Realtime field validation on blur and input
     inputs.forEach(input => {
-      input.addEventListener('blur', () => validateField(input));
-      input.addEventListener('input', () => {
-        if (input.classList.contains('is-invalid-custom')) {
+      input.addEventListener('blur', () => {
+        // Validate on blur if non-empty or required
+        if (input.value.trim() !== '' || input.hasAttribute('required')) {
           validateField(input);
         }
       });
+      input.addEventListener('input', () => {
+        if (input.classList.contains('is-invalid-custom') || input.classList.contains('is-valid-custom')) {
+          validateField(input);
+        }
+      });
+      if (input.tagName === 'SELECT') {
+        input.addEventListener('change', () => validateField(input));
+      }
     });
 
     form.addEventListener('submit', (e) => {
@@ -230,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (!isValid) {
-        showToast('Form Incomplete', 'Please check highlighted fields and try again.', 'error');
+        showToast('Form Incomplete', 'Please check highlighted fields and ensure correct formatting.', 'error');
         return;
       }
 
@@ -248,7 +316,10 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.innerHTML = originalBtnHtml;
         }
         form.reset();
-        inputs.forEach(inp => inp.classList.remove('is-valid-custom'));
+        inputs.forEach(inp => {
+          inp.classList.remove('is-valid-custom');
+          inp.classList.remove('is-invalid-custom');
+        });
 
         const successModal = document.getElementById('successModal');
         if (successModal && typeof bootstrap !== 'undefined') {
@@ -267,16 +338,49 @@ document.addEventListener('DOMContentLoaded', () => {
     let valid = true;
     const value = input.value.trim();
 
+    // 0. Non-required empty fields should remain clean/neutral
+    if (!input.hasAttribute('required') && !value) {
+      input.classList.remove('is-invalid-custom');
+      input.classList.remove('is-valid-custom');
+      return true;
+    }
+
+    // 1. Required check
     if (input.hasAttribute('required') && !value) {
       valid = false;
-    } else if (input.type === 'email' && value) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    } 
+    // 2. Parent Name: letters, spaces, hyphens, and apostrophes only (strictly forbid digits and symbols)
+    else if (input.id === 'contactName' || input.name === 'parentName' || (input.type === 'text' && input.autocomplete === 'name')) {
+      const nameRegex = /^[A-Za-zÀ-ÿ\s'-]{2,50}$/;
+      valid = nameRegex.test(value) && !/\d/.test(value) && ((value.match(/[A-Za-zÀ-ÿ]/g) || []).length >= 2);
+    }
+    // 3. Email Address: valid RFC format
+    else if (input.type === 'email' || input.id === 'contactEmail') {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       valid = emailRegex.test(value);
-    } else if (input.type === 'tel' && value) {
-      const phoneRegex = /^[0-9\-\+\(\)\s]{7,20}$/;
-      valid = phoneRegex.test(value);
-    } else if (input.minLength && value.length < input.minLength) {
+    }
+    // 4. Phone Number: 10 digits formatted (XXX) XXX-XXXX or standard digits
+    else if (input.type === 'tel' || input.id === 'contactPhone') {
+      const digits = value.replace(/\D/g, '');
+      const phoneRegex = /^(\+?1\s?)?\(?[0-9]{3}\)?[\s\.-]?[0-9]{3}[\s\.-]?[0-9]{4}$/;
+      valid = (digits.length === 10 && phoneRegex.test(value)) || (digits.length >= 10 && digits.length <= 15);
+    }
+    // 5. Select dropdown check
+    else if (input.tagName === 'SELECT') {
+      valid = value !== '' && value !== null;
+    }
+    // 6. Textarea / minlength check
+    else if (input.minLength && value.length < input.minLength) {
       valid = false;
+    }
+    // 7. Pattern attribute fallback
+    else if (input.hasAttribute('pattern') && value) {
+      try {
+        const patternRegex = new RegExp(input.getAttribute('pattern'));
+        valid = patternRegex.test(value);
+      } catch (e) {
+        // Fallback
+      }
     }
 
     if (valid) {

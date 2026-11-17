@@ -182,31 +182,31 @@
                     <label for="contactName" class="form-label-custom">
                       <i class="fa-regular fa-user text-primary"></i> Parent Full Name <span class="text-danger">*</span>
                     </label>
-                    <input type="text" class="form-control-custom" id="contactName" placeholder="e.g. Jessica Taylor" required minlength="3">
-                    <div class="invalid-feedback-custom">Please provide your full name.</div>
+                    <input type="text" class="form-control-custom" id="contactName" name="parentName" placeholder="e.g. Jessica Taylor" required minlength="2" maxlength="50" pattern="^[A-Za-zÀ-ÿ\s'-]{2,50}$" autocomplete="name" title="Letters, spaces, hyphens, and apostrophes only (no numbers)">
+                    <div class="invalid-feedback-custom">Please provide a valid full name (letters only, no numbers).</div>
                   </div>
 
                   <div class="col-md-6">
                     <label for="contactEmail" class="form-label-custom">
                       <i class="fa-regular fa-envelope text-primary"></i> Email Address <span class="text-danger">*</span>
                     </label>
-                    <input type="email" class="form-control-custom" id="contactEmail" placeholder="jessica@example.com" required>
-                    <div class="invalid-feedback-custom">Please provide a valid email address.</div>
+                    <input type="email" class="form-control-custom" id="contactEmail" name="parentEmail" placeholder="jessica@example.com" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email" title="Valid email address required (e.g. jessica@example.com)">
+                    <div class="invalid-feedback-custom">Please provide a valid email address (e.g. jessica@example.com).</div>
                   </div>
 
                   <div class="col-md-6">
                     <label for="contactPhone" class="form-label-custom">
                       <i class="fa-solid fa-phone text-primary"></i> Phone Number <span class="text-danger">*</span>
                     </label>
-                    <input type="tel" class="form-control-custom" id="contactPhone" placeholder="(512) 555-0182" required>
-                    <div class="invalid-feedback-custom">Please provide a valid contact number.</div>
+                    <input type="tel" class="form-control-custom" id="contactPhone" name="parentPhone" placeholder="(512) 555-0182" required maxlength="14" pattern="^(\+?1\s?)?\(?[0-9]{3}\)?[\s\.-]?[0-9]{3}[\s\.-]?[0-9]{4}$" autocomplete="tel" inputmode="numeric" title="10-digit phone number (e.g. (512) 555-0182)">
+                    <div class="invalid-feedback-custom">Please provide a valid 10-digit phone number (e.g. (512) 555-0182).</div>
                   </div>
 
                   <div class="col-md-6">
                     <label for="contactInquiryType" class="form-label-custom">
-                      <i class="fa-solid fa-list-check text-primary"></i> Topic of Interest
+                      <i class="fa-solid fa-list-check text-primary"></i> Topic of Interest <span class="text-danger">*</span>
                     </label>
-                    <select class="form-select form-select-custom" id="contactInquiryType" required>
+                    <select class="form-select form-select-custom" id="contactInquiryType" name="inquiryTopic" required>
                       <option value="" disabled selected>Select a topic...</option>
                       <option value="classes">Class Recommendation for My Child</option>
                       <option value="camps">Summer Camp Inquiries</option>
@@ -214,21 +214,21 @@
                       <option value="allergies">Special Dietary or Allergy Inquiries</option>
                       <option value="party">Birthday Party / Private Event Booking</option>
                     </select>
-                    <div class="invalid-feedback-custom">Please select an inquiry topic.</div>
+                    <div class="invalid-feedback-custom">Please select an inquiry topic from the list.</div>
                   </div>
 
                   <div class="col-12">
                     <label for="contactChildDetails" class="form-label-custom">
                       <i class="fa-solid fa-children text-primary"></i> Child's Name & Age (Optional)
                     </label>
-                    <input type="text" class="form-control-custom" id="contactChildDetails" placeholder="e.g. Oliver (Age 7), Loves baking cookies">
+                    <input type="text" class="form-control-custom" id="contactChildDetails" name="childDetails" maxlength="100" placeholder="e.g. Oliver (Age 7), Loves baking cookies">
                   </div>
 
                   <div class="col-12">
                     <label for="contactMessage" class="form-label-custom">
                       <i class="fa-regular fa-comment-dots text-primary"></i> Your Message <span class="text-danger">*</span>
                     </label>
-                    <textarea class="form-control-custom" id="contactMessage" rows="5" placeholder="How can we help your young chef get started?" required minlength="10"></textarea>
+                    <textarea class="form-control-custom" id="contactMessage" name="message" rows="5" placeholder="How can we help your young chef get started?" required minlength="10" maxlength="1000"></textarea>
                     <div class="invalid-feedback-custom">Please enter a message of at least 10 characters.</div>
                   </div>
 
@@ -270,15 +270,16 @@
               </div>
 
               <!-- Live Interactive Kitchen Studio Map -->
-              <div class="custom-card p-0 overflow-hidden shadow-sm contact-map-card" style="height: 300px; position: relative; border-radius: var(--radius-xl);">
-                <!-- Live Map Canvas -->
-                <div id="contact-live-map" class="w-100 h-100" style="height: 300px; z-index: 1;">
-                  <!-- Live Fallback OpenStreetMap Interactive Embed -->
+              <div class="custom-card p-0 overflow-hidden shadow-sm contact-map-card" style="height: 360px; position: relative; border-radius: var(--radius-xl);">
+                <!-- Live Map Canvas / Exact Google Map Embed Container -->
+                <div id="contact-live-map" class="w-100 h-100" style="height: 360px; z-index: 1;">
+                  <!-- Live Fallback Exact Google Maps Embed -->
                   <iframe 
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-97.755%2C30.260%2C-97.735%2C30.275&amp;layer=mapnik&amp;marker=30.2672%2C-97.7431" 
+                    id="contact-map-iframe"
+                    src="https://maps.google.com/maps?q=452+Gourmet+Way,+Austin,+TX+78701&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
                     width="100%" 
                     height="100%" 
-                    style="border: 0; width: 100%; height: 100%; min-height: 300px;" 
+                    style="border: 0; width: 100%; height: 100%; min-height: 360px;" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade" 
@@ -286,18 +287,26 @@
                   </iframe>
                 </div>
 
-                <!-- Live Map Floating Status Badge -->
-                <div class="position-absolute top-3 end-3" style="z-index: 500; pointer-events: none;">
-                  <span class="live-map-pill">
+                <!-- Live Map Mode Switcher & Status Badge -->
+                <div class="position-absolute top-3 end-3 d-flex align-items-center gap-2" style="z-index: 500;">
+                  <div class="btn-group btn-group-sm bg-white dark:bg-slate-900 rounded-pill p-1 shadow-sm border" role="group" aria-label="Map Mode Selector">
+                    <button type="button" class="btn btn-sm rounded-pill px-2 py-0 fw-bold btn-primary text-white" id="btnMapOSM" style="font-size: 0.75rem;" title="Interactive OpenStreetMap">
+                      <i class="fa-solid fa-map me-1"></i> Interactive
+                    </button>
+                    <button type="button" class="btn btn-sm rounded-pill px-2 py-0 text-muted" id="btnMapGoogle" style="font-size: 0.75rem;" title="Google Maps View">
+                      <i class="fa-solid fa-location-dot me-1"></i> Google Map
+                    </button>
+                  </div>
+                  <span class="live-map-pill d-none d-sm-inline-flex">
                     <span class="live-map-pulse-dot"></span>
-                    <span>Live Studio Map</span>
+                    <span>Austin Studio</span>
                   </span>
                 </div>
 
                 <!-- Floating Directions Quick Action Button -->
                 <div class="position-absolute bottom-3 start-3" style="z-index: 500;">
                   <a href="https://www.google.com/maps/search/?api=1&query=452+Gourmet+Way,+Austin,+TX+78701" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-white-map-action shadow-sm">
-                    <i class="fa-solid fa-diamond-turn-right text-primary me-1"></i> Directions
+                    <i class="fa-solid fa-diamond-turn-right text-primary me-1"></i> Open Google Maps
                   </a>
                 </div>
               </div>
@@ -495,92 +504,125 @@
       var lat = 30.2672;
       var lng = -97.7431;
 
-      // Check if Leaflet library is available
-      if (typeof L === 'undefined') {
-        return; // Fallback iframe remains active
+      var btnOSM = document.getElementById('btnMapOSM');
+      var btnGoogle = document.getElementById('btnMapGoogle');
+
+      var googleIframeHtml = `
+        <iframe 
+          id="contact-map-iframe"
+          src="https://maps.google.com/maps?q=452+Gourmet+Way,+Austin,+TX+78701&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border: 0; width: 100%; height: 100%; min-height: 360px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade" 
+          title="Little Chefs Academy Austin Live Location Map">
+        </iframe>
+      `;
+
+      var leafletMap = null;
+
+      function renderGoogleView() {
+        if (leafletMap) {
+          try { leafletMap.remove(); } catch (e) {}
+          leafletMap = null;
+        }
+        mapContainer.innerHTML = googleIframeHtml;
+        if (btnGoogle && btnOSM) {
+          btnGoogle.classList.add('btn-primary', 'text-white');
+          btnGoogle.classList.remove('text-muted');
+          btnOSM.classList.remove('btn-primary', 'text-white');
+          btnOSM.classList.add('text-muted');
+        }
       }
 
-      // Clear fallback iframe before Leaflet initialization
-      mapContainer.innerHTML = '';
-
-      try {
-        var map = L.map('contact-live-map', {
-          center: [lat, lng],
-          zoom: 15,
-          zoomControl: true,
-          scrollWheelZoom: false
-        });
-
-        // Crisp light and dark tile layers (CartoDB)
-        var lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
-          subdomains: 'abcd',
-          maxZoom: 19
-        });
-
-        var darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
-          subdomains: 'abcd',
-          maxZoom: 19
-        });
-
-        var isInitiallyDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        var activeTileLayer = isInitiallyDark ? darkTiles : lightTiles;
-        activeTileLayer.addTo(map);
-
-        // Custom Chef Marker Icon matching brand identity
-        var chefMarkerIcon = L.divIcon({
-          className: 'custom-live-map-marker',
-          html: '<div class="map-marker-pin"><i class="fa-solid fa-utensils"></i></div><div class="map-marker-pulse"></div>',
-          iconSize: [40, 40],
-          iconAnchor: [20, 40],
-          popupAnchor: [0, -42]
-        });
-
-        var marker = L.marker([lat, lng], { icon: chefMarkerIcon }).addTo(map);
-
-        var popupHtml = `
-          <div class="map-popup-card text-center p-1">
-            <h6 class="fw-bold mb-1 font-heading text-primary">Little Chefs Academy</h6>
-            <p class="small text-muted mb-2 lh-sm" style="font-size: 0.8rem;">
-              452 Gourmet Way, Suite 100<br>Austin, TX 78701
-            </p>
-            <div class="d-flex justify-content-center gap-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=452+Gourmet+Way,+Austin,+TX+78701" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary text-white py-1 px-3 rounded-pill" style="font-size: 0.75rem; font-weight: 700;">
-                <i class="fa-solid fa-diamond-turn-right me-1"></i> Directions
-              </a>
-            </div>
-          </div>
-        `;
-        marker.bindPopup(popupHtml);
-
-        // Auto open popup on desktop
-        if (window.innerWidth >= 768) {
-          setTimeout(function () {
-            marker.openPopup();
-          }, 600);
+      function renderOSMView() {
+        if (typeof L === 'undefined') {
+          renderGoogleView();
+          return;
         }
 
-        // Live theme switch observer
-        var themeObserver = new MutationObserver(function () {
-          var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-          if (isDark && map.hasLayer(lightTiles)) {
-            map.removeLayer(lightTiles);
-            darkTiles.addTo(map);
-          } else if (!isDark && map.hasLayer(darkTiles)) {
-            map.removeLayer(darkTiles);
-            lightTiles.addTo(map);
+        mapContainer.innerHTML = '';
+        try {
+          leafletMap = L.map('contact-live-map', {
+            center: [lat, lng],
+            zoom: 16,
+            zoomControl: true,
+            scrollWheelZoom: false
+          });
+
+          // Official OpenStreetMap tile layer (Genuine street data, 100% watermark-free)
+          var osmTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+            subdomains: ['a', 'b', 'c'],
+            maxZoom: 19
+          });
+          osmTiles.addTo(leafletMap);
+
+          // Custom Chef Marker Pin
+          var chefMarkerIcon = L.divIcon({
+            className: 'custom-live-map-marker',
+            html: '<div class="map-marker-pin"><i class="fa-solid fa-utensils"></i></div><div class="map-marker-pulse"></div>',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -42]
+          });
+
+          var marker = L.marker([lat, lng], { icon: chefMarkerIcon }).addTo(leafletMap);
+
+          var popupHtml = `
+            <div class="map-popup-card text-center p-1">
+              <h6 class="fw-bold mb-1 font-heading text-primary">Little Chefs Academy</h6>
+              <p class="small text-muted mb-2 lh-sm" style="font-size: 0.8rem;">
+                452 Gourmet Way, Suite 100<br>Austin, TX 78701
+              </p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="https://www.google.com/maps/search/?api=1&query=452+Gourmet+Way,+Austin,+TX+78701" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary text-white py-1 px-3 rounded-pill" style="font-size: 0.75rem; font-weight: 700;">
+                  <i class="fa-solid fa-diamond-turn-right me-1"></i> Directions
+                </a>
+              </div>
+            </div>
+          `;
+          marker.bindPopup(popupHtml);
+
+          if (window.innerWidth >= 768) {
+            setTimeout(function () {
+              marker.openPopup();
+            }, 500);
           }
+
+          setTimeout(function () {
+            if (leafletMap) leafletMap.invalidateSize();
+          }, 300);
+
+          if (btnGoogle && btnOSM) {
+            btnOSM.classList.add('btn-primary', 'text-white');
+            btnOSM.classList.remove('text-muted');
+            btnGoogle.classList.remove('btn-primary', 'text-white');
+            btnGoogle.classList.add('text-muted');
+          }
+        } catch (err) {
+          console.warn('Leaflet live map initialization failed, switching to Google Maps view:', err);
+          renderGoogleView();
+        }
+      }
+
+      // Default load: OpenStreetMap interactive view with custom branded pin
+      renderOSMView();
+
+      if (btnOSM) {
+        btnOSM.addEventListener('click', function (e) {
+          e.preventDefault();
+          renderOSMView();
         });
-        themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      }
 
-        // Ensure Leaflet recalculates layout on resize
-        setTimeout(function () {
-          map.invalidateSize();
-        }, 300);
-
-      } catch (err) {
-        console.warn('Leaflet live map initialization failed, fallback remains active:', err);
+      if (btnGoogle) {
+        btnGoogle.addEventListener('click', function (e) {
+          e.preventDefault();
+          renderGoogleView();
+        });
       }
     });
   </script>

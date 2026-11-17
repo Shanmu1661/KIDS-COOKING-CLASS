@@ -1585,6 +1585,10 @@
   background: #0f172a !important;
 }
 
+[data-theme="dark"] .contact-map-card .leaflet-tile-pane {
+  filter: brightness(0.7) invert(1) contrast(2.5) hue-rotate(200deg) saturate(0.3) brightness(0.85);
+}
+
 [data-theme="dark"] .live-map-pill {
   background: rgba(15, 23, 42, 0.92) !important;
   border-color: rgba(255, 255, 255, 0.15) !important;
