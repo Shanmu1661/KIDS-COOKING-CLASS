@@ -602,20 +602,55 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="position-relative home2-facility-video-wrapper">
-              <video class="w-100 object-cover d-block home2-facility-video" 
+            <div class="position-relative home2-facility-video-wrapper video-stage shadow-2xl">
+              <video id="home2FacilityVideo" 
+                     class="w-100 object-cover d-block home2-facility-video" 
                      autoplay 
                      muted 
                      loop 
                      playsinline 
-                     controls 
                      preload="auto" 
                      poster="../assets/images/kids_blowing_flour_poster.jpg"
                      aria-label="Little Chefs Academy studio video of children cooking and baking">
                 <source src="../assets/videos/kids_blowing_flour.mp4" type="video/mp4">
                 <source src="../assets/videos/girl_preparing_cookies.mp4" type="video/mp4">
+                <source src="../assets/videos/kids_making_dough.mp4" type="video/mp4">
                 Your browser does not support HTML5 video playback.
               </video>
+
+              <!-- Video Top Header Bar with Live Indicator & Controls -->
+              <div class="video-overlay-bar top-bar d-flex justify-content-between align-items-center">
+                <div class="video-live-pill">
+                  <span class="pulse-dot" aria-hidden="true"></span>
+                  <span id="home2VideoSceneText">Flour Fun &amp; Science &bull; Live Studio</span>
+                </div>
+                <div class="video-action-btns d-flex gap-2" role="group" aria-label="Facility video playback controls">
+                  <button type="button" class="video-pill-btn" id="home2PlayPauseBtn" aria-label="Pause Video" title="Pause / Play">
+                    <i class="fa-solid fa-pause"></i>
+                  </button>
+                  <button type="button" class="video-pill-btn" id="home2MuteBtn" aria-label="Unmute Sound" title="Sound Mute / Unmute">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                  </button>
+                  <button type="button" class="video-pill-btn" id="home2FullscreenBtn" aria-label="Fullscreen" title="Fullscreen View">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Video Bottom Scene Switcher Bar -->
+              <div class="video-overlay-bar bottom-bar d-flex justify-content-center">
+                <div class="scene-switcher-capsule d-inline-flex flex-wrap gap-2" role="tablist" aria-label="Studio video scene selector">
+                  <button type="button" class="capsule-btn active" data-video="../assets/videos/kids_blowing_flour.mp4" data-poster="../assets/images/kids_blowing_flour_poster.jpg" data-title="Flour Fun &amp; Science" aria-selected="true" role="tab">
+                    <i class="fa-solid fa-wheat-awn text-warning"></i> Flour Fun
+                  </button>
+                  <button type="button" class="capsule-btn" data-video="../assets/videos/girl_preparing_cookies.mp4" data-poster="../assets/images/kids_culinary_studio_workstations.jpg" data-title="Cookie Prep &amp; Decorating" aria-selected="false" role="tab">
+                    <i class="fa-solid fa-cookie-bite text-info"></i> Preparing Cookies
+                  </button>
+                  <button type="button" class="capsule-btn" data-video="../assets/videos/kids_making_dough.mp4" data-poster="../assets/images/home_hero_cooking_class.jpg" data-title="Artisan Pizza Dough Lab" aria-selected="false" role="tab">
+                    <i class="fa-solid fa-bread-slice text-primary"></i> Pizza Dough
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -822,7 +857,7 @@
           <div class="col-lg-6 order-1 order-lg-2">
             <span class="section-tag"><i class="fa-solid fa-gauge-high"></i> Dedicated Parent Portal</span>
             <h2 class="section-title">A Modern Parent Dashboard for Stress-Free Studio Scheduling</h2>
-            <p class="text-muted mb-4 lead fs-6">
+            <p class="portal-lead-text mb-4 lead fs-6">
               Experience complete peace of mind. Our parent portal gives you instant visibility into your child's dietary safety, upcoming workstation assignments, live chef feedback, and downloadable high-res kitchen photos.
             </p>
 
