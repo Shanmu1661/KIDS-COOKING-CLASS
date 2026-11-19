@@ -5667,46 +5667,55 @@ a:hover {
 }
 
 .blog-card-footer,
-.filter-item .custom-card .blog-card-footer {
+.filter-item .custom-card .blog-card-footer,
+.custom-card .blog-card-footer {
   margin-top: auto !important;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--border-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  min-height: 52px;
-  height: 52px;
-  flex-shrink: 0;
+  padding-top: 0.85rem !important;
+  border-top: 1px solid var(--border-color) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  flex-shrink: 0 !important;
 }
 
 .blog-card-footer > div:first-child,
-.filter-item .custom-card .blog-card-footer > div:first-child {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  flex: 1 1 auto;
+.filter-item .custom-card .blog-card-footer > div:first-child,
+.custom-card .blog-card-footer > div:first-child,
+.blog-card-author {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+  flex: 0 1 auto !important;
+  max-width: calc(100% - 110px) !important;
 }
 
 .blog-card-footer small,
-.filter-item .custom-card .blog-card-footer small {
+.filter-item .custom-card .blog-card-footer small,
+.blog-card-author small {
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-  display: inline-block;
-  max-width: 140px;
+  display: inline-block !important;
+  max-width: 140px !important;
 }
 
 .blog-card-footer a,
 .filter-item .custom-card .blog-card-footer a,
+.custom-card .blog-card-footer a,
 .blog-card-btn {
   white-space: nowrap !important;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  line-height: 1;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  line-height: 1 !important;
+  margin-left: auto !important;
 }
 
 /* ==========================================================================
@@ -5855,7 +5864,7 @@ div[style*="bottom:16px; left:16px;"] {
 }
 
 /* Card Badge Header & Metadata Alignment */
-.custom-card .d-flex.justify-content-between {
+.custom-card .d-flex.justify-content-between:not(.blog-card-footer) {
   flex-wrap: wrap !important;
   gap: 8px 12px !important;
 }
