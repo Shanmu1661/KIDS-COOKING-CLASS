@@ -1467,43 +1467,43 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         portalCardBody.innerHTML = `
           <!-- Child Profile Bar -->
-          <div class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom">
-            <div class="d-flex align-items-center gap-3">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 pb-3 mb-3 border-bottom">
+            <div class="d-flex align-items-center gap-2.5">
               <div class="position-relative">
-                <img src="${data.avatar}" alt="${data.name}" class="w-14 h-14 rounded-full border-3 border-orange-500 object-cover shadow-sm">
+                <img src="${data.avatar}" alt="${data.name}" class="w-12 h-12 w-sm-14 h-sm-14 rounded-full border-3 border-orange-500 object-cover shadow-sm">
                 <span class="position-absolute bottom-0 end-0 p-1 bg-emerald-500 border border-white rounded-full" title="Active Account"></span>
               </div>
               <div>
-                <h5 class="mb-0 fw-bold font-heading text-slate-900 dark:text-white">${data.name} <span class="text-muted fs-6 fw-normal">(${data.group})</span></h5>
-                <div class="d-flex align-items-center gap-2 mt-1">
-                  <small class="d-flex align-items-center gap-1">${data.allergyBadge}</small>
+                <h5 class="mb-0 fw-bold font-heading text-slate-900 dark:text-white fs-6">${data.name} <span class="text-muted text-xs fw-normal">(${data.group})</span></h5>
+                <div class="d-flex align-items-center gap-2 mt-0.5">
+                  <small class="d-flex align-items-center gap-1 text-xs">${data.allergyBadge}</small>
                 </div>
               </div>
             </div>
-            <span class="badge ${data.passBadgeClass} px-3 py-1.5 rounded-pill font-heading text-xs">
+            <span class="badge ${data.passBadgeClass} px-2.5 py-1 rounded-pill font-heading text-xs">
               ${data.passType}
             </span>
           </div>
 
           <!-- Milestone Progress Bar -->
           <div class="p-3 bg-subtle rounded-2xl mb-3 border">
-            <div class="d-flex justify-content-between align-items-center mb-1 text-xs">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-1 mb-1 text-xs">
               <span class="fw-bold font-heading text-slate-900 dark:text-white"><i class="fa-solid fa-award text-warning me-1"></i> ${data.milestoneTitle}</span>
               <span class="text-muted fw-bold">${data.milestoneHours}</span>
             </div>
             <div class="milestone-progress mb-1.5">
               <div class="milestone-progress-bar" style="width: ${data.milestonePercent}%;"></div>
             </div>
-            <div class="d-flex justify-content-between text-xs text-muted">
+            <div class="d-flex flex-wrap justify-content-between gap-1 text-xs text-muted">
               <span>Target: <strong>${data.milestoneAward}</strong></span>
               <span class="text-primary fw-bold">${data.milestonePercent}% Completed</span>
             </div>
           </div>
 
           <!-- Upcoming Session Ticket Card -->
-          <div class="session-ticket-box p-3.5 bg-subtle rounded-2xl mb-3 border">
-            <div class="d-flex justify-content-between align-items-center text-xs mb-1.5">
-              <span class="text-muted fw-semibold"><i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Session:</span>
+          <div class="session-ticket-box p-3 p-sm-3.5 bg-subtle rounded-2xl mb-3 border">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-1 text-xs mb-1.5">
+              <span class="text-muted fw-semibold text-nowrap"><i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Session:</span>
               <span class="fw-bold text-primary"><i class="fa-regular fa-clock me-1"></i> ${data.nextClassDate}</span>
             </div>
             <h5 class="font-heading fw-bold mb-1.5 text-slate-900 dark:text-white fs-6">${data.nextClassTitle}</h5>
@@ -1523,8 +1523,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <!-- Photo Strip Preview -->
-          <div class="pt-3 border-top d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-2">
+          <div class="pt-3 border-top d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <div class="d-flex align-items-center gap-2 flex-wrap">
               <div class="d-flex -space-x-2 overflow-hidden">
                 ${data.photoThumbs.map(p => `<img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="${p.img}" alt="${p.caption}">`).join('')}
               </div>

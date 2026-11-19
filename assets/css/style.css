@@ -2967,6 +2967,15 @@ a:hover {
   border-radius: 15px !important;
   padding: 14px 16px !important;
   transition: border-color 0.2s ease, background 0.2s ease !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  .session-ticket-box {
+    padding: 10px 12px !important;
+  }
 }
 
 .session-ticket-box:hover {
