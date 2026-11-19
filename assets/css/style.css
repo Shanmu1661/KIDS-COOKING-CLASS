@@ -1828,9 +1828,11 @@ a:hover {
 }
 
 .video-overlay-bar.bottom-bar {
-  bottom: 0;
-  padding-bottom: 22px;
-  background: linear-gradient(0deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0) 100%);
+  display: none !important;
+}
+
+.scene-switcher-capsule {
+  display: none !important;
 }
 
 .video-live-pill {
