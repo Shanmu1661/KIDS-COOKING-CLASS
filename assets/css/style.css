@@ -1834,19 +1834,7 @@ a:hover {
 }
 
 .video-live-pill {
-  pointer-events: auto;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  font-size: 0.82rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: none !important;
 }
 
 .video-live-pill .pulse-dot {
@@ -1961,8 +1949,7 @@ a:hover {
     padding: 10px 14px;
   }
   .video-live-pill {
-    font-size: 0.72rem;
-    padding: 4px 10px;
+    display: none !important;
   }
   .video-pill-btn {
     width: 32px;
