@@ -9093,3 +9093,14 @@ img, svg, video, canvas, iframe {
 .custom-card:hover .included-card-img {
   transform: scale(1.06);
 }
+
+/* Service Detail Feature Hero Image */
+.service-feature-hero {
+  height: 380px;
+}
+
+@media (max-width: 768px) {
+  .service-feature-hero {
+    height: 250px !important;
+  }
+}
