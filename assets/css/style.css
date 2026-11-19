@@ -992,21 +992,11 @@ a:hover {
 .main-header .dropdown-menu.home-mega-dropdown,
 .main-header .dropdown-menu.home-mega-dropdown[data-bs-popper],
 .main-header .dropdown-menu.home-mega-dropdown[data-popper-placement] {
-  position: absolute !important;
-  top: 100% !important;
-  bottom: auto !important;
-  left: 0 !important;
-  right: auto !important;
-  inset: 100% auto auto 0 !important;
-  margin-top: 8px !important;
-  margin-bottom: 0 !important;
   background: #0D1527 !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 18px !important;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 4px 16px rgba(0, 0, 0, 0.4) !important;
   padding: 10px !important;
-  min-width: 360px !important;
-  max-width: 440px !important;
   z-index: 1060 !important;
 }
 
@@ -1113,6 +1103,8 @@ a:hover {
     inset: 100% auto auto 0 !important;
     margin-top: 8px !important;
     margin-bottom: 0 !important;
+    min-width: 360px !important;
+    max-width: 440px !important;
     display: block !important;
     opacity: 0;
     visibility: hidden;
@@ -1134,10 +1126,37 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
-  .main-header .dropdown-menu.home-mega-dropdown {
-    min-width: 100% !important;
+  .main-header .dropdown-menu.home-mega-dropdown,
+  .main-header .dropdown-menu.home-mega-dropdown[data-bs-popper],
+  .main-header .dropdown-menu.home-mega-dropdown[data-popper-placement] {
+    position: static !important;
+    float: none !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
     max-width: 100% !important;
-    margin-top: 6px !important;
+    margin: 8px 0 !important;
+    padding: 8px !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  .main-header .dropdown-menu.home-mega-dropdown::before {
+    display: none !important;
+  }
+
+  .main-header .dropdown-menu.home-mega-dropdown .home-dropdown-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 10px 14px !important;
   }
 }
 
