@@ -1412,6 +1412,8 @@ document.addEventListener('DOMContentLoaded', () => {
         milestoneAward: 'Silver Chef Whisk Award',
         nextClassTitle: 'Handmade Gnocchi & Fresh Herb Pesto',
         nextClassDate: 'Sat, Oct 24 • 10:00 AM – 12:30 PM',
+        nextClassDay: 'Sat, Oct 24',
+        nextClassTime: '10:00 AM – 12:30 PM',
         nextClassChef: 'Chef Marco Rossi',
         nextClassStation: 'Station Island #3 (Nut-Free Zone)',
         badges: [
@@ -1440,6 +1442,8 @@ document.addEventListener('DOMContentLoaded', () => {
         milestoneAward: 'Gold Chef Toque Award',
         nextClassTitle: 'French Macarons & Buttercream Piping',
         nextClassDate: 'Sun, Oct 25 • 01:30 PM – 04:00 PM',
+        nextClassDay: 'Sun, Oct 25',
+        nextClassTime: '01:30 PM – 04:00 PM',
         nextClassChef: 'Chef Maya Vance',
         nextClassStation: 'Pastry Lab #1 (Marble Counter)',
         badges: [
@@ -1502,9 +1506,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <!-- Upcoming Session Ticket Card -->
           <div class="session-ticket-box p-3 p-sm-3.5 bg-subtle rounded-2xl mb-3 border">
-            <div class="d-flex flex-wrap justify-content-between align-items-center gap-1 text-xs mb-1.5">
+            <div class="session-ticket-top mb-1.5 d-flex flex-wrap justify-content-between align-items-center gap-1 text-xs">
               <span class="text-muted fw-semibold text-nowrap"><i class="fa-regular fa-calendar-check text-primary me-1"></i> Upcoming Session:</span>
-              <span class="fw-bold text-primary"><i class="fa-regular fa-clock me-1"></i> ${data.nextClassDate}</span>
+              <div class="session-ticket-timing fw-bold text-primary d-inline-flex flex-wrap align-items-center gap-1">
+                <span class="text-nowrap"><i class="fa-regular fa-clock me-1"></i>${data.nextClassDay || data.nextClassDate}</span>
+                <span class="timing-bullet opacity-50">&bull;</span>
+                <span class="text-nowrap">${data.nextClassTime || ''}</span>
+              </div>
             </div>
             <h5 class="font-heading fw-bold mb-1.5 text-slate-900 dark:text-white fs-6">${data.nextClassTitle}</h5>
             <div class="d-flex flex-wrap align-items-center gap-2 text-muted small text-xs">
