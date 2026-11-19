@@ -9084,3 +9084,12 @@ img, svg, video, canvas, iframe {
   transform: translateY(-6px) !important;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12) !important;
 }
+
+/* What's Included Card Image Styling */
+.included-card-img {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.custom-card:hover .included-card-img {
+  transform: scale(1.06);
+}
